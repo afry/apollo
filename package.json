@@ -1,5 +1,5 @@
 {
-  "name": "apollo",
+  "name": "@afconsult/apollo",
   "version": "0.0.1",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
