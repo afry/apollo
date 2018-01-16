@@ -1,0 +1,45 @@
+{
+  "name": "apollo",
+  "version": "0.0.1",
+  "description": "Design system for ÅF Web Apps",
+  "main": "index.js",
+  "repository": "https://github.com/afconsult/apollo",
+  "author": "afconsult",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "afconsult",
+    "apollo",
+    "react",
+    "components",
+    "component library"
+  ],
+  "scripts": {
+    "dev": "parcel playground/index.html --out-dir playground/dist",
+    "build": "parcel build playground/index.html --out-dir playground/dist",
+    "publish": "npm publish"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "parcel-bundler": "^1.4.1",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
