@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import * as styles from './Heading.css';
@@ -18,8 +18,8 @@ Heading.propTypes = {
     element(props, propName, component) {
         const value = props[propName];
         if(!value.match(/^h1|h2|h3|h4|h5|h6|p$/)) {
-            throw new Error('Invalid input value: {' + value + '} for propName: {' + propName + '}');
+            return new Error('Invalid input value: {' + value + '} for propName: {' + propName + '}');
         }
     },
-    children: PropTypes.any
+    children: PropTypes.string
 };
