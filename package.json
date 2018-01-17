@@ -15,6 +15,7 @@
     "component library"
   ],
   "scripts": {
+    "test": "jest",
     "clean": "rimraf dist/apollo.min.*",
     "build": "npm-run-all clean build:js build:css build:rename",
     "build:js": "parcel build src/apollo.js --out-dir dist --no-cache",
@@ -22,7 +23,8 @@
     "build:rename": "npm-run-all build:rename-js build:rename-css",
     "build:rename-js": "renamer --find apollo --replace apollo.min dist/apollo.js",
     "build:rename-css": "renamer --find apollo --replace apollo.min dist/apollo.css",
-    "dev": "parcel playground/index.html --out-dir playground/assets --no-minify",
+    "start": "npm-run-all test start:dev",
+    "start:dev": "parcel playground/index.html --out-dir playground/assets",
     "publish": "npm publish"
   },
   "eslintConfig": {
@@ -30,6 +32,9 @@
     "env": {
       "browser": true
     }
+  },
+  "dependencies": {
+    
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -43,9 +48,12 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
+    "jest": "^22.1.1",
     "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.4.1",
     "path": "^0.12.7",
+    "postcss": "^6.0.16",
+    "postcss-cssnext": "^3.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "renamer": "^0.6.1",
