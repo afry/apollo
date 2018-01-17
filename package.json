@@ -15,8 +15,14 @@
     "component library"
   ],
   "scripts": {
-    "dev": "parcel playground/index.html --out-dir playground/dist",
-    "build": "parcel build playground/index.html --out-dir playground/dist",
+    "clean": "rimraf dist/apollo.min.*",
+    "build": "npm-run-all clean build:js build:css build:rename",
+    "build:js": "parcel build src/apollo.js --out-dir dist --no-cache",
+    "build:css": "parcel build src/apollo.css --out-dir dist --no-cache",
+    "build:rename": "npm-run-all build:rename-js build:rename-css",
+    "build:rename-js": "renamer --find apollo --replace apollo.min dist/apollo.js",
+    "build:rename-css": "renamer --find apollo --replace apollo.min dist/apollo.css",
+    "dev": "parcel playground/index.html --out-dir playground/assets --no-minify",
     "publish": "npm publish"
   },
   "eslintConfig": {
@@ -37,9 +43,12 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
+    "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.4.1",
     "path": "^0.12.7",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "renamer": "^0.6.1",
+    "rimraf": "^2.6.2"
   }
 }
