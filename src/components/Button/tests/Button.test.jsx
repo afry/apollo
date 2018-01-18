@@ -49,6 +49,7 @@ describe('<Button />', () => {
             const button = shallow(<Button type="button"/>);
             expect(button.prop('type')).toBe('button');
         });
+        
         it('sets the type attribute on the button to submit', () => {
             const button = shallow(<Button type="submit" />);
             expect(button.prop('type')).toBe('submit');
