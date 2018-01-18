@@ -7,6 +7,10 @@ export {
 } from './Checkbox';
 
 export {
+  default as DatePicker,
+} from './DatePicker';
+
+export {
   default as Form,
 } from './Form';
 
