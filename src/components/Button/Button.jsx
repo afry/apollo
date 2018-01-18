@@ -23,7 +23,12 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-    type: PropTypes.string,
+    type(props, propName, component) {
+        const value = props[propName];
+        if(!value.match(/^button|submit|reset$/)) {
+            return new Error('Invalid type: {' + value + '}');
+        }
+    },
     children: PropTypes.string,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
