@@ -1,12 +1,21 @@
 import React from 'react';
-import { Button, Form, TextArea } from '../src/apollo';
+import { Heading, Button, InputField, Form } from '../src/apollo';
 
 export default function Playground() {
   return (
-    <Form>
-      <TextArea name="textarea" defaultValue="This is a default message" rows="10" cols="50" />
-      <Button name="textarea" type="submit">Submit</Button>
-      <Button name="textarea" type="reset">Reset</Button>
-    </Form>
+    <div>
+      <Heading element="h3">Step 3/4</Heading>
+      <Heading element="h2">Who is the customer?</Heading>
+      <Form>
+        <InputField label="Customer" placeholder="Name" />
+        <br />
+        <InputField label="Contact Person" placeholder="Name" />
+      </Form>
+      <br />
+      <Form>
+        <Button>Back</Button>
+        <Button>Next</Button>
+      </Form>
+    </div>
   );
 }
