@@ -10,6 +10,7 @@ export default class Checkbox extends React.Component {
                 <input 
                     type="checkbox"
                     role="checkbox"
+                    className={styles.Checkbox}
                     name={this.props.name}
                     value={this.props.value}
                     checked={this.props.checked}

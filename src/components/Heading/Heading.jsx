@@ -6,7 +6,7 @@ import * as styles from './Heading.css';
 export default class Heading extends React.Component {
     render() {
         const Element = this.props.element;
-        return <Element className={styles.heading}>{this.props.children}</Element>;
+        return <Element className={styles.Heading}>{this.props.children}</Element>;
     };
 };
 
