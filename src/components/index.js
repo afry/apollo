@@ -14,3 +14,7 @@ export {
 export {
     default as Heading
 } from './Heading';
+
+export {
+    default as RadioButton
+} from './RadioButton';

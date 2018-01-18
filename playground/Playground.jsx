@@ -1,15 +1,15 @@
 import React from 'react';
-import { Heading, Button, Checkbox, Form } from '../src/apollo.js';
+import { Heading, Button, Checkbox, Form, RadioButton } from '../src/apollo.js';
 
 export default class Playground extends React.Component {
     render() {
         return (
             <Form>
-                <Heading element='h1'>Hello Playground</Heading>
-                <Button onClick={()=>{ console.log("click"); }} > 
-                    Click me!
-                </Button>
-                <Checkbox label="Toggle me!" />
+                <RadioButton name="gender" value="male" label="Male" checked />
+                <RadioButton name="gender" value="female" label="Female" />
+                <div>
+                    <Button type="submit" >Submit</Button>
+                </div>
             </Form>
         );
     }
