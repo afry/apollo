@@ -1,21 +1,12 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import InputField from '../InputField';
 
 describe('<InputField />', () => {
-    describe('onInput()', () => {
-        it('is called when the input field is receiving input', () => {
-            const spy = jest.fn();
-            const input = shallow(<InputField onInput={spy} />);
-            input.find('input').simulate('input');
-            expect(spy).toHaveBeenCalled();
-        });
-    });
-
     describe('onChange()', () => {
         it('is called when the input field is changed', () => {
             const spy = jest.fn();
-            const input = shallow(<InputField onChange={spy} />);
+            const input = mount(<InputField id="MyInputField" onChange={spy} />);
             input.find('input').simulate('change');
             expect(spy).toHaveBeenCalled();
         });

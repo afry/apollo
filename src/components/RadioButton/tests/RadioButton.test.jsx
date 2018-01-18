@@ -1,12 +1,12 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import RadioButton from '../RadioButton';
 
 describe('<RadioButton />', () => {
     describe('onChange()', () => {
         it('is called when the radio button is changed', () => {
             const spy = jest.fn();
-            const radio = shallow(<RadioButton onChange={spy} />);
+            const radio = mount(<RadioButton id="MyRadioButton" onChange={spy} />);
             radio.find('input').simulate('change');
             expect(spy).toHaveBeenCalled();
         });

@@ -4,12 +4,23 @@ import PropTypes from 'prop-types';
 import * as styles from './InputField.css';
 
 export default class InputField extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(ev) {
+        if(this.props.onChange === null) { return; }
+        this.props.onChange(this.props.id, ev.target.value);
+    }
+
     render() {
         return (
             <div>
                 <label>{this.props.label}</label><br />
                 <input 
                     className={styles.TextInput} 
+                    id={this.props.id}
                     type={this.props.type}
                     name={this.props.name}
                     value={this.props.value}
@@ -23,8 +34,7 @@ export default class InputField extends React.Component {
                     readOnly={this.props.readOnly}
                     autoComplete={this.props.autoComplete ? "on" : "off"}
                     autoFocus={this.props.autoFocus}
-                    onInput={this.props.onInput}
-                    onChange={this.props.onChange}
+                    onChange={this.handleChange}
                     onFocus={this.props.onFocus}
                     onBlur={this.props.onBlur} />
             </div>
@@ -37,6 +47,7 @@ InputField.defaultProps = {
 };
 
 InputField.propTypes = {
+    id: PropTypes.string,
     type(props, propName, component) {
         const value = props[propName];
         if(!value.match(/^text|number|password|email|tel$/)) {
@@ -56,7 +67,6 @@ InputField.propTypes = {
     readOnly: PropTypes.bool,
     autoComplete: PropTypes.bool,
     autoFocus: PropTypes.bool,
-    onInput: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func
