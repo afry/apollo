@@ -34,9 +34,15 @@
     }
   },
   "jest": {
-    "setupFiles": ["./tests/setup.js"]
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
@@ -50,6 +56,7 @@
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-defaults": "^9.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
@@ -60,9 +67,6 @@
     "path": "^0.12.7",
     "postcss": "^6.0.16",
     "postcss-cssnext": "^3.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
     "renamer": "^0.6.1",
     "rimraf": "^2.6.2"
