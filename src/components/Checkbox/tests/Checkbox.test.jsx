@@ -1,12 +1,12 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Checkbox from '../Checkbox';
 
 describe('<Checkbox />', () => {
     describe('onChange()', () => {
         it('is called when the checkbox is changed', () => {
             const spy = jest.fn();
-            const checkbox = shallow(<Checkbox onChange={spy} />);
+            const checkbox = mount(<Checkbox id="MyCheckbox" onChange={spy} />);
             checkbox.find('input').simulate('change');
             expect(spy).toHaveBeenCalled();
         });
