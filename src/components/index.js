@@ -1,28 +1,27 @@
-
 export {
-    default as Button
+  default as Button,
 } from './Button';
 
 export {
-    default as Checkbox
+  default as Checkbox,
 } from './Checkbox';
 
 export {
-    default as Form
+  default as Form,
 } from './Form';
 
 export {
-    default as Heading
+  default as Heading,
 } from './Heading';
 
 export {
-    default as InputField
+  default as InputField,
 } from './InputField';
 
 export {
-    default as RadioButton
+  default as RadioButton,
 } from './RadioButton';
 
 export {
-    default as TextArea
+  default as TextArea,
 } from './TextArea';
