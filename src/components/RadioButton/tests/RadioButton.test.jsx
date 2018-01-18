@@ -53,4 +53,16 @@ describe('<RadioButton />', () => {
             expect(radio.find('input').prop('disabled')).toBe(false);
         });
     });
+
+    describe('readonly', () => {
+        it('sets the readonly attribute on the radio button', () => {
+            const radio = shallow(<RadioButton readOnly />);
+            expect(radio.find('input').prop('readOnly')).toBe(true);
+        });
+
+        it('sets the readonly attribute on the radio button', () => {
+            const radio = shallow(<RadioButton readOnly={false} />);
+            expect(radio.find('input').prop('readOnly')).toBe(false);
+        });
+    });
 });
