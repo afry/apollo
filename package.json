@@ -33,20 +33,28 @@
       "browser": true
     }
   },
+  "jest": {
+    "setupFiles": ["./tests/setup.js"]
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "jest": "^22.1.1",
+    "jest": "^22.1.2",
+    "jest-enzyme": "^4.0.2",
     "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.4.1",
     "path": "^0.12.7",

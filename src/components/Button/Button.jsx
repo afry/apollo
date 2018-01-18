@@ -7,9 +7,10 @@ export default class Button extends React.Component {
     render() {
         return (
             <button 
+                type={this.props.type}
                 onClick={this.props.onClick}
-                onMouseEnter={this.props.onMouseEnter}
-                onMouseLeave={this.props.onMouseLeave}
+                onFocus={this.props.onFocus}
+                onBlur={this.props.onBlur}
                 disabled={this.props.disabled}>
                 {this.props.children}</button>
         );
@@ -17,13 +18,14 @@ export default class Button extends React.Component {
 };
 
 Button.defaultProps = {
-
+    type: 'button'
 };
 
 Button.propTypes = {
+    type: PropTypes.string,
     children: PropTypes.string,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func
 };

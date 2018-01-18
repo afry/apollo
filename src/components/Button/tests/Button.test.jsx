@@ -1,36 +1,62 @@
 import React from 'react';
+import {shallow} from 'enzyme';
 import Button from '../Button';
-import renderer from 'react-test-renderer';
 
-test('onClick', () => {
-    const component = renderer.create(
-        <Button onClick={()=>{}} /> 
-    );
+describe('<Button />', () => {
+    describe('onClick()', () => {
+        it('is called when the button is clicked', () => {
+            const spy = jest.fn();
+            shallow(<Button onClick={spy} />).simulate('click');
+            expect(spy).toHaveBeenCalled();
+        });
+    });
 
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    describe('onFocus()', () => {
+        it('is called when the button is focused', () => {
+            const spy = jest.fn();
+            shallow(<Button onFocus={spy} />).simulate('focus');
+            expect(spy).toHaveBeenCalled();
+        });
+    });
 
-    tree.props.onClick();
-});
+    describe('onBlur()', () => {
+        it('is called when the button is blurred', () => {
+            const spy = jest.fn();
+            shallow(<Button onBlur={spy} />).simulate('blur');
+            expect(spy).toHaveBeenCalled();
+        });
+    });
 
-test('onMouseEnter', () => {
-    const component = renderer.create(
-        <Button onMouseEnter={()=>{}} /> 
-    );
+    describe('disabled', () => {
+        it('sets the disabled attribute on the button', () => {
+            const button = shallow(<Button disabled />);
+            expect(button.prop('disabled')).toBe(true);
+        });
 
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+        it('sets the disabled attribute on the button', () => {
+            const button = shallow(<Button disabled={false} />);
+            expect(button.prop('disabled')).toBe(false);
+        });
+    });
 
-    tree.props.onMouseEnter();
-});
+    describe('type', () => {
+        it('sets the type attribute on the button to default', () => {
+            const button = shallow(<Button />);
+            expect(button.prop('type')).toBe('button');
+        });
 
-test('onMouseLeave', () => {
-    const component = renderer.create(
-        <Button onMouseLeave={()=>{}} /> 
-    );
+        it('sets the type attribute on the button to button', () => {
+            const button = shallow(<Button type="button"/>);
+            expect(button.prop('type')).toBe('button');
+        });
+        it('sets the type attribute on the button to submit', () => {
+            const button = shallow(<Button type="submit" />);
+            expect(button.prop('type')).toBe('submit');
+        });
 
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-
-    tree.props.onMouseLeave();
+        it('sets the type attribute on the button to reset', () => {
+            const button = shallow(<Button type="reset" />);
+            expect(button.prop('type')).toBe('reset');
+        });
+    });
 });
