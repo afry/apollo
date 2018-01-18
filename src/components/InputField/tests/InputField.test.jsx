@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import InputField from '../InputField';
 
 describe('<InputField />', () => {
-    describe('onFocus()', () => {
+    describe('onInput()', () => {
         it('is called when the input field is receiving input', () => {
             const spy = jest.fn();
             const input = shallow(<InputField onInput={spy} />);
@@ -12,7 +12,7 @@ describe('<InputField />', () => {
         });
     });
 
-    describe('onFocus()', () => {
+    describe('onChange()', () => {
         it('is called when the input field is changed', () => {
             const spy = jest.fn();
             const input = shallow(<InputField onChange={spy} />);

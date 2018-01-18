@@ -7,12 +7,13 @@ export default class InputField extends React.Component {
     render() {
         return (
             <div>
-                {this.props.label}<br />
+                <label>{this.props.label}</label><br />
                 <input 
                     className={styles.TextInput} 
                     type={this.props.type}
                     name={this.props.name}
                     value={this.props.value}
+                    defaultValue={this.props.defaultValue}
                     placeholder={this.props.placeholder}
                     required={this.props.required}
                     min={this.props.min}
@@ -44,6 +45,7 @@ InputField.propTypes = {
     },
     name: PropTypes.string,
     value: PropTypes.string,
+    defaultValue: PropTypes.string,
     label: PropTypes.string,
     placeholder: PropTypes.string,
     required: PropTypes.bool,
