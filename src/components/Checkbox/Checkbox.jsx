@@ -11,15 +11,14 @@ export default class Checkbox extends React.Component {
 
   handleChange(ev) {
     if (this.props.onChange == null) { return; }
-    this.props.onChange(this.props.id, ev.target.checked);
+    this.props.onChange(ev.target.checked);
   }
 
   render() {
     return (
-      <span>
+      <label>
         <input
           type="checkbox"
-          id={this.props.id}
           className={styles.Checkbox}
           name={this.props.name}
           value={this.props.value}
@@ -30,13 +29,12 @@ export default class Checkbox extends React.Component {
           onBlur={this.props.onBlur}
         />
         {this.props.label}
-      </span>
+      </label>
     );
   }
 }
 
 Checkbox.defaultProps = {
-  id: undefined,
   name: undefined,
   label: undefined,
   value: undefined,
@@ -48,7 +46,6 @@ Checkbox.defaultProps = {
 };
 
 Checkbox.propTypes = {
-  id: PropTypes.string,
   name: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
