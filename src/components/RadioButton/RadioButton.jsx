@@ -10,13 +10,13 @@ export default class RadioButton extends React.Component {
   }
 
   handleChange(ev) {
-    if (this.props.onChange === null) { return; }
+    if (this.props.onChange == null) { return; }
     this.props.onChange(this.props.id, ev.target.checked);
   }
 
   render() {
     return (
-      <span>
+      <label>
         <input
           type="radio"
           id={this.props.id}
@@ -31,7 +31,7 @@ export default class RadioButton extends React.Component {
           onBlur={this.props.onBlur}
         />
         {this.props.label}
-      </span>
+      </label>
     );
   }
 }
@@ -52,8 +52,8 @@ RadioButton.defaultProps = {
 RadioButton.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  label: PropTypes.string,
   value: PropTypes.string,
+  label: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
