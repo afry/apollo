@@ -10,7 +10,7 @@ export default class Checkbox extends React.Component {
   }
 
   handleChange(ev) {
-    if (this.props.onChange === null) { return; }
+    if (this.props.onChange == null) { return; }
     this.props.onChange(this.props.id, ev.target.checked);
   }
 
