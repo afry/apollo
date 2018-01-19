@@ -23,7 +23,6 @@ export default class DatePicker extends React.Component {
           type="date"
           name={this.props.name}
           value={this.props.value}
-          defaultValue={this.props.defaultValue}
           disabled={this.props.disabled}
           readOnly={this.props.readOnly}
           onChange={this.handleChange}
@@ -37,7 +36,6 @@ DatePicker.defaultProps = {
   name: undefined,
   label: undefined,
   value: undefined,
-  defaultValue: undefined,
   disabled: false,
   readOnly: false,
   onChange: undefined,
@@ -47,7 +45,6 @@ DatePicker.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
-  defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func,
