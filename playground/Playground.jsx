@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Button, InputField, Form } from '../src/apollo';
+import { Heading, Button, DatePicker, InputField, Form } from '../src/apollo';
 
 export default function Playground() {
   return (
@@ -16,6 +16,8 @@ export default function Playground() {
         <Button>Back</Button>
         <Button>Next</Button>
       </Form>
+      <br />
+      <DatePicker label="Pick a date" defaultValue="1701-01-01" onChange={(date) => { console.log(date); }} />
     </div>
   );
 }
