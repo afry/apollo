@@ -10,13 +10,13 @@ export default class Playground extends React.Component {
     this.handleGenderChange = this.handleGenderChange.bind(this);
   }
 
-  handleConfirm(id, newVal) {
-    this.setState({ confirmed: newVal });
+  handleConfirm(checked) {
+    this.setState({ confirmed: checked });
   }
 
-  handleGenderChange(id, newVal) {
-    if (newVal) {
-      this.setState({ selectedGender: id });
+  handleGenderChange(checked, value) {
+    if (checked) {
+      this.setState({ selectedGender: value });
     }
   }
 
@@ -31,10 +31,10 @@ export default class Playground extends React.Component {
           <InputField label="Contact Person" placeholder="Name" />
         </Form>
         <br />
-        <Checkbox id="Confirm" label="Confirm" name="confirm" checked={this.state.confirmed} onChange={this.handleConfirm} />
+        <Checkbox label="Confirm" name="confirm" checked={this.state.confirmed} onChange={this.handleConfirm} />
         <Form>
-          <RadioButton id="Male" name="male" label="Male" checked={this.state.selectedGender === 'Male'} onChange={this.handleGenderChange} />
-          <RadioButton id="Female" name="female" label="Female" checked={this.state.selectedGender === 'Female'} onChange={this.handleGenderChange} />
+          <RadioButton value="Male" label="Male" checked={this.state.selectedGender === 'Male'} onChange={this.handleGenderChange} />
+          <RadioButton value="Female" label="Female" checked={this.state.selectedGender === 'Female'} onChange={this.handleGenderChange} />
         </Form>
         <br />
         <DatePicker label="Pick a date" value={this.state.date} onChange={(d) => { this.setState({ date: d }); }} />

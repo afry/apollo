@@ -20,7 +20,6 @@ export default class InputField extends React.Component {
         {this.props.label}<br />
         <input
           className={styles.TextInput}
-          id={this.props.id}
           type={this.props.type}
           name={this.props.name}
           value={this.props.value}
@@ -42,7 +41,6 @@ export default class InputField extends React.Component {
 }
 
 InputField.defaultProps = {
-  id: undefined,
   type: 'text',
   name: undefined,
   value: undefined,
@@ -61,7 +59,6 @@ InputField.defaultProps = {
 };
 
 InputField.propTypes = {
-  id: PropTypes.string,
   type(props, propName) {
     const value = props[propName];
     if (!value.match(/^text|number|password|email|tel$/)) {

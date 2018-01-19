@@ -11,7 +11,7 @@ export default class RadioButton extends React.Component {
 
   handleChange(ev) {
     if (this.props.onChange == null) { return; }
-    this.props.onChange(this.props.id, ev.target.checked);
+    this.props.onChange(ev.target.checked, this.props.value);
   }
 
   render() {
@@ -19,7 +19,6 @@ export default class RadioButton extends React.Component {
       <label>
         <input
           type="radio"
-          id={this.props.id}
           className={styles.RadioButton}
           name={this.props.name}
           value={this.props.value}
@@ -37,7 +36,6 @@ export default class RadioButton extends React.Component {
 }
 
 RadioButton.defaultProps = {
-  id: undefined,
   name: undefined,
   label: undefined,
   value: undefined,
@@ -50,7 +48,6 @@ RadioButton.defaultProps = {
 };
 
 RadioButton.propTypes = {
-  id: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,
   label: PropTypes.string,
