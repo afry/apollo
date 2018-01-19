@@ -4,7 +4,7 @@ import { Heading, RadioButton, Checkbox, DatePicker, InputField, Form } from '..
 export default class Playground extends React.Component {
   constructor() {
     super();
-    this.state = { confirmed: false, selectedGender: 'Male' };
+    this.state = { confirmed: false, selectedGender: 'Male', date: '1701-01-01' };
 
     this.handleConfirm = this.handleConfirm.bind(this);
     this.handleGenderChange = this.handleGenderChange.bind(this);
@@ -37,7 +37,7 @@ export default class Playground extends React.Component {
           <RadioButton id="Female" name="female" label="Female" checked={this.state.selectedGender === 'Female'} onChange={this.handleGenderChange} />
         </Form>
         <br />
-        <DatePicker label="Pick a date" defaultValue="1701-01-01" onChange={(date) => { console.log(date); }} />
+        <DatePicker label="Pick a date" value={this.state.date} onChange={(d) => { this.setState({ date: d }); }} />
       </div>
     );
   }
