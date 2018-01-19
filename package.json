@@ -16,11 +16,9 @@
   ],
   "scripts": {
     "test": "jest",
-    "clean": "rimraf dist/apollo.min.*",
-    "build": "webpack --config playground/webpack.config.js",
-    "publish": "npm publish",
     "dev": "webpack-dev-server --config ./playground/webpack.config.js --inline",
-    "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev"
+    "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev",
+    "publish": "npm publish"
   },
   "eslintConfig": {
     "extends": "airbnb",
@@ -36,8 +34,7 @@
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-hot-loader": "^3.1.3"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -64,6 +61,7 @@
     "path": "^0.12.7",
     "postcss": "^6.0.16",
     "postcss-cssnext": "^3.0.2",
+    "react-hot-loader": "^3.1.3",
     "react-test-renderer": "^16.2.0",
     "renamer": "^0.6.1",
     "rimraf": "^2.6.2",
