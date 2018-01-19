@@ -26,7 +26,6 @@ export default class Playground extends React.Component {
         <Heading element="h3">Step 3/4</Heading>
         <Heading element="h2">Who is the customer?</Heading>
         <Form>
-          <InputField label="Customer" placeholder="Name" />
           <br />
           <InputField label="Contact Person" placeholder="Name" />
         </Form>

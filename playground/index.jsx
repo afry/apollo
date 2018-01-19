@@ -1,9 +1,21 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
 import Playground from './Playground';
 
-render(
-  <Playground />,
-  document.getElementById('root'),
-);
+function renderPlayground() {
+  render(
+    <AppContainer>
+      <Playground />
+    </AppContainer>,
+    document.getElementById('root'),
+  );
+}
+
+renderPlayground();
+
+if (module.hot) {
+  module.hot.accept('./index.jsx');
+  module.hot.accept('./Playground.jsx', renderPlayground);
+}
