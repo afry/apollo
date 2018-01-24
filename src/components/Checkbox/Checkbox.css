@@ -1,0 +1,14 @@
+.Checkbox {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px 0 0;
+}
+
+.Description {
+  position: absolute;
+  font-size: 14px;
+  color: gray;
+  margin-left: 30px;
+  margin-top: 10px;
+}

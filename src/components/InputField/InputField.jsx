@@ -1,6 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
+import Label from '../Label';
+
 import * as styles from './InputField.css';
 
 export default class InputField extends React.Component {
@@ -10,16 +12,16 @@ export default class InputField extends React.Component {
   }
 
   handleChange(ev) {
-    if (this.props.onChange === null) { return; }
-    this.props.onChange(this.props.id, ev.target.value);
+    const { onChange } = this.props;
+    if (onChange == null) { return; }
+    onChange(ev.target.value);
   }
 
   render() {
     return (
-      <div>
-        {this.props.label}<br />
+      <Label>{this.props.label}
         <input
-          className={styles.TextInput}
+          className={styles.InputField}
           type={this.props.type}
           name={this.props.name}
           value={this.props.value}
@@ -35,7 +37,7 @@ export default class InputField extends React.Component {
           onFocus={this.props.onFocus}
           onBlur={this.props.onBlur}
         />
-      </div>
+      </Label>
     );
   }
 }

@@ -9,6 +9,7 @@ export default class Button extends React.PureComponent {
       <button
         className={styles.Button}
         type={this.props.type}
+        name={this.props.name}
         onClick={this.props.onClick}
         onFocus={this.props.onFocus}
         onBlur={this.props.onBlur}
@@ -21,6 +22,7 @@ export default class Button extends React.PureComponent {
 
 Button.defaultProps = {
   type: 'button',
+  name: undefined,
   children: undefined,
   disabled: false,
   onClick: undefined,
@@ -36,6 +38,7 @@ Button.propTypes = {
     }
     return null;
   },
+  name: PropTypes.string,
   children: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,

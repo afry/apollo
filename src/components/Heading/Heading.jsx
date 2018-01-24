@@ -5,23 +5,39 @@ import * as styles from './Heading.css';
 
 export default class Heading extends React.PureComponent {
   render() {
-    const Element = this.props.element;
-    return <Element className={styles.Heading}>{this.props.children}</Element>;
+    if (this.props.h1) {
+      return <h1 className={styles.Heading}>{this.props.children}</h1>;
+    } else if (this.props.h2) {
+      return <h2 className={styles.Heading}>{this.props.children}</h2>;
+    } else if (this.props.h3) {
+      return <h3 className={styles.Heading}>{this.props.children}</h3>;
+    } else if (this.props.h4) {
+      return <h4 className={styles.Heading}>{this.props.children}</h4>;
+    } else if (this.props.h5) {
+      return <h5 className={styles.Heading}>{this.props.children}</h5>;
+    } else if (this.props.h6) {
+      return <h6 className={styles.Heading}>{this.props.children}</h6>;
+    }
+    return null;
   }
 }
 
 Heading.defaultProps = {
-  element: 'h2',
+  h1: false,
+  h2: false,
+  h3: false,
+  h4: false,
+  h5: false,
+  h6: false,
   children: undefined,
 };
 
 Heading.propTypes = {
-  element(props, propName) {
-    const value = props[propName];
-    if (!value.match(/^h1|h2|h3|h4|h5|h6|p$/)) {
-      return new Error(`Invalid input value: ${value} for propName: ${propName}`);
-    }
-    return null;
-  },
+  h1: PropTypes.bool,
+  h2: PropTypes.bool,
+  h3: PropTypes.bool,
+  h4: PropTypes.bool,
+  h5: PropTypes.bool,
+  h6: PropTypes.bool,
   children: PropTypes.string,
 };

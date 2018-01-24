@@ -1,0 +1,24 @@
+.DatePicker {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  width: 320px;
+  height: 40px;
+  margin: 5px 0px;
+  padding: 0px 5px;
+  background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  background-color: #fff;
+  border: 1px solid initial;
+}
+
+.DatePicker::-webkit-clear-button {
+  display: none;
+}
+
+.DatePicker::-webkit-inner-spin-button {
+  display: none;
+}
+
+.DatePicker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Label from '../Label';
+
 import * as styles from './RadioButton.css';
 
 export default class RadioButton extends React.Component {
@@ -10,27 +12,31 @@ export default class RadioButton extends React.Component {
   }
 
   handleChange(ev) {
-    if (this.props.onChange == null) { return; }
-    this.props.onChange(ev.target.checked, this.props.value);
+    const { onChange } = this.props;
+    if (onChange == null) { return; }
+    onChange(ev.target.checked, this.props.value);
   }
 
   render() {
     return (
-      <label>
-        <input
-          type="radio"
-          className={styles.RadioButton}
-          name={this.props.name}
-          value={this.props.value}
-          checked={this.props.checked}
-          disabled={this.props.disabled}
-          readOnly={this.props.readOnly}
-          onChange={this.handleChange}
-          onFocus={this.props.onFocus}
-          onBlur={this.props.onBlur}
-        />
-        {this.props.label}
-      </label>
+      <div>
+        <Label>
+          <input
+            type="radio"
+            className={styles.RadioButton}
+            name={this.props.name}
+            value={this.props.value}
+            checked={this.props.checked}
+            disabled={this.props.disabled}
+            readOnly={this.props.readOnly}
+            onChange={this.handleChange}
+            onFocus={this.props.onFocus}
+            onBlur={this.props.onBlur}
+          />
+          {this.props.label}
+          <div className={styles.Description}>{this.props.description}</div>
+        </Label>
+      </div>
     );
   }
 }
@@ -38,6 +44,7 @@ export default class RadioButton extends React.Component {
 RadioButton.defaultProps = {
   name: undefined,
   label: undefined,
+  description: undefined,
   value: undefined,
   checked: false,
   disabled: false,
@@ -49,8 +56,9 @@ RadioButton.defaultProps = {
 
 RadioButton.propTypes = {
   name: PropTypes.string,
-  value: PropTypes.string,
   label: PropTypes.string,
+  description: PropTypes.string,
+  value: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,

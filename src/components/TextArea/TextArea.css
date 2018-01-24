@@ -1,0 +1,9 @@
+.TextArea {
+  position: relative;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 5px 0px;
+  padding: 5px;
+  font-size: 16px;
+}
