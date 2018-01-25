@@ -69,6 +69,7 @@ export default class ProjectRegistrationWizard extends React.Component {
   render() {
     const divStyle = {
       height: '750px',
+      width: '1250px',
     };
 
     return (
