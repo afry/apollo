@@ -8,7 +8,7 @@ module.exports = {
     path.join(__dirname, 'index.jsx'),
   ],
   output: {
-    filename: '[name].js',
+    filename: 'apollo.js',
     path: path.resolve(__dirname, 'assets'),
     publicPath: '/assets/',
   },
@@ -18,7 +18,7 @@ module.exports = {
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
     alias: {
-      '@afconsult/apollo': path.resolve(__dirname, '..', 'src'),
+      '@afconsult/apollo': path.resolve(__dirname, '../src'),
     },
   },
   plugins: [
