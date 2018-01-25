@@ -1,6 +1,6 @@
 {
   "name": "@afconsult/apollo",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
   "repository": "https://github.com/afconsult/apollo",
@@ -25,7 +25,7 @@
     "build": "npm-run-all build-dev build-prod",
     "build-dev": "cross-env NODE_ENV=develop webpack --config ./webpack.config.js",
     "build-prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
-    "dev": "webpack-dev-server --config ./playground/webpack.config.js --inline",
+    "dev": "cross-env NODE_ENV=develop webpack-dev-server --config ./playground/webpack.config.js --inline",
     "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev",
     "publish": "npm publish"
   },

@@ -22,7 +22,7 @@ function getPlugins(prod) {
     ];
   }
 
-  return [ new ExtractTextPlugin('css/apollo.css') ];
+  return [new ExtractTextPlugin('css/apollo.css')];
 }
 
 module.exports = {
@@ -30,6 +30,7 @@ module.exports = {
   output: {
     filename: (ENV_PROD) ? 'js/apollo.min.js' : 'js/apollo.js',
     path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
   },
   plugins: getPlugins(ENV_PROD),
   resolve: {
