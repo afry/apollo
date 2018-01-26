@@ -1,0 +1,10 @@
+language: node_js
+node_js: 
+  - "stable"
+
+branches: 
+  only: 
+    - master
+    - develop
+
+script: yarn check:ci

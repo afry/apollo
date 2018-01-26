@@ -21,13 +21,18 @@
     "README.md"
   ],
   "scripts": {
+    "publish": "npm publish",
+    "lint": "eslint . --max-warnings 0",
     "test": "jest",
-    "build": "npm-run-all build-dev build-prod",
-    "build-dev": "cross-env NODE_ENV=develop webpack --config ./webpack.config.js",
-    "build-prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
-    "dev": "cross-env NODE_ENV=develop webpack-dev-server --config ./playground/webpack.config.js --inline",
-    "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev",
-    "publish": "npm publish"
+    "test:ci": "yarn run test --runInBand",
+    "tyest:watch": "yarn run test --watch",
+    "check": "npm-run-all lint test",
+    "check:ci": "npm-run-all lint test:ci",
+    "build": "npm-run-all build:dev build:prod",
+    "build:dev": "cross-env NODE_ENV=develop webpack --config ./webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
+    "dev": "webpack-dev-server --config ./playground/webpack.config.js --inline",
+    "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
@@ -74,15 +79,6 @@
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-server": "^2.11.0",
     "webpack-licenses-plugin": "^0.0.3"
-  },
-  "eslintConfig": {
-    "extends": "airbnb",
-    "env": {
-      "browser": true
-    },
-    "rules": {
-      "react/require-extension": "off"
-    }
   },
   "jest": {
     "setupFiles": [

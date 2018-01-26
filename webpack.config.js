@@ -12,9 +12,9 @@ function getPlugins(prod) {
       new ExtractTextPlugin('css/apollo.min.css'),
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /\.min\.css$/g,
+        canPrint: true,
         cssProcessor: cssnano,
         cssProcessorOptions: { discardComments: { removeAll: true } },
-        canPrint: true,
       }),
       new UglifyJSPlugin({
         extractComments: true,
@@ -27,25 +27,16 @@ function getPlugins(prod) {
 
 module.exports = {
   entry: './src/apollo.js',
-  output: {
-    filename: (ENV_PROD) ? 'js/apollo.min.js' : 'js/apollo.js',
-    path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
-  },
-  plugins: getPlugins(ENV_PROD),
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   module: {
     loaders: [
       {
-        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: ['babel-loader'],
+        test: /\.(js|jsx)$/,
       },
       {
-        test: /\.css$/,
         exclude: /node_modules/,
+        test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -60,5 +51,13 @@ module.exports = {
       },
     ],
   },
+  output: {
+    filename: (ENV_PROD) ? 'js/apollo.min.js' : 'js/apollo.js',
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: getPlugins(ENV_PROD),
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
-
