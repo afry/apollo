@@ -29,8 +29,8 @@
     "check": "npm-run-all lint test",
     "check:ci": "npm-run-all lint test:ci",
     "build": "npm-run-all build:dev build:prod",
-    "build:dev": "cross-env NODE_ENV=develop webpack --config ./webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
+    "build:dev": "webpack --config ./webpack.config.js",
+    "build:prod": "webpack --env.NODE_ENV=production --env.prod --config ./webpack.config.js",
     "dev": "webpack-dev-server --config ./playground/webpack.config.js --inline",
     "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev"
   },
