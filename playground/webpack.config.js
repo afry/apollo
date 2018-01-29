@@ -15,7 +15,7 @@ module.exports = {
       {
         exclude: /node_modules/,
         loader: ['babel-loader'],
-        test: /\.(js|jsx)$/,
+        test: /\.js(x)$/,
       },
       {
         loader: combineLoaders([
@@ -24,10 +24,16 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            query: {
+            options: {
               localIdentName: '[name]__[local]__[hash:base64:5]',
               modules: true,
             },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: { file: '../postcss.config.js' },
+            }
           },
         ]),
         test: /\.css$/,

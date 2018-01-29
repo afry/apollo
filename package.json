@@ -25,7 +25,7 @@
     "lint": "eslint . --max-warnings 0",
     "test": "jest",
     "test:ci": "yarn run test --runInBand",
-    "tyest:watch": "yarn run test --watch",
+    "test:watch": "yarn run test --watch",
     "check": "npm-run-all lint test",
     "check:ci": "npm-run-all lint test:ci",
     "build": "npm-run-all build:dev build:prod",

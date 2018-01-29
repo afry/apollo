@@ -8,13 +8,13 @@ module.exports = (env) => {
   const isDevBuild = !(env && env.prod);
 
   return {
-    entry: './src/apollo.js',
+    entry: './src/index.js',
     module: {
       loaders: [
         {
           exclude: /node_modules/,
           loader: ['babel-loader'],
-          test: /\.(js|jsx)$/,
+          test: /\.js(x)$/,
         },
         {
           exclude: /node_modules/,
@@ -24,9 +24,11 @@ module.exports = (env) => {
             use: [
               {
                 loader: 'css-loader',
-                options: {
-                  minimize: !isDevBuild,
-                },
+                options: { importLoaders: 1 },
+              },
+              {
+                loader: 'postcss-loader',
+                options: {},
               },
             ],
           }),

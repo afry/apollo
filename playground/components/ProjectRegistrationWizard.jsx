@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wizard, WizardPage, Form, DatePicker, Checkbox, RadioButton, InputField, TextArea } from '../../src/apollo';
+import { Wizard, WizardPage, Form, DatePicker, Checkbox, RadioButton, InputField, TextArea } from '../../src/index';
 
 export default class ProjectRegistrationWizard extends React.Component {
   constructor(props) {
