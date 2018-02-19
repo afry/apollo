@@ -66,9 +66,9 @@ export default class Wizard extends React.Component {
     return children.map((child, index) => (
       <WizardStep
         key={index}
+        active={self.state.currentStep === index}
         index={index + 1}
         name={child.props.title}
-        active={self.state.currentStep === index}
       />
     ));
   }
@@ -132,21 +132,21 @@ export default class Wizard extends React.Component {
 }
 
 Wizard.defaultProps = {
-  title: undefined,
   description: undefined,
-  onNext: undefined,
-  onPrevious: undefined,
   onCancel: undefined,
   onFinish: undefined,
+  onNext: undefined,
+  onPrevious: undefined,
+  title: undefined,
 };
 
 Wizard.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
   // TODO(jon): should expect children to be of type WizardPage.
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  onNext: PropTypes.func,
-  onPrevious: PropTypes.func,
+  description: PropTypes.string,
   onCancel: PropTypes.func,
   onFinish: PropTypes.func,
+  onNext: PropTypes.func,
+  onPrevious: PropTypes.func,
+  title: PropTypes.string,
 };

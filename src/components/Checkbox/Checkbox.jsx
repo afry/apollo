@@ -22,15 +22,15 @@ export default class Checkbox extends React.Component {
       <div>
         <Label>
           <input
-            type="checkbox"
-            className={styles.Checkbox}
-            name={this.props.name}
-            value={this.props.value}
             checked={this.props.checked}
+            className={styles.Checkbox}
             disabled={this.props.disabled}
+            name={this.props.name}
+            onBlur={this.props.onBlur}
             onChange={this.handleChange}
             onFocus={this.props.onFocus}
-            onBlur={this.props.onBlur}
+            type="checkbox"
+            value={this.props.value}
           />
           {this.props.label}
           <div className={styles.Description}>{this.props.description}</div>
@@ -41,25 +41,25 @@ export default class Checkbox extends React.Component {
 }
 
 Checkbox.defaultProps = {
-  name: undefined,
-  label: undefined,
-  description: undefined,
-  value: undefined,
   checked: false,
+  description: undefined,
   disabled: false,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
-  onBlur: undefined,
+  value: undefined,
 };
 
 Checkbox.propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  description: PropTypes.string,
-  value: PropTypes.string,
   checked: PropTypes.bool,
+  description: PropTypes.string,
   disabled: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
+  value: PropTypes.string,
 };

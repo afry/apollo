@@ -8,12 +8,12 @@ export default class Button extends React.PureComponent {
     return (
       <button
         className={styles.Button}
-        type={this.props.type}
+        disabled={this.props.disabled}
         name={this.props.name}
+        onBlur={this.props.onBlur}
         onClick={this.props.onClick}
         onFocus={this.props.onFocus}
-        onBlur={this.props.onBlur}
-        disabled={this.props.disabled}
+        type={this.props.type}
       >{this.props.children}
       </button>
     );
@@ -21,16 +21,22 @@ export default class Button extends React.PureComponent {
 }
 
 Button.defaultProps = {
-  type: 'button',
-  name: undefined,
   children: undefined,
   disabled: false,
+  name: undefined,
+  onBlur: undefined,
   onClick: undefined,
   onFocus: undefined,
-  onBlur: undefined,
+  type: 'button',
 };
 
 Button.propTypes = {
+  children: PropTypes.string,
+  disabled: PropTypes.bool,
+  name: PropTypes.string,
+  onBlur: PropTypes.func,
+  onClick: PropTypes.func,
+  onFocus: PropTypes.func,
   type(props, propName) {
     const value = props[propName];
     if (!value.match(/^button|submit|reset$/)) {
@@ -38,10 +44,4 @@ Button.propTypes = {
     }
     return null;
   },
-  name: PropTypes.string,
-  children: PropTypes.string,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
 };

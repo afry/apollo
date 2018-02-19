@@ -23,16 +23,16 @@ export default class TextArea extends React.Component {
       <Label>{this.props.label}
         <textarea
           className={styles.TextArea}
-          name={this.props.name}
-          value={this.props.value}
-          placeholder={this.props.placeholder}
-          maxLength={this.props.maxLength}
-          rows={this.props.rows}
           cols={this.props.cols}
           disabled={this.props.disabled}
-          required={this.props.required}
-          readOnly={this.props.readOnly}
+          maxLength={this.props.maxLength}
+          name={this.props.name}
           onChange={this.handleChange}
+          placeholder={this.props.placeholder}
+          readOnly={this.props.readOnly}
+          required={this.props.required}
+          rows={this.props.rows}
+          value={this.props.value}
         />
       </Label>
     );
@@ -40,29 +40,29 @@ export default class TextArea extends React.Component {
 }
 
 TextArea.defaultProps = {
-  name: undefined,
-  value: undefined,
-  label: undefined,
-  placeholder: undefined,
-  maxLength: undefined,
-  rows: '5',
   cols: '50',
   disabled: false,
-  required: false,
-  readOnly: false,
+  label: undefined,
+  maxLength: undefined,
+  name: undefined,
   onChange: undefined,
+  placeholder: undefined,
+  readOnly: false,
+  required: false,
+  rows: '5',
+  value: undefined,
 };
 
 TextArea.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
-  label: PropTypes.string,
-  placeholder: PropTypes.string,
-  maxLength: PropTypes.string,
-  rows: PropTypes.string,
   cols: PropTypes.string,
   disabled: PropTypes.bool,
-  required: PropTypes.bool,
-  readOnly: PropTypes.bool,
+  label: PropTypes.string,
+  maxLength: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
+  rows: PropTypes.string,
+  value: PropTypes.string,
 };

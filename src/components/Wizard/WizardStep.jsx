@@ -10,20 +10,20 @@ export default class WizardStep extends React.PureComponent {
 
     return (
       <div className={classNames}>
-        <hr />{this.props.index}. {this.props.name}
+        <hr />{this.props.index} {this.props.name}
       </div>
     );
   }
 }
 
 WizardStep.defaultProps = {
-  index: 0,
   active: false,
+  index: 0,
   name: undefined,
 };
 
 WizardStep.propTypes = {
-  index: PropTypes.number,
   active: PropTypes.bool,
+  index: PropTypes.number,
   name: PropTypes.string,
 };

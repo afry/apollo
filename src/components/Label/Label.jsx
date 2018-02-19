@@ -6,7 +6,7 @@ import * as styles from './Label.css';
 export default class InputField extends React.PureComponent {
   render() {
     return (
-      <label htmlFor={this.props.htmlFor} className={styles.Label}>
+      <label className={styles.Label} htmlFor={this.props.htmlFor}>
         {this.props.children}
       </label>
     );

@@ -21,21 +21,21 @@ export default class InputField extends React.Component {
     return (
       <Label>{this.props.label}
         <input
+          autoComplete={this.props.autoComplete ? 'on' : 'off'}
           className={styles.InputField}
-          type={this.props.type}
-          name={this.props.name}
-          value={this.props.value}
-          placeholder={this.props.placeholder}
-          required={this.props.required}
-          min={this.props.min}
+          disabled={this.props.disabled}
           max={this.props.max}
           maxLength={this.props.maxLength}
-          disabled={this.props.disabled}
-          readOnly={this.props.readOnly}
-          autoComplete={this.props.autoComplete ? 'on' : 'off'}
+          min={this.props.min}
+          name={this.props.name}
+          onBlur={this.props.onBlur}
           onChange={this.handleChange}
           onFocus={this.props.onFocus}
-          onBlur={this.props.onBlur}
+          placeholder={this.props.placeholder}
+          readOnly={this.props.readOnly}
+          required={this.props.required}
+          type={this.props.type}
+          value={this.props.value}
         />
       </Label>
     );
@@ -43,24 +43,37 @@ export default class InputField extends React.Component {
 }
 
 InputField.defaultProps = {
-  type: 'text',
-  name: undefined,
-  value: undefined,
+  autoComplete: false,
+  disabled: false,
   label: undefined,
-  placeholder: undefined,
-  required: false,
-  min: undefined,
   max: undefined,
   maxLength: undefined,
-  disabled: false,
-  readOnly: false,
-  autoComplete: false,
+  min: undefined,
+  name: undefined,
+  onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
-  onBlur: undefined,
+  placeholder: undefined,
+  readOnly: false,
+  required: false,
+  type: 'text',
+  value: undefined,
 };
 
 InputField.propTypes = {
+  autoComplete: PropTypes.bool,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  max: PropTypes.string,
+  maxLength: PropTypes.string,
+  min: PropTypes.string,
+  name: PropTypes.string,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
   type(props, propName) {
     const value = props[propName];
     if (!value.match(/^text|number|password|email|tel$/)) {
@@ -68,18 +81,5 @@ InputField.propTypes = {
     }
     return null;
   },
-  name: PropTypes.string,
   value: PropTypes.string,
-  label: PropTypes.string,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  min: PropTypes.string,
-  max: PropTypes.string,
-  maxLength: PropTypes.string,
-  disabled: PropTypes.bool,
-  readOnly: PropTypes.bool,
-  autoComplete: PropTypes.bool,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
 };

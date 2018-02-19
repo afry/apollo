@@ -23,21 +23,21 @@ export default class Heading extends React.PureComponent {
 }
 
 Heading.defaultProps = {
+  children: undefined,
   h1: false,
   h2: false,
   h3: false,
   h4: false,
   h5: false,
   h6: false,
-  children: undefined,
 };
 
 Heading.propTypes = {
+  children: PropTypes.string,
   h1: PropTypes.bool,
   h2: PropTypes.bool,
   h3: PropTypes.bool,
   h4: PropTypes.bool,
   h5: PropTypes.bool,
   h6: PropTypes.bool,
-  children: PropTypes.string,
 };

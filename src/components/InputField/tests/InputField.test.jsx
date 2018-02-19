@@ -80,12 +80,12 @@ describe('<InputField />', () => {
   describe('required', () => {
     it('sets the required attribute on the input field', () => {
       const input = shallow(<InputField required />);
-      expect(input.find('input').prop('required')).toBe(true)
+      expect(input.find('input').prop('required')).toBe(true);
     });
 
     it('sets the required attribute on the input field', () => {
       const input = shallow(<InputField required={false} />);
-      expect(input.find('input').prop('required')).toBe(false)
+      expect(input.find('input').prop('required')).toBe(false);
     });
   });
 
@@ -115,14 +115,14 @@ describe('<InputField />', () => {
 
   describe('min', () => {
     it('sets the min attribute on the input field', () => {
-      const input = shallow(<InputField type="number" min="4" />);
+      const input = shallow(<InputField min="4" type="number" />);
       expect(input.find('input').prop('min')).toBe('4');
     });
   });
 
   describe('max', () => {
     it('sets the max attribute on the input field', () => {
-      const input = shallow(<InputField type="number" max="10" />);
+      const input = shallow(<InputField max="10" type="number" />);
       expect(input.find('input').prop('max')).toBe('10');
     });
   });

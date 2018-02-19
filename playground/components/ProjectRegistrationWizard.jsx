@@ -6,13 +6,13 @@ export default class ProjectRegistrationWizard extends React.Component {
     super(props);
 
     this.state = {
-      generateId: false,
-      projectId: '',
-      projectTitle: '',
-      projectDescription: '',
-      customer: '',
       contactPerson: '',
+      customer: '',
+      generateId: false,
+      projectDescription: '',
+      projectId: '',
       projectManager: '',
+      projectTitle: '',
       startingDate: '',
       visibility: 'visible',
     };
@@ -75,37 +75,37 @@ export default class ProjectRegistrationWizard extends React.Component {
     return (
       <div style={divStyle}>
         <Wizard
-          title="New project"
           description=""
           onCancel={() => {}}
           onFinish={() => {}}
+          title="New project"
         >
-          <WizardPage title="Project ID" description="">
+          <WizardPage description="" title="Project ID">
             <Form>
-              <InputField type="number" label="ID" value={this.state.projectId} placeholder="Lime or PX" onChange={this.handleProjectIdChange} disabled={this.state.generateId} />
-              <Checkbox label="This project does not have an ID" hint="Press me if you'd like a generated id." checked={this.state.generateId} onChange={this.handleGenerateIdChange} />
+              <InputField disabled={this.state.generateId} label="ID" onChange={this.handleProjectIdChange} placeholder="Lime or PX" type="number" value={this.state.projectId} />
+              <Checkbox checked={this.state.generateId} hint="Press me if you'd like a generated id." label="This project does not have an ID" onChange={this.handleGenerateIdChange} />
             </Form>
           </WizardPage>
-          <WizardPage title="Title & description" description="">
+          <WizardPage description="" title="Title & description">
             <Form>
-              <InputField label="Title" value={this.state.projectTitle} placeholder="Name your project" onChange={this.handleProjectTitleChange} />
-              <TextArea label="Project description" value={this.state.projectDescription} placeholder="Describe your project" onChange={this.handleProjectDescriptionChange} />
+              <InputField label="Title" onChange={this.handleProjectTitleChange} placeholder="Name your project" value={this.state.projectTitle} />
+              <TextArea label="Project description" onChange={this.handleProjectDescriptionChange} placeholder="Describe your project" value={this.state.projectDescription} />
             </Form>
           </WizardPage>
-          <WizardPage title="Who is the customer?" description="">
+          <WizardPage title="Who is the customer?">
             <Form>
-              <InputField label="Customer" value={this.state.customer} placeholder="Name" onChange={this.handleCustomerChange} />
-              <InputField label="Contact person" value={this.state.contactPerson} placeholder="Name" onChange={this.handleContactPersonChange} />
+              <InputField label="Customer" onChange={this.handleCustomerChange} placeholder="Name" value={this.state.customer} />
+              <InputField label="Contact person" onChange={this.handleContactPersonChange} placeholder="Name" value={this.state.contactPerson} />
             </Form>
           </WizardPage>
-          <WizardPage title="Administrative info" description="Project manager from ÅF, starting date and security level.">
+          <WizardPage description="Project manager from ÅF, starting date and security level." title="Administrative info">
             <Form>
-              <InputField label="Project manager" value={this.state.projectManager} placeholder="Name" onChange={this.handleProjectManagerChange} />
-              <DatePicker label="Starting date" value={this.state.startingDate} placeholder={new Date().toISOString().substr(0, 10)} onChange={this.handleStartintDateChange} />
+              <InputField label="Project manager" onChange={this.handleProjectManagerChange} placeholder="Name" value={this.state.projectManager} />
+              <DatePicker label="Starting date" onChange={this.handleStartintDateChange} placeholder={new Date().toISOString().substr(0, 10)} value={this.state.startingDate} />
             </Form>
             <Form>
-              <RadioButton value="visible" label="Visible for ÅF co-workers" description="" checked={this.state.visibility === 'visible'} onChange={this.handleVisibilityChange} />
-              <RadioButton value="hidden" label="Classified" description="This project will only be shown for invited members." checked={this.state.visibility === 'hidden'} onChange={this.handleVisibilityChange} />
+              <RadioButton checked={this.state.visibility === 'visible'} label="Visible for ÅF co-workers" onChange={this.handleVisibilityChange} value="visible" />
+              <RadioButton checked={this.state.visibility === 'hidden'} description="This project will only be shown for invited members." label="Classified" onChange={this.handleVisibilityChange} value="hidden" />
             </Form>
           </WizardPage>
         </Wizard>

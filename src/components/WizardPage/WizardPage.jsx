@@ -18,13 +18,13 @@ export default class WizardPage extends React.PureComponent {
 }
 
 WizardPage.defaultProps = {
-  title: undefined,
-  description: undefined,
   children: undefined,
+  description: undefined,
+  title: undefined,
 };
 
 WizardPage.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
   children: PropTypes.node,
+  description: PropTypes.string,
+  title: PropTypes.string,
 };

@@ -22,13 +22,13 @@ export default class DatePicker extends React.Component {
       <Label>{this.props.label}
         <input
           className={styles.DatePicker}
-          type="date"
-          name={this.props.name}
-          value={this.props.value}
-          placeholder={this.props.placeholder}
           disabled={this.props.disabled}
-          readOnly={this.props.readOnly}
+          name={this.props.name}
           onChange={this.handleChange}
+          placeholder={this.props.placeholder}
+          readOnly={this.props.readOnly}
+          type="date"
+          value={this.props.value}
         />
       </Label>
     );
@@ -36,21 +36,21 @@ export default class DatePicker extends React.Component {
 }
 
 DatePicker.defaultProps = {
-  name: undefined,
-  label: undefined,
-  value: undefined,
-  placeholder: undefined,
   disabled: false,
-  readOnly: false,
+  label: undefined,
+  name: undefined,
   onChange: undefined,
+  placeholder: undefined,
+  readOnly: false,
+  value: undefined,
 };
 
 DatePicker.propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  readOnly: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
+  value: PropTypes.string,
 };

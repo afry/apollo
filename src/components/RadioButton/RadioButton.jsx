@@ -22,16 +22,16 @@ export default class RadioButton extends React.Component {
       <div>
         <Label>
           <input
-            type="radio"
-            className={styles.RadioButton}
-            name={this.props.name}
-            value={this.props.value}
             checked={this.props.checked}
+            className={styles.RadioButton}
             disabled={this.props.disabled}
-            readOnly={this.props.readOnly}
+            name={this.props.name}
+            onBlur={this.props.onBlur}
             onChange={this.handleChange}
             onFocus={this.props.onFocus}
-            onBlur={this.props.onBlur}
+            readOnly={this.props.readOnly}
+            type="radio"
+            value={this.props.value}
           />
           {this.props.label}
           <div className={styles.Description}>{this.props.description}</div>
@@ -42,28 +42,27 @@ export default class RadioButton extends React.Component {
 }
 
 RadioButton.defaultProps = {
-  name: undefined,
-  label: undefined,
-  description: undefined,
-  value: undefined,
   checked: false,
+  description: undefined,
   disabled: false,
-  readOnly: false,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
-  onBlur: undefined,
+  readOnly: false,
+  value: undefined,
 };
 
 RadioButton.propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  description: PropTypes.string,
-  value: PropTypes.string,
   checked: PropTypes.bool,
+  description: PropTypes.string,
   disabled: PropTypes.bool,
-  readOnly: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
+  readOnly: PropTypes.bool,
+  value: PropTypes.string,
 };
-
