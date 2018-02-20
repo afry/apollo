@@ -1,7 +1,8 @@
-.Label {
-  display: block;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+.label {
   margin: 0; 
   padding: 5px 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: left;
 }
