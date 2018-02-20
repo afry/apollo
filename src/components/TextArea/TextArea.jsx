@@ -20,9 +20,10 @@ export default class TextArea extends React.Component {
 
   render() {
     return (
-      <Label>{this.props.label}
+      <div>
+        <Label>{this.props.label}</Label>
         <textarea
-          className={styles.TextArea}
+          className={styles.textarea}
           cols={this.props.cols}
           disabled={this.props.disabled}
           maxLength={this.props.maxLength}
@@ -34,13 +35,13 @@ export default class TextArea extends React.Component {
           rows={this.props.rows}
           value={this.props.value}
         />
-      </Label>
+      </div>
     );
   }
 }
 
 TextArea.defaultProps = {
-  cols: '50',
+  cols: '39',
   disabled: false,
   label: undefined,
   maxLength: undefined,
