@@ -19,10 +19,11 @@ export default class InputField extends React.Component {
 
   render() {
     return (
-      <Label>{this.props.label}
+      <div>
+        <Label>{this.props.label}</Label>
         <input
           autoComplete={this.props.autoComplete ? 'on' : 'off'}
-          className={styles.InputField}
+          className={styles.inputfield}
           disabled={this.props.disabled}
           max={this.props.max}
           maxLength={this.props.maxLength}
@@ -37,7 +38,7 @@ export default class InputField extends React.Component {
           type={this.props.type}
           value={this.props.value}
         />
-      </Label>
+      </div>
     );
   }
 }
