@@ -21,7 +21,7 @@ export default class DatePicker extends React.Component {
     return (
       <Label>{this.props.label}
         <input
-          className={styles.DatePicker}
+          className={styles.datepicker}
           disabled={this.props.disabled}
           name={this.props.name}
           onChange={this.handleChange}
