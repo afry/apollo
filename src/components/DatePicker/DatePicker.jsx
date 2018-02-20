@@ -19,7 +19,8 @@ export default class DatePicker extends React.Component {
 
   render() {
     return (
-      <Label>{this.props.label}
+      <div>
+        <Label>{this.props.label}</Label>
         <input
           className={styles.datepicker}
           disabled={this.props.disabled}
@@ -30,7 +31,7 @@ export default class DatePicker extends React.Component {
           type="date"
           value={this.props.value}
         />
-      </Label>
+      </div>
     );
   }
 }
