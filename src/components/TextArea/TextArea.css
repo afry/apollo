@@ -14,3 +14,7 @@
 .textarea:hover {
   border-color: #025FAE;
 }
+
+.textarea:disabled {
+	background-color: #F6F6F6;
+}
