@@ -16,7 +16,7 @@ module.exports = (env) => {
           exclude: /node_modules/,
           loader: [
             'babel-loader',
-            'react-classname-prefix-loader?prefix=Apollo'
+            'react-classname-prefix-loader?prefix=apollo'
           ],
           test: /\.js(x)$/,
         },
@@ -36,7 +36,7 @@ module.exports = (env) => {
                   ident: 'postcss',
                   plugins: [
                     postcssprefixer({
-                      prefix: 'Apollo-',
+                      prefix: 'apollo-',
                       ignore: [''], // eslint-disable-line
                     }),
                   ],
