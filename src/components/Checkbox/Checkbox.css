@@ -1,14 +1,68 @@
-.Checkbox {
+.checkbox {
+  display: block;
   position: relative;
-  width: 25px;
-  height: 25px;
-  margin: 0 5px 0 0;
+  padding-left: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.Description {
+.checkbox input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.checkbox .checkmark {
   position: absolute;
-  font-size: 14px;
-  color: gray;
-  margin-left: 30px;
-  margin-top: 10px;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--color-stone);
+  border-radius: 3px;
+}
+
+.checkbox:hover input ~ .checkmark {
+  border: 2px solid var(--color-one-blue);
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: var(--color-one-blue);
+  border: 1px solid var(--color-one-blue);
+}
+
+.checkbox input:disabled ~ .checkmark {
+  background-color: var(--color-misty);
+  border-color: var(--color-misty);
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
