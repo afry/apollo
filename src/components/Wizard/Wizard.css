@@ -1,70 +1,85 @@
-.Wizard {
+.wizard {
   position: relative;
+  width: 1250px;
+  height: 750px;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  padding: 0 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  background-color: var(--color-one-darkest-blue);
+}
+
+.header-nav {
+  position: absolute;
   width: 100%;
   height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.LeftPanel {
-  display: inline-flex;
-  float: left;
-  width: 25%;
-  height: 100%;
-  background: darkgray;
-}
-
-.Content {
-  padding: 75px 50px;
-}
-
-.Page {
+  left: 0;
   margin: 0;
   padding: 0;
+  text-align: center;
+  list-style: none;
 }
 
-.LeftPanel .Content {
-  color: #fff;
+.header-nav li {
+  display: inline-block;
+  text-align: center;
+  padding: 1.55rem 2rem;
 }
 
-.Steps {
-  margin-top: 50px;
+.header-nav li a {
+  color: var(--color-misty);
+  text-decoration: none;
 }
 
-.Step {
-  position: relative;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
-  color: gray;
+.header-nav li a:active {
+  color: var(--color-white);
 }
 
-.Step.active {
-  color: white;
-}
-
-.Step.active hr{
-  background: white;
-  border-color: white;
-}
-
-hr {  
-  float: left;
-  width: 1px;
-  height: 35px;
-  padding: 0;
-  margin: -10px 15px 0 0;
-  background: gray;
-  border: 1px solid gray;
-}
-
-.RightPanel {
-  position: relative;
-  display: inline-flex;
-  float: right;
-  width: 75%;
-  height: 100%;
+.brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: inherit;
+  white-space: nowrap;
+  color: var(--color-white);
 }
 
 .Footer {
@@ -74,7 +89,16 @@ hr {
   bottom: 0;
 }
 
-.ButtonGroup {
+.button-group {
+  width: 100%;
+}
+
+.button-group-left {
+  float: left;
+  margin: 0 50px;
+}
+
+.button-group-right {
   float: right;
   margin: 0 50px;
 }

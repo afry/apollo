@@ -1,3 +1,12 @@
-.WizardPage {
+.wizardpage {
+    width: 100%;
+}
 
+.heading {
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 16px;
 }

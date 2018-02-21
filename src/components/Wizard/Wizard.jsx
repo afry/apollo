@@ -3,9 +3,24 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
-import WizardStep from './WizardStep';
 
 import * as styles from './Wizard.css';
+
+const Navlink = ({ children }) => <li><a>{children}</a></li>;
+
+const Header = (props) => {
+  return (
+    <div className={styles.header}>
+      <div className={styles.brand}>One</div>
+      <ul className={styles['header-nav']}>
+        <Navlink>Create Project</Navlink>
+        <Navlink>Description</Navlink>
+        <Navlink>Customer</Navlink>
+        <Navlink>Administrative Info</Navlink>
+      </ul>
+    </div>
+  );
+};
 
 export default class Wizard extends React.Component {
   constructor(props) {
@@ -75,78 +90,82 @@ export default class Wizard extends React.Component {
 
   renderButtonGroup() {
     const { children } = this.props;
-    const len = children ? children.length : 0;
-
     const { currentStep } = this.state;
 
+    const len = children ? children.length : 0;
+
     return (
-      <div className={styles.ButtonGroup}>
-        <Button onClick={this.handleCancel}>Cancel</Button>
-        {
-          (currentStep > 0) &&
-            <Button onClick={this.handlePrevious}>Previous</Button>
-        }
-        {
-          (len > 0 && currentStep === len - 1) &&
-            <Button onClick={this.handleFinish}>Finish</Button>
-        }
-        {
-          (len > 0 && currentStep < len - 1) &&
-            <Button onClick={this.handleNext}>Next</Button>
-        }
+      <div className={styles['button-group']}>
+        <div className={styles['button-group-left']}>
+          {
+            (currentStep === 0)
+              ? <Button onClick={this.handleCancel}>Cancel</Button>
+              : <Button onClick={this.handlePrevious}>Go Back</Button>
+          }
+        </div>
+
+        <div className={styles['button-group-right']}>
+          {
+            (len > 0 && currentStep === len - 1) &&
+              <Button onClick={this.handleFinish} success>Create</Button>
+          }
+          {
+            (len > 0 && currentStep < len - 1) &&
+              <Button onClick={this.handleNext} primary>Next</Button>
+          }
+        </div>
       </div>
     );
   }
 
   render() {
     return (
-      <div className={styles.Wizard}>
-        <div className={styles.LeftPanel}>
-          <div className={styles.Content}>
-            <div>
-              <Heading h1>{this.props.title}</Heading>
-              <Heading h3>{this.props.description}</Heading>
-            </div>
-            <div className={styles.Steps}>
-              {
-                this.renderSteps()
-              }
-            </div>
-          </div>
+      <div className={styles.wizard}>
+        <Header />
+        <div className={styles.content}>
+          {
+            this.renderActivePage()
+          }
         </div>
-        <div className={styles.RightPanel}>
-          <div className={styles.Content}>
-            {
-              this.renderActivePage()
-            }
-          </div>
-          <div className={styles.Footer}>
-            {
-              this.renderButtonGroup()
-            }
-          </div>
+        <div className={styles.Footer}>
+          {
+            this.renderButtonGroup()
+          }
         </div>
       </div>
     );
   }
 }
 
+Navlink.defaultProps = {
+  children: undefined
+};
+
+Navlink.propTypes = {
+  children: PropTypes.string
+};
+
+
+Header.defaultProps = {
+
+};
+
+Header.propTypes = {
+
+};
+
 Wizard.defaultProps = {
-  description: undefined,
   onCancel: undefined,
   onFinish: undefined,
   onNext: undefined,
   onPrevious: undefined,
-  title: undefined,
 };
 
 Wizard.propTypes = {
   // TODO(jon): should expect children to be of type WizardPage.
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  description: PropTypes.string,
   onCancel: PropTypes.func,
   onFinish: PropTypes.func,
   onNext: PropTypes.func,
   onPrevious: PropTypes.func,
-  title: PropTypes.string,
 };
