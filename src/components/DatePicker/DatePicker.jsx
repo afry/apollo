@@ -13,16 +13,15 @@ export default class DatePicker extends React.Component {
 
   handleChange(ev) {
     const { onChange } = this.props;
-    if (onChange === null) { return; }
+    if (onChange == null) { return; }
     onChange(ev.target.value);
   }
 
   render() {
     return (
-      <div>
+      <div className={styles.datepicker}>
         <Label>{this.props.label}</Label>
         <input
-          className={styles.datepicker}
           disabled={this.props.disabled}
           name={this.props.name}
           onChange={this.handleChange}

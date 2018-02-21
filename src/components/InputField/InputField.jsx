@@ -19,11 +19,10 @@ export default class InputField extends React.Component {
 
   render() {
     return (
-      <div className={styles['inputfield-container']}>
+      <div className={styles.inputfield}>
         <Label>{this.props.label}</Label>
         <input
           autoComplete={this.props.autoComplete ? 'on' : 'off'}
-          className={styles.inputfield}
           disabled={this.props.disabled}
           max={this.props.max}
           maxLength={this.props.maxLength}

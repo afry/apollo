@@ -1,10 +1,10 @@
-.inputfield-container {
+.inputfield {
+  position: relative;
   padding: 5px 0;
 }
 
-.inputfield {
+.inputfield input {
   display: block;
-  position: relative;
   width: 370px;
   height: 49.33px;
   border: 1px solid var(--color-dark-gray);
@@ -15,15 +15,15 @@
   padding: 0px 15px;
 }
 
-.inputfield:hover {
+.inputfield:hover input {
   border-color: var(--color-one-blue);
 }
 
-.inputfield:disabled {
+.inputfield:disabled input {
 	background-color: var(--color-light-smoke);
 }
 
-.inputfield[type=number]::-webkit-inner-spin-button {
+.inputfield input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
