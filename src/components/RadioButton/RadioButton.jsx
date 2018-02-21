@@ -19,23 +19,20 @@ export default class RadioButton extends React.Component {
 
   render() {
     return (
-      <div>
-        <Label>
-          <input
-            checked={this.props.checked}
-            className={styles.RadioButton}
-            disabled={this.props.disabled}
-            name={this.props.name}
-            onBlur={this.props.onBlur}
-            onChange={this.handleChange}
-            onFocus={this.props.onFocus}
-            readOnly={this.props.readOnly}
-            type="radio"
-            value={this.props.value}
-          />
-          {this.props.label}
-          <div className={styles.Description}>{this.props.description}</div>
-        </Label>
+      <div className={styles.radiobutton}>
+        <input
+          checked={this.props.checked}
+          disabled={this.props.disabled}
+          name={this.props.name}
+          onBlur={this.props.onBlur}
+          onChange={this.handleChange}
+          onFocus={this.props.onFocus}
+          readOnly={this.props.readOnly}
+          type="radio"
+          value={this.props.value}
+        />
+        <span className={styles.checkmark} />
+        <Label large>{this.props.label}</Label>
       </div>
     );
   }
@@ -43,7 +40,6 @@ export default class RadioButton extends React.Component {
 
 RadioButton.defaultProps = {
   checked: false,
-  description: undefined,
   disabled: false,
   label: undefined,
   name: undefined,
@@ -56,7 +52,6 @@ RadioButton.defaultProps = {
 
 RadioButton.propTypes = {
   checked: PropTypes.bool,
-  description: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,

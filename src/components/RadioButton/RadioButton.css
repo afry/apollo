@@ -1,14 +1,71 @@
-.RadioButton {
+.radiobutton {
+  display: block;
   position: relative;
-  margin: 5px 5px 5px 0px;
-  width: 25px;
-  height: 25px;
+  padding-left: 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.Description {
+.radiobutton input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radiobutton label {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.radiobutton .checkmark {
   position: absolute;
-  font-size: 14px;
-  color: gray;
-  margin-top: 10px;
-  margin-left: 30px;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: 1px solid var(--color-stone);
+  border-radius: 100px;
+}
+
+.radiobutton:hover input ~ .checkmark {
+  border: 2px solid var(--color-one-blue);
+}
+
+.radiobutton input:checked ~ .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-one-blue);
+}
+
+.radiobutton input:disabled ~ .checkmark {
+  background-color: var(--color-white);
+  border-color: var(--color-misty);
+}
+
+.radiobutton .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radiobutton input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radiobutton .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-one-blue);
+}
+
+.radiobutton input:disabled ~ .checkmark:after {
+  background-color: var(--color-misty);
 }
