@@ -4,70 +4,55 @@
   margin: 5px 0px;
   font-size: 16px;
   border-radius: 6px;
-  /* border: 1px solid var(--color-dark-gray); */
-  border: 1px solid #A3A3A3;
-  /* background-color: var(--color-white); */
-  background-color: #FFFFFF;
-  /* color: var(--color-charcoal); */
-  color: #505050;
+  border: 1px solid var(--color-dark-gray);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
 }
 
 .button:hover {
-  /* background-color: var(--color-marble); */
-  background-color: #F0F0F0;
+  background-color: var(--color-marble);
 }
 
-.small {
+.button-small {
   height: 40px;
   width: 144px;
 }
 
-.large {
+.button-large {
   height: 56px;
   width: 145px;
 }
 
-.primary {
-  /* background-color: var(--color-one-blue); */
-  background-color: #025FAE;
-  border-color: #025FAE;
-  /* color: var(--color-white); */
-  color: #FFFF;
+.button-primary {
+  background-color: var(--color-one-blue);
+  border-color: var(--color-one-blue);
+  color: var(--color-white);
 }
 
-.primary:hover {
-  /* background-color: var(--color-one-dark-blue); */
-  background-color: #014385;
+.button-primary:hover {
+  background-color: var(--color-one-dark-blue);
 }
 
-.danger { 
+.button-danger { 
   height: 48px;
   widows: 150px;
-  /* background-color: var(--color-red-status); */
-  background-color: #D14D4D;
-  /* border-color: var(--color-red-status) */
-  border-color: #D14D4D;
-  /* color: var(--color-white); */
-  color: #FFFFFF;
+  background-color: var(--color-red-status);
+  border-color: var(--color-red-status);
+  color: var(--color-white);
 }
 
-.danger:hover {
-  /* background-color: var(--color-red-hover-status); */
-  background-color: #B43C3C;
+.button-danger:hover {
+  background-color: var(--color-red-hover-status);
 }
 
-.success {
+.button-success {
   height: 48px;
   width: 162px;
-  /* background-color: var(--color-green-status); */
-  background-color: #39B983;
-  /* border-color: var(--color-green-status) */
-  border-color: #39B983;
-  /* color: var(--color-white); */
-  color: #FFFFFF;
+  background-color: var(--color-green-status);
+  border-color: var(--color-green-status);
+  color: var(--color-white);
 }
 
-.success:hover {
-  /* background-color: var(--color-green-hover-status); */
-  background-color: #399C73;
+.button-success:hover {
+  background-color: var(--color-green-hover-status);
 }

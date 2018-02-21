@@ -6,17 +6,17 @@ import * as styles from './Button.css';
 export default class Button extends React.PureComponent {
   render() {
     const classNames = (options) => {
-      const result = options.join(' ').replace('false', '').trim();
+      const result = options.join(' ').replace(/ false/g, '').trim();
       return result;
     };
 
     const className = classNames([
       styles.button,
-      this.props.primary && styles.primary,
-      this.props.small && styles.small,
-      this.props.large && styles.large,
-      this.props.danger && styles.danger,
-      this.props.success && styles.success,
+      this.props.small && styles['button-small'],
+      this.props.large && styles['button-large'],
+      this.props.primary && styles['button-primary'],
+      this.props.danger && styles['button-danger'],
+      this.props.success && styles['button-success'],
     ]);
 
     return (
