@@ -19,11 +19,11 @@ export default function Playground() {
     <div>
       <Heading h2>Buttons</Heading>
       <div>
-        <Button large primary>Large Button</Button><br />
+        <Button color="primary" size="large">Large Button</Button><br />
         <Button>Default Button</Button><br />
-        <Button primary small>Small Button</Button><br />
-        <Button danger>Delete Button</Button><br />
-        <Button success>Success Button</Button><br />
+        <Button color="primary" size="small">Small Button</Button><br />
+        <Button color="danger">Delete Button</Button><br />
+        <Button color="success">Success Button</Button><br />
         <Button disabled>Disabled Button</Button><br />
       </div><br />
 

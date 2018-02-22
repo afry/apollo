@@ -3,64 +3,18 @@ import PropTypes from 'prop-types';
 
 import * as styles from './Button.css';
 
-export default class Button extends React.PureComponent {
-  render() {
-    const classNames = (options) => {
-      const result = options.join(' ').replace(/ false/g, '').trim();
-      return result;
-    };
-
-    const className = classNames([
-      styles.button,
-      this.props.small && styles['button-small'],
-      this.props.large && styles['button-large'],
-      this.props.primary && styles['button-primary'],
-      this.props.danger && styles['button-danger'],
-      this.props.success && styles['button-success'],
-    ]);
-
-    return (
-      <button
-        className={className}
-        disabled={this.props.disabled}
-        name={this.props.name}
-        onBlur={this.props.onBlur}
-        onClick={this.props.onClick}
-        onFocus={this.props.onFocus}
-        type={this.props.type}
-      >{this.props.children}
-      </button>
-    );
-  }
-}
-
-Button.defaultProps = {
-  children: undefined,
-  danger: false,
-  disabled: false,
-  large: false,
-  name: undefined,
-  onBlur: undefined,
-  onClick: undefined,
-  onFocus: undefined,
-  primary: false,
-  small: false,
-  success: false,
-  type: 'button',
+const classNames = (options) => {
+  const result = options.join(' ').replace(/ false/g, '').trim();
+  return result;
 };
 
-Button.propTypes = {
+const propTypes = {
   children: PropTypes.string,
-  danger: PropTypes.bool,
+  color: PropTypes.string,
   disabled: PropTypes.bool,
-  large: PropTypes.bool,
   name: PropTypes.string,
-  onBlur: PropTypes.func,
   onClick: PropTypes.func,
-  onFocus: PropTypes.func,
-  primary: PropTypes.bool,
-  small: PropTypes.bool,
-  success: PropTypes.bool,
+  size: PropTypes.string,
   type(props, propName) {
     const value = props[propName];
     if (!value.match(/^button|submit|reset$/)) {
@@ -69,3 +23,64 @@ Button.propTypes = {
     return null;
   },
 };
+
+const defaultProps = {
+  children: undefined,
+  color: 'secondary',
+  disabled: false,
+  name: undefined,
+  onClick: undefined,
+  size: '',
+  type: 'button',
+};
+
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    if (this.props.disabled) {
+      e.preventDefault();
+      return;
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  render() {
+    const {
+      children,
+      color,
+      disabled,
+      name,
+      size,
+      type,
+    } = this.props;
+
+    const className = classNames([
+      styles.button,
+      styles[`button-${color}`],
+      size && styles[`button-${size}`],
+    ]);
+
+    return (
+      <button
+        className={className}
+        disabled={disabled}
+        name={name}
+        onClick={this.handleClick}
+        type={type}
+      >{children}
+      </button>
+    );
+  }
+}
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
+
+export default Button;
