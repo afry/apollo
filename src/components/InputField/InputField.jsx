@@ -5,62 +5,7 @@ import Label from '../Label';
 
 import * as styles from './InputField.css';
 
-export default class InputField extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(ev) {
-    const { onChange } = this.props;
-    if (onChange == null) { return; }
-    onChange(ev.target.value);
-  }
-
-  render() {
-    return (
-      <div className={styles.inputfield}>
-        <Label>{this.props.label}</Label>
-        <input
-          autoComplete={this.props.autoComplete ? 'on' : 'off'}
-          disabled={this.props.disabled}
-          max={this.props.max}
-          maxLength={this.props.maxLength}
-          min={this.props.min}
-          name={this.props.name}
-          onBlur={this.props.onBlur}
-          onChange={this.handleChange}
-          onFocus={this.props.onFocus}
-          placeholder={this.props.placeholder}
-          readOnly={this.props.readOnly}
-          required={this.props.required}
-          type={this.props.type}
-          value={this.props.value}
-        />
-      </div>
-    );
-  }
-}
-
-InputField.defaultProps = {
-  autoComplete: false,
-  disabled: false,
-  label: undefined,
-  max: undefined,
-  maxLength: undefined,
-  min: undefined,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  onFocus: undefined,
-  placeholder: undefined,
-  readOnly: false,
-  required: false,
-  type: 'text',
-  value: undefined,
-};
-
-InputField.propTypes = {
+const propTypes = {
   autoComplete: PropTypes.bool,
   disabled: PropTypes.bool,
   label: PropTypes.string,
@@ -68,9 +13,7 @@ InputField.propTypes = {
   maxLength: PropTypes.string,
   min: PropTypes.string,
   name: PropTypes.string,
-  onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
@@ -83,3 +26,74 @@ InputField.propTypes = {
   },
   value: PropTypes.string,
 };
+
+const defaultProps = {
+  autoComplete: false,
+  disabled: false,
+  label: undefined,
+  max: undefined,
+  maxLength: undefined,
+  min: undefined,
+  name: undefined,
+  onChange: undefined,
+  placeholder: undefined,
+  readOnly: false,
+  required: false,
+  type: 'text',
+  value: undefined,
+};
+
+class InputField extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    if (this.props.onChange) {
+      this.props.onChange(e.target.value);
+    }
+  }
+
+  render() {
+    const {
+      autoComplete,
+      disabled,
+      label,
+      max,
+      maxLength,
+      min,
+      name,
+      placeholder,
+      readOnly,
+      required,
+      value,
+      type,
+    } = this.props;
+
+    return (
+      <div className={styles.inputfield}>
+        <Label>{label}</Label>
+        <input
+          autoComplete={autoComplete ? 'on' : 'off'}
+          disabled={disabled}
+          max={max}
+          maxLength={maxLength}
+          min={min}
+          name={name}
+          onChange={this.handleChange}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          required={required}
+          type={type}
+          value={value}
+        />
+      </div>
+    );
+  }
+}
+
+InputField.propTypes = propTypes;
+InputField.defaultProps = defaultProps;
+
+export default InputField;

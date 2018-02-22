@@ -5,59 +5,67 @@ import Label from '../Label';
 
 import * as styles from './RadioButton.css';
 
-export default class RadioButton extends React.Component {
+const propTypes = {
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  readOnly: PropTypes.bool,
+  value: PropTypes.string,
+};
+
+const defaultProps = {
+  checked: false,
+  disabled: false,
+  label: undefined,
+  name: undefined,
+  onChange: undefined,
+  readOnly: false,
+  value: undefined,
+};
+
+class RadioButton extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(ev) {
-    const { onChange } = this.props;
-    if (onChange == null) { return; }
-    onChange(ev.target.checked, this.props.value);
+  handleChange(e) {
+    if (this.props.onChange) {
+      this.props.onChange(e.target.checked, this.props.value);
+    }
   }
 
   render() {
+    const {
+      checked,
+      disabled,
+      label,
+      name,
+      readOnly,
+      value,
+    } = this.props;
+
     return (
       <div className={styles.radiobutton}>
         <input
-          checked={this.props.checked}
-          disabled={this.props.disabled}
-          name={this.props.name}
-          onBlur={this.props.onBlur}
+          checked={checked}
+          disabled={disabled}
+          name={name}
           onChange={this.handleChange}
-          onFocus={this.props.onFocus}
-          readOnly={this.props.readOnly}
+          readOnly={readOnly}
           type="radio"
-          value={this.props.value}
+          value={value}
         />
         <span className={styles.checkmark} />
-        <Label large>{this.props.label}</Label>
+        <Label large>{label}</Label>
       </div>
     );
   }
 }
 
-RadioButton.defaultProps = {
-  checked: false,
-  disabled: false,
-  label: undefined,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  onFocus: undefined,
-  readOnly: false,
-  value: undefined,
-};
+RadioButton.propTypes = propTypes;
+RadioButton.defaultProps = defaultProps;
 
-RadioButton.propTypes = {
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  label: PropTypes.string,
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  readOnly: PropTypes.bool,
-  value: PropTypes.string,
-};
+export default RadioButton;

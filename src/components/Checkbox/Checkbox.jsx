@@ -5,30 +5,53 @@ import Label from '../Label';
 
 import * as styles from './Checkbox.css';
 
-export default class Checkbox extends React.Component {
+const propTypes = {
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+};
+
+const defaultProps = {
+  checked: false,
+  disabled: false,
+  label: undefined,
+  name: undefined,
+  onChange: undefined,
+  value: undefined,
+};
+
+class Checkbox extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(ev) {
-    const { onChange } = this.props;
-    if (onChange == null) { return; }
-    onChange(ev.target.checked);
+  handleChange(e) {
+    if (this.props.onChange) {
+      this.props.onChange(e.target.checked);
+    }
   }
 
   render() {
+    const {
+      checked,
+      disabled,
+      name,
+      value,
+    } = this.props;
+
     return (
       <div className={styles.checkbox}>
         <input
-          checked={this.props.checked}
-          disabled={this.props.disabled}
-          name={this.props.name}
-          onBlur={this.props.onBlur}
+          checked={checked}
+          disabled={disabled}
+          name={name}
           onChange={this.handleChange}
-          onFocus={this.props.onFocus}
           type="checkbox"
-          value={this.props.value}
+          value={value}
         />
         <span className={styles.checkmark} />
         <Label>{this.props.label}</Label>
@@ -37,24 +60,7 @@ export default class Checkbox extends React.Component {
   }
 }
 
-Checkbox.defaultProps = {
-  checked: false,
-  disabled: false,
-  label: undefined,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  onFocus: undefined,
-  value: undefined,
-};
+Checkbox.propTypes = propTypes;
+Checkbox.defaultProps = defaultProps;
 
-Checkbox.propTypes = {
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  label: PropTypes.string,
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  value: PropTypes.string,
-};
+export default Checkbox;

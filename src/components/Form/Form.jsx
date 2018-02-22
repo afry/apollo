@@ -3,16 +3,23 @@ import PropTypes from 'prop-types';
 
 import * as styles from './Form.css';
 
-export default class Form extends React.PureComponent {
-  render() {
-    return <form className={styles.Form}>{this.props.children}</form>;
-  }
-}
+const propTypes = {
+  children: PropTypes.node,
+};
 
-Form.defaultProps = {
+const defaultProps = {
   children: undefined,
 };
 
-Form.propTypes = {
-  children: PropTypes.node,
+const Form = (props) => {
+  const { children } = props;
+
+  return (
+    <form className={styles.Form}>{children}</form>
+  );
 };
+
+Form.propTypes = propTypes;
+Form.defaultProps = defaultProps;
+
+export default Form;

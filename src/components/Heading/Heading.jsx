@@ -3,26 +3,17 @@ import PropTypes from 'prop-types';
 
 import * as styles from './Heading.css';
 
-export default class Heading extends React.PureComponent {
-  render() {
-    if (this.props.h1) {
-      return <h1 className={styles.Heading}>{this.props.children}</h1>;
-    } else if (this.props.h2) {
-      return <h2 className={styles.Heading}>{this.props.children}</h2>;
-    } else if (this.props.h3) {
-      return <h3 className={styles.Heading}>{this.props.children}</h3>;
-    } else if (this.props.h4) {
-      return <h4 className={styles.Heading}>{this.props.children}</h4>;
-    } else if (this.props.h5) {
-      return <h5 className={styles.Heading}>{this.props.children}</h5>;
-    } else if (this.props.h6) {
-      return <h6 className={styles.Heading}>{this.props.children}</h6>;
-    }
-    return null;
-  }
-}
+const propTypes = {
+  children: PropTypes.string,
+  h1: PropTypes.bool,
+  h2: PropTypes.bool,
+  h3: PropTypes.bool,
+  h4: PropTypes.bool,
+  h5: PropTypes.bool,
+  h6: PropTypes.bool,
+};
 
-Heading.defaultProps = {
+const defaultProps = {
   children: undefined,
   h1: false,
   h2: false,
@@ -32,12 +23,34 @@ Heading.defaultProps = {
   h6: false,
 };
 
-Heading.propTypes = {
-  children: PropTypes.string,
-  h1: PropTypes.bool,
-  h2: PropTypes.bool,
-  h3: PropTypes.bool,
-  h4: PropTypes.bool,
-  h5: PropTypes.bool,
-  h6: PropTypes.bool,
+const Heading = (props) => {
+  const {
+    children,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+  } = props;
+
+  if (h1) {
+    return <h1 className={styles.Heading}>{children}</h1>;
+  } else if (h2) {
+    return <h2 className={styles.Heading}>{children}</h2>;
+  } else if (h3) {
+    return <h3 className={styles.Heading}>{children}</h3>;
+  } else if (h4) {
+    return <h4 className={styles.Heading}>{children}</h4>;
+  } else if (h5) {
+    return <h5 className={styles.Heading}>{children}</h5>;
+  } else if (h6) {
+    return <h6 className={styles.Heading}>{children}</h6>;
+  }
+  return null;
 };
+
+Heading.propTypes = propTypes;
+Heading.defaultProps = defaultProps;
+
+export default Heading;

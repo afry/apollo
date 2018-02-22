@@ -5,52 +5,62 @@ import Label from '../Label';
 
 import * as styles from './DatePicker.css';
 
-export default class DatePicker extends React.Component {
+const propTypes = {
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  readOnly: PropTypes.bool,
+  value: PropTypes.string,
+};
+
+const defaultProps = {
+  disabled: false,
+  label: undefined,
+  name: undefined,
+  onChange: undefined,
+  readOnly: false,
+  value: undefined,
+};
+
+class DatePicker extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(ev) {
-    const { onChange } = this.props;
-    if (onChange == null) { return; }
-    onChange(ev.target.value);
+  handleChange(e) {
+    if (this.props.onChange) {
+      this.props.onChange(e.target.value);
+    }
   }
 
   render() {
+    const {
+      disabled,
+      label,
+      name,
+      readOnly,
+      value,
+    } = this.props;
+
     return (
       <div className={styles.datepicker}>
-        <Label>{this.props.label}</Label>
+        <Label>{label}</Label>
         <input
-          disabled={this.props.disabled}
-          name={this.props.name}
+          disabled={disabled}
+          name={name}
           onChange={this.handleChange}
-          placeholder={this.props.placeholder}
-          readOnly={this.props.readOnly}
+          readOnly={readOnly}
           type="date"
-          value={this.props.value}
+          value={value}
         />
       </div>
     );
   }
 }
 
-DatePicker.defaultProps = {
-  disabled: false,
-  label: undefined,
-  name: undefined,
-  onChange: undefined,
-  placeholder: undefined,
-  readOnly: false,
-  value: undefined,
-};
+DatePicker.propTypes = propTypes;
+DatePicker.defaultProps = defaultProps;
 
-DatePicker.propTypes = {
-  disabled: PropTypes.bool,
-  label: PropTypes.string,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  placeholder: PropTypes.string,
-  readOnly: PropTypes.bool,
-  value: PropTypes.string,
-};
+export default DatePicker;
