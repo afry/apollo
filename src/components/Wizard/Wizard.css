@@ -6,26 +6,7 @@
   margin: 0;
 }
 
-.content {
-  width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header {
+.wizard-navbar {
   position: relative;
   height: 70px;
   width: 100%;
@@ -44,33 +25,7 @@
   background-color: var(--color-one-darkest-blue);
 }
 
-.header-nav {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  list-style: none;
-}
-
-.header-nav li {
-  display: inline-block;
-  text-align: center;
-  padding: 1.55rem 2rem;
-}
-
-.header-nav li a {
-  color: var(--color-misty);
-  text-decoration: none;
-}
-
-.header-nav li a:active {
-  color: var(--color-white);
-}
-
-.brand {
+.wizard-navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -82,28 +37,66 @@
   color: var(--color-white);
 }
 
-.Footer {
+.wizard-navbar-nav {
   position: absolute;
   width: 100%;
-  height: 75px;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.wizard-navbar-nav li {
+  display: inline-block;
+  text-align: center;
+  padding: 1.55rem 2rem;
+}
+
+.wizard-navbar-nav li a {
+  pointer-events: none;
+  cursor: default;
+  color: var(--color-misty);
+  text-decoration: none;
+}
+
+.wizard-navbar-nav li a.active {
+  color: var(--color-white);
+}
+
+.wizard-content {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wizard-button-group {
+  position: absolute;
   bottom: 0;
-}
-
-.button-group {
   width: 100%;
+  height: 75px;
 }
 
-.button-group-left {
+.wizard-button-group .pull-left {
   float: left;
   margin: 0 50px;
 }
 
-.button-group-right {
+.wizard-button-group .pull-right {
   float: right;
   margin: 0 50px;
 }
-
-.ButtonGroup > * {
-  margin: 2.5px;
-}
-
