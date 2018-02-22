@@ -1,12 +1,8 @@
-.wizardpage {
+.wizard-page {
     width: 100%;
 }
 
-.heading {
+.wizard-page-title,
+.wizard-page-description {
     text-align: center;
-}
-
-p {
-    font-weight: bold;
-    font-size: 16px;
 }

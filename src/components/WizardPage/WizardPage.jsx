@@ -8,12 +8,16 @@ import * as styles from './WizardPage.css';
 export default class WizardPage extends React.PureComponent {
   render() {
     return (
-      <div className={styles.wizardpage}>
-        <div className={styles.heading}>
+      <div className={styles['wizard-page']}>
+        <div className={styles['wizard-page-title']}>
           <Header h1>{this.props.title}</Header><br />
-          <p>{this.props.description}</p><br />
+          <p className={styles['wizard-page-description']}>
+            {this.props.description}
+          </p><br />
         </div>
-        {this.props.children}
+        <div>
+          {this.props.children}
+        </div>
       </div>
     );
   }

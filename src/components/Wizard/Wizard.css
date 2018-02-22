@@ -12,16 +12,11 @@
   width: 100%;
   padding: 0 30px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  -moz-box-pack: justify;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   background-color: var(--color-one-darkest-blue);
 }
 
@@ -42,6 +37,7 @@
   width: 100%;
   height: 100%;
   left: 0;
+  top: 0;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -67,16 +63,11 @@
 
 .wizard-content {
   width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-box-pack: justify; 
   margin-top: 75px;
   margin-bottom: 75px;
   padding: 0;
