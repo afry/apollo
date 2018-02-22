@@ -61,9 +61,9 @@ describe('<TextArea />', () => {
     });
   });
 
-  describe('cols', () => {
-    it('sets the cols attribute on the text area', () => {
-      const textarea = shallow(<TextArea cols="10" />);
+  describe('columns', () => {
+    it('sets the columns attribute on the text area', () => {
+      const textarea = shallow(<TextArea columns="10" />);
       expect(textarea.find('textarea').prop('cols')).toBe('10');
     });
   });

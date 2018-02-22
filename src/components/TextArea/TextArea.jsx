@@ -19,12 +19,14 @@ export default class TextArea extends React.Component {
   }
 
   render() {
+    const style = { resize: this.props.resize };
+
     return (
       <div>
         <Label>{this.props.label}</Label>
         <textarea
           className={styles.textarea}
-          cols={this.props.cols}
+          cols={this.props.columns}
           disabled={this.props.disabled}
           maxLength={this.props.maxLength}
           name={this.props.name}
@@ -33,6 +35,7 @@ export default class TextArea extends React.Component {
           readOnly={this.props.readOnly}
           required={this.props.required}
           rows={this.props.rows}
+          style={style}
           value={this.props.value}
         />
       </div>
@@ -41,7 +44,7 @@ export default class TextArea extends React.Component {
 }
 
 TextArea.defaultProps = {
-  cols: '39',
+  columns: '39',
   disabled: false,
   label: undefined,
   maxLength: undefined,
@@ -50,12 +53,13 @@ TextArea.defaultProps = {
   placeholder: undefined,
   readOnly: false,
   required: false,
+  resize: 'both',
   rows: '5',
   value: undefined,
 };
 
 TextArea.propTypes = {
-  cols: PropTypes.string,
+  columns: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   maxLength: PropTypes.string,
@@ -64,6 +68,7 @@ TextArea.propTypes = {
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
+  resize: PropTypes.string,
   rows: PropTypes.string,
   value: PropTypes.string,
 };
