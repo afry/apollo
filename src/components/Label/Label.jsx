@@ -37,4 +37,3 @@ Label.propTypes = {
   large: PropTypes.bool,
   small: PropTypes.bool,
 };
-
