@@ -5,32 +5,41 @@ import Header from '../Heading';
 
 import * as styles from './WizardPage.css';
 
-export default class WizardPage extends React.PureComponent {
-  render() {
-    return (
-      <div className={styles['wizard-page']}>
-        <div className={styles['wizard-page-title']}>
-          <Header h1>{this.props.title}</Header><br />
-          <p className={styles['wizard-page-description']}>
-            {this.props.description}
-          </p><br />
-        </div>
-        <div>
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
-}
+const propTypes = {
+  children: PropTypes.node,
+  description: PropTypes.string,
+  title: PropTypes.string,
+};
 
-WizardPage.defaultProps = {
+const defaultProps = {
   children: undefined,
   description: undefined,
   title: undefined,
 };
 
-WizardPage.propTypes = {
-  children: PropTypes.node,
-  description: PropTypes.string,
-  title: PropTypes.string,
+const WizardPage = (props) => {
+  const {
+    children,
+    description,
+    title,
+  } = props;
+
+  return (
+    <div className={styles['wizard-page']}>
+      <div className={styles['wizard-page-title']}>
+        <Header h1>{title}</Header><br />
+        <p className={styles['wizard-page-description']}>
+          {description}
+        </p><br />
+      </div>
+      <div>
+        {children}
+      </div>
+    </div>
+  );
 };
+
+WizardPage.propTypes = propTypes;
+WizardPage.defaultProps = defaultProps;
+
+export default WizardPage;
