@@ -15,12 +15,16 @@ export {
 } from './Form';
 
 export {
+  default as FormGroup,
+} from './FormGroup';
+
+export {
   default as Heading,
 } from './Heading';
 
 export {
-  default as InputField,
-} from './InputField';
+  default as Input,
+} from './Input';
 
 export {
   default as Label,

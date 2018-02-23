@@ -1,7 +1,7 @@
 .button {
   height: 48px;  
   width: 154px;
-  margin: 5px 0px;
+  margin: 0;
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid var(--color-dark-gray);

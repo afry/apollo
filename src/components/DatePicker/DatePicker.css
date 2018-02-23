@@ -1,10 +1,6 @@
 .datepicker {
   position: relative;
-  padding: 5px 0;
-}
-
-.datepicker input{
-  display: block;
+  display: inherit;
   font-size: 16px;
   margin: 5px 0px;
   padding: 0px 15px;
@@ -16,22 +12,22 @@
   background-color: #FFFFFF;
 }
 
-.datepicker:hover input {
+.datepicker:hover {
   border-color: #025FAE;
 }
 
-.datepicker:disabled input {
+.datepicker:disabled {
 	background-color: #F6F6F6;
 }
 
-.datepicker input::-webkit-clear-button {
+.datepicker::-webkit-clear-button {
   display: none;
 }
 
-.datepicker input::-webkit-inner-spin-button {
+.datepicker::-webkit-inner-spin-button {
   display: none;
 }
 
-.datepicker input::-webkit-calendar-picker-indicator {
+.datepicker::-webkit-calendar-picker-indicator {
   opacity: 0;
 }

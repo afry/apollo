@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Label from '../Label';
-
 import * as styles from './RadioButton.css';
 
 const propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  id: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   readOnly: PropTypes.bool,
@@ -18,7 +15,7 @@ const propTypes = {
 const defaultProps = {
   checked: false,
   disabled: false,
-  label: undefined,
+  id: undefined,
   name: undefined,
   onChange: undefined,
   readOnly: false,
@@ -41,7 +38,7 @@ class RadioButton extends React.Component {
     const {
       checked,
       disabled,
-      label,
+      id,
       name,
       readOnly,
       value,
@@ -52,6 +49,7 @@ class RadioButton extends React.Component {
         <input
           checked={checked}
           disabled={disabled}
+          id={id}
           name={name}
           onChange={this.handleChange}
           readOnly={readOnly}
@@ -59,7 +57,6 @@ class RadioButton extends React.Component {
           value={value}
         />
         <span className={styles.checkmark} />
-        <Label large>{label}</Label>
       </div>
     );
   }

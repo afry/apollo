@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Label from '../Label';
-
 import * as styles from './DatePicker.css';
 
 const propTypes = {
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  id: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   readOnly: PropTypes.bool,
@@ -16,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   disabled: false,
-  label: undefined,
+  id: undefined,
   name: undefined,
   onChange: undefined,
   readOnly: false,
@@ -38,24 +35,23 @@ class DatePicker extends React.Component {
   render() {
     const {
       disabled,
-      label,
+      id,
       name,
       readOnly,
       value,
     } = this.props;
 
     return (
-      <div className={styles.datepicker}>
-        <Label>{label}</Label>
-        <input
-          disabled={disabled}
-          name={name}
-          onChange={this.handleChange}
-          readOnly={readOnly}
-          type="date"
-          value={value}
-        />
-      </div>
+      <input
+        className={styles.datepicker}
+        disabled={disabled}
+        id={id}
+        name={name}
+        onChange={this.handleChange}
+        readOnly={readOnly}
+        type="date"
+        value={value}
+      />
     );
   }
 }

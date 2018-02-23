@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Label from '../Label';
-
 import * as styles from './TextArea.css';
 
 const propTypes = {
   columns: PropTypes.string,
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  id: PropTypes.string,
   maxLength: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -23,7 +20,7 @@ const propTypes = {
 const defaultProps = {
   columns: '39',
   disabled: false,
-  label: undefined,
+  id: undefined,
   maxLength: undefined,
   name: undefined,
   onChange: undefined,
@@ -51,7 +48,7 @@ class TextArea extends React.Component {
     const {
       columns,
       disabled,
-      label,
+      id,
       maxLength,
       name,
       placeholder,
@@ -62,23 +59,21 @@ class TextArea extends React.Component {
     } = this.props;
 
     return (
-      <div>
-        <Label>{label}</Label>
-        <textarea
-          className={styles.textarea}
-          cols={columns}
-          disabled={disabled}
-          maxLength={maxLength}
-          name={name}
-          onChange={this.handleChange}
-          placeholder={placeholder}
-          readOnly={readOnly}
-          required={required}
-          rows={rows}
-          style={{ resize: this.props.resize }}
-          value={value}
-        />
-      </div>
+      <textarea
+        className={styles.textarea}
+        cols={columns}
+        disabled={disabled}
+        id={id}
+        maxLength={maxLength}
+        name={name}
+        onChange={this.handleChange}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        required={required}
+        rows={rows}
+        style={{ resize: this.props.resize }}
+        value={value}
+      />
     );
   }
 }

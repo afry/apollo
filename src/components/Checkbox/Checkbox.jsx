@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Label from '../Label';
-
 import * as styles from './Checkbox.css';
 
 const propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  id: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
@@ -17,7 +14,7 @@ const propTypes = {
 const defaultProps = {
   checked: false,
   disabled: false,
-  label: undefined,
+  id: undefined,
   name: undefined,
   onChange: undefined,
   value: undefined,
@@ -39,6 +36,7 @@ class Checkbox extends React.Component {
     const {
       checked,
       disabled,
+      id,
       name,
       value,
     } = this.props;
@@ -48,13 +46,13 @@ class Checkbox extends React.Component {
         <input
           checked={checked}
           disabled={disabled}
+          id={id}
           name={name}
           onChange={this.handleChange}
           type="checkbox"
           value={value}
         />
         <span className={styles.checkmark} />
-        <Label>{this.props.label}</Label>
       </div>
     );
   }
