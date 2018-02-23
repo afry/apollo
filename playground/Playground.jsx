@@ -5,8 +5,10 @@ import {
   Checkbox,
   DatePicker,
   Form,
+  FormGroup,
   Heading,
-  InputField,
+  Input,
+  Label,
   RadioButton,
   TextArea,
   Wizard,
@@ -17,67 +19,85 @@ import {
 export default function Playground() {
   return (
     <div>
-      <Heading h2>Buttons</Heading>
-      <div>
-        <Button color="primary" size="large">Large Button</Button><br />
-        <Button>Default Button</Button><br />
-        <Button color="primary" size="small">Small Button</Button><br />
-        <Button color="danger">Delete Button</Button><br />
-        <Button color="success">Success Button</Button><br />
-        <Button disabled>Disabled Button</Button><br />
-      </div><br />
+      <Form inline>
+        <Heading h2>Button</Heading>
+        <FormGroup>
+          <Button color="primary" size="large">Large Button</Button>
+        </FormGroup>
+        <FormGroup>
+          <Button>Default Button</Button>
+        </FormGroup>
+        <FormGroup>
+          <Button color="primary" size="small">Small Button</Button>
+        </FormGroup>
+        <FormGroup>
+          <Button color="danger">Delete Button</Button>
+        </FormGroup>
+        <FormGroup>
+          <Button color="success">Success Button</Button>
+        </FormGroup>
+        <FormGroup>
+          <Button disabled>Disabled Button</Button>
+        </FormGroup>
+      </Form>
 
-      <Heading h2>Input Fields</Heading>
       <Form>
-        <DatePicker label="Date Picker" placeholder="02/10/2018"/>
-        <InputField label="Input Field" placeholder="Placeholder" />
-        <TextArea label="Text Area" />
-      </Form><br />
+        <Heading h2>Input</Heading>
+        <FormGroup>
+          <Label for="exampleDatePicker">Date Picker</Label>
+          <DatePicker id="exampleDatePicker" placeholder="02/10/2018"/>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleInput">Input Field</Label>
+          <Input id="exampleInput" placeholder="Placeholder" />
+        </FormGroup>
+      </Form>
 
-      <Heading h2>Checkbox</Heading>
       <Form>
-        <Checkbox label="Default" />
-        <Checkbox label="Focus" checked />
-        <Checkbox label="Disabled" checked disabled />
-      </Form><br />
+        <Heading h2>Text Area</Heading>
+        <FormGroup>
+          <Label for="exampleTextArea">Text Area</Label>
+          <TextArea id="exampleTextArea" />
+        </FormGroup>
+      </Form>
 
-      <Heading h2>Radio</Heading>
+      <Form inline>
+        <Heading h2>Checkbox</Heading>
+        <FormGroup>
+          <Label for="exampleDefaultCheckbox">
+            <Checkbox id="exampleDefaultCheckbox" /> Default
+          </Label>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleHoverCheckbox">
+            <Checkbox checked id="exampleHoverCheckbox" /> Focus
+          </Label>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleDisabledCheckbox">
+            <Checkbox checked disabled id="exampleDisabledCheckbox" /> Disabled
+          </Label>
+        </FormGroup>
+      </Form>
+
       <Form>
-        <RadioButton label="Default" />
-        <RadioButton label="Focus" checked />
-        <RadioButton label="Disabled" checked disabled />
-      </Form><br />
-
-      <Heading h2>Wizard</Heading>
-      <Wizard>
-        <WizardPage title="Create Project" description="Use Lime or PX ID to prefill the information. Tick the checkbox if your projekt doesn't have and ID.">
-          <Form>
-            <InputField label="Project ID" placeholder="634 132 108" />
-            <Checkbox label="This project doesn't have and ID number." />
-          </Form>
-        </WizardPage>
-        <WizardPage title="Description" description="Describe the project so that partners, colleagues and customers easily know what the project is all about." >
-          <Form>
-            <InputField label="Title" placeholder="Concept ONE 2018" />
-            <TextArea label="Project Description" />
-          </Form>
-        </WizardPage>
-        <WizardPage title="Customer" description="Fill in the company/organization name as well as the customer's main contact person for the project.">
-          <Form>
-            <InputField label="Customer" placeholder="ÅF AB" />
-            <InputField label="Contact Person" placeholder="Fredrik Sundqvist" />
-          </Form>
-        </WizardPage>
-        <WizardPage title="Administrative Info" description="Fill in the name of the project manager at ÅF, toghether with the project's starting date and security level.">
-          <Form>
-            <InputField label="Project Manager" placeholder="Julia Stierna" />
-            <DatePicker label="Starting Date" />
-            
-            <RadioButton label="Visible for ÅF co-workers" />
-            <RadioButton label="Classified" checked />
-          </Form>
-        </WizardPage>
-      </Wizard>
+        <Heading h2>Radio</Heading>
+        <FormGroup>
+          <Label for="exampleDefaultRadioButton">
+            <RadioButton id="exampleDefaultRadioButton" /> Default
+          </Label>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleHoveredRadioButton">
+            <RadioButton checked id="exampleHoveredRadioButton" /> Focus
+          </Label>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleDisabledRadioButton">
+            <RadioButton checked disabled id="exampleDisabledRdioButton" /> Disabled
+          </Label>
+        </FormGroup>
+      </Form>
     </div>
   );
 }
