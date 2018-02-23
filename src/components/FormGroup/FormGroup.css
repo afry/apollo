@@ -1,7 +1,8 @@
 .form-group {
-  position: relative;
+  position: inherit;
   display: inherit;
   padding-right: 10px;
+  vertical-align: top;
 }
 
 .form-group-inline {

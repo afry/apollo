@@ -33,4 +33,3 @@ FormGroup.propTypes = propTypes;
 FormGroup.defaultProps = defaultProps;
 
 export default FormGroup;
-
