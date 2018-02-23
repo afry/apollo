@@ -12,6 +12,8 @@ import {
   Input,
   Label,
   RadioButton,
+  Select,
+  SelectOption,
   TextArea,
   Wizard,
   WizardPage
@@ -47,15 +49,31 @@ export default function Playground() {
         <Heading h2>Input</Heading>
         <FormGroup>
           <Label for="exampleDatePicker">Date Picker</Label>
-          <Input id="exampleDatePicker" />
+          <DatePicker id="exampleDatePicker" />
         </FormGroup>
         <FormGroup>
-          <Label for="exampleInput">Input Field</Label>
-          <Input id="exampleInput" placeholder="Placeholder" />
+          <Label for="exampleTextInput">Text Input</Label>
+          <Input id="exampleTextInput" placeholder="Placeholder" />
           <FormFeedback>Oh noes! Something went wrong.</FormFeedback>
           <FormText>Example help text that remains unchanged.</FormText>
         </FormGroup>
+        <FormGroup>
+          <Label for="examplePasswordInput">Password Input</Label>
+          <Input id="examplePasswordInput" placeholder="Placeholder" type="password" />
+        </FormGroup>
+      </Form>
 
+      <Form>
+        <Heading h2>Select</Heading>
+        <FormGroup>
+          <Label for="exampleSelect" value="">Select Input</Label>
+          <Select id="exampleSelect" required value="">
+            <SelectOption disabled hidden value="">Select Option...</SelectOption>
+            <SelectOption value="first">First Option</SelectOption>
+            <SelectOption value="second">Second Option</SelectOption>
+            <SelectOption value="third">Second Option</SelectOption>
+          </Select>
+        </FormGroup>
       </Form>
 
       <Form>
