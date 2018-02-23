@@ -45,8 +45,8 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
+      <Heading h2>Input</Heading>
       <Form inline>
-        <Heading h2>Input</Heading>
         <FormGroup>
           <Label for="exampleDatePicker">Date Picker</Label>
           <DatePicker id="exampleDatePicker" />
@@ -63,8 +63,8 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
+      <Heading h2>Select</Heading>
       <Form>
-        <Heading h2>Select</Heading>
         <FormGroup>
           <Label for="exampleSelect" value="">Select Input</Label>
           <Select id="exampleSelect" required value="">
@@ -76,16 +76,16 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
+      <Heading h2>Text Area</Heading>
       <Form>
-        <Heading h2>Text Area</Heading>
         <FormGroup>
           <Label for="exampleTextArea">Text Area</Label>
           <TextArea id="exampleTextArea" />
         </FormGroup>
       </Form>
 
+      <Heading h2>Checkbox</Heading>
       <Form>
-        <Heading h2>Checkbox</Heading>
         <FormGroup>
           <Label for="exampleDefaultCheckbox">
             <Checkbox id="exampleDefaultCheckbox" /> Default
@@ -104,8 +104,8 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
+      <Heading h2>Radio</Heading>
       <Form>
-        <Heading h2>Radio</Heading>
         <FormGroup>
           <Label for="exampleDefaultRadioButton">
             <RadioButton id="exampleDefaultRadioButton" /> Default
