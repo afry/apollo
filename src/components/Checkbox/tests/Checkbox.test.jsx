@@ -13,24 +13,6 @@ describe('<Checkbox />', () => {
     });
   });
 
-  describe('onFocus()', () => {
-    it('is called when the checkbox is focused', () => {
-      const spy = jest.fn();
-      const checkbox = shallow(<Checkbox onFocus={spy} />);
-      checkbox.find('input').simulate('focus');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onBlur()', () => {
-    it('is called when the checkbox is blurred', () => {
-      const spy = jest.fn();
-      const checkbox = shallow(<Checkbox onBlur={spy} />);
-      checkbox.find('input').simulate('blur');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
   describe('checked', () => {
     it('sets the checked attribute on the checkbox', () => {
       const checkbox = shallow(<Checkbox checked />);

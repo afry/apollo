@@ -12,22 +12,6 @@ describe('<Button />', () => {
     });
   });
 
-  describe('onFocus()', () => {
-    it('is called when the button is focused', () => {
-      const spy = jest.fn();
-      shallow(<Button onFocus={spy} />).simulate('focus');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onBlur()', () => {
-    it('is called when the button is blurred', () => {
-      const spy = jest.fn();
-      shallow(<Button onBlur={spy} />).simulate('blur');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
   describe('disabled', () => {
     it('sets the disabled attribute on the button', () => {
       const button = shallow(<Button disabled />);

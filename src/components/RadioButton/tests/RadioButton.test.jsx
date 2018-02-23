@@ -13,24 +13,6 @@ describe('<RadioButton />', () => {
     });
   });
 
-  describe('onFocus()', () => {
-    it('is called when the radio button is focused', () => {
-      const spy = jest.fn();
-      const radio = shallow(<RadioButton onFocus={spy} />);
-      radio.find('input').simulate('focus');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onBlur()', () => {
-    it('is called when the radio button is blurred', () => {
-      const spy = jest.fn();
-      const radio = shallow(<RadioButton onBlur={spy} />);
-      radio.find('input').simulate('blur');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
   describe('checked', () => {
     it('sets the checked attribute on the radio button', () => {
       const radio = shallow(<RadioButton checked />);

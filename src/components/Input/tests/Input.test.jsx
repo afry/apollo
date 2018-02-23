@@ -13,24 +13,6 @@ describe('<InputField />', () => {
     });
   });
 
-  describe('onFocus()', () => {
-    it('is called when the input is focused', () => {
-      const spy = jest.fn();
-      const input = shallow(<Input onFocus={spy} />);
-      input.find('input').simulate('focus');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onBlur()', () => {
-    it('is called when the input is blurred', () => {
-      const spy = jest.fn();
-      const input = shallow(<Input onBlur={spy} />);
-      input.find('input').simulate('blur');
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
   describe('disabled', () => {
     it('sets the disabled attribute on the input', () => {
       const input = shallow(<Input disabled />);
