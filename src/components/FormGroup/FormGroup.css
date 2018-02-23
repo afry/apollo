@@ -1,0 +1,9 @@
+.form-group {
+  position: relative;
+  display: inherit;
+  padding: 5px 10px 5px 0px;
+}
+
+.form-group-inline {
+  display: inline;
+}
