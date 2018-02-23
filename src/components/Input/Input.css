@@ -1,10 +1,6 @@
-.inputfield {
+.input {
   position: relative;
-  padding: 5px 0;
-}
-
-.inputfield input {
-  display: block;
+  display: inherit;
   width: 370px;
   height: 49.33px;
   border: 1px solid var(--color-dark-gray);
@@ -15,15 +11,15 @@
   padding: 0px 15px;
 }
 
-.inputfield:hover input {
+.input:hover {
   border-color: var(--color-one-blue);
 }
 
-.inputfield:disabled input {
+.input:disabled {
 	background-color: var(--color-light-smoke);
 }
 
-.inputfield input[type=number]::-webkit-inner-spin-button {
+.input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 

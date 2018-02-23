@@ -1,14 +1,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import Label from '../Label';
-
-import * as styles from './InputField.css';
+import * as styles from './Input.css';
 
 const propTypes = {
   autoComplete: PropTypes.bool,
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  id: PropTypes.string,
   max: PropTypes.string,
   maxLength: PropTypes.string,
   min: PropTypes.string,
@@ -30,7 +28,7 @@ const propTypes = {
 const defaultProps = {
   autoComplete: false,
   disabled: false,
-  label: undefined,
+  id: undefined,
   max: undefined,
   maxLength: undefined,
   min: undefined,
@@ -43,7 +41,7 @@ const defaultProps = {
   value: undefined,
 };
 
-class InputField extends React.Component {
+class Input extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -59,7 +57,7 @@ class InputField extends React.Component {
     const {
       autoComplete,
       disabled,
-      label,
+      id,
       max,
       maxLength,
       min,
@@ -72,28 +70,27 @@ class InputField extends React.Component {
     } = this.props;
 
     return (
-      <div className={styles.inputfield}>
-        <Label>{label}</Label>
-        <input
-          autoComplete={autoComplete ? 'on' : 'off'}
-          disabled={disabled}
-          max={max}
-          maxLength={maxLength}
-          min={min}
-          name={name}
-          onChange={this.handleChange}
-          placeholder={placeholder}
-          readOnly={readOnly}
-          required={required}
-          type={type}
-          value={value}
-        />
-      </div>
+      <input
+        autoComplete={autoComplete ? 'on' : 'off'}
+        className={styles.input}
+        disabled={disabled}
+        id={id}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        name={name}
+        onChange={this.handleChange}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        required={required}
+        type={type}
+        value={value}
+      />
     );
   }
 }
 
-InputField.propTypes = propTypes;
-InputField.defaultProps = defaultProps;
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
 
-export default InputField;
+export default Input;
