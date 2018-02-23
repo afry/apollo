@@ -5,7 +5,9 @@ import {
   Checkbox,
   DatePicker,
   Form,
+  FormFeedback,
   FormGroup,
+  FormText,
   Heading,
   Input,
   Label,
@@ -45,12 +47,15 @@ export default function Playground() {
         <Heading h2>Input</Heading>
         <FormGroup>
           <Label for="exampleDatePicker">Date Picker</Label>
-          <DatePicker id="exampleDatePicker" placeholder="02/10/2018"/>
+          <Input id="exampleDatePicker" />
         </FormGroup>
         <FormGroup>
           <Label for="exampleInput">Input Field</Label>
           <Input id="exampleInput" placeholder="Placeholder" />
+          <FormFeedback>Oh noes! Something went wrong.</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
         </FormGroup>
+
       </Form>
 
       <Form>
@@ -61,11 +66,12 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
-      <Form inline>
+      <Form>
         <Heading h2>Checkbox</Heading>
         <FormGroup>
           <Label for="exampleDefaultCheckbox">
             <Checkbox id="exampleDefaultCheckbox" /> Default
+            <FormText indented>Example indented help text that remains unchanged.</FormText>
           </Label>
         </FormGroup>
         <FormGroup>
