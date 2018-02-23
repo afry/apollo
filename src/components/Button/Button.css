@@ -1,7 +1,7 @@
 .button {
   height: 48px;  
   width: 154px;
-  margin: 0;
+  margin: 5px 0;
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid var(--color-dark-gray);
@@ -30,8 +30,6 @@
 }
 
 .button-danger { 
-  /* height: 48px; */
-  /* widows: 150px; */
   background-color: var(--color-red-status);
   border-color: var(--color-red-status);
   color: var(--color-white);
@@ -43,8 +41,6 @@
 }
 
 .button-success {
-  /* height: 48px; */
-  /* width: 162px; */
   background-color: var(--color-green-status);
   border-color: var(--color-green-status);
   color: var(--color-white);

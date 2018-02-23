@@ -19,7 +19,7 @@ import {
 export default function Playground() {
   return (
     <div>
-      <Form inline>
+      <Form>
         <Heading h2>Button</Heading>
         <FormGroup>
           <Button color="primary" size="large">Large Button</Button>
@@ -41,7 +41,7 @@ export default function Playground() {
         </FormGroup>
       </Form>
 
-      <Form>
+      <Form inline>
         <Heading h2>Input</Heading>
         <FormGroup>
           <Label for="exampleDatePicker">Date Picker</Label>

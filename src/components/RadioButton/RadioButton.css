@@ -1,8 +1,8 @@
 .radiobutton {
   position: relative;
-  display: inherit;
+  display: inline-block;
   padding-left: 10px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   cursor: pointer;
   user-select: none;
 }
