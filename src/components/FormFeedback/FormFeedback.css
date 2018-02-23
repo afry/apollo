@@ -1,0 +1,9 @@
+.form-feedback {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-red-status);
+}
+
+.form-feedback-indented {
+  margin-left: 35px;
+}
