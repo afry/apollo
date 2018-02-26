@@ -1,7 +1,10 @@
 .form-feedback {
   font-size: 13px;
-  line-height: 16px;
   color: var(--color-red-status);
+}
+
+.form-feedback-valid {
+  color: var(--color-green-status);
 }
 
 .form-feedback-indented {

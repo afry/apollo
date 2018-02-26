@@ -6,21 +6,25 @@ import * as styles from './FormFeedback.css';
 const propTypes = {
   children: PropTypes.node,
   indented: PropTypes.bool,
+  valid: PropTypes.bool,
 };
 
 const defaultProps = {
   children: undefined,
   indented: false,
+  valid: false,
 };
 
 const FormFeedback = (props) => {
   const {
     children,
-    indented
+    indented,
+    valid,
   } = props;
 
   const className = classNames([
     styles['form-feedback'],
+    valid ? styles['form-feedback-valid'] : '',
     indented ? styles['form-feedback-indented'] : '',
   ]);
 

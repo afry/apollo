@@ -1,8 +1,15 @@
 .form-group {
   position: inherit;
   display: inherit;
-  padding-right: 10px;
+  margin: 0;
+  padding-right: 1.5rem;
   vertical-align: top;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
+.form-group:last-child {
+  padding-right: 0;
 }
 
 .form-group-inline {
