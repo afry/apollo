@@ -1,24 +1,24 @@
 :root {
-  --color-one-light-blue: rgb(42, 154, 232);
-  --color-one-blue: rgb(2, 95, 174);
-  --color-one-dark-blue: rgb(1, 67, 133);
-  --color-one-darkest-blue: rgb(23, 33, 55);
-  --color-faded-light-blue: rgb(237, 243, 247);
-  --color-faded-blue: rgb(211, 225, 235);
+  --one-light-blue: #20A3E8;
+  --one-blue: #025FAE;
+  --one-dark-blue: #08478E;
+  --one-darkest-blue: #172137;
+  --faded-light-blue: #EDF3F7;
+  --faded-blue: #D3E1EB;
 
-  --color-green-status: rgb(57, 185, 131);
-  --color-green-hover-status: rgb(57, 156, 115);
-  --color-yellow-status: rgb(247, 196, 115);
-  --color-yellow-hover-status: rgb(235, 173, 98);
-  --color-red-status: rgb(209, 77, 77);
-  --color-red-hover-status: rgb(180, 59, 59);
+  --green-status: #39B983;
+  --green-hover-status: #399C73;
+  --yellow-status: #F7C473;
+  --yellow-hover-status: #EBAD62;
+  --red-status: #D14D4D;
+  --red-hover-status: #B43B3B;
 
-  --color-white: rgb(255, 255, 255);
-  --color-white-smoke: rgb(246, 246, 246);
-  --color-marble: rgb(240, 240, 240);
-  --color-misty: rgb(200, 200, 200);
-  --color-dark-gray: rgb(163, 163, 163);
-  --color-stone: rgb(124, 124, 124);
-  --color-charcoal: rgb(80, 80, 80);
-  --color-black: rgb(0, 0, 0);
+  --white: #FFFFFF;
+  --light-smoke: #F6F6F6;
+  --marble: #F0F0F0;
+  --misty: #C8C8C8;
+  --dark-gray: #A3A3A3;
+  --stone: #7C7C7C;
+  --charcoal: #505050;
+  --black: #1E1E1E;
 }

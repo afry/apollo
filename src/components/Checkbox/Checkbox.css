@@ -2,13 +2,15 @@
   position: relative;
   display: inline-block;
   padding-left: 10px;
-  cursor: pointer;
   user-select: none;
 }
 
 .checkbox input {
   opacity: 0;
-  cursor: pointer;
+}
+
+.checkbox input:disabled {
+  cursor: default;
 }
 
 .checkbox .checkmark {
@@ -17,26 +19,28 @@
   left: 0;
   height: 20px;
   width: 20px;
-  border: 1px solid var(--color-stone);
+  border: 1px solid var(--stone);
   border-radius: 3px;
 }
 
 .checkbox:hover input ~ .checkmark {
   height: 18px;
   width: 18px;
-  border: 2px solid var(--color-one-blue);
+  border: 2px solid var(--one-blue);
+  cursor: pointer;
 }
 
 .checkbox input:checked ~ .checkmark {
   height: 18px;
   width: 18px;
-  background-color: var(--color-one-blue);
-  border: 2px solid var(--color-one-blue);
+  background-color: var(--one-blue);
+  border: 2px solid var(--one-blue);
 }
 
 .checkbox input:disabled ~ .checkmark {
-  background-color: var(--color-misty);
-  border-color: var(--color-misty);
+  background-color: var(--misty);
+  border-color: var(--misty);
+  cursor: default;
 }
 
 .checkbox .checkmark:after {
@@ -54,7 +58,7 @@
   top: 2px;
   width: 4px;
   height: 10px;
-  border: solid white;
+  border: solid var(--white);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

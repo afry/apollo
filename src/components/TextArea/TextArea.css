@@ -3,18 +3,23 @@
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
-  border: 1px solid #A3A3A3;
+  border: 1px solid var(--dark-gray);
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: var(--white);
   font-size: 16px;
   margin: 5px 0px;
   padding: 10px 15px;
 }
 
 .textarea:hover {
-  border-color: #025FAE;
+  border-color: var(--one-blue);
 }
 
 .textarea:disabled {
-	background-color: #F6F6F6;
+  background-color: var(--light-smoke);
+  border-color: var(--dark-gray);
+}
+
+::placeholder {
+  color: var(--dark-gray) !important;
 }

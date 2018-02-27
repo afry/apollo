@@ -6,10 +6,10 @@
   margin: 5px 0px;
   padding: 0px 15px;
   font-size: 16px;
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--dark-gray);
   border-radius: 6px;
   background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
-  background-color: var(--color-white);
+  background-color: var(--white);
 }
 
 .datepicker:hover {
@@ -17,7 +17,9 @@
 }
 
 .datepicker:disabled {
-	background-color: #F6F6F6;
+  background-color: var(--light-smoke);
+  border-color: var(--dark-gray);
+  color: var(--dark-gray);
 }
 
 .datepicker::-webkit-clear-button {

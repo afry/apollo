@@ -1,5 +1,6 @@
 .Heading {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
-  margin: 10px 0;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
