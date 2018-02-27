@@ -30,45 +30,52 @@ const FormExample = () => {
         <Form inline>
           <Heading h3>Input</Heading>
           <FormGroup>
-            <Label for="exampleTextInput">Text</Label>
-            <Input id="exampleTextInput" placeholder="Text" />
+            <Label for="text_input">Text</Label>
+            <Input id="text_input" placeholder="Text" />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleNumberInput">Number</Label>
-            <Input id="exampleNumberInput" placeholder="Number" type="number" />
+            <Label for="number_input">Number</Label>
+            <Input id="number_input" placeholder="Number" type="number" />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleTelInput">Tel</Label>
-            <Input id="exampleTelInput" placeholder="Tel" type="tel" />
+            <Label for="tel_input">Tel</Label>
+            <Input id="tel_input" placeholder="Tel" type="tel" />
           </FormGroup>
         </Form>
 
         <Form inline>
           <FormGroup>
-            <Label for="exampleEmailInput">Email</Label>
-            <Input id="exampleEmailInput" placeholder="Email" type="email" />
+            <Label for="email_input">Email</Label>
+            <Input id="email_input" placeholder="Email" type="email" />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePasswordInput">Password</Label>
-            <Input id="examplePasswordInput" placeholder="Password" type="password" />
+            <Label for="password_input">Password</Label>
+            <Input id="password_input" placeholder="Password" type="password" />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleFormText">Form Text</Label>
-            <Input id="exampleFormText" placeholder="Form Text" />
+            <Label for="input_with_form_text">Form Text</Label>
+            <Input id="input_with_form_text" placeholder="Form Text" />
             <FormText>Example help text that remains unchanged.</FormText>
+          </FormGroup>
+        </Form>
+
+        <Form>
+          <FormGroup>
+            <Label for="disabled_input">Disabled</Label>
+            <Input disabled id="disabled_input" placeholder="Disabled" />
           </FormGroup>
         </Form>
 
         <Form>
           <Heading h4>Validation</Heading>
           <FormGroup>
-            <Label for="exampleTextInputValid">Valid</Label>
-            <Input id="exampleTextInputValid" placeholder="Text" />
+            <Label for="input_with_valid_form_feedback">Valid</Label>
+            <Input id="input_with_valid_form_feedback" placeholder="Text" />
             <FormFeedback valid>Hurray! Something worked.</FormFeedback>
           </FormGroup>
           <FormGroup>
-            <Label for="exampleTextInputInvalid">Invalid</Label>
-            <Input id="exampleTextInputInvalid" placeholder="Text" />
+            <Label for="input_with_invalid_form_feedback">Invalid</Label>
+            <Input id="input_with_invalid_form_feedback" placeholder="Text" />
             <FormFeedback>Oh noes! Something went wrong.</FormFeedback>
           </FormGroup>
         </Form>
@@ -76,16 +83,29 @@ const FormExample = () => {
         <Form>
           <Heading h3>Date Picker</Heading>
           <FormGroup>
-            <Label for="exampleDatePicker">Date</Label>
-            <DatePicker id="exampleDatePicker" />
+            <Label for="date_picker">Date</Label>
+            <DatePicker id="date_picker" />
+          </FormGroup>
+          <FormGroup>
+            <Label for="disabled_date_picker">Disabled</Label>
+            <DatePicker disabled id="disabled_date_picker" />
           </FormGroup>
         </Form>
-       
+
         <Form>
           <Heading h3>Select</Heading>
           <FormGroup>
-            <Label for="exampleSelect" value="">Select</Label>
-            <Select id="exampleSelect" required value="">
+            <Label for="select" value="">Select</Label>
+            <Select id="select" required value="">
+              <SelectOption disabled hidden value="">Select Option</SelectOption>
+              <SelectOption value="first">1</SelectOption>
+              <SelectOption value="second">2</SelectOption>
+              <SelectOption value="third">3</SelectOption>
+            </Select>
+          </FormGroup>
+          <FormGroup>
+            <Label for="disabled_select" value="">Disabled</Label>
+            <Select disabled id="disabled_select" required value="">
               <SelectOption disabled hidden value="">Select Option</SelectOption>
               <SelectOption value="first">1</SelectOption>
               <SelectOption value="second">2</SelectOption>
@@ -97,8 +117,12 @@ const FormExample = () => {
         <Form>
           <Heading h3>Text Area</Heading>
           <FormGroup>
-            <Label for="exampleTextArea">Text Area</Label>
-            <TextArea id="exampleTextArea" />
+            <Label for="text_area">Text Area</Label>
+            <TextArea id="text_area" />
+          </FormGroup>
+          <FormGroup>
+            <Label for="disabled_text_area">Disabled</Label>
+            <TextArea disabled id="disabled_text_area" />
           </FormGroup>
         </Form>
 
@@ -106,18 +130,18 @@ const FormExample = () => {
           <FormGroup>
             <Heading h3>Radio Button</Heading>
             <FormGroup>
-              <Label for="radioDefault">
-                <RadioButton id="radioDefault" /> Default
+              <Label for="radio_button">
+                <RadioButton id="radio_button" /> Default
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioHover">
-                <RadioButton checked id="radioHover" /> Focus
+              <Label for="focused_radio_button">
+                <RadioButton checked id="focused_radio_button" /> Focus
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioDisabled">
-                <RadioButton checked disabled id="radioDisabled" /> Disabled
+              <Label for="disabled_radio_button">
+                <RadioButton checked disabled id="disabled_radio_button" /> Disabled
               </Label>
             </FormGroup>
           </FormGroup>
@@ -127,20 +151,20 @@ const FormExample = () => {
           <FormGroup>
             <Heading h4>Form Text</Heading>
             <FormGroup>
-              <Label for="radioFormTextDefault">
-                <RadioButton id="radioFormTextDefault" /> Default
+              <Label for="radio_button_with_form_text">
+                <RadioButton id="radio_button_with_form_text" /> Default
                 <FormText indented>Example indented help text that remains unchanged.</FormText>
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioFormTextHover">
-                <RadioButton checked id="radioFormTextHover" /> Focus
+              <Label for="focused_radio_button_with_form_text">
+                <RadioButton checked id="focused_radio_button_with_form_text" /> Focus
                 <FormText indented>Example indented help text that remains unchanged.</FormText>
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioFormTextDisabled">
-                <RadioButton checked disabled id="radioFormTextDisabled" /> Disabled
+              <Label for="disabled_radio_button_with_form_text">
+                <RadioButton checked disabled id="disabled_radio_button_with_form_text" /> Disabled
                 <FormText indented>Example indented help text that remains unchanged.</FormText>
               </Label>
             </FormGroup>
@@ -152,18 +176,18 @@ const FormExample = () => {
           <FormGroup>
             <Heading h4>Inline</Heading>
             <FormGroup>
-              <Label for="radioInlineDefault">
-                <RadioButton id="radioInlineDefault" /> Default
+              <Label for="radio_button_inlined">
+                <RadioButton id="radio_button_inlined" /> Default
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioInlineHove">
-                <RadioButton checked id="radioInlineHover" /> Focus
+              <Label for="focused_radio_button_inlined">
+                <RadioButton checked id="focused_radio_button_inlined" /> Focus
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="radioInlineDisabled">
-                <RadioButton checked disabled id="radioInlineDisabled" /> Disabled
+              <Label for="disabled_radio_button_inlined">
+                <RadioButton checked disabled id="disabled_radio_button_inlined" /> Disabled
               </Label>
             </FormGroup>
           </FormGroup>
@@ -173,18 +197,18 @@ const FormExample = () => {
           <FormGroup>
             <Heading h3>Checkbox</Heading>
             <FormGroup>
-              <Label for="checkboxDefault">
-                <Checkbox id="checkboxDefault" /> Default
+              <Label for="checkbox">
+                <Checkbox id="checkbox" /> Default
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="checkboxHover">
-                <Checkbox checked id="checkboxHover" /> Focus
+              <Label for="focused_checkbox">
+                <Checkbox checked id="focused_checkbox" /> Focus
               </Label>
             </FormGroup>
             <FormGroup>
-              <Label for="checkboxDisabled">
-                <Checkbox checked disabled id="checkboxDisabled" /> Disabled
+              <Label for="disabled_checkbox">
+                <Checkbox checked disabled id="disabled_checkbox" /> Disabled
               </Label>
             </FormGroup>
           </FormGroup>
@@ -194,8 +218,8 @@ const FormExample = () => {
           <FormGroup>
             <Heading h4>Form Text</Heading>
             <FormGroup>
-              <Label for="checkboxFormTextDefault">
-                <Checkbox id="checkboxFormTextDefault" /> Default
+              <Label for="exampleFormTextCheckboxDefault">
+                <Checkbox id="exampleFormTextCheckboxDefault" /> Default
                 <FormText indented>Example indented help text that remains unchanged.</FormText>
               </Label>
             </FormGroup>
