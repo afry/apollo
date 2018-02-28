@@ -39,24 +39,14 @@ class Select extends React.Component {
   render() {
     const {
       children,
-      disabled,
-      id,
-      name,
-      readOnly,
-      required,
-      value,
+      ...other
     } = this.props;
 
     return (
       <select
+        {...other}
         className={styles.select}
-        disabled={disabled}
-        id={id}
-        name={name}
         onChange={this.handleChange}
-        readOnly={readOnly}
-        required={required}
-        value={value}
       >{children}
       </select>
     );

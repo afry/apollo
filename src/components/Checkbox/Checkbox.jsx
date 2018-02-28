@@ -34,23 +34,15 @@ class Checkbox extends React.Component {
 
   render() {
     const {
-      checked,
-      disabled,
-      id,
-      name,
-      value,
+      ...other
     } = this.props;
 
     return (
       <div className={styles.checkbox}>
         <input
-          checked={checked}
-          disabled={disabled}
-          id={id}
-          name={name}
+          {...other}
           onChange={this.handleChange}
           type="checkbox"
-          value={value}
         />
         <span className={styles.checkmark} />
       </div>

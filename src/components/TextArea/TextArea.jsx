@@ -47,32 +47,16 @@ class TextArea extends React.Component {
   render() {
     const {
       columns,
-      disabled,
-      id,
-      maxLength,
-      name,
-      placeholder,
-      readOnly,
-      required,
-      rows,
-      value,
+      ...other
     } = this.props;
 
     return (
       <textarea
+        {...other}
         className={styles.textarea}
         cols={columns}
-        disabled={disabled}
-        id={id}
-        maxLength={maxLength}
-        name={name}
         onChange={this.handleChange}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        required={required}
-        rows={rows}
         style={{ resize: this.props.resize }}
-        value={value}
       />
     );
   }

@@ -34,23 +34,15 @@ class DatePicker extends React.Component {
 
   render() {
     const {
-      disabled,
-      id,
-      name,
-      readOnly,
-      value,
+      ...other
     } = this.props;
 
     return (
       <input
+        {...other}
         className={styles.datepicker}
-        disabled={disabled}
-        id={id}
-        name={name}
         onChange={this.handleChange}
-        readOnly={readOnly}
         type="date"
-        value={value}
       />
     );
   }

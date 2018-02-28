@@ -52,11 +52,8 @@ class Button extends React.Component {
     const {
       children,
       color,
-      disabled,
-      id,
-      name,
       size,
-      type,
+      ...other
     } = this.props;
 
     const className = classNames([
@@ -67,12 +64,9 @@ class Button extends React.Component {
 
     return (
       <button
+        {...other}
         className={className}
-        disabled={disabled}
-        id={id}
-        name={name}
         onClick={this.handleClick}
-        type={type}
       >{children}
       </button>
     );

@@ -36,25 +36,15 @@ class RadioButton extends React.Component {
 
   render() {
     const {
-      checked,
-      disabled,
-      id,
-      name,
-      readOnly,
-      value,
+      ...other
     } = this.props;
 
     return (
       <div className={styles['radio-button']}>
         <input
-          checked={checked}
-          disabled={disabled}
-          id={id}
-          name={name}
+          {...other}
           onChange={this.handleChange}
-          readOnly={readOnly}
           type="radio"
-          value={value}
         />
         <span className={styles.checkmark} />
       </div>

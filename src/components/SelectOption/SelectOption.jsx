@@ -19,17 +19,13 @@ const defaultProps = {
 const SelectOption = (props) => {
   const {
     children,
-    disabled,
-    hidden,
-    value,
+    ...other
   } = props;
 
   return (
     <option
+      {...other}
       className={styles['select-option']}
-      disabled={disabled}
-      hidden={hidden}
-      value={value}
     >{children}
     </option>
   );

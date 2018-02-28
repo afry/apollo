@@ -56,35 +56,15 @@ class Input extends React.Component {
   render() {
     const {
       autoComplete,
-      disabled,
-      id,
-      max,
-      maxLength,
-      min,
-      name,
-      placeholder,
-      readOnly,
-      required,
-      value,
-      type,
+      ...other
     } = this.props;
 
     return (
       <input
+        {...other}
         autoComplete={autoComplete ? 'on' : 'off'}
         className={styles.input}
-        disabled={disabled}
-        id={id}
-        max={max}
-        maxLength={maxLength}
-        min={min}
-        name={name}
         onChange={this.handleChange}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        required={required}
-        type={type}
-        value={value}
       />
     );
   }
