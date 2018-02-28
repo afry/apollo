@@ -1,6 +1,6 @@
 .form {
   position: relative;
-  display: inherit;
+  display: block;
 }
 
 .form-inline {

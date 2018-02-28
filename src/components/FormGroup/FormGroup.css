@@ -1,11 +1,9 @@
 .form-group {
-  position: inherit;
   display: inherit;
-  margin: 0;
   padding-right: 1.5rem;
-  vertical-align: top;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
+  vertical-align: top;
 }
 
 .form-group:last-child {
@@ -14,4 +12,14 @@
 
 .form-group-inline {
   display: inline-block;
+}
+
+.form-group-inline label {
+  display: inherit;
+  margin-right: .5rem;
+}
+
+.form-group-check label {
+  font-size: 16px;
+  font-weight: 100;
 }
