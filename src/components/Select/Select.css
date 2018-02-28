@@ -1,15 +1,4 @@
 .select {
-  position: relative;
-  display: inherit;
-  width: 400px;
-  height: 49.33px;
-  margin: 5px 0px;
-  padding: 0px 10px;
-  border: 1px solid var(--dark-gray);
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 16px;
-  overflow: hidden;
 }
 
 .select:valid {

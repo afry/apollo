@@ -1,14 +1,6 @@
 .textarea {
-  position: relative;
-  display: block;
   overflow-x: hidden;
   overflow-y: auto;
-  border: 1px solid var(--dark-gray);
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 16px;
-  margin: 5px 0px;
-  padding: 10px 15px;
 }
 
 .textarea:hover {

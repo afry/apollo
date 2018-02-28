@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-
 import * as styles from './Label.css';
 
 const propTypes = {

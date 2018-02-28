@@ -45,7 +45,7 @@ class RadioButton extends React.Component {
     } = this.props;
 
     return (
-      <div className={styles.radiobutton}>
+      <div className={styles['radio-button']}>
         <input
           checked={checked}
           disabled={disabled}

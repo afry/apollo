@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import * as styles from './Heading.css';
 
 const propTypes = {

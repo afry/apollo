@@ -1,14 +1,4 @@
 .input {
-  position: relative;
-  display: inherit;
-  width: 370px;
-  height: 49.33px;
-  margin: 5px 0;
-  padding: 0px 15px;
-  border: 1px solid var(--dark-gray);
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 16px;
 }
 
 .input:focus {

@@ -1,13 +1,9 @@
 .button {
-  text-align: center;
+  color: var(--charcoal);
   display: inline-block;
   height: 48px;  
   width: 154px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid var(--dark-gray);
-  background-color: var(--white);
-  color: var(--charcoal);
+  text-align: center;
 }
 
 .button:hover {
@@ -28,6 +24,7 @@
 .button-primary:hover,
 .button-primary:disabled {
   background-color: var(--one-dark-blue);
+  border-color: var(--one-dark-blue);
 }
 
 .button-danger { 
@@ -39,6 +36,7 @@
 .button-danger:hover,
 .button-danger:disabled {
   background-color: var(--red-hover-status);
+  border-color: var(--red-hover-status);
 }
 
 .button-success {
@@ -50,6 +48,7 @@
 .button-success:hover,
 .button-success:disabled {
   background-color: var(--green-hover-status);
+  border-color: var(--green-hover-status);
 }
 
 .button-small {
