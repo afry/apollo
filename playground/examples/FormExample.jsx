@@ -18,9 +18,9 @@ import {
 const FormExample = () => {
   return (
     <div className="example">
-      <Heading h1>Form</Heading>
+      <Heading tag="h1">Form</Heading>
       <Form inline>
-        <Heading h3>Input</Heading>
+        <Heading tag="h3">Input</Heading>
         <FormGroup>
           <Label for="text_input">Text</Label>
           <Input id="text_input" placeholder="Text" />
@@ -59,7 +59,7 @@ const FormExample = () => {
       </Form>
 
       <Form>
-        <Heading h4>Validation</Heading>
+        <Heading tag="h4">Validation</Heading>
         <FormGroup>
           <Label for="input_with_valid_form_feedback">Valid</Label>
           <Input id="input_with_valid_form_feedback" placeholder="Text" />
@@ -73,7 +73,7 @@ const FormExample = () => {
       </Form>
 
       <Form>
-        <Heading h3>Date Picker</Heading>
+        <Heading tag="h3">Date Picker</Heading>
         <FormGroup>
           <Label for="date_picker">Date</Label>
           <DatePicker id="date_picker" />
@@ -85,7 +85,7 @@ const FormExample = () => {
       </Form>
 
       <Form>
-        <Heading h3>Select</Heading>
+        <Heading tag="h3">Select</Heading>
         <FormGroup>
           <Label for="select" value="">Select</Label>
           <Select id="select" required value="">
@@ -107,7 +107,7 @@ const FormExample = () => {
       </Form>
 
       <Form>
-        <Heading h3>Text Area</Heading>
+        <Heading tag="h3">Text Area</Heading>
         <FormGroup>
           <Label for="text_area">Text Area</Label>
           <TextArea id="text_area" />
@@ -120,7 +120,7 @@ const FormExample = () => {
 
       <Form>
         <FormGroup>
-          <Heading h3>Radio Button</Heading>
+          <Heading tag="h3">Radio Button</Heading>
           <FormGroup check>
             <Label for="radio_button">
               <RadioButton id="radio_button" /> Default
@@ -141,7 +141,7 @@ const FormExample = () => {
 
       <Form>
         <FormGroup>
-          <Heading h4>Form Text</Heading>
+          <Heading tag="h4">Form Text</Heading>
           <FormGroup check>
             <Label for="radio_button_with_form_text">
               <RadioButton id="radio_button_with_form_text" /> Default
@@ -166,7 +166,7 @@ const FormExample = () => {
 
       <Form inline>
         <FormGroup>
-          <Heading h4>Inline</Heading>
+          <Heading tag="h4">Inline</Heading>
           <FormGroup check>
             <Label for="radio_button_inlined">
               <RadioButton id="radio_button_inlined" /> Default
@@ -187,7 +187,7 @@ const FormExample = () => {
 
       <Form>
         <FormGroup>
-          <Heading h3>Checkbox</Heading>
+          <Heading tag="h3">Checkbox</Heading>
           <FormGroup check>
             <Label for="checkbox">
               <Checkbox id="checkbox" /> Default
@@ -208,7 +208,7 @@ const FormExample = () => {
       
       <Form>
         <FormGroup>
-          <Heading h4>Form Text</Heading>
+          <Heading tag="h4">Form Text</Heading>
           <FormGroup check>
             <Label for="exampleFormTextCheckboxDefault">
               <Checkbox id="exampleFormTextCheckboxDefault" /> Default
@@ -232,7 +232,7 @@ const FormExample = () => {
 
       <Form inline>
         <FormGroup>
-          <Heading h4>Inline</Heading>
+          <Heading tag="h4">Inline</Heading>
           <FormGroup check>
             <Label for="checkboxInlineDefault">
               <Checkbox id="checkboxInlineDefault" /> Default

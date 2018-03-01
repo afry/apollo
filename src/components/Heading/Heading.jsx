@@ -3,50 +3,22 @@ import PropTypes from 'prop-types';
 import * as styles from './Heading.css';
 
 const propTypes = {
-  children: PropTypes.string,
-  h1: PropTypes.bool,
-  h2: PropTypes.bool,
-  h3: PropTypes.bool,
-  h4: PropTypes.bool,
-  h5: PropTypes.bool,
-  h6: PropTypes.bool,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
-  children: undefined,
-  h1: false,
-  h2: false,
-  h3: false,
-  h4: false,
-  h5: false,
-  h6: false,
+  tag: 'h2',
 };
 
 const Heading = (props) => {
   const {
-    children,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
+    tag: Tag,
+    ...other
   } = props;
 
-  if (h1) {
-    return <h1 className={styles.Heading}>{children}</h1>;
-  } else if (h2) {
-    return <h2 className={styles.Heading}>{children}</h2>;
-  } else if (h3) {
-    return <h3 className={styles.Heading}>{children}</h3>;
-  } else if (h4) {
-    return <h4 className={styles.Heading}>{children}</h4>;
-  } else if (h5) {
-    return <h5 className={styles.Heading}>{children}</h5>;
-  } else if (h6) {
-    return <h6 className={styles.Heading}>{children}</h6>;
-  }
-  return null;
+  return (
+    <Tag {...other} className={styles.Heading} />
+  );
 };
 
 Heading.propTypes = propTypes;

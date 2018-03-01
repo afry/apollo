@@ -5,21 +5,26 @@ import {
 } from '../../src/index';
 
 const ButtonExample = () => {
-  const divStyle = {
-    borderTop: '1px solid lightgray',
-    margin: '10px 0',
-    padding: '20px 10px',
-    width: 'auto'
-  };
-
   return (
-    <div>
-      <Heading h2>Button</Heading>
-      <div style={divStyle}>
+    <div className="example">
+      <Heading tag="h1">Button</Heading>
+      <div>
         <Button color="primary">primary</Button>
         <Button color="secondary">secondary</Button>
         <Button color="success">success</Button>
         <Button color="danger">danger</Button>
+        <br />
+        <div>
+          <Heading tag="h3">Sizes</Heading>
+          <Heading tag="h4">Large</Heading>
+          <Button color="primary" size="large">Large Button</Button>
+          <Button color="secondary" size="large">Large Button</Button>
+        </div>
+        <div>
+          <Heading tag="h4">Small</Heading>
+          <Button color="primary" size="small">Small Button</Button>
+          <Button color="secondary" size="small">Small Button</Button>
+        </div>
       </div>
     </div>
   );
