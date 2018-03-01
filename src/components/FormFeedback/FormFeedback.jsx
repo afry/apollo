@@ -1,25 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from '../../utilities';
+import classNames from 'classnames';
 import * as styles from './FormFeedback.css';
 
 const propTypes = {
-  children: PropTypes.node,
   indented: PropTypes.bool,
   valid: PropTypes.bool,
 };
 
 const defaultProps = {
-  children: undefined,
   indented: false,
   valid: false,
 };
 
 const FormFeedback = (props) => {
   const {
-    children,
     indented,
     valid,
+    ...other
   } = props;
 
   const className = classNames([
@@ -29,7 +27,7 @@ const FormFeedback = (props) => {
   ]);
 
   return (
-    <div className={className}>{children}</div>
+    <div {...other} className={className} />
   );
 };
 

@@ -1,31 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from '../../utilities';
+import classNames from 'classnames';
 import * as styles from './Form.css';
 
 const propTypes = {
-  children: PropTypes.node,
   inline: PropTypes.bool,
 };
 
 const defaultProps = {
-  children: undefined,
   inline: false,
 };
 
 const Form = (props) => {
   const {
-    children,
     inline,
+    ...other
   } = props;
 
-  const className = classNames([
+  const className = classNames(
     styles.form,
     inline ? styles['form-inline'] : ''
-  ]);
+  );
 
   return (
-    <form className={className}>{children}</form>
+    <form {...other} className={className} />
   );
 };
 

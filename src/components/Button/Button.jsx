@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from '../../utilities';
+import classNames from 'classnames';
 import * as styles from './Button.css';
 
 const propTypes = {
-  children: PropTypes.string,
   color: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
@@ -21,7 +20,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: undefined,
   color: 'secondary',
   disabled: false,
   id: undefined,
@@ -50,25 +48,19 @@ class Button extends React.Component {
 
   render() {
     const {
-      children,
       color,
       size,
       ...other
     } = this.props;
 
-    const className = classNames([
+    const className = classNames(
       styles.button,
       styles[`button-${color}`],
-      size ? styles[`button-${size}`] : '',
-    ]);
+      size ? styles[`button-${size}`] : ''
+    );
 
     return (
-      <button
-        {...other}
-        className={className}
-        onClick={this.handleClick}
-      >{children}
-      </button>
+      <button {...other} className={className} onClick={this.handleClick} />
     );
   }
 }

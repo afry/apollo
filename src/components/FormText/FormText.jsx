@@ -1,31 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from '../../utilities';
+import classNames from 'classnames';
 import * as styles from './FormText.css';
 
 const propTypes = {
-  children: PropTypes.node,
   indented: PropTypes.bool,
 };
 
 const defaultProps = {
-  children: undefined,
   indented: false,
 };
 
 const FormText = (props) => {
   const {
-    children,
     indented,
+    ...other
   } = props;
 
-  const className = classNames([
+  const className = classNames(
     styles['form-text'],
     indented ? styles['form-text-indented'] : '',
-  ]);
+  );
 
   return (
-    <div className={className}>{children}</div>
+    <div {...other} className={className} />
   );
 };
 
