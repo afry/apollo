@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import * as styles from './SelectOption.css';
 
 const propTypes = {
-  children: PropTypes.node,
   disabled: PropTypes.bool,
   hidden: PropTypes.bool,
   value: PropTypes.string,
 };
 
 const defaultProps = {
-  children: undefined,
   disabled: false,
   hidden: false,
   value: undefined,
@@ -18,7 +16,6 @@ const defaultProps = {
 
 const SelectOption = (props) => {
   const {
-    children,
     ...other
   } = props;
 
@@ -26,8 +23,7 @@ const SelectOption = (props) => {
     <option
       {...other}
       className={styles['select-option']}
-    >{children}
-    </option>
+    />
   );
 };
 

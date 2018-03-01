@@ -4,25 +4,21 @@ import PropTypes from 'prop-types';
 import * as styles from './Label.css';
 
 const propTypes = {
-  children: PropTypes.node,
   for: PropTypes.string,
 };
 
 const defaultProps = {
-  children: undefined,
   for: undefined,
 };
 
 const Label = (props) => {
   const {
-    children,
     for: htmlFor,
+    ...other
   } = props;
 
   return (
-    <label className={styles.label} htmlFor={htmlFor}>
-      {children}
-    </label>
+    <label {...other} className={styles.label} htmlFor={htmlFor} />
   );
 };
 

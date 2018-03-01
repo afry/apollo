@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as styles from './Select.css';
 
 const propTypes = {
-  children: PropTypes.node,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -14,7 +13,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
@@ -38,7 +36,6 @@ class Select extends React.Component {
 
   render() {
     const {
-      children,
       ...other
     } = this.props;
 
@@ -47,8 +44,7 @@ class Select extends React.Component {
         {...other}
         className={styles.select}
         onChange={this.handleChange}
-      >{children}
-      </select>
+      />
     );
   }
 }
