@@ -1,6 +1,5 @@
 const path = require('path');
 const cssnano = require('cssnano');
-const postcssprefixer = require('postcss-prefixer');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -14,10 +13,7 @@ module.exports = (env) => {
       loaders: [
         {
           exclude: /node_modules/,
-          loader: [
-            'babel-loader',
-            'react-classname-prefix-loader?prefix=apollo'
-          ],
+          loader: ['babel-loader'],
           test: /\.js(x)$/,
         },
         {
@@ -28,19 +24,14 @@ module.exports = (env) => {
             use: [
               {
                 loader: 'css-loader',
-                options: { importLoaders: 1 },
+                options: {
+                  importLoaders: 1,
+                  localIdentName: 'apollo-[local]',
+                  modules: true,
+                },
               },
               {
                 loader: 'postcss-loader',
-                options: {
-                  ident: 'postcss',
-                  plugins: [
-                    postcssprefixer({
-                      prefix: 'apollo-',
-                      ignore: [''], // eslint-disable-line
-                    }),
-                  ],
-                },
               },
             ],
           }),
