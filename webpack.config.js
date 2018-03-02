@@ -25,13 +25,18 @@ module.exports = (env) => {
               {
                 loader: 'css-loader',
                 options: {
-                  importLoaders: 1,
                   localIdentName: 'apollo-[local]',
+                  minimize: false,
                   modules: true,
+                  sourceMap: true,
                 },
               },
               {
                 loader: 'postcss-loader',
+                options: {
+                  minimize: false,
+                  sourceMap: true,
+                },
               },
             ],
           }),
