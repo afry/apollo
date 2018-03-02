@@ -1,3 +1,6 @@
 .label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: .25rem;
   text-align: left;
 }

@@ -1,9 +1,17 @@
 .button {
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  border-radius: 6px;
   color: var(--charcoal);
   display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
   height: 48px;  
-  width: 154px;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
   text-align: center;
+  width: 154px;
 }
 
 .button:hover {

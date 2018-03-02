@@ -40,7 +40,7 @@ class DatePicker extends React.Component {
     return (
       <input
         {...other}
-        className={styles.datepicker}
+        className={styles['date-picker']}
         onChange={this.handleChange}
         type="date"
       />

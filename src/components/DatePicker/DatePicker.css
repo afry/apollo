@@ -1,25 +1,36 @@
-.datepicker {
+.date-picker {
   background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  height: 49.33px;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0 1rem;
+  width: 370px;
 }
 
-.datepicker:hover {
+.date-picker:hover {
   border-color: #025FAE;
 }
 
-.datepicker:disabled {
+.date-picker:disabled {
   background-color: var(--light-smoke);
   border-color: var(--dark-gray);
   color: var(--dark-gray);
 }
 
-.datepicker::-webkit-clear-button {
+.date-picker::-webkit-clear-button {
   display: none;
 }
 
-.datepicker::-webkit-inner-spin-button {
+.date-picker::-webkit-inner-spin-button {
   display: none;
 }
 
-.datepicker::-webkit-calendar-picker-indicator {
+.date-picker::-webkit-calendar-picker-indicator {
   opacity: 0;
 }

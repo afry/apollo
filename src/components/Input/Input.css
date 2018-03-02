@@ -1,4 +1,15 @@
 .input {
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  height: 49.33px;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0 1rem;
+  width: 370px;
 }
 
 .input:focus {
