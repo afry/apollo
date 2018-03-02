@@ -42,7 +42,7 @@ class Button extends React.Component {
     }
 
     if (this.props.onClick) {
-      this.props.onClick();
+      this.props.onClick(e);
     }
   }
 
