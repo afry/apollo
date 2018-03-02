@@ -5,7 +5,6 @@ import {
   Form,
   FormGroup,
   FormText,
-  Heading,
   Input,
   Label,
   RadioButton,
@@ -17,10 +16,10 @@ import {
 const WizardExample = () => {
   return (
     <div className="example">
-      <Heading tag="h1">Wizard</Heading>
+      <h1>Wizard</h1>
       <Wizard>
         <WizardPage title="Create Project">
-          <Heading>Create Project</Heading>
+          <h2>Create Project</h2>
           <p>Use Lime or PX ID to prefill the information. Tick the checkbox if your projekt doesn't have and ID.</p>
           <Form>
             <FormGroup>
@@ -35,7 +34,7 @@ const WizardExample = () => {
           </Form>
         </WizardPage>
         <WizardPage title="Description">
-          <Heading>Description</Heading>
+          <h2>Description</h2>
           <p>Describe the project so that partners, colleagues and customers easily know what the project is all about.</p>
           <Form>
             <FormGroup>
@@ -49,7 +48,7 @@ const WizardExample = () => {
           </Form>
         </WizardPage>
         <WizardPage title="Customer">
-          <Heading>Customer</Heading>
+          <h2>Customer</h2>
           <p>Fill in the company/organization name as well as the customer's main contact person for the project.</p>
           <Form>
             <FormGroup>
@@ -63,7 +62,7 @@ const WizardExample = () => {
           </Form>
         </WizardPage>
         <WizardPage title="Administrative Info">
-          <Heading>Administrative Info</Heading>
+          <h2>Administrative Info</h2>
           <p>Fill in the name of the project manager at ÅF, toghether with the project's starting date and security level.</p>
           <Form>
             <FormGroup>
