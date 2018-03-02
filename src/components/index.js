@@ -27,16 +27,32 @@ export {
 } from './FormText';
 
 export {
-  default as Heading,
-} from './Heading';
-
-export {
   default as Input,
 } from './Input';
 
 export {
   default as Label,
 } from './Label';
+
+export {
+  default as Nav,
+} from './Nav';
+
+export {
+  default as Navbar,
+} from './Navbar';
+
+export {
+  default as NavbarBrand,
+} from './NavbarBrand';
+
+export {
+  default as NavItem,
+} from './NavItem';
+
+export {
+  default as NavLink,
+} from './NavLink';
 
 export {
   default as RadioButton,
