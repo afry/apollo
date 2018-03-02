@@ -30,7 +30,8 @@ class RadioButton extends React.Component {
 
   handleChange(e) {
     if (this.props.onChange) {
-      this.props.onChange(e.target.checked, this.props.value);
+      const { currentTarget } = e;
+      this.props.onChange(currentTarget.checked, this.props.value);
     }
   }
 

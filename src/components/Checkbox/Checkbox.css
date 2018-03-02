@@ -1,10 +1,15 @@
 .checkbox {
-  position: relative;
   display: inline-block;
+  padding-right: 30px;
+  position: relative;
+  user-select: none;
 }
 
 .checkbox input {
+  height: 0;
   opacity: 0;
+  padding: 0;
+  width: 0;
 }
 
 .checkbox input:disabled {
