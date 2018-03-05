@@ -6,8 +6,6 @@ import * as styles from './Button.css';
 const propTypes = {
   color: PropTypes.string,
   disabled: PropTypes.bool,
-  id: PropTypes.string,
-  name: PropTypes.string,
   onClick: PropTypes.func,
   size: PropTypes.string,
   type(props, propName) {
@@ -22,8 +20,6 @@ const propTypes = {
 const defaultProps = {
   color: 'secondary',
   disabled: false,
-  id: undefined,
-  name: undefined,
   onClick: undefined,
   size: '',
   type: 'button',
