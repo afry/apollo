@@ -32,35 +32,22 @@ const defaultProps = {
   value: undefined,
 };
 
-class TextArea extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
+const TextArea = (props) => {
+  const {
+    columns,
+    resize: Resize,
+    ...other
+  } = props;
 
-  handleChange(e) {
-    if (this.props.onChange) {
-      this.props.onChange(e.target.value);
-    }
-  }
-
-  render() {
-    const {
-      columns,
-      ...other
-    } = this.props;
-
-    return (
-      <textarea
-        {...other}
-        className={styles.textarea}
-        cols={columns}
-        onChange={this.handleChange}
-        style={{ resize: this.props.resize }}
-      />
-    );
-  }
-}
+  return (
+    <textarea
+      {...other}
+      className={styles.textarea}
+      cols={columns}
+      style={{ resize: Resize }}
+    />
+  );
+};
 
 TextArea.propTypes = propTypes;
 TextArea.defaultProps = defaultProps;

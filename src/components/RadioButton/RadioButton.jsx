@@ -22,36 +22,18 @@ const defaultProps = {
   value: undefined,
 };
 
-class RadioButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
+const RadioButton = (props) => {
+  const {
+    ...other
+  } = props;
 
-  handleChange(e) {
-    if (this.props.onChange) {
-      const { currentTarget } = e;
-      this.props.onChange(currentTarget.checked, this.props.value);
-    }
-  }
-
-  render() {
-    const {
-      ...other
-    } = this.props;
-
-    return (
-      <div className={styles['radio-button']}>
-        <input
-          {...other}
-          onChange={this.handleChange}
-          type="radio"
-        />
-        <span className={styles.checkmark} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles['radio-button']}>
+      <input {...other} type="radio" />
+      <span className={styles.checkmark} />
+    </div>
+  );
+};
 
 RadioButton.propTypes = propTypes;
 RadioButton.defaultProps = defaultProps;

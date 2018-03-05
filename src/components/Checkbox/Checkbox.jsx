@@ -20,36 +20,21 @@ const defaultProps = {
   value: undefined,
 };
 
-class Checkbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
+const Checkbox = (props) => {
+  const {
+    ...other
+  } = props;
 
-  handleChange(e) {
-    if (this.props.onChange) {
-      const { currentTarget } = e;
-      this.props.onChange(currentTarget.checked);
-    }
-  }
-
-  render() {
-    const {
-      ...other
-    } = this.props;
-
-    return (
-      <div className={styles.checkbox}>
-        <input
-          {...other}
-          onChange={this.handleChange}
-          type="checkbox"
-        />
-        <span className={styles.checkmark} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.checkbox}>
+      <input
+        {...other}
+        type="checkbox"
+      />
+      <span className={styles.checkmark} />
+    </div>
+  );
+};
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;

@@ -22,32 +22,18 @@ const defaultProps = {
   value: undefined,
 };
 
-class Select extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
+const Select = (props) => {
+  const {
+    ...other
+  } = props;
 
-  handleChange(e) {
-    if (this.props.onChange) {
-      this.props.onChange(e.target.value);
-    }
-  }
-
-  render() {
-    const {
-      ...other
-    } = this.props;
-
-    return (
-      <select
-        {...other}
-        className={styles.select}
-        onChange={this.handleChange}
-      />
-    );
-  }
-}
+  return (
+    <select
+      {...other}
+      className={styles.select}
+    />
+  );
+};
 
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
