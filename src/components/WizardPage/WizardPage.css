@@ -1,8 +1,4 @@
 .wizard-page {
-    width: 100%;
-}
-
-.wizard-page-title,
-.wizard-page-description {
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
