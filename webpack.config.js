@@ -9,6 +9,12 @@ module.exports = (env) => {
 
   return {
     entry: './src/index.js',
+    externals: {
+      classnames: 'classnames',
+      'prop-types': 'prop-types',
+      react: 'react',
+      'react-dom': 'react-dom',
+    },
     module: {
       loaders: [
         {
