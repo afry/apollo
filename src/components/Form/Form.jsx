@@ -5,15 +5,18 @@ import * as styles from './Form.css';
 
 const propTypes = {
   inline: PropTypes.bool,
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
   inline: false,
+  innerRef: undefined,
 };
 
 const Form = (props) => {
   const {
     inline,
+    innerRef,
     ...other
   } = props;
 
@@ -23,7 +26,7 @@ const Form = (props) => {
   );
 
   return (
-    <form {...other} className={className} />
+    <form {...other} ref={innerRef} className={className} />
   );
 };
 
