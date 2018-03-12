@@ -4,31 +4,52 @@ import classNames from 'classnames';
 import * as styles from './Nav.css';
 
 const propTypes = {
-  horizontal: PropTypes.bool,
+  className: PropTypes.string,
+  collapsed: PropTypes.bool,
+  horizontal: PropTypes.string,
+  justified: PropTypes.bool,
   navbar: PropTypes.bool,
+  tabs: PropTypes.bool,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   vertical: PropTypes.bool,
 };
 
 const defaultProps = {
-  horizontal: true,
+  className: undefined,
+  collapsed: false,
+  horizontal: 'left',
+  justified: false,
   navbar: false,
+  tabs: false,
+  tag: 'ul',
   vertical: false,
 };
 
 const Nav = (props) => {
   const {
+    className,
+    collapsed,
     horizontal,
+    justified,
     navbar,
+    tabs,
+    tag: Tag,
     vertical,
     ...other
   } = props;
 
-  const className = classNames(
-    styles.nav,
+  const classes = classNames(
+    className,
+    navbar ? styles['navbar-nav'] : styles.nav,
+    collapsed ? styles['nav-collapsed'] : '',
+    horizontal ? styles[`justify-content-${horizontal}`] : '',
+    justified ? styles['nav-justified'] : '',
+    tabs ? styles['nav-tabs'] : '',
+    vertical ? styles['nav-vertical'] : '',
   );
 
   return (
-    <ul {...other} className={className} />
+    <Tag {...other} className={classes} />
   );
 };
 
