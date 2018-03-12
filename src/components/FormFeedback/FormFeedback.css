@@ -1,6 +1,7 @@
 .form-feedback {
-  font-size: 13px;
   color: var(--red-status);
+  font-size: 13px;
+  text-align: left;
 }
 
 .form-feedback-valid {
