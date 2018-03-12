@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as styles from './Input.css';
 
 const propTypes = {
-  autoComplete: PropTypes.bool,
   onChange: PropTypes.func,
   type(props, propName) {
     const value = props[propName];
@@ -15,21 +14,18 @@ const propTypes = {
 };
 
 const defaultProps = {
-  autoComplete: false,
   onChange: undefined,
   type: 'text',
 };
 
 const Input = (props) => {
   const {
-    autoComplete,
     ...other
   } = props;
 
   return (
     <input
       {...other}
-      autoComplete={autoComplete ? 'on' : 'off'}
       className={styles.input}
     />
   );

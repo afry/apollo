@@ -85,12 +85,12 @@ describe('<InputField />', () => {
 
   describe('autocomplete', () => {
     it('sets the autocomplete attribute on the input', () => {
-      const input = shallow(<Input autoComplete />);
+      const input = shallow(<Input autoComplete="on" />);
       expect(input.find('input').prop('autoComplete')).toBe('on');
     });
 
     it('sets the autocomplete attribute on the input', () => {
-      const input = shallow(<Input autoComplete={false} />);
+      const input = shallow(<Input autoComplete="off" />);
       expect(input.find('input').prop('autoComplete')).toBe('off');
     });
   });
