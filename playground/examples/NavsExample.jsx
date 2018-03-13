@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Navbar,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -17,23 +15,6 @@ class NavbarExample extends React.Component {
     return (
       <div className="example">
         <h1>Navs</h1>
-        {/* <Navbar>
-          <NavbarBrand>One</NavbarBrand>
-          <Nav horizontal="center" navbar>
-            <NavItem>
-              <NavLink active>Time Report</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>Projects</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>Groups</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>Information</NavLink>
-            </NavItem>
-          </Nav>
-        </Navbar> */}
 
         <h3>Horizontal</h3>
         <h4>Left-aligned</h4>
