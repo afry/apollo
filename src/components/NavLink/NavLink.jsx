@@ -23,6 +23,7 @@ const NavLink = (props) => {
   const {
     active,
     className,
+    disabled,
     innerRef,
     tag: Tag,
     ...other
@@ -31,11 +32,12 @@ const NavLink = (props) => {
   const classes = classNames(
     className,
     styles['nav-link'],
+    disabled ? styles.disabled : '',
     active ? styles.active : '',
   );
 
   return (
-    <Tag {...other} ref={innerRef} className={classes} />
+    <Tag {...other} ref={innerRef} className={classes} disabled={disabled} />
   );
 };
 

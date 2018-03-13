@@ -22,7 +22,7 @@
 
 .nav-link.disabled,
 .nav-link:disabled {
-  color: var(--marble);
+  color: var(--misty) !important;
 }
 
 .nav-link:not(.disabled):not(:disabled) {
