@@ -1,0 +1,7 @@
+.nav-item {
+  height: 100%;
+}
+
+.nav-item .nav{
+  padding-left: 1rem;
+}

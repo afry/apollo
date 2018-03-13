@@ -1,16 +1,18 @@
 /* eslint-disable */
 import React from 'react';
 
-import ButtonExample from './examples/ButtonExample';
-import FormExample from './examples/FormExample';
-import WizardExample from './examples/WizardExample';
+import NavsExample from './examples/NavsExample';
+import NavbarExample from './examples/NavbarExample';
+
+
+import Avatar from '../src/components/Avatar';
 
 export default function Playground() {
   return (
     <div>
-      <ButtonExample /> 
-      <FormExample />
-      <WizardExample />      
+      <Avatar alt="JW" size="x-small" src="404" />
+      <NavbarExample />
+      <NavsExample /> 
     </div>
   );
 }

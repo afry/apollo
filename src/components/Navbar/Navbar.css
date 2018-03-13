@@ -1,0 +1,79 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 5rem;
+  min-height: 70px;
+}
+
+.navbar-expand {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.navbar-expand .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar-dark {
+  background-color: var(--one-darkest-blue);
+}
+
+.navbar-light {
+  background-color: var(--white);
+  box-shadow: 0px 5px 5px var(--light-smoke);
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--white);
+}
+
+.navbar-light .navbar-brand {
+  color: var(--black);
+}
+
+.navbar .nav-link {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--misty);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: var(--white);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--white);
+}

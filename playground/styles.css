@@ -1,0 +1,19 @@
+html,
+body {
+  width: 90%;
+  width: 1440px;
+  margin: 1.25rem auto; 
+}
+
+h1 {
+  font-weight: 200;
+  padding-top: 2rem; 
+  padding-bottom: .25rem; 
+  border-bottom: 1px solid #f0f0f0; 
+}
+
+h3,
+h4 { 
+  padding-top: 1rem; 
+  font-weight: 300;
+}

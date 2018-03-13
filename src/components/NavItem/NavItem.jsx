@@ -4,23 +4,29 @@ import classNames from 'classnames';
 import * as styles from './NavItem.css';
 
 const propTypes = {
+  className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
+  className: undefined,
   tag: 'li'
 };
 
 const NavItem = (props) => {
   const {
+    className,
     tag: Tag,
     ...other
   } = props;
 
-  const className = classNames(styles['nav-item']);
+  const classes = classNames(
+    className,
+    styles['nav-item']
+  );
 
   return (
-    <Tag {...other} className={className} />
+    <Tag {...other} className={classes} />
   );
 };
 

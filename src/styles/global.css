@@ -1,6 +1,7 @@
 html,
 body {
   line-height: 1.5rem;
+  font-family: var(--theinhardt);
 }
 
 h1,

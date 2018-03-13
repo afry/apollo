@@ -4,30 +4,43 @@ import classNames from 'classnames';
 import * as styles from './Navbar.css';
 
 const propTypes = {
-  fixed: PropTypes.bool,
+  className: PropTypes.string,
+  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  fixed: PropTypes.string,
   inverse: PropTypes.bool,
+  role: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
-  fixed: false,
+  className: undefined,
+  expand: true,
+  fixed: undefined,
   inverse: false,
+  role: undefined,
+  tag: 'nav',
 };
 
 const Navbar = (props) => {
   const {
+    className,
+    expand,
     fixed,
     inverse,
+    tag: Tag,
     ...other
   } = props;
 
-  const className = classNames(
+  const classes = classNames(
+    className,
     styles.navbar,
+    expand ? styles['navbar-expand'] : '',
     fixed ? styles[`navbar-fixed-${fixed}`] : '',
-    inverse ? styles['navbar-inverse'] : '',
+    inverse ? styles['navbar-light'] : styles['navbar-dark'],
   );
 
   return (
-    <div {...other} className={className} />
+    <Tag {...other} className={classes} />
   );
 };
 
