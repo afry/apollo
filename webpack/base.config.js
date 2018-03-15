@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -34,7 +33,7 @@ module.exports = {
               loader: 'postcss-loader',
               options: {
                 minimize: false,
-                sourceMap: true,
+                sourceMap: false,
               },
             },
           ],
@@ -43,7 +42,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin('css/apollo.css'),
   ],
   resolve: {

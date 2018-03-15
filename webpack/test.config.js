@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const merge = require('webpack-merge');
-const common = require('./webpack.common');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
+const baseConfig = require('./base.config.js');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = merge(common, {
+module.exports = merge(baseConfig, {
   devServer: {
     contentBase: './playground',
   },
