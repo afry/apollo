@@ -5,12 +5,6 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   devtool: 'source-map',
-  externals: {
-    classnames: 'classnames',
-    'prop-types': 'prop-types',
-    react: 'react',
-    'react-dom': 'react-dom',
-  },
   mode: 'development',
   output: {
     filename: 'js/apollo.js',

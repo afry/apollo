@@ -2,6 +2,12 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  externals: {
+    classnames: 'classnames',
+    'prop-types': 'prop-types',
+    react: 'react',
+    'react-dom': 'react-dom',
+  },
   module: {
     rules: [
       {
