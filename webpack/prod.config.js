@@ -6,12 +6,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   devtool: 'source-map',
-  externals: {
-    classnames: 'classnames',
-    'prop-types': 'prop-types',
-    react: 'react',
-    'react-dom': 'react-dom',
-  },
   mode: 'production',
   output: {
     filename: 'js/apollo.min.js',
