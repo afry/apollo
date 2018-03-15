@@ -18,7 +18,7 @@ const NavbarExample = () => {
         <NavbarBrand>one</NavbarBrand>
         <Nav navbar>
           <NavItem>
-            <NavLink>Time Report</NavLink>
+            <NavLink disabled>Time Report</NavLink>
           </NavItem>
           <NavItem>
             <NavLink>Projects</NavLink>
@@ -40,7 +40,7 @@ const NavbarExample = () => {
             <NavLink active>Overview</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink>News</NavLink>
+            <NavLink disabled>News</NavLink>
           </NavItem>
           <NavItem>
             <NavLink>CEO Blog</NavLink>
