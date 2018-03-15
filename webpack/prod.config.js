@@ -1,9 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const baseConfig = require('./base.config.js');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-module.exports = merge(common, {
+module.exports = merge(baseConfig, {
   devtool: 'source-map',
   externals: {
     classnames: 'classnames',
@@ -13,12 +14,12 @@ module.exports = merge(common, {
   },
   mode: 'production',
   output: {
-    filename: 'js/apollo.js',
+    filename: 'js/apollo.min.js',
     libraryTarget: 'umd',
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new UglifyJSPlugin({
-      extractComments: true,
       sourceMap: true,
     }),
   ],

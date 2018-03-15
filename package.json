@@ -29,17 +29,16 @@
     "test:watch": "yarn run test --watch",
     "check": "npm-run-all lint test",
     "check:ci": "npm-run-all lint test:ci",
-    "build": "webpack --config ./webpack.prod.js",
-    "dev": "webpack-dev-server --open --config ./webpack.dev.js",
-    "start": "echo \"Warning: no 'start' task specified. Run 'yarn dev' instead.\" && yarn dev"
+    "build:dev": "webpack --config ./webpack/dev.config.js",
+    "build:prod": "webpack --config ./webpack/prod.config.js",
+    "build": "npm-run-all build:prod build:dev",
+    "start": "webpack-dev-server --open --config ./webpack/test.config.js"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "clean-webpack-plugin": "^0.1.18",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "webpack-merge": "^4.1.2"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
@@ -50,6 +49,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
@@ -86,7 +86,8 @@
     "webpack-cli": "^2.0.10",
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-server": "^3.1.0",
-    "webpack-licenses-plugin": "^0.0.3"
+    "webpack-licenses-plugin": "^0.0.3",
+    "webpack-merge": "^4.1.2"
   },
   "jest": {
     "setupFiles": [
