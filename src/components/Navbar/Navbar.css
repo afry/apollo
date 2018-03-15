@@ -6,8 +6,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: .5rem 5rem;
-  min-height: 70px;
+  padding: 0rem 5rem;
+  height: 70px;
 }
 
 .navbar-expand {
