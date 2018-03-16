@@ -1,5 +1,5 @@
 .nav-link {
-  color: var(--charcoal);
+  color: var(--charcoal, slategray);
   display: block;
   font-size: 16px;
   font-weight: 100;
@@ -7,22 +7,23 @@
   padding: 0.5rem 1rem;
   text-decoration: none;
   user-select: none;
+  box-sizing:border-box;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--one-blue);
+  color: var(--one-blue, blue);
 }
 
 .nav-link.active,
 .nav-link:active {
-  color: var(--one-blue);
-  font-weight: 500;
+  color: var(--one-blue, blue);
+  text-shadow: 0 0 .01px var(--one-blue, blue), 0 0 .01px var(--one-blue, blue);
 }
 
 .nav-link.disabled,
 .nav-link:disabled {
-  color: var(--misty) !important;
+  color: var(--misty, lightgray) !important;
 }
 
 .nav-link:not(.disabled):not(:disabled) {

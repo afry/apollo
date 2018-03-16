@@ -17,7 +17,7 @@
   align-items: center;
   -moz-box-pack: justify;
   -webkit-box-pack: justify;
-  background-color: var(--one-darkest-blue);
+  background-color: var(--one-darkest-blue, darkblue);
 }
 
 .wizard-navbar-brand {
@@ -29,7 +29,7 @@
   font-weight: 500;
   line-height: inherit;
   white-space: nowrap;
-  color: var(--white);
+  color: var(--white, white);
 }
 
 .wizard-navbar-nav {
@@ -53,12 +53,12 @@
 .wizard-navbar-nav li a {
   pointer-events: none;
   cursor: default;
-  color: var(--misty);
+  color: var(--misty, lightgray);
   text-decoration: none;
 }
 
 .wizard-navbar-nav li a.active {
-  color: var(--white);
+  color: var(--white, white);
 }
 
 .wizard-content {

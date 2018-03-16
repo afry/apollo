@@ -1,11 +1,11 @@
 .form-feedback {
-  color: var(--red-status);
+  color: var(--red-status, red);
   font-size: 13px;
   text-align: left;
 }
 
 .form-feedback-valid {
-  color: var(--green-status);
+  color: var(--green-status, green);
 }
 
 .form-feedback-indented {

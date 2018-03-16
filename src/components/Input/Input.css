@@ -1,6 +1,6 @@
 .input {
-  background-color: var(--white);
-  border: 1px solid var(--dark-gray);
+  background-color: var(--white, white);
+  border: 1px solid var(--dark-gray, darkgray);
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
@@ -16,12 +16,12 @@
 }
 
 .input:hover {
-  border-color: var(--one-blue);
+  border-color: var(--one-blue, blue);
 }
 
 .input:disabled {
-  background-color: var(--light-smoke);
-  border-color: var(--dark-gray);
+  background-color: var(--light-smoke, whitesmoke);
+  border-color: var(--dark-gray, darkgray);
 }
 
 .input[type=number]::-webkit-inner-spin-button {
@@ -29,5 +29,5 @@
 }
 
 ::placeholder {
-  color: var(--dark-gray) !important;
+  color: var(--dark-gray, darkgray) !important;
 }

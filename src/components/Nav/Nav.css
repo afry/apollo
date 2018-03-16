@@ -19,7 +19,7 @@
 }
 
 .nav-tabs {
-  border-bottom: 1px solid var(--misty);
+  border-bottom: 1px solid var(--misty, lightgray);
 }
 
 .nav-tabs .nav-item {
@@ -32,7 +32,7 @@
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:active {
-  border-color: var(--one-blue);
+  border-color: var(--one-blue, blue);
 }
 
 .nav-vertical {
@@ -52,7 +52,7 @@
 
 .nav-vertical.nav-tabs .nav-link.active,
 .nav-vertical.nav-tabs .nav-link:active {
-  border-left: 2px solid var(--one-blue);
+  border-left: 2px solid var(--one-blue, blue);
 }
 
 .nav-justified .nav-item {

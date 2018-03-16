@@ -1,6 +1,6 @@
 .textarea {
-  background-color: var(--white);
-  border: 1px solid var(--dark-gray);
+  background-color: var(--white, white);
+  border: 1px solid var(--dark-gray, darkgray);
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
@@ -13,14 +13,14 @@
 }
 
 .textarea:hover {
-  border-color: var(--one-blue);
+  border-color: var(--one-blue, blue);
 }
 
 .textarea:disabled {
-  background-color: var(--light-smoke);
-  border-color: var(--dark-gray);
+  background-color: var(--light-smoke, whitesmoke);
+  border-color: var(--dark-gray, darkgray);
 }
 
 ::placeholder {
-  color: var(--dark-gray) !important;
+  color: var(--dark-gray, darkgray) !important;
 }

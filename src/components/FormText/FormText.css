@@ -1,7 +1,7 @@
 .form-text {
   font-size: 13px;
   font-weight: 100;
-  color: var(--dark-gray);
+  color: var(--dark-gray, darkgray);
 }
 
 .form-text-indented {

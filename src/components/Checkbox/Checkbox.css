@@ -17,7 +17,7 @@
 }
 
 .checkbox .checkmark {
-  border: 1px solid var(--stone);
+  border: 1px solid var(--stone, slategray);
   border-radius: 3px;
   height: 20px;
   left: 0;
@@ -27,22 +27,22 @@
 }
 
 .checkbox:hover input ~ .checkmark {
-  border: 2px solid var(--one-blue);
+  border: 2px solid var(--one-blue, blue);
   cursor: pointer;
   height: 18px;
   width: 18px;
 }
 
 .checkbox input:checked ~ .checkmark {
-  background-color: var(--one-blue);
-  border: 2px solid var(--one-blue);
+  background-color: var(--one-blue, blue);
+  border: 2px solid var(--one-blue, blue);
   height: 18px;
   width: 18px;
 }
 
 .checkbox input:disabled ~ .checkmark {
-  background-color: var(--misty);
-  border-color: var(--misty);
+  background-color: var(--misty, lightgray);
+  border-color: var(--misty lightgray);
   cursor: default;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .checkbox .checkmark:after {
-  border: solid var(--white);
+  border: solid var(--white, white);
   border-width: 0 2px 2px 0;
   height: 10px;
   left: 6px;
