@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Navbar,
   NavbarBrand,
   Nav,
@@ -7,14 +8,12 @@ import {
   NavLink,
 } from '../../src';
 
-const NavbarExample = () => {
-
-  return (
-    <div className="example">
-      <h1>Navbar</h1>
-
-      <h3>Dark</h3>
-      <Navbar>
+const NavbarExample = () => (
+  <Container>
+    <h1>Navbar</h1>
+    <h3>Dark</h3>
+    <Navbar>
+      <Container>
         <NavbarBrand>one</NavbarBrand>
         <Nav navbar>
           <NavItem>
@@ -30,10 +29,12 @@ const NavbarExample = () => {
             <NavLink>Information</NavLink>
           </NavItem>
         </Nav>
-      </Navbar>
+      </Container>
+    </Navbar>
 
-      <h3>Light</h3>
-      <Navbar inverse>
+    <h3>Light</h3>
+    <Navbar inverse>
+      <Container>
         <NavbarBrand>Home</NavbarBrand>
         <Nav horizontal="center" navbar>
           <NavItem>
@@ -49,9 +50,9 @@ const NavbarExample = () => {
             <NavLink>Jobs & Assignments</NavLink>
           </NavItem>
         </Nav>
-      </Navbar>
-    </div>
-  );
-};
+      </Container>
+    </Navbar>
+  </Container>
+);
 
 export default NavbarExample;
