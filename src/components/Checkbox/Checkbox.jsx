@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './Checkbox.css';
 
 const propTypes = {
   checked: PropTypes.bool,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -13,6 +15,7 @@ const propTypes = {
 
 const defaultProps = {
   checked: false,
+  className: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
@@ -22,15 +25,18 @@ const defaultProps = {
 
 const Checkbox = (props) => {
   const {
+    className,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles.checkbox,
+  );
+
   return (
-    <div className={styles.checkbox}>
-      <input
-        {...other}
-        type="checkbox"
-      />
+    <div className={classes}>
+      <input {...other} type="checkbox" />
       <span className={styles.checkmark} />
     </div>
   );

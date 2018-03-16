@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './DatePicker.css';
 
 const propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -12,6 +14,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
@@ -22,15 +25,17 @@ const defaultProps = {
 
 const DatePicker = (props) => {
   const {
+    className,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles['date-picker'],
+  );
+
   return (
-    <input
-      {...other}
-      className={styles['date-picker']}
-      type="date"
-    />
+    <input {...other} className={classes} type="date" />
   );
 };
 

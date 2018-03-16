@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import * as styles from './Button.css';
 
 const propTypes = {
+  className: PropTypes.string,
   color: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
@@ -18,6 +19,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: undefined,
   color: 'secondary',
   disabled: false,
   onClick: undefined,
@@ -44,19 +46,21 @@ class Button extends React.Component {
 
   render() {
     const {
+      className,
       color,
       size,
       ...other
     } = this.props;
 
-    const className = classNames(
+    const classes = classNames(
+      className,
       styles.button,
       styles[`button-${color}`],
       size ? styles[`button-${size}`] : ''
     );
 
     return (
-      <button {...other} className={className} onClick={this.handleClick} />
+      <button {...other} className={classes} onClick={this.handleClick} />
     );
   }
 }

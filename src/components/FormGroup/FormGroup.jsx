@@ -5,29 +5,33 @@ import * as styles from './FormGroup.css';
 
 const propTypes = {
   check: PropTypes.bool,
+  className: PropTypes.string,
   inline: PropTypes.bool,
 };
 
 const defaultProps = {
   check: false,
+  className: undefined,
   inline: false,
 };
 
 const FormGroup = (props) => {
   const {
     check,
+    className,
     inline,
     ...other
   } = props;
 
-  const className = classNames(
+  const classes = classNames(
+    className,
     styles['form-group'],
     inline ? styles['form-group-inline'] : '',
     check ? styles['form-group-check'] : ''
   );
 
   return (
-    <div {...other} className={className} />
+    <div {...other} className={classes} />
   );
 };
 
