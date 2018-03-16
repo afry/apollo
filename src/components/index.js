@@ -7,6 +7,10 @@ export {
 } from './Checkbox';
 
 export {
+  default as Container,
+} from './Container';
+
+export {
   default as DatePicker,
 } from './DatePicker';
 
