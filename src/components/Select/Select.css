@@ -1,6 +1,6 @@
 .select {
-  background-color: var(--white);
-  border: 1px solid var(--dark-gray);
+  background-color: var(--white, white);
+  border: 1px solid var(--dark-gray, darkgray);
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
@@ -18,14 +18,14 @@
 
 .select,
 .select[value=""] {
-  color: var(--dark-gray);
+  color: var(--dark-gray, darkgray);
 }
 
 .select:hover {
-  border-color: var(--one-blue);
+  border-color: var(--one-blue, blue);
 }
 
 .select:disabled {
-  background-color: var(--light-smoke);
-  border-color: var(--dark-gray);
+  background-color: var(--light-smoke, whitesmoke);
+  border-color: var(--dark-gray, darkgray);
 }
