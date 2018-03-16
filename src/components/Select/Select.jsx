@@ -1,8 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './Select.css';
 
 const propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -13,6 +15,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
@@ -24,14 +27,17 @@ const defaultProps = {
 
 const Select = (props) => {
   const {
+    className,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles.select,
+  );
+
   return (
-    <select
-      {...other}
-      className={styles.select}
-    />
+    <select {...other} className={classes} />
   );
 };
 

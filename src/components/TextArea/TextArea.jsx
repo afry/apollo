@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './TextArea.css';
 
 const propTypes = {
+  className: PropTypes.string,
   columns: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
@@ -18,6 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: undefined,
   columns: '39',
   disabled: false,
   id: undefined,
@@ -34,15 +37,21 @@ const defaultProps = {
 
 const TextArea = (props) => {
   const {
+    className,
     columns,
     resize: Resize,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles.textarea,
+  );
+
   return (
     <textarea
       {...other}
-      className={styles.textarea}
+      className={classes}
       cols={columns}
       style={{ resize: Resize }}
     />

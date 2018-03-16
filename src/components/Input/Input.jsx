@@ -1,8 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './Input.css';
 
 const propTypes = {
+  className: PropTypes.string,
   onChange: PropTypes.func,
   type(props, propName) {
     const value = props[propName];
@@ -14,20 +16,24 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: undefined,
   onChange: undefined,
   type: 'text',
 };
 
 const Input = (props) => {
   const {
+    className,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles.input,
+  );
+
   return (
-    <input
-      {...other}
-      className={styles.input}
-    />
+    <input {...other} className={classes} />
   );
 };
 

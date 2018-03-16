@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './RadioButton.css';
 
 const propTypes = {
   checked: PropTypes.bool,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -14,6 +16,7 @@ const propTypes = {
 
 const defaultProps = {
   checked: false,
+  className: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
@@ -24,11 +27,17 @@ const defaultProps = {
 
 const RadioButton = (props) => {
   const {
+    className,
     ...other
   } = props;
 
+  const classes = classNames(
+    className,
+    styles['radio-button'],
+  );
+
   return (
-    <div className={styles['radio-button']}>
+    <div className={classes}>
       <input {...other} type="radio" />
       <span className={styles.checkmark} />
     </div>
