@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Nav,
   NavItem,
   NavLink,
@@ -13,9 +14,8 @@ class NavbarExample extends React.Component {
 
   render() {
     return (
-      <div className="example">
+      <Container>
         <h1>Navs</h1>
-
         <h3>Horizontal</h3>
         <h4>Left-aligned</h4>
         <Nav>
@@ -170,7 +170,7 @@ class NavbarExample extends React.Component {
             <NavLink>Link</NavLink>
           </NavItem>
         </Nav>
-      </div>
+      </Container>
     );
   }
 }
