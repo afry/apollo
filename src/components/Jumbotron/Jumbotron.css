@@ -1,0 +1,8 @@
+.jumbotron {
+  background-color: var(--faded-light-blue, lightblue);
+  padding: 50px 110px;
+}
+
+.jumbotron > * {
+  max-width: 55ch;
+}

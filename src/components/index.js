@@ -39,6 +39,10 @@ export {
 } from './Input';
 
 export {
+  default as Jumbotron,
+} from './Jumbotron';
+
+export {
   default as Label,
 } from './Label';
 
