@@ -1,0 +1,21 @@
+.badge {
+  border: 1px solid var(--one-blue, blue);
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 .5rem;
+  user-select: none;
+}
+
+.badge-primary {
+  color: var(--white, white);
+  background-color: var(--one-blue, blue);
+}
+
+.badge-secondary {
+  color: var(--one-blue, blue);
+  background-color: var(--white, white);
+}
