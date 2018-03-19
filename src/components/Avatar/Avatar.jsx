@@ -29,9 +29,8 @@ class Avatar extends React.Component {
   }
 
   render() {
-    const Tag = 'img';
-
     const {
+      alt,
       className,
       size,
       ...other
@@ -46,13 +45,18 @@ class Avatar extends React.Component {
     if (this.state.error) {
       return (
         <div className={classes}>
-          <span>{this.props.alt}</span>
+          <span>{alt}</span>
         </div>
       );
     }
 
     return (
-      <Tag {...other} className={classes} onError={this.handleError} />
+      <img
+        {...other}
+        alt={alt}
+        className={classes}
+        onError={this.handleError}
+      />
     );
   }
 }
