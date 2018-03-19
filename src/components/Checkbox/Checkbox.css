@@ -42,7 +42,7 @@
 
 .checkbox input:disabled ~ .checkmark {
   background-color: var(--misty, lightgray);
-  border-color: var(--misty lightgray);
+  border-color: var(--misty, lightgray);
   cursor: default;
 }
 
