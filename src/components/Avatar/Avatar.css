@@ -1,20 +1,16 @@
 .avatar {
-  /* border: 2px solid black; */
-  background: var(--one-blue);
-  border-radius: 50%/50%;
-  color: var(--white);
-  display: block;
-  max-width: 100%;
+  display: inline-block;
   position: relative;
+  color: var(--white, white);
+  background-clip: padding-box;
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--one-blue, blue);
+  border-radius: 50%;
+  margin: 0 1px;
   overflow: hidden;
   text-align: center;
   user-select: none;
-}
-
-.avatar::after {
-  content: '';
-  display: block;
-  padding-bottom: 100%;
 }
 
 .avatar-x-small {
@@ -39,4 +35,24 @@
   height: 88px;
   width: 88px;
   line-height: 88px;
+}
+
+.avatar-x-small > span {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.avatar-small > span {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.avatar-medium > span {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.avatar-large > span {
+  font-size: 24px;
+  line-height: 29px;
 }

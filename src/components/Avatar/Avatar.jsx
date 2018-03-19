@@ -4,35 +4,58 @@ import classNames from 'classnames';
 import * as styles from './Avatar.css';
 
 const propTypes = {
+  alt: PropTypes.string,
   className: PropTypes.string,
   size: PropTypes.string,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  src: PropTypes.string,
 };
 
 const defaultProps = {
+  alt: undefined,
   className: undefined,
   size: 'small',
-  tag: 'img',
+  src: undefined,
 };
 
-const Avatar = (props) => {
-  const {
-    className,
-    size,
-    tag: Tag,
-    ...other
-  } = props;
+class Avatar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleError = this.handleError.bind(this);
+    this.state = { error: false };
+  }
 
-  const classes = classNames(
-    className,
-    styles.avatar,
-    styles[`avatar-${size}`],
-  );
+  handleError() {
+    this.setState({ error: true });
+  }
 
-  return (
-    <Tag {...other} className={classes} />
-  );
-};
+  render() {
+    const Tag = 'img';
+
+    const {
+      className,
+      size,
+      ...other
+    } = this.props;
+
+    const classes = classNames(
+      className,
+      styles.avatar,
+      styles[`avatar-${size}`],
+    );
+
+    if (this.state.error) {
+      return (
+        <div className={classes}>
+          <span>{this.props.alt}</span>
+        </div>
+      );
+    }
+
+    return (
+      <Tag {...other} className={classes} onError={this.handleError} />
+    );
+  }
+}
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
