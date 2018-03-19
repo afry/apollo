@@ -4,7 +4,7 @@ import {
   Container,
 } from '../../src';
 
-const ButtonExample = () => (
+const BadgeExample = () => (
   <Container>
     <h1>Badge</h1>
     <div>
@@ -14,5 +14,4 @@ const ButtonExample = () => (
   </Container>
 );
 
-export default ButtonExample;
-
+export default BadgeExample;
