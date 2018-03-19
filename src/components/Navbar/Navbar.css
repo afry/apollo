@@ -6,18 +6,20 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0rem 65px;
-  height: 70px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 70px;
 }
 
 .navbar > .container,
 .navbar > .container-fluid {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  padding: 0;
+  width: 100%;
 }
 
 .navbar-expand {
@@ -41,7 +43,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; 
   z-index: 1030;
 }
 
@@ -53,13 +55,46 @@
   z-index: 1030;
 }
 
+@media (--phone) {
+  [class*="navbar-fixed-"] > .container {
+    max-width: 410px;
+  }
+}
+
+@media (--tablet) {
+  [class*="navbar-fixed-"] > .container {
+    max-width: 590px;
+  }
+}
+
+@media (--desktop) {
+  [class*="navbar-fixed-"] > .container {
+    max-width: 830px;
+  }
+}
+
+@media (--large-desktop) {
+  [class*="navbar-fixed-"] > .container {
+    max-width: 1310px;
+  }
+}
+
 .navbar-dark {
   background-color: var(--one-darkest-blue, darkblue);
 }
 
 .navbar-light {
   background-color: var(--white, white);
-  box-shadow: 0px 5px 5px var(--light-smoke, whitesmoke);
+  box-shadow: 0px 2.5px 2.5px var(--marble, lightgray),
+              0px -2.5px 2.5px var(--marble, lightgray);
+}
+
+.navbar-fixed-top.navbar-light {
+  box-shadow: 0px 2.5px 2.5px var(--marble, lightgray);
+}
+
+.navbar-fixed-bottom.navbar-light {
+  box-shadow: 0px -2.5px 2.5px var(--marble, lightgray);
 }
 
 .navbar-dark .navbar-brand {
@@ -80,6 +115,7 @@
 
 .navbar-dark .nav-link.active,
 .navbar-dark .nav-link:active {
+  color: var(--white, white);
   text-shadow: 0 0 .01rem var(--white, white), 0 0 .01rem var(--white, white);
 }
 
