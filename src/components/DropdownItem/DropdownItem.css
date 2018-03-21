@@ -1,14 +1,27 @@
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 19px;
   clear: both;
-  font-weight: 100;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: inherit;
   color: var(--black, black);
   text-align: inherit;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  text-indent: 0px;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: none;
 }
 
 .dropdown-item:hover,
@@ -26,8 +39,8 @@
   display: block;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-bottom: 0;
   font-size: 16px;
+  line-height: 19px;
   font-weight: 100;
   color: var(--stone, gray);
   white-space: nowrap;

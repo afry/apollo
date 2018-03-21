@@ -44,6 +44,7 @@ class DropdownItem extends React.Component {
 
   render() {
     const {
+      active,
       className,
       header,
       href,
@@ -60,6 +61,7 @@ class DropdownItem extends React.Component {
       (!header && !separator) ? styles['dropdown-item'] : '',
       header ? styles['dropdown-header'] : '',
       separator ? styles['dropdown-separator'] : '',
+      active ? styles.active : '',
     );
 
     if (Tag === 'button') {
@@ -73,7 +75,12 @@ class DropdownItem extends React.Component {
     }
 
     return (
-      <Tag {...other} className={classes} onClick={this.handleClick} />
+      <Tag
+        {...other}
+        className={classes}
+        href={href}
+        onClick={this.handleClick}
+      />
     );
   }
 }
