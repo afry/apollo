@@ -9,13 +9,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   size: PropTypes.string,
-  type(props, propName) {
-    const value = props[propName];
-    if (!value.match(/^button|submit|reset$/)) {
-      return new Error(`Invalid type: ${value}`);
-    }
-    return null;
-  },
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
 
 const defaultProps = {
