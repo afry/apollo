@@ -7,6 +7,10 @@ export {
 } from './Badge';
 
 export {
+  default as BasicDropdown,
+} from './BasicDropdown';
+
+export {
   default as Button,
 } from './Button';
 
