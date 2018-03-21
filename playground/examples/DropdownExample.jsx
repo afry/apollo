@@ -2,6 +2,7 @@
 import React from 'react';
 import {
   Container,
+  BasicDropdown,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -33,6 +34,17 @@ class DropdownExample extends React.Component {
             <DropdownItem disabled>Disabled</DropdownItem>
           </DropdownMenu>
         </Dropdown>
+
+        <BasicDropdown>
+          <DropdownToggle>Basic Dropdown</DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem header>Header</DropdownItem>
+            <DropdownItem separator />
+            <DropdownItem>Menu Item</DropdownItem>
+            <DropdownItem>Menu Item</DropdownItem>
+            <DropdownItem disabled>Disabled</DropdownItem>
+          </DropdownMenu>
+        </BasicDropdown>
       </Container>
     );
   }
