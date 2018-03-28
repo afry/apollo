@@ -5,6 +5,7 @@ import * as styles from './Dropdown.css';
 
 const propTypes = {
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   onToggle: PropTypes.func,
   open: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -12,6 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   className: undefined,
+  disabled: false,
   onToggle: undefined,
   open: false,
   tag: 'div',
@@ -26,6 +28,10 @@ class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleDocumentClick = this.handleDocumentClick.bind(this);
+
+    this.addEventListeners = this.addEventListeners.bind(this);
+    this.removeEventListeners = this.removeEventListeners.bind(this);
   }
 
   getChildContext() {
@@ -35,10 +41,51 @@ class Dropdown extends React.Component {
     };
   }
 
-  handleToggle(e) {
-    if (this.props.onToggle) {
-      this.props.onToggle(e);
+  componentDidMount() {
+    if (this.props.open) {
+      this.addEventListeners();
+    } else {
+      this.removeEventListeners();
     }
+  }
+
+  componentDidUpdate(previousProps) {
+    if (this.props.open !== previousProps.open) {
+      if (this.props.open) {
+        this.addEventListeners();
+      } else {
+        this.removeEventListeners();
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    this.removeEventListeners();
+  }
+
+  addEventListeners() {
+    ['click'].forEach(event => (
+      document.addEventListener(event, this.handleDocumentClick, true)
+    ));
+  }
+
+  removeEventListeners() {
+    ['click'].forEach(event => (
+      document.removeEventListener(event, this.handleDocumentClick, true)
+    ));
+  }
+
+  handleDocumentClick(e) {
+    this.handleToggle(e);
+  }
+
+  handleToggle(e) {
+    if (this.props.disabled) {
+      e.preventDefault();
+      return;
+    }
+
+    this.props.onToggle(e);
   }
 
   render() {
