@@ -11,6 +11,10 @@ export {
 } from './BasicDropdown';
 
 export {
+  default as BasicWizard,
+} from './BasicWizard';
+
+export {
   default as Button,
 } from './Button';
 
@@ -111,5 +115,9 @@ export {
 } from './Wizard';
 
 export {
-  default as WizardPage,
-} from './WizardPage';
+  default as WizardControl,
+} from './WizardControl';
+
+export {
+  default as WizardStep,
+} from './WizardStep';

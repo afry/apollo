@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Button from '../Button';
-import WizardNavbar from './WizardNavbar';
-import WizardNavLink from './WizardNavLink';
-
+import classNames from 'classnames';
 import * as styles from './Wizard.css';
 
+import Nav from '../Nav';
+import Navbar from '../Navbar';
+import NavItem from '../NavItem';
+import NavLink from '../NavLink';
+
+import Container from '../Container';
+
 const propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  activeStep: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  brand: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  children: PropTypes.node,
+  className: PropTypes.string,
   onCancel: PropTypes.func,
   onFinish: PropTypes.func,
   onNext: PropTypes.func,
@@ -16,101 +22,127 @@ const propTypes = {
 };
 
 const defaultProps = {
+  activeStep: 0,
+  brand: undefined,
+  children: undefined,
+  className: undefined,
   onCancel: undefined,
   onFinish: undefined,
   onNext: undefined,
   onPrevious: undefined,
 };
 
+const childContextTypes = {
+  onCancel: PropTypes.func,
+  onFinish: PropTypes.func,
+  onNext: PropTypes.func,
+  onPrevious: PropTypes.func,
+};
+
 class Wizard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentStep: 0 };
-    this.handleNext = this.handleNext.bind(this);
-    this.handlePrevious = this.handlePrevious.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
     this.handleFinish = this.handleFinish.bind(this);
+    this.handleNext = this.handleNext.bind(this);
+    this.handlePrevious = this.handlePrevious.bind(this);
+
+    this.renderNavbar = this.renderNavbar.bind(this);
+    this.renderSteps = this.renderSteps.bind(this);
   }
 
-  handleNext() {
-    const step = this.state.currentStep + 1;
-    this.setState({ currentStep: step });
-
-    if (this.props.onNext) {
-      this.props.onNext();
-    }
+  getChildContext() {
+    return {
+      onCancel: this.props.onCancel,
+      onFinish: this.props.onFinish,
+      onNext: this.props.onNext,
+      onPrevious: this.props.onPrevious,
+    };
   }
 
-  handlePrevious() {
-    const step = this.state.currentStep - 1;
-    if (step < 0) { return; }
-    this.setState({ currentStep: step });
-
-    if (this.props.onPrevious) {
-      this.props.onPrevious();
-    }
-  }
-
-  handleCancel() {
+  handleCancel(e) {
     if (this.props.onCancel) {
-      this.props.onCancel();
+      this.props.onCancel(e);
     }
   }
 
-  handleFinish() {
+  handleFinish(e) {
     if (this.props.onFinish) {
-      this.props.onFinish();
+      this.props.onFinish(e);
     }
+  }
+
+  handleNext(e) {
+    if (this.props.onNext) {
+      this.props.onNext(e);
+    }
+  }
+
+  handlePrevious(e) {
+    if (this.props.onPrevious) {
+      this.props.onPrevious(e);
+    }
+  }
+
+  renderNavbar(steps) {
+    const { brand, activeStep } = this.props;
+    return (
+      <Navbar>
+        <Container>
+          {brand}
+          <Nav horizontal="center">
+            {
+              steps.map((step, index) => {
+                const isActive = (index === activeStep);
+                return (
+                  <NavItem key={step.props.label}>
+                    <NavLink active={isActive}>{step.props.label}</NavLink>
+                  </NavItem>
+                );
+              })
+            }
+          </Nav>
+        </Container>
+      </Navbar>
+    );
+  }
+
+  renderSteps(steps, className) {
+    const { activeStep } = this.props;
+    return (
+      <div className={className}>
+        {
+          steps.map((step, index) => (
+            React.cloneElement(step, {
+              active: (index === activeStep)
+            })
+          ))
+        }
+      </div>
+    );
   }
 
   render() {
-    const { children } = this.props;
-    const { currentStep } = this.state;
+    const {
+      children,
+      className,
+    } = this.props;
 
     if (!children || children.length === 0) {
       return null;
     }
 
-    const activePage = children.filter((page, index) => index === currentStep);
+    const outerClasses = classNames(
+      className,
+      styles.wizard,
+    );
 
-    const navlinks = children.map((page, index) => {
-      const active = currentStep === index;
-      return (
-        <WizardNavLink key={page.props.title} active={active}>
-          {page.props.title}
-        </WizardNavLink>
-      );
-    });
-
-
-    let nextButton;
-    let previousButton;
-
-    if (currentStep === 0) {
-      previousButton = <Button onClick={this.handleCancel}>Cancel</Button>;
-    } else {
-      previousButton = <Button onClick={this.handlePrevious}>Go Back</Button>;
-    }
-    if (currentStep === children.length - 1) {
-      nextButton = <Button color="success" onClick={this.handleFinish}>Finish</Button>;
-    } else {
-      nextButton = <Button color="primary" onClick={this.handleNext}>Next</Button>;
-    }
+    const innerClasses = classNames(styles['wizard-body']);
 
     return (
-      <div className={styles.wizard}>
-        <WizardNavbar>{navlinks}</WizardNavbar>
-        <div className={styles['wizard-content']}>
-          {activePage}
-        </div>
-        <div className={styles['wizard-button-group']}>
-          <div className={styles['pull-left']}>
-            {previousButton}
-          </div>
-          <div className={styles['pull-right']}>
-            {nextButton}
-          </div>
-        </div>
+      <div className={outerClasses}>
+        {this.renderNavbar(children)}
+        {this.renderSteps(children, innerClasses)}
       </div>
     );
   }
@@ -118,5 +150,6 @@ class Wizard extends React.Component {
 
 Wizard.propTypes = propTypes;
 Wizard.defaultProps = defaultProps;
+Wizard.childContextTypes = childContextTypes;
 
 export default Wizard;

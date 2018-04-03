@@ -1,0 +1,76 @@
+.wizard-control {
+  position: relative;
+  background-color: var(--white, white);
+  border: 1px solid var(--dark-gray, darkgray);
+  border-radius: 6px;
+  color: var(--charcoal, slategray);
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  height: 48px;  
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  text-align: center;
+  width: 154px;
+}
+
+.wizard-control:hover {
+  background-color: var(--marble, whitesmoke);
+}
+
+.wizard-control:disabled {
+  background-color: var(--marble, whitesmoke);
+  border-color: var(--marble, whitesmoke);
+}
+
+.wizard-control-primary {
+  background-color: var(--one-blue, blue);
+  border-color: var(--one-blue, blue);
+  color: var(--white, white);
+}
+
+.wizard-control-primary:hover,
+.wizard-control-primary:disabled {
+  background-color: var(--one-dark-blue, darkblue);
+  border-color: var(--one-dark-blue, darkblue);
+}
+
+.wizard-control-danger { 
+  background-color: var(--red-status, red);
+  border-color: var(--red-status, red);
+  color: var(--white, white);
+}
+
+.wizard-control-danger:hover,
+.wizard-control-danger:disabled {
+  background-color: var(--red-hover-status, darkred);
+  border-color: var(--red-hover-status, darkred);
+}
+
+.wizard-control-success {
+  background-color: var(--green-status, green);
+  border-color: var(--green-status, green);
+  color: var(--white, white);
+}
+
+.wizard-control-success:hover,
+.wizard-control-success:disabled {
+  background-color: var(--green-hover-status, darkgreen);
+  border-color: var(--green-hover-status, darkgreen);
+}
+
+.wizard-control-left,
+.wizard-control-right {
+  position: absolute;
+  bottom: 0;
+  margin: 25px 75px;
+}
+  
+.wizard-control-left {
+  left: 0;
+}
+
+.wizard-control-right {
+  right: 0;
+}
