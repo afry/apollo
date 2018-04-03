@@ -32,6 +32,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  padding: 0 25px;
 }
 
 .navbar-expand .nav-item {
@@ -53,30 +54,6 @@
   left: 0;
   right: 0;
   z-index: 1030;
-}
-
-@media (--phone) {
-  [class*="navbar-fixed-"] > .container {
-    max-width: 410px;
-  }
-}
-
-@media (--tablet) {
-  [class*="navbar-fixed-"] > .container {
-    max-width: 590px;
-  }
-}
-
-@media (--desktop) {
-  [class*="navbar-fixed-"] > .container {
-    max-width: 830px;
-  }
-}
-
-@media (--large-desktop) {
-  [class*="navbar-fixed-"] > .container {
-    max-width: 1310px;
-  }
 }
 
 .navbar-dark {
