@@ -76,6 +76,11 @@ class Dropdown extends React.Component {
   }
 
   handleDocumentClick(e) {
+    const container = this.node;
+    if (container.contains(e.target) && container !== e.target) {
+      return;
+    }
+
     this.handleToggle(e);
   }
 
@@ -101,7 +106,11 @@ class Dropdown extends React.Component {
     );
 
     return (
-      <Tag {...other} className={classes} />
+      <Tag
+        {...other}
+        ref={(node) => { this.node = node; }}
+        className={classes}
+      />
     );
   }
 }
