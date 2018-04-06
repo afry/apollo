@@ -1,6 +1,10 @@
 import React from 'react';
 import {
+  BasicDropdown,
   Container,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
   Navbar,
   NavbarBrand,
   Nav,
@@ -19,9 +23,14 @@ const NavbarExample = () => (
           <NavItem>
             <NavLink disabled>Time Report</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink>Projects</NavLink>
-          </NavItem>
+          <BasicDropdown>
+            <DropdownToggle>Projects</DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Menu Item</DropdownItem>
+              <DropdownItem>Menu Item</DropdownItem>
+              <DropdownItem>Menu Item</DropdownItem>
+            </DropdownMenu>
+          </BasicDropdown>
           <NavItem>
             <NavLink>Groups</NavLink>
           </NavItem>
@@ -37,9 +46,12 @@ const NavbarExample = () => (
       <Container>
         <NavbarBrand>Home</NavbarBrand>
         <Nav horizontal="center" navbar>
-          <NavItem>
-            <NavLink active>Overview</NavLink>
-          </NavItem>
+          <BasicDropdown>
+            <DropdownToggle disabled>Overview</DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Hej</DropdownItem>
+            </DropdownMenu>
+          </BasicDropdown>
           <NavItem>
             <NavLink disabled>News</NavLink>
           </NavItem>

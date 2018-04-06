@@ -1,9 +1,33 @@
 .dropdown-toggle {
+  color: var(--charcoal, slategray);
   display: block;
-  line-height: 19px;
   font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
   user-select: none;
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   text-decoration: none;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  color: var(--one-blue, blue);
+}
+
+.dropdown-toggle.active,
+.dropdown-toggle:active {
+  color: var(--one-blue, blue);
+  text-shadow: 0 0 .01px var(--one-blue, blue),
+               0 0 .01px var(--one-blue, blue);
+}
+
+.dropdown-toggle.disabled,
+.dropdown-toggle:disabled {
+  color: var(--misty, lightgray);
+  text-shadow: none;
+}
+
+.dropdown-toggle:not(.disabled):not(:disabled) {
+  cursor: pointer;
 }
