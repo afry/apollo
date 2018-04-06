@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import * as styles from './DropdownToggle.css';
 
 const propTypes = {
+  active: PropTypes.bool,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
@@ -11,6 +12,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  active: false,
   className: undefined,
   disabled: false,
   onClick: undefined,
@@ -19,6 +21,7 @@ const defaultProps = {
 
 const contextTypes = {
   onToggle: PropTypes.func,
+  open: PropTypes.bool,
 };
 
 class DropdownToggle extends React.Component {
@@ -42,18 +45,24 @@ class DropdownToggle extends React.Component {
 
   render() {
     const {
+      active,
       className,
+      disabled,
       tag: Tag,
       ...other
     } = this.props;
 
+    const { open } = this.context;
+
     const classes = classNames(
       className,
       styles['dropdown-toggle'],
+      (active || open) ? styles.active : '',
+      (disabled) ? styles.disabled : '',
     );
 
     return (
-      <Tag {...other} className={classes} onClick={this.handleClick} />
+      <Tag {...other} className={classes} disabled={disabled} onClick={this.handleClick} />
     );
   }
 }
@@ -63,4 +72,3 @@ DropdownToggle.defaultProps = defaultProps;
 DropdownToggle.contextTypes = contextTypes;
 
 export default DropdownToggle;
-

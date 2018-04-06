@@ -88,7 +88,7 @@
 }
 
 .navbar-dark .nav-link,
-.navbar .dropdown-toggle {
+.navbar-dark .dropdown-toggle {
   color: var(--misty, lightgray);
 }
 
@@ -97,7 +97,8 @@
 .navbar-dark .dropdown-toggle.active,
 .navbar-dark .dropdown-toggle:active {
   color: var(--white, white);
-  text-shadow: 0 0 .01rem var(--white, white), 0 0 .01rem var(--white, white);
+  text-shadow: 0 0 .01rem var(--white, white),
+               0 0 .01rem var(--white, white);
 }
 
 .navbar-dark .nav-link:hover,
@@ -111,5 +112,6 @@
 .navbar-dark .nav-link:disabled,
 .navbar-dark .dropdown-toggle.disabled,
 .navbar-dark .dropdown-toggle:disabled {
-  color: var(--charcoal, slategray) !important;
+  color: var(--charcoal, slategray);
+  text-shadow: none;
 }

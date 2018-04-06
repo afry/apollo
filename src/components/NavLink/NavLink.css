@@ -23,7 +23,8 @@
 
 .nav-link.disabled,
 .nav-link:disabled {
-  color: var(--misty, lightgray) !important;
+  color: var(--misty, lightgray);
+  text-shadow: none;
 }
 
 .nav-link:not(.disabled):not(:disabled) {

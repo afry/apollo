@@ -1,6 +1,10 @@
 import React from 'react';
 import {
+  BasicDropdown,
   Container,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
   Nav,
   NavItem,
   NavLink,
@@ -23,7 +27,14 @@ class NavbarExample extends React.Component {
             <NavLink active>Active</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink>Link</NavLink>
+            <BasicDropdown>
+              <DropdownToggle>Projects</DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Menu Item</DropdownItem>
+                <DropdownItem>Menu Item</DropdownItem>
+                <DropdownItem>Menu Item</DropdownItem>
+              </DropdownMenu>
+            </BasicDropdown>
           </NavItem>
           <NavItem>
             <NavLink>Link</NavLink>
