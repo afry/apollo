@@ -39,10 +39,6 @@ class WizardExample extends React.Component {
   }
 
   handlePrevious(e) {
-    if (!this.validate()) {
-      return;
-    }
-
     const step = this.state.currentStep - 1;
     this.setState({ currentStep: step });
   }
@@ -57,18 +53,14 @@ class WizardExample extends React.Component {
         messages[child.name] = child.validationMessage;
       }
     }
-    this.setState({ errorMessages: messages });
 
+    this.setState({ errorMessages: messages });
     return result;
   }
 
   render() {
-    const containerStyle = {
-      height: '720px'
-    };
-
     return (
-      <Container style={containerStyle}>
+      <Container style={{ height: '720px' }}>
         <h1>Wizard</h1>
         <Wizard
           activeStep={this.state.currentStep}
@@ -148,7 +140,7 @@ class WizardExample extends React.Component {
               </FormGroup>
               <FormGroup check>
                 <Label>
-                  <RadioButton checked /> Classified
+                  <RadioButton checked onChange={() => {}} /> Classified
                   <FormText indented>Only visible for invited members</FormText>
                 </Label>
               </FormGroup>

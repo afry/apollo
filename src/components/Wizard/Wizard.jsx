@@ -114,7 +114,8 @@ class Wizard extends React.Component {
         {
           steps.map((step, index) => (
             React.cloneElement(step, {
-              active: (index === activeStep)
+              active: (index === activeStep),
+              key: step.props.label,
             })
           ))
         }
