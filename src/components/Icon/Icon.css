@@ -1,0 +1,26 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  fill: var(--one-blue, blue);
+}
+
+.icon-x-small {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-small {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-medium {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-large {
+  width: 64px;
+  height: 64px;
+}
