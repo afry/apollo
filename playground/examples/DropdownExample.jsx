@@ -30,9 +30,9 @@ class DropdownExample extends React.Component {
           <DropdownToggle>Dropdown</DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Header</DropdownItem>
+            <DropdownItem>Menu Item</DropdownItem>
+            <DropdownItem>Menu Item</DropdownItem>
             <DropdownItem separator />
-            <DropdownItem>Menu Item</DropdownItem>
-            <DropdownItem>Menu Item</DropdownItem>
             <DropdownItem disabled>Disabled</DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -41,9 +41,9 @@ class DropdownExample extends React.Component {
           <DropdownToggle>Basic Dropdown</DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Header</DropdownItem>
+            <DropdownItem>Menu Item</DropdownItem>
+            <DropdownItem>Menu Item</DropdownItem>
             <DropdownItem separator />
-            <DropdownItem>Menu Item</DropdownItem>
-            <DropdownItem>Menu Item</DropdownItem>
             <DropdownItem disabled>Disabled</DropdownItem>
           </DropdownMenu>
         </BasicDropdown>
