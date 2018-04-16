@@ -18,6 +18,11 @@
   background-color: var(--marble, whitesmoke);
 }
 
+.button:hover,
+.button:focus {
+  outline: none;
+}
+
 .button:disabled {
   background-color: var(--marble, whitesmoke);
   border-color: var(--marble, whitesmoke);
@@ -57,6 +62,22 @@
 .button-success:disabled {
   background-color: var(--green-hover-status, darkgreen);
   border-color: var(--green-hover-status, darkgreen);
+}
+
+.button-link {
+  color: var(--charcoal, slategray);
+}
+
+.button-link,
+.button-link:hover,
+.button-link:focus {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.button-link:hover,
+.button-link:focus {
+  color: var(--one-blue, blue);
 }
 
 .button-small {
