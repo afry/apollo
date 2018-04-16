@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 
+import IconExample from './examples/IconExample';
 import AvatarExample from './examples/AvatarExample';
 import BadgeExample from './examples/BadgeExample';
 import ButtonExample from './examples/ButtonExample';
@@ -13,6 +14,7 @@ import FormExample from './examples/FormExample';
 export default function Playground() {
   return (
     <div>
+      <IconExample />
       <AvatarExample />
       <BadgeExample />
       <ButtonExample /> 
