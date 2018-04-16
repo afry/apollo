@@ -18,7 +18,6 @@ class DropdownExample extends React.Component {
 
   handleToggle() {
     const isOpen = !this.state.open;
-    console.log(isOpen);
     this.setState({ open: isOpen });
   }
 
