@@ -17,7 +17,7 @@ const defaultProps = {
   color: 'secondary',
   disabled: false,
   onClick: undefined,
-  size: '',
+  size: undefined,
   type: 'button',
 };
 
@@ -43,6 +43,7 @@ class Button extends React.Component {
       className,
       color,
       size,
+      type,
       ...other
     } = this.props;
 
@@ -54,7 +55,12 @@ class Button extends React.Component {
     );
 
     return (
-      <button {...other} className={classes} onClick={this.handleClick} />
+      <button
+        {...other}
+        className={classes}
+        onClick={this.handleClick}
+        type={type}
+      />
     );
   }
 }
