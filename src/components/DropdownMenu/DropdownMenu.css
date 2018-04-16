@@ -16,6 +16,7 @@
   background-clip: padding-box;
   border: 1px solid var(--marble, lightgray);
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .dropdown-menu.open {

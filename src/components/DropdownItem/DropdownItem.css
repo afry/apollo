@@ -37,13 +37,24 @@
 
 .dropdown-header {
   display: block;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
   font-size: 16px;
   line-height: 19px;
   font-weight: 100;
   color: var(--stone, gray);
   white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdown-header:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 19px;
+  border-top: 1px solid var(--marble, lightgray);
+  width: 100%;
+  clear: both;
 }
 
 .dropdown-separator {
