@@ -17,3 +17,7 @@
 .navbar-brand:not(.disabled):not(:disabled) {
   cursor: pointer;
 }
+
+.navbar-brand.active {
+
+}
