@@ -6,7 +6,7 @@ import * as styles from './Avatar.css';
 const propTypes = {
   alt: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['x-small', 'small', 'medium', 'large']),
   src: PropTypes.string,
 };
 
