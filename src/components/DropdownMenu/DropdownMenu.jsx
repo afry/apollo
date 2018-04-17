@@ -5,11 +5,13 @@ import * as styles from './DropdownMenu.css';
 
 const propTypes = {
   className: PropTypes.string,
+  right: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
   className: undefined,
+  right: false,
   tag: 'div',
 };
 
@@ -20,6 +22,7 @@ const contextTypes = {
 const DropdownMenu = (props, context) => {
   const {
     className,
+    right,
     tag: Tag,
     ...other
   } = props;
@@ -32,6 +35,7 @@ const DropdownMenu = (props, context) => {
     className,
     styles['dropdown-menu'],
     open ? styles.open : '',
+    right ? styles['dropdown-menu-right'] : '',
   );
 
   return (
