@@ -5,18 +5,18 @@ import * as styles from './Navbar.css';
 
 const propTypes = {
   className: PropTypes.string,
+  dark: PropTypes.bool,
   expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   fixed: PropTypes.string,
-  inverse: PropTypes.bool,
   role: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
   className: undefined,
+  dark: false,
   expand: true,
   fixed: undefined,
-  inverse: false,
   role: undefined,
   tag: 'nav',
 };
@@ -24,9 +24,9 @@ const defaultProps = {
 const Navbar = (props) => {
   const {
     className,
+    dark,
     expand,
     fixed,
-    inverse,
     tag: Tag,
     ...other
   } = props;
@@ -34,9 +34,9 @@ const Navbar = (props) => {
   const classes = classNames(
     className,
     styles.navbar,
+    dark ? styles['navbar-dark'] : styles['navbar-light'],
     expand ? styles['navbar-expand'] : '',
     fixed ? styles[`navbar-fixed-${fixed}`] : '',
-    inverse ? styles['navbar-light'] : styles['navbar-dark'],
   );
 
   return (

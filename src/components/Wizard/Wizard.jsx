@@ -87,7 +87,7 @@ class Wizard extends React.Component {
   renderNavbar(steps) {
     const { brand, activeStep } = this.props;
     return (
-      <Navbar>
+      <Navbar dark>
         <Container>
           {brand}
           <Nav horizontal="center">
