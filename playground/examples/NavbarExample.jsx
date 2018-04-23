@@ -16,7 +16,7 @@ const NavbarExample = () => (
   <Container>
     <h1>Navbar</h1>
     <h3>Dark</h3>
-    <Navbar>
+    <Navbar dark>
       <Container>
         <NavbarBrand>one</NavbarBrand>
         <Nav navbar>
@@ -42,7 +42,7 @@ const NavbarExample = () => (
     </Navbar>
 
     <h3>Light</h3>
-    <Navbar inverse>
+    <Navbar>
       <Container>
         <NavbarBrand>Home</NavbarBrand>
         <Nav horizontal="center" navbar>
