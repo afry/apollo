@@ -15,30 +15,37 @@
 }
 
 .avatar-x-small {
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+}
+
+.avatar-small {
   height: 40px;
   width: 40px;
   line-height: 40px;
 }
 
-.avatar-small {
+.avatar-medium {
   height: 48px; 
   width: 48px;
   line-height: 48px;
 }
 
-.avatar-medium {
+.avatar-large {
   height: 64px;
   width: 64px;
   line-height: 64px;
 }
 
-.avatar-large {
+.avatar-x-large {
   height: 88px;
   width: 88px;
   line-height: 88px;
 }
 
 .avatar > span {
+  font-weight: 100;
   margin: auto;
   padding: 0;
 }
