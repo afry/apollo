@@ -6,14 +6,14 @@ import * as styles from './Avatar.css';
 const propTypes = {
   alt: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['x-small', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(['x-small', 'small', 'medium', 'large', 'x-large']),
   src: PropTypes.string,
 };
 
 const defaultProps = {
   alt: undefined,
   className: undefined,
-  size: 'small',
+  size: 'medium',
   src: undefined,
 };
 
