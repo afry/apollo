@@ -102,6 +102,10 @@ export {
   default as Label,
 } from './Label';
 
+export { 
+  default as Mention,
+} from './Mention';
+
 export {
   default as Nav,
 } from './Nav';
@@ -133,6 +137,10 @@ export {
 export {
   default as SelectOption,
 } from './SelectOption';
+
+export { 
+  default as Tag,
+} from './Tag';
 
 export {
   default as TextArea,
