@@ -12,6 +12,7 @@
   height: 40px;
   font-size: 16px;
   font-weight: 300;
+  line-height: 16px;
 };
 
 .tag:first-child {
@@ -29,7 +30,7 @@
   padding-right: 10px;
 }
 
-.tag .button-remove {
+.tag .close {
   display: block;
   background-color: var(--faded-light-blue, lightblue);
   border: none;
@@ -42,13 +43,13 @@
   padding-right: 10px;
 }
 
-.tag .button-remove:hover,
-.tag .button-remove:focus {
+.tag .close:hover,
+.tag .close:focus {
   background-color: var(--faded-blue, lightblue);
   outline: none;
 }
 
-.tag .button-remove:after {
+.tag .close:after {
   content: '\000d7';
   display: inline-block;
   color: var(--black, black);

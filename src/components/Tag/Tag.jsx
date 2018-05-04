@@ -5,35 +5,35 @@ import * as styles from './Tag.css';
 
 const propTypes = {
   children: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  onRemove: PropTypes.func,
+  onClose: PropTypes.func,
 };
 
 const defaultProps = {
   children: undefined,
-  onRemove: undefined,
+  onClose: undefined,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.handleRemove = this.handleRemove.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleRemove(e) {
-    if (!this.props.onRemove) {
+    if (!this.props.onClose) {
       return;
     }
 
-    this.props.onRemove(e);
+    this.props.onClose(e);
   }
 
   render() {
-    const { children, onRemove } = this.props;
+    const { children, onClose } = this.props;
     const outerClasses = classNames(styles.tag);
     const textClasses = classNames(styles.text);
-    const removeClasses = classNames(styles['button-remove']);
+    const closeClasses = classNames(styles.close);
 
-    if (!onRemove) {
+    if (!onClose) {
       return (
         <span className={outerClasses}>
           <span className={textClasses}>{children}</span>
@@ -47,9 +47,9 @@ class Tag extends React.Component {
           {children}
         </span>
         <button
-          area-label="Remove"
-          className={removeClasses}
-          onClick={this.handleRemove}
+          area-label="Close"
+          className={closeClasses}
+          onClick={this.handleClose}
           type="button"
         />
       </span>
