@@ -19,7 +19,7 @@ class Tag extends React.Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
-  handleRemove(e) {
+  handleClose(e) {
     if (!this.props.onClose) {
       return;
     }

@@ -33,19 +33,18 @@
 .tag .close {
   display: block;
   background-color: var(--faded-light-blue, lightblue);
-  border: none;
+  border: 1px solid transparent;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
   height: 40px;
   width: 40px;
   margin-right: -10px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border: 1px solid var(--faded-blue, lightblue);
   padding-right: 10px;
 }
 
 .tag .close:hover,
 .tag .close:focus {
-  background-color: var(--faded-blue, lightblue);
+  border-color: var(--faded-blue, lightblue);
   outline: none;
 }
 
