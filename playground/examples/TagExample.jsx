@@ -10,7 +10,7 @@ const TagExample = () => (
     <div>
       <Tag>Stockholm</Tag>
       <Tag>Stockholm, Sweden</Tag>
-      <Tag onRemove={() => {}}>Stockholm, Sweden</Tag>
+      <Tag onClose={() => {}}>Stockholm, Sweden</Tag>
     </div>
   </Container>
 );
