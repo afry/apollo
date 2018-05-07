@@ -1,3 +1,5 @@
+@import '../../styles/foundation.css';
+
 .tag {
   display: inline-flex;
   overflow: hidden;
@@ -13,7 +15,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 16px;
-};
+}
 
 .tag:first-child {
   margin-left: 0px;
@@ -36,6 +38,7 @@
   border: 1px solid transparent;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
+  cursor: pointer;
   height: 40px;
   width: 40px;
   margin-right: -10px;
@@ -49,9 +52,10 @@
 }
 
 .tag .close:after {
-  content: '\000d7';
+  content: '×';
   display: inline-block;
   color: var(--black, black);
   font-size: 28px;
+  line-height: 40px;
   font-weight: lighter;
 }
