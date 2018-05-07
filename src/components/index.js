@@ -106,6 +106,22 @@ export {
   default as Mention,
 } from './Mention';
 
+export { 
+  default as Modal,
+} from './Modal';
+
+export { 
+  default as ModalBody,
+} from './ModalBody';
+
+export {
+  default as ModalFooter,
+} from './ModalFooter';
+
+export {
+  default as ModalHeader,
+} from './ModalHeader';
+
 export {
   default as Nav,
 } from './Nav';
