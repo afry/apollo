@@ -1,0 +1,35 @@
+.modal-header {
+  position: relative;
+  padding: 1rem;
+}
+
+.modal-title {
+  line-height: 1rem;
+  margin-bottom: 0;
+}
+
+.modal-header .close {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  float: right;
+  top: 0px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.modal-header .close:hover,
+.modal-header .close:focus {
+  outline: none;
+}
+
+.modal-header .close:after {
+  content: '×';
+  display: inline-block;
+  color: var(--black, black);
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: lighter;
+}
