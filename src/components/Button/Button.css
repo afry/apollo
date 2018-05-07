@@ -1,3 +1,5 @@
+@import '../../styles/foundation.css';
+
 .button {
   background-color: var(--white, white);
   border: 1px solid var(--dark-gray, darkgray);
@@ -11,7 +13,19 @@
   overflow: visible;
   line-height: inherit;
   text-align: center;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
   width: 154px;
+}
+
+.button:first-child {
+  margin-left: 0px;
+  margin-right: 2.5px;
+}
+
+.button:last-child {
+  margin-left: 2.5px;
+  margin-right: 0px;
 }
 
 .button:hover {

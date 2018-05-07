@@ -1,3 +1,5 @@
+@import '../../styles/foundation.css';
+
 .radio-button {
   display: inline-block;
   padding-right: 28px;
