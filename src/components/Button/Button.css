@@ -30,6 +30,7 @@
 
 .button:hover {
   background-color: var(--marble, whitesmoke);
+  cursor: pointer;
 }
 
 .button:hover,
