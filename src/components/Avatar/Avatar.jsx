@@ -24,6 +24,11 @@ class Avatar extends React.Component {
     this.state = { error: false };
   }
 
+  // eslint-disable-next-line no-unused-vars
+  componentWillReceiveProps(nextProps) {
+    this.setState({ error: false });
+  }
+
   handleError() {
     this.setState({ error: true });
   }
