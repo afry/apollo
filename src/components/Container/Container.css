@@ -1,12 +1,14 @@
 .container {
   width: 100%;
-  padding-right: 65px;
-  padding-left: 65px;
+  padding-right: 64px;
+  padding-left: 64px;
   margin: 0 auto;
 }
 
 @media (--phone) {
   .container {
+    padding-right: 0;
+    padding-left: 0;
     max-width: 540px;
   }
 }
@@ -25,7 +27,7 @@
 
 @media (--large-desktop) {
   .container {
-    max-width: 1140px;
+    max-width: 1440px;
   }
 }
 
