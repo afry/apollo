@@ -27,6 +27,8 @@
 
 @media (--large-desktop) {
   .container {
+    padding-right: 64px;
+    padding-left: 64px;
     max-width: 1440px;
   }
 }
