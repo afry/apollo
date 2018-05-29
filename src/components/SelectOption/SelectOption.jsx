@@ -7,7 +7,7 @@ const propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   hidden: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const defaultProps = {
