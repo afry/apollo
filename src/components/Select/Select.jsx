@@ -12,7 +12,7 @@ const propTypes = {
   onChange: PropTypes.func,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const defaultProps = {
