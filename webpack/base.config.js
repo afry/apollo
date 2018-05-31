@@ -24,7 +24,7 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 localIdentName: 'apollo-[local]',
-                minimize: false,
+                minimize: true,
                 modules: true,
                 sourceMap: true,
               },

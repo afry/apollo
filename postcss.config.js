@@ -1,13 +1,13 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
-    'postcss-custom-media': {
+    'postcss-custom-media': { // eslint-disable-line sort-keys
       extensions: {
-            '--phone': '(min-width: 576px)',
-            '--tablet': '(min-width: 768px)',
-            '--desktop': '(min-width: 992px)', // eslint-disable-line sort-keys
-            '--large-desktop': '(min-width: 1200px)',
-          }
+        '--phone': '(min-width: 576px)',
+        '--tablet': '(min-width: 768px)',
+        '--desktop': '(min-width: 992px)', // eslint-disable-line sort-keys
+        '--large-desktop': '(min-width: 1200px)',
+      }
     },
     'postcss-preset-env': {
       features: {
