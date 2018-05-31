@@ -105,3 +105,17 @@
   height: 56px;
   width: 145px;
 }
+
+a.button {
+  text-decoration: none;
+  line-height: 48px;
+}
+
+a.button-small {
+  line-height: 40px;
+}
+
+a.button-large {
+  line-height: 56px;
+}
+
