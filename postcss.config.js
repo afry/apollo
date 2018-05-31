@@ -1,16 +1,16 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
-    'postcss-preset-env': {
-      features: {
-        customMedia: {
-          extensions: {
+    'postcss-custom-media': {
+      extensions: {
             '--phone': '(min-width: 576px)',
             '--tablet': '(min-width: 768px)',
             '--desktop': '(min-width: 992px)', // eslint-disable-line sort-keys
             '--large-desktop': '(min-width: 1200px)',
           }
-        },
+    },
+    'postcss-preset-env': {
+      features: {
         customProperties: {
           preserve: true,
           variables: {
