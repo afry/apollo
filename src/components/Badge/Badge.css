@@ -1,5 +1,3 @@
-@import '../../styles/foundation.css';
-
 .badge {
   border: 1px solid var(--one-blue, blue);
   border-radius: 2px;

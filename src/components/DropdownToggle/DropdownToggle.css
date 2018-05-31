@@ -1,5 +1,3 @@
-@import '../../styles/foundation.css';
-
 .dropdown-toggle {
   color: var(--charcoal, slategray);
   display: block;

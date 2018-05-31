@@ -1,5 +1,3 @@
-@import '../../styles/foundation.css';
-
 .form-feedback {
   color: var(--red-status, red);
   font-size: 13px;
