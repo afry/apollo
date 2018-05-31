@@ -13,11 +13,13 @@ const ButtonExample = () => (
       <Button color="success">success</Button>
       <Button color="danger">danger</Button>
       <Button color="link">link</Button>
+      <Button tag="a">anchor</Button>
     </div>
     <div>
       <h4>Large</h4>
       <Button color="primary" size="large">Large Button</Button>
       <Button color="secondary" size="large">Large Button</Button>
+      <Button href="https://google.com">Google link</Button>
     </div>
     <div>
       <h4>Small</h4>
