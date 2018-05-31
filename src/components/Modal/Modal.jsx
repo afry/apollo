@@ -8,7 +8,6 @@ const propTypes = {
   className: PropTypes.string,
   onToggle: PropTypes.func,
   open: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
@@ -16,7 +15,6 @@ const defaultProps = {
   className: undefined,
   onToggle: undefined,
   open: false,
-  tag: 'div'
 };
 
 const childContextTypes = {

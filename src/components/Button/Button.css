@@ -1,5 +1,3 @@
-@import '../../styles/foundation.css';
-
 .button {
   background-color: var(--white, white);
   border: 1px solid var(--dark-gray, darkgray);

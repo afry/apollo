@@ -11,20 +11,25 @@ import JumbotronExample from './examples/JumbotronExample';
 import NavsExample from './examples/NavsExample';
 import NavbarExample from './examples/NavbarExample';
 import FormExample from './examples/FormExample';
+import TagExample from './examples/TagExample';
+import MentionExample from './examples/MentionExample';
+import ModalExample from './examples/ModalExample';
 
 export default function Playground() {
   return (
     <div>
-      <CardExample />
-      {/* <IconExample />
-      <AvatarExample />
-      <BadgeExample />
-      <ButtonExample /> 
-      <DropdownExample />
-      <JumbotronExample />
-      <NavbarExample />
-      <NavsExample /> 
-      <FormExample />  */}
+      <ModalExample />
+      <TagExample />
+      {/* <MentionExample /> */}
+      {/* <IconExample /> */}
+      {/* <AvatarExample /> */}
+      {/* <BadgeExample /> */}
+      <ButtonExample />
+      {/* <DropdownExample /> */}
+      {/* <JumbotronExample /> */}
+      {/* <NavbarExample /> */}
+      <NavsExample />
+      {/* <FormExample />  */}
     </div>
   );
 }
