@@ -22,13 +22,13 @@ yarn add @afconsult/apollo
 import '@afconsult/apollo/dist/css/apollo.css';
 ```
 
-2. Import required apollo components within ```src/index.js``` file or your custom component files:
+2. Import required apollo components in your ```src/index.js``` file or in any of your custom component files:
 ```javascript
 import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
 3. Tell React to render the components
-``javascript
+```javascript
 ReactDOM.render(
   <Form>
     <FormGroup>
