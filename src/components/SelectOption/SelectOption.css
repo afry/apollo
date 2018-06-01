@@ -4,6 +4,6 @@
   color: var(--black, black);
 }
 
-[hidden] {
+.select-option[hidden] {
   display: none;
 }

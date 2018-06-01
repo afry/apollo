@@ -40,7 +40,9 @@ const Select = (props) => {
   );
 
   return (
-    <select {...other} ref={innerRef} className={classes} />
+    <div className={classes}>
+      <select {...other} ref={innerRef} />
+    </div>
   );
 };
 
