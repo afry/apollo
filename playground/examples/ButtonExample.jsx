@@ -1,31 +1,34 @@
 import React from 'react';
 import {
   Button,
+  ButtonGroup,
   Container,
 } from '../../src';
 
 const ButtonExample = () => (
   <Container>
     <h1>Button</h1>
-    <div>
+    <ButtonGroup>
       <Button color="primary">primary</Button>
       <Button color="secondary">secondary</Button>
       <Button color="success">success</Button>
       <Button color="danger">danger</Button>
       <Button color="link">link</Button>
       <Button tag="a">anchor</Button>
-    </div>
-    <div>
-      <h4>Large</h4>
+    </ButtonGroup>
+
+    <h4>Large</h4>
+    <ButtonGroup segmented>
       <Button color="primary" size="large">Large Button</Button>
       <Button color="secondary" size="large">Large Button</Button>
-      <Button href="https://google.com">Google link</Button>
-    </div>
-    <div>
-      <h4>Small</h4>
+      <Button href="https://google.com" size="large">Google link</Button>
+    </ButtonGroup>
+
+    <h4>Small</h4>
+    <ButtonGroup>
       <Button color="primary" size="small">Small Button</Button>
       <Button color="secondary" size="small">Small Button</Button>
-    </div>
+    </ButtonGroup>
   </Container>
 );
 
