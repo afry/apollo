@@ -1,31 +1,76 @@
 .select {
+  position: relative;
+  height: 49.33px;
+  width: 400px;
+  background-color: var(--white, white);
+}
+
+.select:before {
+  width: 30px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  content: '';
+  pointer-events: none;
+}
+
+.select:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: var(--dark-gray, darkgray) transparent transparent transparent;
+  pointer-events: none;
+}
+
+select {
   background-color: var(--white, white);
   border: 1px solid var(--dark-gray, darkgray);
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
-  height: 49.33px;
+  height: 100%;
+  width: 100%;
   line-height: inherit;
   overflow: visible;
   margin: 0;
   padding: 0 1rem;
-  width: 400px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
-.select:valid {
+select::-ms-expand {
+  display: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+} 
+
+select:valid {
   color: inherit;
 }
 
-.select,
-.select[value=""] {
+select,
+select[value=""] {
   color: var(--dark-gray, darkgray);
 }
 
-.select:hover {
+select:hover,
+select:focus {
   border-color: var(--one-blue, blue);
+  outline: none;
 }
 
-.select:disabled {
+select:disabled {
   background-color: var(--light-smoke, whitesmoke);
   border-color: var(--dark-gray, darkgray);
 }
