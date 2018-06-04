@@ -9,6 +9,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   size: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
 
@@ -18,6 +19,7 @@ const defaultProps = {
   disabled: false,
   onClick: undefined,
   size: undefined,
+  tag: 'button',
   type: 'button',
 };
 
@@ -39,11 +41,15 @@ class Button extends React.Component {
   }
 
   render() {
+    let {
+      tag: Tag,
+      type,
+    } = this.props;
+
     const {
       className,
       color,
       size,
-      type,
       ...other
     } = this.props;
 
@@ -54,8 +60,16 @@ class Button extends React.Component {
       size ? styles[`button-${size}`] : ''
     );
 
+    if (other.href) {
+      Tag = 'a';
+    }
+
+    if (Tag !== 'button') {
+      type = undefined;
+    }
+
     return (
-      <button
+      <Tag
         {...other}
         className={classes}
         onClick={this.handleClick}

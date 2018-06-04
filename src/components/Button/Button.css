@@ -11,11 +11,28 @@
   overflow: visible;
   line-height: inherit;
   text-align: center;
-  width: 154px;
+  padding-left: 28px;
+  padding-right: 28px;
+  min-width: 154px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.button:first-child {
+  margin-left: 0px;
+}
+
+.button:last-child {
+  margin-right: 0px;
 }
 
 .button:hover {
   background-color: var(--marble, whitesmoke);
+}
+
+.button:not(:disabled):hover {
+  cursor: pointer;
 }
 
 .button:hover,
@@ -82,10 +99,24 @@
 
 .button-small {
   height: 40px;
-  width: 144px;
+  min-width: 144px;
 }
 
 .button-large {
   height: 56px;
-  width: 145px;
+  min-width: 145px;
 }
+
+a.button {
+  text-decoration: none;
+  line-height: 48px;
+}
+
+a.button-small {
+  line-height: 40px;
+}
+
+a.button-large {
+  line-height: 56px;
+}
+

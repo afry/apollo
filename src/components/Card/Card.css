@@ -6,8 +6,8 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--color-white, white);
+  background-color: var(--white, white);
   background-clip: border-box;
-  border: 1px solid var(--color-faded-blue, lightblue);
+  border: 1px solid var(--faded-blue, lightblue);
   border-radius: 6px;
 }

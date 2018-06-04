@@ -7,17 +7,19 @@ const propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   name: PropTypes.string,
   onChange: PropTypes.func,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const defaultProps = {
   className: undefined,
   disabled: false,
   id: undefined,
+  innerRef: undefined,
   name: undefined,
   onChange: undefined,
   readOnly: false,
@@ -28,6 +30,7 @@ const defaultProps = {
 const Select = (props) => {
   const {
     className,
+    innerRef,
     ...other
   } = props;
 
@@ -37,7 +40,9 @@ const Select = (props) => {
   );
 
   return (
-    <select {...other} className={classes} />
+    <div className={classes}>
+      <select {...other} ref={innerRef} />
+    </div>
   );
 };
 

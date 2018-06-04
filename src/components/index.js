@@ -18,6 +18,10 @@ export {
   default as Button,
 } from './Button';
 
+export {
+  default as ButtonGroup,
+} from './ButtonGroup';
+
 export { 
   default as Card,
 } from './Card';
@@ -102,6 +106,26 @@ export {
   default as Label,
 } from './Label';
 
+export { 
+  default as Mention,
+} from './Mention';
+
+export { 
+  default as Modal,
+} from './Modal';
+
+export { 
+  default as ModalBody,
+} from './ModalBody';
+
+export {
+  default as ModalFooter,
+} from './ModalFooter';
+
+export {
+  default as ModalHeader,
+} from './ModalHeader';
+
 export {
   default as Nav,
 } from './Nav';
@@ -133,6 +157,10 @@ export {
 export {
   default as SelectOption,
 } from './SelectOption';
+
+export { 
+  default as Tag,
+} from './Tag';
 
 export {
   default as TextArea,

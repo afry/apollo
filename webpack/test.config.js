@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
     contentBase: './playground',
   },
   devtool: 'inline-source-map',
-  entry: './playground/index.jsx',
+  entry: ['react-hot-loader/patch', './playground/index.jsx'],
   mode: 'development',
   module: {
     rules: [
