@@ -4,23 +4,32 @@ import classNames from 'classnames';
 import * as styles from './Avatar.css';
 
 const propTypes = {
-  alt: PropTypes.string,
   className: PropTypes.string,
-  size: PropTypes.oneOf(['x-small', 'small', 'medium', 'large', 'x-large']),
+  name: PropTypes.string,
+  size: PropTypes.oneOf([
+    'x-small',
+    'small',
+    'medium',
+    'large',
+    'x-large',
+  ]),
   src: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
-  alt: undefined,
   className: undefined,
+  name: undefined,
   size: 'medium',
   src: undefined,
+  tag: 'img',
 };
 
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
     this.handleError = this.handleError.bind(this);
+    this.getInitials = this.getInitials.bind(this);
     this.state = { error: false };
   }
 
@@ -29,15 +38,27 @@ class Avatar extends React.Component {
     this.setState({ error: false });
   }
 
+  getInitials() {
+    const { name } = this.props;
+    const parts = name.split(' ');
+    let result = '';
+    for (let i = 0; i < parts.length; i++) {
+      result += parts[i].substr(0, 1).toUpperCase();
+    }
+
+    return result.slice(0, 2);
+  }
+
   handleError() {
     this.setState({ error: true });
   }
 
   render() {
     const {
-      alt,
       className,
+      name,
       size,
+      tag: Tag,
       ...other
     } = this.props;
 
@@ -50,15 +71,15 @@ class Avatar extends React.Component {
     if (this.state.error) {
       return (
         <div className={classes}>
-          <span>{alt}</span>
+          <span>{this.getInitials()}</span>
         </div>
       );
     }
 
     return (
-      <img
+      <Tag
         {...other}
-        alt={alt}
+        alt={name}
         className={classes}
         onError={this.handleError}
       />
