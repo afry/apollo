@@ -14,6 +14,10 @@
   user-select: none;
 }
 
+.avatar:focus {
+  outline: none;
+}
+
 .avatar-x-small {
   height: 28px;
   width: 28px;
@@ -51,7 +55,7 @@
 }
 
 .avatar-x-small > span {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .avatar-small > span {
@@ -64,4 +68,8 @@
 
 .avatar-large > span {
   font-size: 24px;
+}
+
+.avatar-x-large > span {
+  font-size: 32px;
 }
