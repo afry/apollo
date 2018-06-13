@@ -45,7 +45,7 @@ const NavbarExample = () => (
     <Navbar>
       <Container>
         <NavbarBrand>Home</NavbarBrand>
-        <Nav horizontal="center" navbar>
+        <Nav align="center" navbar>
           <BasicDropdown>
             <DropdownToggle disabled>Overview</DropdownToggle>
             <DropdownMenu>
