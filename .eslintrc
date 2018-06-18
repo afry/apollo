@@ -5,9 +5,7 @@
     "jest": true,
     "node": true
   },
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb"],
   "globals": {
     "it": true,
     "describe": true,
@@ -30,23 +28,13 @@
   "rules": {
     "comma-dangle": 0,
     "default-case": 2,
-    "eol-last": [
-      2,
-      "always"
-    ],
-    "max-len": [
-      1,
-      {
-        "tabWidth": 2
-      }
-    ],
-    "new-cap": [
-      2,
-      {
-        "capIsNew": false
-      }
-    ],
+    "eol-last": [2, "always"],
+    "import/extensions": [".js", ".jsx"],
+    "import/no-unresolved": 0,
+    "max-len": [1, { "tabWidth": 2 }],
+    "new-cap": [2, { "capIsNew": false }],
     "no-console": 2,
+    "no-plusplus": 0,
     "no-undef": 2,
     "no-underscore-dangle": [
       2,
@@ -72,44 +60,9 @@
     "react/jsx-handler-names": 2,
     "react/jsx-key": 2,
     "react/jsx-no-bind": 2,
-    "react/jsx-no-literals": 1,
+    "react/jsx-no-literals": [2, {"noStrings": true}],
     "react/jsx-sort-props": 2,
     "react/jsx-uses-vars": 2,
-    "react/sort-comp": [
-      2,
-      {
-        "groups": {
-          "lifecycle": [
-            "displayName",
-            "propTypes",
-            "contextTypes",
-            "childContextTypes",
-            "mixins",
-            "statics",
-            "defaultProps",
-            "constructor",
-            "getDefaultProps",
-            "getInitialState",
-            "state",
-            "getChildContext",
-            "componentWillMount",
-            "componentDidMount",
-            "componentWillReceiveProps",
-            "shouldComponentUpdate",
-            "componentWillUpdate",
-            "componentDidUpdate",
-            "componentWillUnmount"
-          ]
-        },
-        "order": [
-          "static-methods",
-          "lifecycle",
-          "everything-else",
-          "render"
-        ]
-      }
-    ],
-    "require-jsdoc": 0,
     "sort-keys": [
       2,
       "asc",
@@ -117,7 +70,6 @@
         "caseSensitive": false
       }
     ],
-    "sort-vars": 2,
-    "valid-jsdoc": 0
+    "sort-vars": 2
   }
 }
