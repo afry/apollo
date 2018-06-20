@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import * as styles from './Nav.css';
 
 const propTypes = {
+  align: PropTypes.string,
   className: PropTypes.string,
   collapsed: PropTypes.bool,
-  horizontal: PropTypes.string,
   justified: PropTypes.bool,
   navbar: PropTypes.bool,
   tabs: PropTypes.bool,
@@ -15,9 +15,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  align: 'left',
   className: undefined,
   collapsed: false,
-  horizontal: 'left',
   justified: false,
   navbar: false,
   tabs: false,
@@ -27,9 +27,9 @@ const defaultProps = {
 
 const Nav = (props) => {
   const {
+    align,
     className,
     collapsed,
-    horizontal,
     justified,
     navbar,
     tabs,
@@ -42,7 +42,7 @@ const Nav = (props) => {
     className,
     navbar ? styles['navbar-nav'] : styles.nav,
     collapsed ? styles['nav-collapsed'] : '',
-    horizontal ? styles[`justify-content-${horizontal}`] : '',
+    align ? styles[`nav-horizontal-${align}`] : '',
     justified ? styles['nav-justified'] : '',
     tabs ? styles['nav-tabs'] : '',
     vertical ? styles['nav-vertical'] : '',

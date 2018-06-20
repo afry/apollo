@@ -8,21 +8,25 @@ const AvatarExample = () => (
   <Container>
     <h1>Avatar</h1>
     <div>
-      <h3>Extra small</h3>
-      <Avatar alt="AC" size="x-small" src="" />
-      <Avatar alt="AC" size="x-small" src="http://via.placeholder.com/400x400" />
+      <h4>X-Small</h4>
+      <Avatar name="Jon Wahlström" size="x-small" src="" />
+      <Avatar name="Jon Wahlström" size="x-small" src="http://via.placeholder.com/400x400" />
 
-      <h3>Small</h3>
-      <Avatar alt="AC" src="" />
-      <Avatar alt="AC" src="http://via.placeholder.com/400x400" />
+      <h4>Small</h4>
+      <Avatar name="Jon Wahlström" src="" />
+      <Avatar name="Jon Wahlström" src="http://via.placeholder.com/400x400" />
 
-      <h3>Medium</h3>
-      <Avatar alt="AC" size="medium" src="" />
-      <Avatar alt="AC" size="medium" src="http://via.placeholder.com/400x400" />
+      <h4>Medium</h4>
+      <Avatar name="Jon Wahlström" size="medium" src="" />
+      <Avatar name="Jon Wahlström" size="medium" src="http://via.placeholder.com/400x400" />
 
-      <h3>Large</h3>
-      <Avatar alt="AC" size="large" src="" />
-      <Avatar alt="AC" size="large" src="http://via.placeholder.com/400x400" />
+      <h4>Large</h4>
+      <Avatar name="Jon Wahlström" size="large" src="" />
+      <Avatar name="Jon Wahlström" size="large" src="http://via.placeholder.com/400x400" />
+
+      <h4>X-Large</h4>
+      <Avatar name="Jon Wahlström" size="x-large" src="" />
+      <Avatar name="Jon Wahlström" size="x-large" src="http://via.placeholder.com/400x400" />
     </div>
   </Container>
 );

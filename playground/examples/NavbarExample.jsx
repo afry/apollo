@@ -57,35 +57,9 @@ class NavbarExample extends React.Component {
             </Collapse>
           </Container>
         </Navbar>
-
-{/*
-        <h3>Light</h3>
-        <Navbar>
-          <Container>
-            <NavbarBrand>Home</NavbarBrand>
-            <Nav horizontal="center" navbar>
-              <BasicDropdown>
-                <DropdownToggle disabled>Overview</DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>Hej</DropdownItem>
-                </DropdownMenu>
-              </BasicDropdown>
-              <NavItem>
-                <NavLink disabled>News</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>CEO Blog</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>Jobs & Assignments</NavLink>
-              </NavItem>
-            </Nav>
-          </Container>
-        </Navbar>
-*/}
       </Container>
     );
   }
-};
+}
 
 export default NavbarExample;

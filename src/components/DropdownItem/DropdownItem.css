@@ -28,6 +28,7 @@
 .dropdown-item:focus {
   background-color: var(--faded-light-blue, lightblue);
   text-decoration: none;
+  outline: none;
 }
 
 .dropdown-item:disabled {

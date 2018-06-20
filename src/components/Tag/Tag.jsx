@@ -4,7 +4,11 @@ import classNames from 'classnames';
 import * as styles from './Tag.css';
 
 const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  children: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.string
+  ]),
   className: PropTypes.string,
   onClose: PropTypes.func,
 };
@@ -55,7 +59,7 @@ class Tag extends React.Component {
 
     return (
       <span className={classes}>
-        <span className={classNames(styles.text)}>
+        <span className={classNames(styles['tag-text'])}>
           {children}
         </span>
         {closeButton}

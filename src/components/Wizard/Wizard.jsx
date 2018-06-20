@@ -90,7 +90,7 @@ class Wizard extends React.Component {
       <Navbar dark>
         <Container>
           {brand}
-          <Nav horizontal="center" navbar>
+          <Nav align="center" navbar>
             {
               steps.map((step, index) => {
                 const isActive = (index === activeStep);

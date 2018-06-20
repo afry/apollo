@@ -45,7 +45,7 @@ class NavbarExample extends React.Component {
         </Nav>
 
         <h4>Centered</h4>
-        <Nav horizontal="center">
+        <Nav align="center">
           <NavItem>
             <NavLink active>Active</NavLink>
           </NavItem>
@@ -61,7 +61,7 @@ class NavbarExample extends React.Component {
         </Nav>
 
         <h4>Right-aligned</h4>
-        <Nav horizontal="right">
+        <Nav align="right">
           <NavItem>
             <NavLink active>Active</NavLink>
           </NavItem>
