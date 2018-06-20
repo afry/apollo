@@ -5,8 +5,16 @@ import * as styles from './CardImage.css';
 
 const propTypes = {
   className: PropTypes.string,
-  placement: PropTypes.oneOf(['bottom', 'top']),
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  placement: PropTypes.oneOf([
+    'top',
+    'right',
+    'bottom',
+    'left',
+  ]),
+  tag: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string
+  ]),
 };
 
 const defaultProps = {
