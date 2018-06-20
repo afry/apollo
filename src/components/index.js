@@ -38,6 +38,10 @@ export {
   default as CardImage,
 } from './CardImage';
 
+export {
+  default as CardLink,
+} from './CardLink';
+
 export { 
   default as CardText,
 } from './CardText';
