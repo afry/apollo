@@ -1,0 +1,14 @@
+.card-link {
+  color: var(--one-blue);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--one-light-blue);
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: 1.25rem;
+}
