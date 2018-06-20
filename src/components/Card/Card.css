@@ -11,3 +11,12 @@
   border: 1px solid var(--faded-blue, lightblue);
   border-radius: 6px;
 }
+
+.card-dark {
+  background-color: var(--one-darkest-blue, darkblue);
+}
+
+.card-dark .card-title,
+.card-dark .card-text {
+  color: var(--white, white);
+}
