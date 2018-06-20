@@ -1,30 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './DropdownToggle.css';
+import * as styles from './NavbarToggle.css';
 
 const propTypes = {
-  active: PropTypes.bool,
+  children: PropTypes.node,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  type: PropTypes.string,
 };
 
 const defaultProps = {
-  active: false,
+  children: undefined,
   className: undefined,
   disabled: false,
   onClick: undefined,
-  tag: 'a',
+  tag: 'button',
+  type: 'button',
 };
 
-const contextTypes = {
-  onToggle: PropTypes.func,
-  open: PropTypes.bool,
-};
-
-class DropdownToggle extends React.Component {
+class NavbarToggle extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -39,27 +36,28 @@ class DropdownToggle extends React.Component {
     if (this.props.onClick) {
       this.props.onClick(e);
     }
-
-    this.context.onToggle(e);
   }
 
   render() {
     const {
-      active,
+      children,
       className,
       disabled,
       tag: Tag,
       ...other
     } = this.props;
 
-    const { open } = this.context;
+    let { type } = this.props;
 
     const classes = classNames(
       className,
-      styles['dropdown-toggle'],
-      (active || open) ? styles.active : '',
+      styles['navbar-toggle'],
       (disabled) ? styles.disabled : '',
     );
+
+    if (Tag !== 'button') {
+      type = undefined;
+    }
 
     return (
       <Tag
@@ -67,13 +65,15 @@ class DropdownToggle extends React.Component {
         className={classes}
         disabled={disabled}
         onClick={this.handleClick}
-      />
+        type={type}
+      >
+        {children || <span className={styles['navbar-toggle-icon']} />}
+      </Tag>
     );
   }
 }
 
-DropdownToggle.propTypes = propTypes;
-DropdownToggle.defaultProps = defaultProps;
-DropdownToggle.contextTypes = contextTypes;
+NavbarToggle.propTypes = propTypes;
+NavbarToggle.defaultProps = defaultProps;
 
-export default DropdownToggle;
+export default NavbarToggle;

@@ -59,6 +59,10 @@ export {
 } from './Container';
 
 export {
+  default as Collapse,
+} from './Collapse';
+
+export {
   default as DatePicker,
 } from './DatePicker';
 
@@ -141,6 +145,10 @@ export {
 export {
   default as NavbarBrand,
 } from './NavbarBrand';
+
+export {
+  default as NavbarToggle,
+} from './NavbarToggle';
 
 export {
   default as NavItem,

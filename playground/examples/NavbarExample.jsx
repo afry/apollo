@@ -2,69 +2,90 @@ import React from 'react';
 import {
   BasicDropdown,
   Container,
+  Collapse,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   Navbar,
   NavbarBrand,
+  NavbarToggle,
   Nav,
   NavItem,
   NavLink,
 } from '../../src';
 
-const NavbarExample = () => (
-  <Container>
-    <h1>Navbar</h1>
-    <h3>Dark</h3>
-    <Navbar dark>
-      <Container>
-        <NavbarBrand>one</NavbarBrand>
-        <Nav navbar>
-          <NavItem>
-            <NavLink disabled>Time Report</NavLink>
-          </NavItem>
-          <BasicDropdown>
-            <DropdownToggle>Projects</DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem>Menu Item</DropdownItem>
-              <DropdownItem>Menu Item</DropdownItem>
-              <DropdownItem>Menu Item</DropdownItem>
-            </DropdownMenu>
-          </BasicDropdown>
-          <NavItem>
-            <NavLink>Groups</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink>Information</NavLink>
-          </NavItem>
-        </Nav>
-      </Container>
-    </Navbar>
+class NavbarExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+    this.handleToggle = this.handleToggle.bind(this);
+  }
 
-    <h3>Light</h3>
-    <Navbar>
+  handleToggle(e) {
+    this.setState({ open: !this.state.open });
+  }
+
+  render() {
+    return (
       <Container>
-        <NavbarBrand>Home</NavbarBrand>
-        <Nav horizontal="center" navbar>
-          <BasicDropdown>
-            <DropdownToggle disabled>Overview</DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem>Hej</DropdownItem>
-            </DropdownMenu>
-          </BasicDropdown>
-          <NavItem>
-            <NavLink disabled>News</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink>CEO Blog</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink>Jobs & Assignments</NavLink>
-          </NavItem>
-        </Nav>
+        <h1>Navbar</h1>
+        <h3>Dark</h3>
+        <Navbar dark expand="medium">
+          <Container>
+            <NavbarBrand>one</NavbarBrand>
+            <NavbarToggle onClick={this.handleToggle} />
+            <Collapse navbar open={this.state.open}>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink disabled>Time Report</NavLink>
+                </NavItem>
+                <BasicDropdown>
+                  <DropdownToggle>Projects</DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>Menu Item</DropdownItem>
+                    <DropdownItem>Menu Item</DropdownItem>
+                    <DropdownItem>Menu Item</DropdownItem>
+                  </DropdownMenu>
+                </BasicDropdown>
+                <NavItem>
+                  <NavLink>Groups</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink>Information</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
+        </Navbar>
+
+{/*
+        <h3>Light</h3>
+        <Navbar>
+          <Container>
+            <NavbarBrand>Home</NavbarBrand>
+            <Nav horizontal="center" navbar>
+              <BasicDropdown>
+                <DropdownToggle disabled>Overview</DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>Hej</DropdownItem>
+                </DropdownMenu>
+              </BasicDropdown>
+              <NavItem>
+                <NavLink disabled>News</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>CEO Blog</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>Jobs & Assignments</NavLink>
+              </NavItem>
+            </Nav>
+          </Container>
+        </Navbar>
+*/}
       </Container>
-    </Navbar>
-  </Container>
-);
+    );
+  }
+};
 
 export default NavbarExample;

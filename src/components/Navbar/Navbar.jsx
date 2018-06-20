@@ -35,7 +35,9 @@ const Navbar = (props) => {
     className,
     styles.navbar,
     dark ? styles['navbar-dark'] : styles['navbar-light'],
-    expand ? styles['navbar-expand'] : '',
+    (typeof (expand) === 'boolean' || expand === 'x-small')
+      ? styles['navbar-expand']
+      : styles[`navbar-expand-${expand}`],
     fixed ? styles[`navbar-fixed-${fixed}`] : '',
   );
 

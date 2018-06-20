@@ -22,6 +22,11 @@
   padding-bottom: 0 !important;
 }
 
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+}
+
 .nav-tabs {
   border-bottom: 1px solid var(--misty, lightgray);
 }
