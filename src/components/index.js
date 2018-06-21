@@ -14,6 +14,14 @@ export {
   default as BasicWizard,
 } from './BasicWizard';
 
+export { 
+  default as Breadcrumb,
+} from './Breadcrumb';
+
+export { 
+  default as Breadcrumbs,
+} from './Breadcrumbs';
+
 export {
   default as Button,
 } from './Button';
@@ -57,6 +65,10 @@ export {
 export {
   default as Container,
 } from './Container';
+
+export {
+  default as Collapse,
+} from './Collapse';
 
 export {
   default as DatePicker,
@@ -141,6 +153,10 @@ export {
 export {
   default as NavbarBrand,
 } from './NavbarBrand';
+
+export {
+  default as NavbarToggle,
+} from './NavbarToggle';
 
 export {
   default as NavItem,

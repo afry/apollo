@@ -1,0 +1,27 @@
+.navbar-toggle {
+  padding: 0.25rem 0.75rem;
+  font-size: 16px;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.navbar-toggle:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.navbar-toggle-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
