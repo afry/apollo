@@ -93,7 +93,7 @@ class NavbarExample extends React.Component {
             <NavbarBrand>one</NavbarBrand>
             <NavbarToggle />
             <Collapse navbar open={false}>
-              <Nav navbar>
+              <Nav navbar align="right">
                 <NavItem>
                   <NavLink disabled>Time Report</NavLink>
                 </NavItem>
