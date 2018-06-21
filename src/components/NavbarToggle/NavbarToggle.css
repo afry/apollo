@@ -9,6 +9,7 @@
 
 .navbar-toggle:hover, .navbar-toggle:focus {
   text-decoration: none;
+  outline: none;
 }
 
 .navbar-toggle:not(:disabled):not(.disabled) {

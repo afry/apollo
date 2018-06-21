@@ -16,3 +16,13 @@
   -ms-flex-align: center;
   align-items: center;
 }
+
+.navbar-collapse.open {
+  padding-bottom: 1rem;
+}
+
+.navbar-collapse.open .navbar-nav .nav-link,
+.navbar-collapse.open .navbar-nav .dropdown-toggle {
+  line-height: 35px;
+  padding: .5rem 0;
+}

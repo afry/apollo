@@ -1,7 +1,10 @@
 .navbar {
   position: relative;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -12,12 +15,15 @@
 
 .navbar > .container,
 .navbar > .container-fluid {
-  position: relative;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (max-width: 575.98px) {
@@ -39,17 +45,17 @@
     justify-content: flex-start;
   }
   .navbar-expand-small .navbar-nav {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-    -ms-flex-direction: row !important;
-    flex-direction: row !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .navbar-expand-small .navbar-nav .dropdown-menu {
-    position: absolute !important;
+    position: absolute;
   }
   .navbar-expand-small .navbar-nav .nav-link {
-    padding-right: 0.5rem !important;
-    padding-left: 0.5rem !important;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   .navbar-expand-small > .container,
   .navbar-expand-small > .container-fluid {
@@ -89,9 +95,10 @@
   .navbar-expand-medium .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .navbar-expand-medium .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+  .navbar-expand-medium .navbar-nav .nav-link,
+  .navbar-expand-medium .navbar-nav .dropdown-toggle {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   .navbar-expand-medium > .container,
   .navbar-expand-medium > .container-fluid {
@@ -126,29 +133,25 @@
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
-
   .navbar-expand-large .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
-
   .navbar-expand-large .navbar-nav .dropdown-menu {
     position: absolute;
   }
-
-  .navbar-expand-large .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+  .navbar-expand-large .navbar-nav .nav-link,
+  .navbar-expand-large .navbar-nav .dropdown-toggle {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
-
   .navbar-expand-large .navbar-collapse {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
   }
-
   .navbar-expand-large .navbar-toggle {
     display: none;
   }
@@ -181,9 +184,10 @@
   .navbar-expand-x-large .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .navbar-expand-x-large .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+  .navbar-expand-x-large .navbar-nav .nav-link,
+  .navbar-expand-x-large .navbar-nav .dropdown-toggle {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   .navbar-expand-x-large .navbar-collapse {
     display: flex !important;
@@ -225,9 +229,10 @@
   position: absolute;
 }
 
-.navbar-expand .navbar-nav .nav-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+.navbar-expand .navbar-nav .nav-link,
+.navbar-expand .navbar-nav .dropdown-toggle {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .navbar-expand .navbar-collapse {
@@ -262,6 +267,11 @@
   background-color: var(--one-darkest-blue, darkblue);
 }
 
+.navbar-dark .navbar-toggle {
+  color: var(--charcoal, slategray);
+  border-color: var(--dark-gray, darkgray);
+}
+
 .navbar-dark .navbar-toggle-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -270,6 +280,11 @@
   background-color: var(--white, white);
   box-shadow: 0px 2.5px 2.5px var(--marble, lightgray),
               0px -2.5px 2.5px var(--marble, lightgray);
+}
+
+.navbar-light .navbar-toggle {
+  color: var(--charcoal, slategray);
+  border-color: var(--dark-gray, darkgray);
 }
 
 .navbar-light .navbar-toggle-icon {
@@ -290,11 +305,6 @@
 
 .navbar-light .navbar-brand {
   color: var(--black, black);
-}
-
-.navbar .nav-link,
-.navbar .dropdown-toggle {
-  padding: 0.5rem 2rem;
 }
 
 .navbar-dark .nav-link,
