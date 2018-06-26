@@ -80,17 +80,23 @@
 }
 
 .nav-horizontal-left {
-  justify-content: flex-start;
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
 }
 
 .nav-horizontal-center {
-  justify-content: center;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
   margin-left: auto;
   margin-right: auto;
 }
 
 .nav-horizontal-right {
-  justify-content: flex-end;
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
   margin-left: auto;
 }
 

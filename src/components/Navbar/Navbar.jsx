@@ -15,7 +15,7 @@ const propTypes = {
 const defaultProps = {
   className: undefined,
   dark: false,
-  expand: true,
+  expand: false,
   fixed: undefined,
   role: undefined,
   tag: 'nav',
@@ -35,7 +35,7 @@ const Navbar = (props) => {
     className,
     styles.navbar,
     dark ? styles['navbar-dark'] : styles['navbar-light'],
-    (typeof (expand) === 'boolean' || expand === 'x-small')
+    ((typeof (expand) === 'boolean' && expand) || expand === 'x-small')
       ? styles['navbar-expand']
       : styles[`navbar-expand-${expand}`],
     fixed ? styles[`navbar-fixed-${fixed}`] : '',
