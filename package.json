@@ -1,6 +1,6 @@
 {
   "name": "@afconsult/apollo",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
   "repository": "https://github.com/afconsult/apollo",
