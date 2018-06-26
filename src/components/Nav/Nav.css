@@ -9,6 +9,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-left: 0;
   list-style: none;
@@ -20,6 +22,11 @@
   line-height: 70px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
 }
 
 .nav-tabs {
@@ -72,22 +79,28 @@
   display: none;
 }
 
-.justify-content-left {
-  justify-content: flex-start;
+.nav-horizontal-left {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
 }
 
-.justify-content-center {
-  justify-content: center;
+.nav-horizontal-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
   margin-left: auto;
   margin-right: auto;
 }
 
-.justify-content-right {
-  justify-content: flex-end;
+.nav-horizontal-right {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
   margin-left: auto;
 }
 
-.navbar-nav.justify-content-center {
+.navbar-nav.nav-horizontal-center {
   position: absolute;
   top: 50%;
   left: 50%;

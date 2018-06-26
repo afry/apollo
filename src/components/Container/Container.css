@@ -1,14 +1,13 @@
 .container {
   width: 100%;
-  padding-right: 64px;
-  padding-left: 64px;
-  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (--phone) {
   .container {
-    padding-right: 0;
-    padding-left: 0;
     max-width: 540px;
   }
 }
@@ -37,5 +36,6 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }

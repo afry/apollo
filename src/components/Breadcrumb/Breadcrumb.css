@@ -1,0 +1,26 @@
+.breadcrumb {
+  color: var(--one-blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.breadcrumb:not(.active):hover {
+  text-decoration: underline;
+}
+
+.breadcrumb::before {
+  content: "/";
+  color: var(--black);
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.breadcrumb:hover::before {
+  text-decoration: none;
+}
+
+.breadcrumb.active {
+  color: var(--one-light-blue);
+  cursor: initial;
+}

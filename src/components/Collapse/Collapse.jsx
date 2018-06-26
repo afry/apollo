@@ -1,40 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './CardImage.css';
+import * as styles from './Collapse.css';
 
 const propTypes = {
   className: PropTypes.string,
-  placement: PropTypes.oneOf([
-    'top',
-    'right',
-    'bottom',
-    'left',
-  ]),
+  navbar: PropTypes.bool,
+  open: PropTypes.bool,
   tag: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.string
+    PropTypes.string,
   ]),
 };
 
 const defaultProps = {
   className: undefined,
-  placement: 'top',
-  tag: 'img',
+  navbar: false,
+  open: false,
+  tag: 'div',
 };
 
-const CardImage = (props) => {
+const Collapse = (props) => {
   const {
     className,
-    placement,
+    navbar,
+    open,
     tag: Tag,
     ...other
   } = props;
 
   const classes = classNames(
     className,
-    styles['card-image'],
-    placement ? styles[`card-image-${placement}`] : '',
+    styles.collapse,
+    navbar ? styles['navbar-collapse'] : '',
+    open ? styles.open : '',
   );
 
   return (
@@ -42,7 +41,7 @@ const CardImage = (props) => {
   );
 };
 
-CardImage.propTypes = propTypes;
-CardImage.defaultProps = defaultProps;
+Collapse.propTypes = propTypes;
+Collapse.defaultProps = defaultProps;
 
-export default CardImage;
+export default Collapse;

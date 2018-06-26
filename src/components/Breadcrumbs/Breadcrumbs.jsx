@@ -1,32 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Card.css';
+import * as styles from './Breadcrumbs.css';
 
 const propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
-  dark: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
+  children: undefined,
   className: undefined,
-  dark: false,
-  tag: 'div',
+  tag: 'nav',
 };
 
-const Card = (props) => {
+const Breadcrumb = (props) => {
   const {
     className,
-    dark,
     tag: Tag,
     ...other
   } = props;
 
   const classes = classNames(
     className,
-    styles.card,
-    dark ? styles['card-dark'] : '',
+    styles.breadcrumbs,
   );
 
   return (
@@ -34,7 +32,7 @@ const Card = (props) => {
   );
 };
 
-Card.propTypes = propTypes;
-Card.defaultProps = defaultProps;
+Breadcrumb.propTypes = propTypes;
+Breadcrumb.defaultProps = defaultProps;
 
-export default Card;
+export default Breadcrumb;
