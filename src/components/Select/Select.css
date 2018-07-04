@@ -64,10 +64,13 @@ select[value=""] {
   color: var(--dark-gray, darkgray);
 }
 
+select:focus {
+  outline: none;
+}
+
 select:hover,
 select:focus {
   border-color: var(--one-blue, blue);
-  outline: none;
 }
 
 select:disabled {

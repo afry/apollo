@@ -12,7 +12,12 @@
   width: 370px;
 }
 
-.textarea:hover {
+.textarea:focus {
+  outline: none;
+}
+
+.textarea:hover,
+.textarea:focus {
   border-color: var(--one-blue, blue);
 }
 
