@@ -19,11 +19,11 @@
 .checkbox .checkmark {
   border: 1px solid var(--stone, slategray);
   border-radius: 3px;
-  height: 20px;
+  height: 18px;
   left: 0;
   position: absolute;
-  top: 0;
-  width: 20px;
+  top: 4px;
+  width: 18px;
 }
 
 .checkbox:hover input ~ .checkmark {
@@ -60,8 +60,8 @@
   border: solid var(--white, white);
   border-width: 0 2px 2px 0;
   height: 10px;
-  left: 6px;
-  top: 2px;
+  left: 5px;
+  top: 1px;
   width: 4px;
   transform: rotate(45deg);
 }

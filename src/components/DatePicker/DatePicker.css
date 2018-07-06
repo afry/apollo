@@ -13,7 +13,22 @@
   width: 370px;
 }
 
-.date-picker:hover {
+.date-picker:focus {
+  outline: none;
+}
+
+.date-picker::before,
+::placeholder {
+  color: var(--stone, darkgray);
+  content: attr(placeholder);
+}
+
+.date-picker::-ms-clear {
+  display: none;
+}
+
+.date-picker:hover,
+.date-picker:focus {
   border-color: var(--one-blue, blue);
 }
 
