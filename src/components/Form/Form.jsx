@@ -6,7 +6,11 @@ import * as styles from './Form.css';
 const propTypes = {
   className: PropTypes.string,
   inline: PropTypes.bool,
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.string
+  ]),
 };
 
 const defaultProps = {
@@ -15,24 +19,27 @@ const defaultProps = {
   innerRef: undefined,
 };
 
-const Form = (props) => {
-  const {
-    className,
-    inline,
-    innerRef,
-    ...other
-  } = props;
+/* eslint-disable react/prefer-stateless-function */
+class Form extends React.PureComponent {
+  render() {
+    const {
+      className,
+      innerRef,
+      inline,
+      ...other
+    } = this.props;
 
-  const classes = classNames(
-    className,
-    styles.form,
-    inline ? styles['form-inline'] : ''
-  );
+    const classes = classNames(
+      className,
+      styles.form,
+      inline ? styles['form-inline'] : ''
+    );
 
-  return (
-    <form {...other} ref={innerRef} className={classes} />
-  );
-};
+    return (
+      <form {...other} ref={innerRef} className={classes} />
+    );
+  }
+}
 
 Form.propTypes = propTypes;
 Form.defaultProps = defaultProps;
