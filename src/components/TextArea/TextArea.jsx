@@ -8,6 +8,11 @@ const propTypes = {
   columns: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.string
+  ]),
   maxLength: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -24,6 +29,7 @@ const defaultProps = {
   columns: '39',
   disabled: false,
   id: undefined,
+  innerRef: undefined,
   maxLength: undefined,
   name: undefined,
   onChange: undefined,
@@ -39,6 +45,7 @@ const TextArea = (props) => {
   const {
     className,
     columns,
+    innerRef,
     resize: Resize,
     ...other
   } = props;
@@ -51,6 +58,7 @@ const TextArea = (props) => {
   return (
     <textarea
       {...other}
+      ref={innerRef}
       className={classes}
       cols={columns}
       style={{ resize: Resize }}
