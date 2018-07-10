@@ -10,10 +10,6 @@ export {
   default as BasicDropdown,
 } from './BasicDropdown';
 
-export {
-  default as BasicWizard,
-} from './BasicWizard';
-
 export { 
   default as Breadcrumb,
 } from './Breadcrumb';
@@ -185,15 +181,3 @@ export {
 export {
   default as TextArea,
 } from './TextArea';
-
-export {
-  default as Wizard,
-} from './Wizard';
-
-export {
-  default as WizardControl,
-} from './WizardControl';
-
-export {
-  default as WizardStep,
-} from './WizardStep';
