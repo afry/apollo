@@ -17,10 +17,9 @@
   outline: none;
 }
 
-.date-picker::before,
 ::placeholder {
   color: var(--stone, darkgray);
-  content: attr(placeholder);
+  display: inline-block;
 }
 
 .date-picker::-ms-clear {
