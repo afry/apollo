@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'nav',
 };
 
-const Breadcrumb = (props) => {
+const Breadcrumbs = (props) => {
   const {
     className,
     tag: Tag,
@@ -32,7 +32,7 @@ const Breadcrumb = (props) => {
   );
 };
 
-Breadcrumb.propTypes = propTypes;
-Breadcrumb.defaultProps = defaultProps;
+Breadcrumbs.propTypes = propTypes;
+Breadcrumbs.defaultProps = defaultProps;
 
-export default Breadcrumb;
+export default Breadcrumbs;

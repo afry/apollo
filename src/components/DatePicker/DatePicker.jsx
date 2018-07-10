@@ -7,6 +7,11 @@ const propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.string
+  ]),
   name: PropTypes.string,
   onChange: PropTypes.func,
   readOnly: PropTypes.bool,
@@ -17,6 +22,7 @@ const defaultProps = {
   className: undefined,
   disabled: false,
   id: undefined,
+  innerRef: undefined,
   name: undefined,
   onChange: undefined,
   readOnly: false,
@@ -26,6 +32,7 @@ const defaultProps = {
 const DatePicker = (props) => {
   const {
     className,
+    innerRef,
     ...other
   } = props;
 
@@ -35,7 +42,13 @@ const DatePicker = (props) => {
   );
 
   return (
-    <input {...other} className={classes} type="date" />
+    <input
+      {...other}
+      ref={innerRef}
+      className={classes}
+      placeholder="YYYY-MM-DD"
+      type="date"
+    />
   );
 };
 

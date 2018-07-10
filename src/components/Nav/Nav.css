@@ -83,6 +83,7 @@
   -webkit-box-pack: start !important;
   -ms-flex-pack: start !important;
   justify-content: flex-start !important;
+  padding-left: 0;
 }
 
 .nav-horizontal-center {
@@ -98,6 +99,7 @@
   -ms-flex-pack: end !important;
   justify-content: flex-end !important;
   margin-left: auto;
+  padding-right: 0;
 }
 
 .navbar-nav.nav-horizontal-center {

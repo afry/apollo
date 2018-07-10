@@ -15,7 +15,7 @@ class ModalExample extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleToggle(e) {
+  handleToggle() {
     this.setState({ open: !this.state.open });
   }
 
@@ -25,7 +25,7 @@ class ModalExample extends React.Component {
         <h1>Modal</h1>
         <Button onClick={this.handleToggle}>Open Modal</Button>
 
-        <Modal onToggle={this.handleToggle} open={this.state.open}>
+        <Modal keyboard onToggle={this.handleToggle} open={this.state.open} onClosed={() => console.log('onClosed')} onOpened={() => console.log('onOpened')} onEnter={() => console.log('onEnter')} onExit={() => console.log('onExit')}>
           <ModalHeader>
             Add Members
           </ModalHeader>

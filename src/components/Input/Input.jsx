@@ -5,6 +5,11 @@ import * as styles from './Input.css';
 
 const propTypes = {
   className: PropTypes.string,
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.string
+  ]),
   onChange: PropTypes.func,
   type(props, propName) {
     const value = props[propName];
@@ -17,25 +22,30 @@ const propTypes = {
 
 const defaultProps = {
   className: undefined,
+  innerRef: undefined,
   onChange: undefined,
   type: 'text',
 };
 
-const Input = (props) => {
-  const {
-    className,
-    ...other
-  } = props;
+/* eslint-disable react/prefer-stateless-function */
+class Input extends React.PureComponent {
+  render() {
+    const {
+      className,
+      innerRef,
+      ...other
+    } = this.props;
 
-  const classes = classNames(
-    className,
-    styles.input,
-  );
+    const classes = classNames(
+      className,
+      styles.input,
+    );
 
-  return (
-    <input {...other} className={classes} />
-  );
-};
+    return (
+      <input {...other} ref={innerRef} className={classes} />
+    );
+  }
+}
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;

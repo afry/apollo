@@ -5,11 +5,15 @@
   left: 0;
   right: 0;
   z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: none;
 }
 
 .modal-dialog {
   position: relative;
   margin: 1rem;
+  pointer-events: none;
 }
 
 .modal-content {
@@ -39,4 +43,68 @@
   z-index: 1040;
   background-color: var(--black, black);
   opacity: .5;
+}
+
+@-webkit-keyframes slide-enter {
+  from {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px, 0);
+  }
+}
+
+@keyframes slide-enter {
+  from {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px, 0);
+  }
+}
+
+@-webkit-keyframes slide-exit {
+  to {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px, 0);
+  }
+}
+
+@keyframes slide-exit {
+  to {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px, 0);
+  }
+}
+
+@-webkit-keyframes fade-enter {
+  from {
+      opacity: 0;
+  }
+}
+
+@keyframes fade-enter {
+  from {
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-exit {
+  to {
+      opacity: 0
+  }
+}
+
+@keyframes fade-exit {
+  to {
+      opacity: 0
+  }
+}
+
+.modal.show .modal-dialog {
+  -webkit-animation: slide-enter both cubic-bezier(0.4, 0, 0, 1.5), fade-enter both ease-in;
+  animation: slide-enter both cubic-bezier(0.4, 0, 0, 1.5), fade-enter both ease-in;
+  animation-duration: .5s;
+}
+
+.modal.hide .modal-dialog {
+  -webkit-animation: slide-exit both, fade-exit both ease-out;
+  animation: slide-exit both, fade-exit both ease-out;
+  animation-duration: .5s;
 }
