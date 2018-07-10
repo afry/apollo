@@ -1,6 +1,6 @@
 .checkbox {
   display: inline-block;
-  padding-right: 28px;
+  padding-right: 35px;
   position: relative;
   user-select: none;
 }
@@ -19,18 +19,18 @@
 .checkbox .checkmark {
   border: 1px solid var(--stone, slategray);
   border-radius: 3px;
-  height: 18px;
+  height: 20px;
   left: 0;
   position: absolute;
-  top: 4px;
-  width: 18px;
+  top: 3px;
+  width: 20px;
 }
 
 .checkbox:hover input ~ .checkmark {
   border: 2px solid var(--one-blue, blue);
   cursor: pointer;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
 }
 
 .checkbox input:checked ~ .checkmark {
