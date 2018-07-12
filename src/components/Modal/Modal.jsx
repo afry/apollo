@@ -5,8 +5,11 @@ import * as styles from './Modal.css';
 
 const propTypes = {
   autoFocus: PropTypes.bool,
+  backdropClassName: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  contentClassName: PropTypes.string,
+  dialogClassName: PropTypes.string,
   keyboard: PropTypes.bool,
   onClosed: PropTypes.func,
   onEnter: PropTypes.func,
@@ -18,8 +21,11 @@ const propTypes = {
 
 const defaultProps = {
   autoFocus: true,
+  backdropClassName: undefined,
   children: undefined,
   className: undefined,
+  contentClassName: undefined,
+  dialogClassName: undefined,
   keyboard: false,
   onClosed: undefined,
   onEnter: undefined,
@@ -146,8 +152,11 @@ class Modal extends React.Component {
 
   render() {
     const {
+      backdropClassName,
       children,
       className,
+      contentClassName,
+      dialogClassName,
       keyboard, // eslint-disable-line no-unused-vars
       open, // eslint-disable-line no-unused-vars
       onClosed, // eslint-disable-line no-unused-vars
@@ -163,7 +172,7 @@ class Modal extends React.Component {
       return null;
     }
 
-    const classes = classNames(
+    const modalClasses = classNames(
       className,
       styles.modal,
       styles[animationType],
@@ -177,19 +186,31 @@ class Modal extends React.Component {
       tabIndex: '-1',
     };
 
+    const backdropClasses = classNames(
+      backdropClassName,
+      styles['modal-backdrop'],
+    );
+
+    const contentClasses = classNames(
+      contentClassName,
+      styles['modal-content'],
+    );
+
+    const dialogClasses = classNames(
+      dialogClassName,
+      styles['modal-dialog'],
+    );
+
     return (
       <div>
-        <div {...other} {...modalAttributes} className={classes}>
-          <div
-            ref={this._dialogRef}
-            className={classNames(styles['modal-dialog'])}
-          >
-            <div className={classNames(styles['modal-content'])}>
+        <div {...other} {...modalAttributes} className={modalClasses}>
+          <div ref={this._dialogRef} className={dialogClasses}>
+            <div className={contentClasses}>
               {children}
             </div>
           </div>
         </div>
-        <div className={classNames(styles['modal-backdrop'])} />
+        <div className={backdropClasses} />
       </div>
     );
   }

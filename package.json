@@ -1,6 +1,6 @@
 {
   "name": "@afconsult/apollo",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
   "repository": "https://github.com/afconsult/apollo",
@@ -39,7 +39,8 @@
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-lottie": "^1.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
