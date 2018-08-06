@@ -47,15 +47,15 @@
 }
 
 .button-primary {
-  background-color: var(--one-blue, blue);
-  border-color: var(--one-blue, blue);
+  background-color: var(--one, blue);
+  border-color: var(--one, blue);
   color: var(--white, white);
 }
 
 .button-primary:hover,
 .button-primary:disabled {
-  background-color: var(--one-dark-blue, darkblue);
-  border-color: var(--one-dark-blue, darkblue);
+  background-color: var(--one-dark, darkblue);
+  border-color: var(--one-dark, darkblue);
 }
 
 .button-danger { 
@@ -95,7 +95,7 @@
 
 .button-link:hover,
 .button-link:focus {
-  color: var(--one-blue, blue);
+  color: var(--one, blue);
 }
 
 .button-small {

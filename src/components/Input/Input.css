@@ -22,7 +22,7 @@
 
 .input:hover,
 .input:focus {
-  border-color: var(--one-blue, blue);
+  border-color: var(--one, blue);
 }
 
 .input:disabled {

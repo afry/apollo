@@ -43,7 +43,7 @@
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:active {
-  border-color: var(--one-blue, blue);
+  border-color: var(--one, blue);
 }
 
 .nav-vertical {
@@ -63,7 +63,7 @@
 
 .nav-vertical.nav-tabs .nav-link.active,
 .nav-vertical.nav-tabs .nav-link:active {
-  border-left: 2px solid var(--one-blue, blue);
+  border-left: 2px solid var(--one, blue);
 }
 
 .nav-justified .nav-item {

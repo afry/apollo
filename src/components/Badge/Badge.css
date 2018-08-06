@@ -1,5 +1,5 @@
 .badge {
-  border: 1px solid var(--one-blue, blue);
+  border: 1px solid var(--one, blue);
   border-radius: 2px;
   font-size: 12px;
   font-weight: 500;
@@ -21,10 +21,10 @@
 
 .badge-primary {
   color: var(--white, white);
-  background-color: var(--one-blue, blue);
+  background-color: var(--one, blue);
 }
 
 .badge-secondary {
-  color: var(--one-blue, blue);
+  color: var(--one, blue);
   background-color: var(--white, white);
 }

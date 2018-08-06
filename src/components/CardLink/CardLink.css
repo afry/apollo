@@ -1,11 +1,11 @@
 .card-link {
-  color: var(--one-blue);
+  color: var(--one);
   font-size: 16px;
   text-decoration: none;
 }
 
 .card-link:hover {
-  color: var(--one-light-blue);
+  color: var(--one-light);
   text-decoration: none;
 }
 
