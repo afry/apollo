@@ -233,7 +233,7 @@
 }
 
 .navbar-dark {
-  background-color: var(--one-darkest-blue, darkblue);
+  background-color: var(--primary-darkest, darkblue);
 }
 
 .navbar-dark .navbar-toggle {
@@ -247,7 +247,7 @@
 
 .navbar-dark .navbar-collapse.open .navbar-nav .dropdown-menu {
   border-color: transparent;
-  background-color: var(--one-darkest-blue, darkblue);
+  background-color: var(--primary-darkest, darkblue);
 }
 
 .navbar-dark .navbar-collapse.open .navbar-nav .dropdown-item {

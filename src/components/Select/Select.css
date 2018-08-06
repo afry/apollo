@@ -70,7 +70,7 @@ select:focus {
 
 select:hover,
 select:focus {
-  border-color: var(--one-blue, blue);
+  border-color: var(--primary, blue);
 }
 
 select:disabled {

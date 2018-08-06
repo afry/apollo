@@ -2,7 +2,7 @@
   display: inline-block;
   vertical-align: middle;
   margin: auto;
-  fill: var(--one-blue, blue);
+  fill: var(--primary, blue);
 }
 
 .icon-x-small {

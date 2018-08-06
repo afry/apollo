@@ -1,10 +1,11 @@
 :root {
-  --one-light-blue: #20A3E8;
-  --one-blue: #025FAE;
-  --one-dark-blue: #08478E;
-  --one-darkest-blue: #172137;
-  --faded-light-blue: #EDF3F7;
+  --primary: #025FAE;
+  --primary-dark: #08478E;
+  --primary-darkest: #172137;
+  --primary-light: #20A3E8;
+
   --faded-blue: #D3E1EB;
+  --faded-light-blue: #EDF3F7;
 
   --green-status: #39B983;
   --green-hover-status: #399C73;

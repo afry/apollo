@@ -13,7 +13,7 @@
 }
 
 .card-dark {
-  background-color: var(--one-darkest-blue, darkblue);
+  background-color: var(--primary-darkest, darkblue);
 }
 
 .card-dark .card-title,

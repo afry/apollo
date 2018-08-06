@@ -1,5 +1,5 @@
 .breadcrumb {
-  color: var(--one-blue);
+  color: var(--primary);
   cursor: pointer;
   text-decoration: none;
 }
@@ -21,6 +21,6 @@
 }
 
 .breadcrumb.active {
-  color: var(--one-light-blue);
+  color: var(--primary-light);
   cursor: initial;
 }
