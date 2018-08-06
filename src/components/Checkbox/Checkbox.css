@@ -27,15 +27,15 @@
 }
 
 .checkbox:hover input ~ .checkmark {
-  border: 2px solid var(--one, blue);
+  border: 2px solid var(--primary, blue);
   cursor: pointer;
   height: 20px;
   width: 20px;
 }
 
 .checkbox input:checked ~ .checkmark {
-  background-color: var(--one, blue);
-  border: 2px solid var(--one, blue);
+  background-color: var(--primary, blue);
+  border: 2px solid var(--primary, blue);
   height: 18px;
   width: 18px;
 }

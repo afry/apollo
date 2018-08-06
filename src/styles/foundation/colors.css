@@ -1,8 +1,8 @@
 :root {
-  --one: #025FAE;
-  --one-dark: #08478E;
-  --one-darkest: #172137;
-  --one-light: #20A3E8;
+  --primary: #025FAE;
+  --primary-dark: #08478E;
+  --primary-darkest: #172137;
+  --primary-light: #20A3E8;
 
   --faded-blue: #D3E1EB;
   --faded-light-blue: #EDF3F7;

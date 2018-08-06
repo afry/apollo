@@ -28,7 +28,7 @@
 
 .date-picker:hover,
 .date-picker:focus {
-  border-color: var(--one, blue);
+  border-color: var(--primary, blue);
 }
 
 .date-picker:disabled {
