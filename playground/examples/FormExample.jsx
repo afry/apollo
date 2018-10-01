@@ -87,7 +87,7 @@ const FormExample = () => (
       <h3>Select</h3>
       <FormGroup>
         <Label for="select" value="">Select</Label>
-        <Select id="select" required value="">
+        <Select id="select" required value="first">
           <SelectOption disabled hidden value="">Select Option</SelectOption>
           <SelectOption value="first">1</SelectOption>
           <SelectOption value="second">2</SelectOption>

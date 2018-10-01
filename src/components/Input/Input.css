@@ -28,7 +28,7 @@
 
 .input:disabled {
   background-color: var(--light-smoke, whitesmoke);
-  border-color: var(--dark-gray, darkgray);
+  border-color: var(--marble, lightgray);
 }
 
 .input[type=number]::-webkit-inner-spin-button {

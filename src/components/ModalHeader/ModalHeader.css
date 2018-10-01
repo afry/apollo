@@ -6,6 +6,9 @@
 .modal-title {
   line-height: 1rem;
   margin-bottom: 0;
+  font-weight: 300;
+  font-size: 26px;
+  color: var(--black, black);
 }
 
 .modal-header .close {
