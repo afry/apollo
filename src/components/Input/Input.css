@@ -9,7 +9,8 @@
   margin: 0;
   overflow: visible;
   padding: 0 1rem;
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
 }
 
 .input::-ms-clear {

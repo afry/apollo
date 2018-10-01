@@ -95,6 +95,7 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
+    "testURL": "http://localhost:8080",
     "setupFiles": [
       "./tests/setup.js"
     ],
