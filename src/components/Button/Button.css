@@ -30,7 +30,8 @@
 }
 
 .button:hover {
-  background-color: var(--marble, whitesmoke);
+  border-color: var(--primary, blue);
+  color: var(--primary, blue);
 }
 
 .button:not(:disabled):hover {
@@ -41,9 +42,11 @@
   outline: none;
 }
 
-.button:disabled {
+.button:disabled,
+.button:disabled:hover {
   background-color: var(--marble, whitesmoke);
   border-color: var(--marble, whitesmoke);
+  color: var(--dark-gray, darkgray);
 }
 
 .button-primary {
@@ -52,34 +55,46 @@
   color: var(--white, white);
 }
 
-.button-primary:hover,
-.button-primary:disabled {
+.button-primary:hover {
   background-color: var(--primary-dark, darkblue);
   border-color: var(--primary-dark, darkblue);
+  color: var(--white, white);
 }
 
 .button-danger { 
-  background-color: var(--red-status, red);
-  border-color: var(--red-status, red);
+  background-color: var(--danger, red);
+  border-color: var(--danger, red);
   color: var(--white, white);
 }
 
-.button-danger:hover,
-.button-danger:disabled {
-  background-color: var(--red-hover-status, darkred);
-  border-color: var(--red-hover-status, darkred);
+.button-danger:hover {
+  background-color: var(--danger-hover, darkred);
+  border-color: var(--danger-hover, darkred);
+  color: var(--white, white);
 }
 
 .button-success {
-  background-color: var(--green-status, green);
-  border-color: var(--green-status, green);
+  background-color: var(--success, green);
+  border-color: var(--success, green);
   color: var(--white, white);
 }
 
-.button-success:hover,
-.button-success:disabled {
-  background-color: var(--green-hover-status, darkgreen);
-  border-color: var(--green-hover-status, darkgreen);
+.button-success:hover {
+  background-color: var(--success-hover, darkgreen);
+  border-color: var(--success-hover, darkgreen);
+  color: var(--white, white);
+}
+
+.button-warning {
+  background-color: var(--warning, yellow);
+  border-color: var(--warning, yellow);
+  color: var(--white, white);
+}
+
+.button-warning:hover {
+  background-color: var(--warning-hover, darkgoldenrod);
+  border-color: var(--warning-hover, darkgoldenrod);
+  color: var(--white, white);
 }
 
 .button-link {

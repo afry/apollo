@@ -8,7 +8,7 @@
   word-wrap: break-word;
   background-color: var(--white, white);
   background-clip: border-box;
-  border: 1px solid var(--faded-blue, lightblue);
+  border: 1px solid var(--sky, lightblue);
   border-radius: 6px;
 }
 

@@ -4,7 +4,7 @@
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: var(--faded-light-blue, lightblue);
+  background-color: var(--cloud, lightblue);
   color: var(--black, black);
   margin-left: 2.5px;
   margin-right: 2.5px;
@@ -32,7 +32,7 @@
 
 .tag .close {
   display: block;
-  background-color: var(--faded-light-blue, lightblue);
+  background-color: var(--cloud, lightblue);
   border: 1px solid transparent;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -45,7 +45,7 @@
 
 .tag .close:hover,
 .tag .close:focus {
-  border-color: var(--faded-blue, lightblue);
+  border-color: var(--sky, lightblue);
   outline: none;
 }
 

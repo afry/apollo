@@ -5,7 +5,7 @@ import {
 } from '../../src';
 
 const MentionExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Mention</h1>
     <div>
       <Mention>Stockholm, Sweden</Mention>

@@ -16,7 +16,7 @@ import {
 } from '../../src';
 
 const FormExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Form</h1>
     <Form inline>
       <h3>Input</h3>
