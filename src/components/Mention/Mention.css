@@ -4,7 +4,7 @@
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: var(--sky, lightblue);
+  background-color: var(--cloud, lightblue);
   color: var(--black, black);
   margin-left: 2.5px;
   margin-right: 2.5px;
