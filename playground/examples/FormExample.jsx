@@ -16,7 +16,7 @@ import {
 } from '../../src';
 
 const FormExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Form</h1>
     <Form inline>
       <h3>Input</h3>
@@ -87,7 +87,7 @@ const FormExample = () => (
       <h3>Select</h3>
       <FormGroup>
         <Label for="select" value="">Select</Label>
-        <Select id="select" required value="">
+        <Select id="select" required value="first">
           <SelectOption disabled hidden value="">Select Option</SelectOption>
           <SelectOption value="first">1</SelectOption>
           <SelectOption value="second">2</SelectOption>

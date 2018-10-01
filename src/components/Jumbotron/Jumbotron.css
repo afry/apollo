@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: var(--faded-light-blue, lightblue);
+  background-color: var(--cloud, lightblue);
   padding: 50px 110px;
 }
 

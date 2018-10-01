@@ -6,7 +6,7 @@ import {
 } from '../../src';
 
 const JumbotronExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Jumbotron</h1>
     <Jumbotron>
       <Badge>PROJECT</Badge>

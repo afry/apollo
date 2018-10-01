@@ -10,7 +10,8 @@
   margin: 0;
   overflow: visible;
   padding: 0 1rem;
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
 }
 
 .date-picker:focus {
@@ -33,7 +34,7 @@
 
 .date-picker:disabled {
   background-color: var(--light-smoke, whitesmoke);
-  border-color: var(--dark-gray, darkgray);
+  border-color: var(--marble, lightgray);
   color: var(--dark-gray, darkgray);
 }
 

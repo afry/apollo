@@ -26,7 +26,7 @@
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: var(--faded-light-blue, lightblue);
+  background-color: var(--cloud, lightblue);
   text-decoration: none;
   outline: none;
 }

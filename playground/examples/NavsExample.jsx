@@ -18,7 +18,7 @@ class NavbarExample extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Navs</h1>
         <h3>Horizontal</h3>
         <h4>Left-aligned</h4>

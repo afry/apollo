@@ -5,7 +5,7 @@ import {
 } from '../../src';
 
 const TagExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Tag</h1>
     <div>
       <Tag>Stockholm</Tag>

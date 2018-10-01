@@ -5,7 +5,7 @@ import {
 } from '../../src';
 
 const AvatarExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Avatar</h1>
     <div>
       <h4>X-Small</h4>
