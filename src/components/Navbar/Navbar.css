@@ -280,11 +280,11 @@
 }
 
 .navbar-fixed-top.navbar-light {
-  box-shadow: 0px 2.5px 2.5px var(--marble, lightgray);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
 }
 
 .navbar-fixed-bottom.navbar-light {
-  box-shadow: 0px -2.5px 2.5px var(--marble, lightgray);
+  box-shadow: 0 0 -12px 0 rgba(0,0,0,0.12);
 }
 
 .navbar-dark .navbar-brand {
