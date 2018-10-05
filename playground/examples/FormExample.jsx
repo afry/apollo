@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Checkbox,
   Container,
-  DatePicker,
   Form,
   FormFeedback,
   FormGroup,
@@ -68,18 +67,6 @@ const FormExample = () => (
         <Label for="input_with_invalid_form_feedback">Invalid</Label>
         <Input id="input_with_invalid_form_feedback" placeholder="Text" />
         <FormFeedback>Oh noes! Something went wrong.</FormFeedback>
-      </FormGroup>
-    </Form>
-
-    <Form>
-      <h3>Date Picker</h3>
-      <FormGroup>
-        <Label for="date_picker">Date</Label>
-        <DatePicker id="date_picker" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="disabled_date_picker">Disabled</Label>
-        <DatePicker disabled id="disabled_date_picker" />
       </FormGroup>
     </Form>
 
