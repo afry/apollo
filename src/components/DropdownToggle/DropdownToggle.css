@@ -12,14 +12,14 @@
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-  color: var(--primary, blue);
+  color: var(--day, blue);
 }
 
 .dropdown-toggle.active,
 .dropdown-toggle:active {
-  color: var(--primary, blue);
-  text-shadow: 0 0 .01px var(--primary, blue),
-               0 0 .01px var(--primary, blue);
+  color: var(--day, blue);
+  text-shadow: 0 0 .01px var(--day, blue),
+               0 0 .01px var(--day, blue);
 }
 
 .dropdown-toggle.disabled,

@@ -30,8 +30,8 @@
 }
 
 .button:hover {
-  border-color: var(--primary, blue);
-  color: var(--primary, blue);
+  border-color: var(--day, blue);
+  color: var(--day, blue);
 }
 
 .button:not(:disabled):hover {
@@ -50,14 +50,14 @@
 }
 
 .button-primary {
-  background-color: var(--primary, blue);
-  border-color: var(--primary, blue);
+  background-color: var(--day, blue);
+  border-color: var(--day, blue);
   color: var(--white, white);
 }
 
 .button-primary:hover {
-  background-color: var(--primary-dark, darkblue);
-  border-color: var(--primary-dark, darkblue);
+  background-color: var(--evening, darkblue);
+  border-color: var(--evening, darkblue);
   color: var(--white, white);
 }
 
@@ -110,7 +110,7 @@
 
 .button-link:hover,
 .button-link:focus {
-  color: var(--primary, blue);
+  color: var(--day, blue);
 }
 
 .button-small {

@@ -12,13 +12,13 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--primary, blue);
+  color: var(--day, blue);
 }
 
 .nav-link.active,
 .nav-link:active {
-  color: var(--primary, blue);
-  text-shadow: 0 0 .01px var(--primary, blue), 0 0 .01px var(--primary, blue);
+  color: var(--day, blue);
+  text-shadow: 0 0 .01px var(--day, blue), 0 0 .01px var(--day, blue);
 }
 
 .nav-link.disabled,

@@ -23,7 +23,7 @@
 
 .input:hover,
 .input:focus {
-  border-color: var(--primary, blue);
+  border-color: var(--day, blue);
 }
 
 .input:disabled {
