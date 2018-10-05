@@ -67,10 +67,6 @@ export {
 } from './Collapse';
 
 export {
-  default as DatePicker,
-} from './DatePicker';
-
-export {
   default as Dropdown,
 } from './Dropdown';
 
