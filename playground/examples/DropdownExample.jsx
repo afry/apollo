@@ -23,7 +23,7 @@ class DropdownExample extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Dropdown</h1>
         <Dropdown onToggle={this.handleToggle} open={this.state.open}>
           <DropdownToggle>Dropdown</DropdownToggle>

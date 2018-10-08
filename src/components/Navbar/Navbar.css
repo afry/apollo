@@ -10,7 +10,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0rem 1rem;
-  min-height: 70px;
+  height: 70px;
 }
 
 .navbar > .container,
@@ -233,7 +233,7 @@
 }
 
 .navbar-dark {
-  background-color: var(--one-darkest-blue, darkblue);
+  background-color: var(--black, black);
 }
 
 .navbar-dark .navbar-toggle {
@@ -247,7 +247,7 @@
 
 .navbar-dark .navbar-collapse.open .navbar-nav .dropdown-menu {
   border-color: transparent;
-  background-color: var(--one-darkest-blue, darkblue);
+  background-color: var(--black, black);
 }
 
 .navbar-dark .navbar-collapse.open .navbar-nav .dropdown-item {
@@ -280,11 +280,11 @@
 }
 
 .navbar-fixed-top.navbar-light {
-  box-shadow: 0px 2.5px 2.5px var(--marble, lightgray);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
 }
 
 .navbar-fixed-bottom.navbar-light {
-  box-shadow: 0px -2.5px 2.5px var(--marble, lightgray);
+  box-shadow: 0 0 -12px 0 rgba(0,0,0,0.12);
 }
 
 .navbar-dark .navbar-brand {

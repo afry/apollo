@@ -27,7 +27,7 @@ class NavbarExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ margin: '25px 0' }}>
         <h1>Navbar</h1>
         <h3>Dark</h3>
         <Navbar dark expand="medium">

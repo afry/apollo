@@ -1,7 +1,8 @@
 .select {
   position: relative;
   height: 49.33px;
-  width: 400px;
+  max-width: 370px;
+  width: 100%;
   background-color: var(--white, white);
 }
 
@@ -70,10 +71,10 @@ select:focus {
 
 select:hover,
 select:focus {
-  border-color: var(--one-blue, blue);
+  border-color: var(--day, blue);
 }
 
 select:disabled {
   background-color: var(--light-smoke, whitesmoke);
-  border-color: var(--dark-gray, darkgray);
+  border-color: var(--marble, lightgray);
 }

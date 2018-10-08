@@ -6,7 +6,7 @@ import {
 } from '../../src';
 
 const BreadcrumbsExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Breadcrumbs</h1>
     <Breadcrumbs>
       <Breadcrumb>Home</Breadcrumb>

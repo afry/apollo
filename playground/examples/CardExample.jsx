@@ -11,7 +11,7 @@ import {
 } from '../../src';
 
 const CardExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Cards</h1>
     <CardGroup style={{ height: '394px', width: '75%' }}>
       <Card dark>

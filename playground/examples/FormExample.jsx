@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Checkbox,
   Container,
-  DatePicker,
   Form,
   FormFeedback,
   FormGroup,
@@ -16,7 +15,7 @@ import {
 } from '../../src';
 
 const FormExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Form</h1>
     <Form inline>
       <h3>Input</h3>
@@ -72,22 +71,10 @@ const FormExample = () => (
     </Form>
 
     <Form>
-      <h3>Date Picker</h3>
-      <FormGroup>
-        <Label for="date_picker">Date</Label>
-        <DatePicker id="date_picker" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="disabled_date_picker">Disabled</Label>
-        <DatePicker disabled id="disabled_date_picker" />
-      </FormGroup>
-    </Form>
-
-    <Form>
       <h3>Select</h3>
       <FormGroup>
         <Label for="select" value="">Select</Label>
-        <Select id="select" required value="">
+        <Select id="select" required value="first">
           <SelectOption disabled hidden value="">Select Option</SelectOption>
           <SelectOption value="first">1</SelectOption>
           <SelectOption value="second">2</SelectOption>

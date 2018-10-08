@@ -5,7 +5,7 @@ import {
 } from '../../src';
 
 const BadgeExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Badge</h1>
     <div>
       <Badge color="primary">PROJECT</Badge>

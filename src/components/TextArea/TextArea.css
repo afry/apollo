@@ -9,7 +9,8 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 1rem;
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
 }
 
 .textarea:focus {
@@ -18,12 +19,12 @@
 
 .textarea:hover,
 .textarea:focus {
-  border-color: var(--one-blue, blue);
+  border-color: var(--day, blue);
 }
 
 .textarea:disabled {
   background-color: var(--light-smoke, whitesmoke);
-  border-color: var(--dark-gray, darkgray);
+  border-color: var(--marble, lightgray);
 }
 
 ::placeholder {

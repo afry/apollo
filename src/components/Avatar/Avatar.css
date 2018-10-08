@@ -6,7 +6,7 @@
   background-clip: padding-box;
   background-size: cover;
   background-position: center center;
-  background-color: var(--one-blue, blue);
+  background-color: var(--day, blue);
   border-radius: 50%;
   margin: auto;
   overflow: hidden;

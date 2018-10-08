@@ -1,6 +1,6 @@
 {
   "name": "@afconsult/apollo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
   "repository": "https://github.com/afconsult/apollo",
@@ -95,6 +95,7 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
+    "testURL": "http://localhost:8080",
     "setupFiles": [
       "./tests/setup.js"
     ],

@@ -6,10 +6,11 @@ import {
 } from '../../src';
 
 const ButtonExample = () => (
-  <Container>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Button</h1>
     <ButtonGroup>
       <Button color="primary">primary</Button>
+      <Button disabled color="primary">disabled</Button>
       <Button color="secondary">secondary</Button>
       <Button color="success">success</Button>
       <Button color="danger">danger</Button>
