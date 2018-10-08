@@ -1,5 +1,5 @@
 .breadcrumb {
-  color: var(--primary);
+  color: var(--day);
   cursor: pointer;
   text-decoration: none;
 }
@@ -21,6 +21,6 @@
 }
 
 .breadcrumb.active {
-  color: var(--primary-light);
+  color: var(--morning);
   cursor: initial;
 }
