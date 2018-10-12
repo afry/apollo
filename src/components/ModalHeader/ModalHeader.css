@@ -1,13 +1,12 @@
 .modal-header {
   position: relative;
-  padding: 1rem;
 }
 
 .modal-title {
-  line-height: 1rem;
+  line-height: 32px;
   margin-bottom: 0;
   font-weight: 300;
-  font-size: 26px;
+  font-size: 24px;
   color: var(--black, black);
 }
 
@@ -17,10 +16,8 @@
   border: 1px solid transparent;
   cursor: pointer;
   float: right;
-  top: 0px;
-  right: 0;
-  height: 40px;
-  width: 40px;
+  top: -10px;
+  right: -10px;
 }
 
 .modal-header .close:hover,
@@ -33,6 +30,6 @@
   display: inline-block;
   color: var(--black, black);
   font-size: 28px;
-  line-height: 40px;
+  line-height: 32px;
   font-weight: lighter;
 }
