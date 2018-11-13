@@ -3,10 +3,13 @@ module.exports = {
     'postcss-import': {},
     'postcss-custom-media': { // eslint-disable-line sort-keys
       extensions: {
-        '--phone': '(min-width: 576px)',
+        '--mobile': '(min-width: 320px)',
+        '--mobile-only': '(min-width: 320px) and (max-width: 767px)',
         '--tablet': '(min-width: 768px)',
-        '--desktop': '(min-width: 992px)', // eslint-disable-line sort-keys
-        '--large-desktop': '(min-width: 1200px)',
+        '--tablet-only': '(min-width: 768px) and (max-width: 1024px)',
+        '--desktop': '(min-width: 1025px)', // eslint-disable-line sort-keys
+        '--desktop-only': '(min-width: 1025px) and (max-width: 1280px)',
+        '--large-desktop': '(min-width: 1281px)',
       },
     },
     'postcss-preset-env': { // eslint-disable-line sort-keys
