@@ -9,7 +9,7 @@
   margin-bottom: 15px;
 }
 
-@media (--phone) {
+@media (--mobile) {
   .button-group {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
