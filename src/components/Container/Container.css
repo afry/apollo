@@ -6,19 +6,19 @@
   margin-right: auto;
 }
 
-@media (--phone) {
+@media (--mobile-only) {
   .container {
     max-width: 540px;
   }
 }
 
-@media (--tablet) {
+@media (--tablet-only) {
   .container {
     max-width: 720px;
   }
 }
 
-@media (--desktop) {
+@media (--desktop-only) {
   .container {
     max-width: 960px;
   }
