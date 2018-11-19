@@ -21,3 +21,9 @@
 .navbar-brand.active {
 
 }
+
+.navbar-brand > img {
+  max-height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
