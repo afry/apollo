@@ -15,8 +15,6 @@
 
 .navbar > .container,
 .navbar > .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
