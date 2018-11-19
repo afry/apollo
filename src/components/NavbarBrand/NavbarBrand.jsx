@@ -5,22 +5,34 @@ import * as styles from './NavbarBrand.css';
 
 const propTypes = {
   active: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   className: PropTypes.string,
   href: PropTypes.string,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  icon: PropTypes.string,
+  tag: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string
+  ]),
 };
 
 const defaultProps = {
   active: false,
+  children: undefined,
   className: undefined,
   href: undefined,
-  tag: 'a'
+  icon: undefined,
+  tag: 'a',
 };
 
 const NavbarBrand = (props) => {
   const {
     active,
+    children,
     className,
+    icon,
     tag: Tag,
     ...other
   } = props;
@@ -31,8 +43,18 @@ const NavbarBrand = (props) => {
     active ? styles.active : '',
   );
 
+  if (icon) {
+    return (
+      <Tag {...other} className={classes}>
+        <img alt="Missing" height="40" src={icon} /> {children}
+      </Tag>
+    );
+  }
+
   return (
-    <Tag {...other} className={classes} />
+    <Tag {...other} className={classes}>
+      {children}
+    </Tag>
   );
 };
 
