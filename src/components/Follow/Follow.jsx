@@ -85,7 +85,7 @@ class Tag extends React.Component {
         role="button"
         tabIndex={0}
       >
-        {icon && <img alt="Error" className={styles['follow-icon']} src={icon} />}
+        {icon && <img alt="" className={styles['follow-icon']} src={icon} />}
         <span className={styles['follow-text']}>
           {children}
         </span>
