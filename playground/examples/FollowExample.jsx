@@ -12,14 +12,10 @@ class FollowExample extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  // eslint-disable-next-line
-  handleClick() {
-    console.log('Clicked follow');
-  }
-
   handleToggle() {
-    console.log('Toggled cancel');
-    this.setState({ active: !this.state.active });
+    this.setState(state => ({
+      active: !state.active
+    }));
   }
 
   render() {
@@ -29,7 +25,7 @@ class FollowExample extends React.Component {
       <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Follow</h1>
         <div>
-          <Follow icon="https://picsum.photos/200/200/?image=1" onClick={this.handleClick} onToggle={this.handleToggle}>Stockholm</Follow>
+          <Follow active={active} icon="https://picsum.photos/200/200/?image=1" onToggle={this.handleToggle}>Stockholm</Follow>
         </div>
       </Container>
     );
