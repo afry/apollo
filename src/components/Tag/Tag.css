@@ -1,5 +1,6 @@
 .tag {
   display: inline-flex;
+  position: relative;
   overflow: hidden;
   align-items: center;
   padding-left: 10px;
@@ -13,16 +14,32 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 16px;
+  vertical-align: top;
+  outline: none;
 }
 
 .tag:first-child {
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 2.5px;
 }
 
 .tag:last-child {
+  margin-right: 0;
   margin-left: 2.5px;
-  margin-right: 0px;
+}
+
+.tag-button:hover {
+  cursor: pointer;
+  color: var(--day, blue);
+}
+
+.tag-icon {
+  display: block;
+  margin-left: -10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: 1px solid var(--white, white);
 }
 
 .tag-text { 
@@ -30,8 +47,12 @@
   padding-right: 10px;
 }
 
+.tag-icon ~ .tag-text {
+  padding-left: 5px;
+}
+
 .tag .close {
-  display: block;
+  position: absolute;
   background-color: var(--cloud, lightblue);
   border: 1px solid transparent;
   border-top-right-radius: 100px;
@@ -39,21 +60,51 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
+  right: 10px;
   margin-right: -10px;
   padding-right: 10px;
+  display: none;
+}
+
+.tag:hover .close,
+.tag:focus .close {
+  display: block;
 }
 
 .tag .close:hover,
 .tag .close:focus {
   border-color: var(--sky, lightblue);
   outline: none;
+  display: block
 }
 
 .tag .close:after {
   content: '×';
   display: inline-block;
-  color: var(--black, black);
+  color: var(--stone, darkgray);
   font-size: 28px;
-  line-height: 40px;
+  line-height: 24px;
   font-weight: lighter;
 }
+
+.tag-secondary {
+  background-color: var(--cloud, lightblue);
+  color: var(--black, black);
+}
+
+.tag-primary {
+  background-color: var(--sky, lightblue);
+}
+
+.tag-primary .close {
+  background-color: var(--sky, lightblue);
+}
+
+.tag-primary .close:hover,
+.tag-primary .close:focus {
+  border-color: var(--morning, blue);
+  outline: none;
+  display: block
+}
+
+
