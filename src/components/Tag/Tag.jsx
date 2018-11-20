@@ -10,59 +10,99 @@ const propTypes = {
     PropTypes.string
   ]),
   className: PropTypes.string,
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+  ]),
+  icon: PropTypes.string,
+  onClick: PropTypes.func,
   onClose: PropTypes.func,
 };
 
 const defaultProps = {
   children: undefined,
   className: undefined,
+  color: 'secondary',
+  icon: undefined,
+  onClick: undefined,
   onClose: undefined,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
-  handleClose(e) {
-    if (!this.props.onClose) {
+  handleClick(e) {
+    const { onClick } = this.props;
+    if (!onClick) {
       return;
     }
 
-    this.props.onClose(e);
+    onClick(e);
+  }
+
+  handleClose(e) {
+    e.stopPropagation();
+
+    const { onClose } = this.props;
+    if (!onClose) {
+      return;
+    }
+    onClose(e);
+  }
+
+  handleKeyUp(e) {
+    if (e.keyCode === 13) {
+      this.handleClick(e);
+    }
   }
 
   render() {
     const {
       children,
       className,
-      onClose
+      color,
+      icon,
+      onClick,
+      onClose,
     } = this.props;
 
     const classes = classNames(
       className,
-      styles.tag
+      styles.tag,
+      styles[`tag-${color}`],
+      onClick ? styles['tag-button'] : undefined,
     );
 
-    let closeButton = null;
-    if (onClose) {
-      closeButton = (
-        <button
-          area-label="Close"
-          className={classNames(styles.close)}
-          onClick={this.handleClose}
-          type="button"
-        />
-      );
-    }
-
     return (
-      <span className={classes}>
-        <span className={classNames(styles['tag-text'])}>
+      <span
+        className={classes}
+        onClick={this.handleClick}
+        onKeyUp={this.handleKeyUp}
+        role="button"
+        tabIndex={0}
+      >
+        {icon && (
+          <img
+            alt=""
+            className={styles['tag-icon']}
+            src={icon}
+          />
+        )}
+        <span className={styles['tag-text']}>
           {children}
         </span>
-        {closeButton}
+        {onClose && (
+          <button
+            className={styles.close}
+            onClick={this.handleClose}
+            type="button"
+          />
+        )}
       </span>
     );
   }
