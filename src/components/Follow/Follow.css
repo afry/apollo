@@ -1,0 +1,105 @@
+.follow {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--cloud, lightblue);
+  color: var(--black, black);
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  border-radius: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  vertical-align: top;
+  outline: none;
+}
+
+.follow:first-child {
+  margin-left: 0;
+  margin-right: 2.5px;
+}
+
+.follow:last-child {
+  margin-right: 0;
+  margin-left: 2.5px;
+}
+
+.follow-clickable:hover {
+  cursor: pointer;
+  color: var(--day, blue);
+}
+
+.follow-icon {
+  display: block;
+  margin-left: -10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: 1px solid var(--white, white);
+}
+
+.follow-text { 
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.follow-icon ~ .follow-text {
+  padding-left: 5px;
+}
+
+.follow .close {
+  position: absolute;
+  background-color: var(--cloud, lightblue);
+  border: 1px solid transparent;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  right: 10px;
+  margin-right: -10px;
+  padding-right: 10px;
+  display: none;
+}
+
+.follow:hover .close,
+.follow:focus .close {
+  display: block;
+}
+
+.follow .close:hover,
+.follow .close:focus {
+  border-color: var(--sky, lightblue);
+  outline: none;
+  display: block
+}
+
+.follow .close:after {
+  content: attr(data-content);
+  display: inline-block;
+  color: var(--stone, darkgray);
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: lighter;
+}
+
+.follow.active {
+  background-color: var(--sky, lightblue);
+}
+
+.follow.active .close {
+  background-color: var(--sky, lightblue);
+}
+
+.follow.active .close:hover,
+.follow.active .close:focus {
+  border-color: var(--morning, blue);
+  outline: none;
+  display: block
+}
+
+

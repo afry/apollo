@@ -83,6 +83,10 @@ export {
 } from './DropdownToggle';
 
 export {
+  default as Follow,
+} from './Follow';
+
+export {
   default as Form,
 } from './Form';
 
