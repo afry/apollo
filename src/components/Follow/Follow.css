@@ -1,4 +1,4 @@
-.tag {
+.follow {
   display: inline-flex;
   position: relative;
   overflow: hidden;
@@ -18,22 +18,22 @@
   outline: none;
 }
 
-.tag:first-child {
+.follow:first-child {
   margin-left: 0;
   margin-right: 2.5px;
 }
 
-.tag:last-child {
+.follow:last-child {
   margin-right: 0;
   margin-left: 2.5px;
 }
 
-.tag-button:hover {
+.follow-clickable:hover {
   cursor: pointer;
   color: var(--day, blue);
 }
 
-.tag-icon {
+.follow-icon {
   display: block;
   margin-left: -10px;
   height: 40px;
@@ -42,16 +42,16 @@
   border: 1px solid var(--white, white);
 }
 
-.tag-text { 
+.follow-text { 
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.tag-icon ~ .tag-text {
+.follow-icon ~ .follow-text {
   padding-left: 5px;
 }
 
-.tag .close {
+.follow .close {
   position: absolute;
   background-color: var(--cloud, lightblue);
   border: 1px solid transparent;
@@ -66,20 +66,20 @@
   display: none;
 }
 
-.tag:hover .close,
-.tag:focus .close {
+.follow:hover .close,
+.follow:focus .close {
   display: block;
 }
 
-.tag .close:hover,
-.tag .close:focus {
+.follow .close:hover,
+.follow .close:focus {
   border-color: var(--sky, lightblue);
   outline: none;
   display: block
 }
 
-.tag .close:after {
-  content: '×';
+.follow .close:after {
+  content: attr(data-content);
   display: inline-block;
   color: var(--stone, darkgray);
   font-size: 28px;
@@ -87,21 +87,16 @@
   font-weight: lighter;
 }
 
-.tag-secondary {
-  background-color: var(--cloud, lightblue);
-  color: var(--black, black);
-}
-
-.tag-primary {
+.follow.active {
   background-color: var(--sky, lightblue);
 }
 
-.tag-primary .close {
+.follow.active .close {
   background-color: var(--sky, lightblue);
 }
 
-.tag-primary .close:hover,
-.tag-primary .close:focus {
+.follow.active .close:hover,
+.follow.active .close:focus {
   border-color: var(--morning, blue);
   outline: none;
   display: block

@@ -1,38 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Tag.css';
+import * as styles from './Follow.css';
 
 const propTypes = {
+  active: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.node,
     PropTypes.string
   ]),
   className: PropTypes.string,
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-  ]),
   icon: PropTypes.string,
   onClick: PropTypes.func,
-  onClose: PropTypes.func,
+  onToggle: PropTypes.func,
 };
 
 const defaultProps = {
+  active: true,
   children: undefined,
   className: undefined,
-  color: 'secondary',
   icon: undefined,
   onClick: undefined,
-  onClose: undefined,
+  onToggle: undefined,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
@@ -45,14 +42,14 @@ class Tag extends React.Component {
     onClick(e);
   }
 
-  handleClose(e) {
+  handleToggle(e) {
     e.stopPropagation();
 
-    const { onClose } = this.props;
-    if (!onClose) {
+    const { onToggle } = this.props;
+    if (!onToggle) {
       return;
     }
-    onClose(e);
+    onToggle(e);
   }
 
   handleKeyUp(e) {
@@ -63,43 +60,41 @@ class Tag extends React.Component {
 
   render() {
     const {
+      active,
       children,
       className,
-      color,
       icon,
       onClick,
-      onClose,
+      onToggle,
+      ...other
     } = this.props;
 
     const classes = classNames(
       className,
-      styles.tag,
-      styles[`tag-${color}`],
-      onClick ? styles['tag-button'] : undefined,
+      styles.follow,
+      active ? styles.active : 'undefined',
+      onClick ? styles['follow-clickable'] : undefined,
     );
 
     return (
       <span
+        {...other}
         className={classes}
         onClick={this.handleClick}
         onKeyUp={this.handleKeyUp}
         role="button"
         tabIndex={0}
       >
-        {icon && (
-          <img
-            alt=""
-            className={styles['tag-icon']}
-            src={icon}
-          />
-        )}
-        <span className={styles['tag-text']}>
+        {icon && <img alt="" className={styles['follow-icon']} src={icon} />}
+        <span className={styles['follow-text']}>
           {children}
         </span>
-        {onClose && (
+        {onToggle && (
           <button
-            className={styles.close}
-            onClick={this.handleClose}
+            area-label="Control"
+            className={classNames(styles.close)}
+            data-content={active ? '×' : '+'}
+            onClick={this.handleToggle}
             type="button"
           />
         )}
