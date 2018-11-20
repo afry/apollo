@@ -4,6 +4,7 @@ export { default as BreadcrumbsExample } from './BreadcrumbsExample';
 export { default as ButtonExample } from './ButtonExample';
 export { default as CardExample } from './CardExample';
 export { default as DropdownExample } from './DropdownExample';
+export { default as FollowExample } from './FollowExample';
 export { default as FormExample } from './FormExample';
 export { default as JumbotronExample } from './JumbotronExample';
 export { default as MentionExample } from './MentionExample';
