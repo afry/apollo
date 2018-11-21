@@ -17,17 +17,17 @@ yarn add @afconsult/apollo
 ```
 
 ### Example
-1. import apollo CSS in your ```src/index.js``` file:
+1. Import the stylesheet:
 ```javscript
 import '@afconsult/apollo/dist/css/apollo.css';
 ```
 
-2. Import required apollo components in your ```src/index.js``` file or in any of your custom component files:
+2. Import required apollo components:
 ```javascript
 import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
-3. Tell React to render the components
+3. Use the components:
 ```javascript
 ReactDOM.render(
   <Form>
@@ -40,6 +40,31 @@ ReactDOM.render(
   document.getElementById('app');
 )
 ```
+
+### Components
+- [Avatar](./src/components/Avatar)
+- [Badge](./src/components/Badge)
+- [Breadcrumbs](./src/components/Breadcrumbs)
+- [Buttons](./src/components/Button)
+- [Button Group](./src/components/ButtonGroup)
+- [Checkbox](./src/components/Checkbox)
+- [Collapse](./src/components/Collapse)
+- [Container](./src/components/Container)
+- [Dropdowns](./src/components/Dropdown)
+- [Follow](./src/components/Follow)
+- [Forms](./src/components/Form)
+- [Input](./src/components/Input)
+- [Jumbotron](./src/components/Jumbotron)
+- [Label](./src/components/Label)
+- [Loader](./src/components/Loader)
+- [Mention](./src/components/Mention)
+- [Modals](./src/components/Modal)
+- [Navs](./src/components/Nav)
+- [Navbars](./src/components/Navbar)
+- [Radio Button](./src/components/RadioButton)
+- [Select](./src/components/Select)
+- [Tag](./src/components/Tag)
+- [Text Area](./src/components/TextArea)
 
 ## Contribute
 Feel free to [create an issue or feature request](https://github.com/afconsult/apollo/issues/new).
