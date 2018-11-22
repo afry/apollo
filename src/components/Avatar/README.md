@@ -1,8 +1,8 @@
-## Avatar
+# Avatar
 Avatars are used to display a thumbnail of an individual.
 
 #### Example
-``` javascript
+``` jsx
 import React from 'react';
 import { Avatar } from '@afconsult/apollo';
 
