@@ -6,7 +6,7 @@ Avatars are used to display a thumbnail of an individual.
 import React from 'react';
 import { Avatar } from '@afconsult/apollo';
 
-class Example extends React.PureComponent {
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Avatar
@@ -17,8 +17,6 @@ class Example extends React.PureComponent {
     );
   }
 }
-
-export default Example;
 ```
 
 #### Props
