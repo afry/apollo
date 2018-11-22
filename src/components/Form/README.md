@@ -29,9 +29,9 @@ export default class Example extends React.PureComponent {
 #### Props [FormGroup](../FormGroup)
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
+| check     | `bool`   | `false`     | |
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| indented  | `bool`   | `false`     | |
-| valid     | `bool`   | `false`     | Specifies the value of the DOM element. |
+| inline    | `bool`   | `false`     | |
 
 #### Props [FormFeedback](../FormFeedback)
 | Name      | PropType | Default     | Description |
