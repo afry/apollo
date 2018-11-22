@@ -1,5 +1,4 @@
-## Button
-
+# Button
 
 #### Example
 ``` javascript
