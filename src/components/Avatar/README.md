@@ -3,17 +3,22 @@ Avatars are used to display a thumbnail of an individual.
 
 #### Example
 ``` javascript
+import React from 'react';
+import { Avatar } from '@afconsult/apollo';
+
 class Example extends React.PureComponent {
   render() {
     return (
       <Avatar
-        name="Jon Wahlström"
+        name="Willow Mcdonald"
         size="x-small"
         src="http://via.placeholder.com/400x400"
       />
     );
   }
 }
+
+export default Example;
 ```
 
 #### Props
