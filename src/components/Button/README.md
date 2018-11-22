@@ -3,7 +3,10 @@
 
 #### Examples
 ``` javascript
-class Example extends React.PureComponent {  
+import React from 'react';
+import { Button } from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {  
   render() {
     return (
       <div>
@@ -13,25 +16,6 @@ class Example extends React.PureComponent {
         <Button color="danger">danger</Button>
         <Button color="link">link</Button>
       </div>
-    );
-  }
-}
-```
-
-``` javascript
-class Example extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  
-  handleClick(e) {
-  
-  }
-  
-  render() {
-    return (
-      <Button onClick={this.handleClick}>click me</Button>
     );
   }
 }
