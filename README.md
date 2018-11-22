@@ -29,16 +29,19 @@ import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 
 3. Use the components:
 ```javascript
-ReactDOM.render(
-  <Form>
-    <FormGroup>
-      <Label for="example">Example Input</Label>
-      <Input id="example" placeholder="Inser text here..">
-    </FormGroup>
-    <Button type="submit">Submit</Button>
-  </Form>,
-  document.getElementById('app');
-)
+class Example extends React.PureComponent {
+  render() {
+    return (
+      <Form>
+        <FormGroup>
+          <Label for="example">Example Input</Label>
+          <Input id="example" placeholder="Inser text here..">
+        </FormGroup>
+        <Button type="submit">Submit</Button>
+      </Form>
+    );
+  }
+}
 ```
 
 ### Components
