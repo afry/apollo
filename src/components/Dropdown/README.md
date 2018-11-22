@@ -81,7 +81,7 @@ export default class Example extends React.Component {
 For the most basic use-case a [BasicDropdown](../BasicDropdown) component is provided. It manages its own state the does not require the `onToggle` and `open` props to work. 
 
 #### Example
-``` javascript
+``` jsx
 import React from 'react';
 import { BasicDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@afconsult/apollo';
 
