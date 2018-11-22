@@ -1,7 +1,7 @@
 ## Button
 
 
-#### Examples
+#### Example
 ``` javascript
 import React from 'react';
 import { Button } from '@afconsult/apollo';
