@@ -1,9 +1,9 @@
-## Dropdown
+# Dropdown
 
 The Dropdown component is used to pass the `open` and `onToggle` props via context to the [DropdownToggle](../DropdownToggle) and [DropdownMenu](../DropdownMenu) components.
 
 #### Example
-``` javascript
+``` jsx
 import React from 'react';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@afconsult/apollo';
 
@@ -20,6 +20,7 @@ export default class Example extends React.Component {
   
   render() {
     const { isOpen } = this.state;
+    
     return (
       <Dropdown onToggle={this.handleToggle} open={isOpen}>
         <DropdownToggle>
