@@ -10,6 +10,7 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@afconsult
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { isOpen: false };
     this.handleToggle = this.handleToggle.bind(this);
   }
   
