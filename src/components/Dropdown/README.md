@@ -86,7 +86,6 @@ import { BasicDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@afco
 
 export default class Example extends React.PureComponent {
   render() {
-    const { isOpen } = this.state;
     return (
       <BasicDropdown>
         <DropdownToggle>
