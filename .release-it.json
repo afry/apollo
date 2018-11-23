@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "safeBump": false,
+  "src": {
+    "commitMessage": "v%s",
+    "tagName": "v%s"
+  },
+  "npm": {
+    "publish": true
+  },
+  "github": {
+    "release": true
+  }
+}
