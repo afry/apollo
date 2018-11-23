@@ -219,12 +219,12 @@ export default class Example extends React.PureComponent {
     return (
       <Form>
         <FormGroup>
-          <Label for="select_example" value="">Select</Label>
+          <Label for="select_example">Select</Label>
           <Select id="select_example" required value="first">
-            <SelectOption disabled hidden value="">Select Option</SelectOption>
-            <SelectOption value="first">1</SelectOption>
-            <SelectOption value="second">2</SelectOption>
-            <SelectOption value="third">3</SelectOption>
+            <SelectOption disabled hidden value="">Hidden Option</SelectOption>
+            <SelectOption value="first">First Option</SelectOption>
+            <SelectOption value="second">Second Option</SelectOption>
+            <SelectOption value="third">Third Option</SelectOption>
           </Select>
         </FormGroup>
       </Form>
@@ -244,3 +244,34 @@ export default class Example extends React.PureComponent {
 | onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
 | readOnly  | `bool`   | `false`     | |
 | value     | `string` | `undefined` | Specifies the value of the DOM element. |
+
+### [TextArea](../TextArea)
+#### Example
+``` jsx
+import React from 'react';
+import { Form, FormGroup, Label, TextArea } from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {
+  render() {
+    return (
+      <Form>
+        <FormGroup>
+          <Label for="textarea_example">Select</Label>
+          <TextArea id="textarea_example" />
+        </FormGroup>
+      </Form>
+    );
+  }
+}
+```
+
+#### Props
+| Name      | PropType | Default     | Description |
+|-----------|----------|-------------|-------------|
+| className | `string` | `undefined` | Classes to be applied to the DOM element. |
+| columns   | `string` | `39`        |
+| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
+| id        | `string` | `undefined` | A unique id for the DOM element. |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
+| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
+| rows      | `string` | `1`         |
