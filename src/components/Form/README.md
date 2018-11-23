@@ -60,7 +60,7 @@ export default class Example extends React.PureComponent {
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
 | inline    | `bool`   | `false`     | |
-| innerRef  | `[func, object, string]` | `undefined` | |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
 
 #### Props [FormGroup](../FormGroup)
 | Name      | PropType | Default     | Description |
