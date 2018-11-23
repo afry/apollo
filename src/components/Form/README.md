@@ -9,8 +9,8 @@ export default class Example extends React.PureComponent {
     return (
       <Form>
         <FormGroup>
-          <Label for="form_inline_example">Valid</Label>
-          <Input id="form_inline_example" placeholder="Text" />
+          <Label for="form_example">Valid</Label>
+          <Input id="form_example" placeholder="Text" />
         </FormGroup>
       </Form>
     );
@@ -20,15 +20,15 @@ export default class Example extends React.PureComponent {
 
 ``` jsx
 import React from 'react';
-import { Form, FormGroup, FormFeedback, Label, Input } from '@afconsult/apollo';
+import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {  
   render() {
     return (
       <Form inline>
         <FormGroup>
-          <Label for="form_feedback_example">Valid</Label>
-          <Input id="form_feedback_example" placeholder="Text" />
+          <Label for="form_inline_example">Valid</Label>
+          <Input id="form_inline_example" placeholder="Text" />
         </FormGroup>
       </Form>
     );
