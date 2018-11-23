@@ -50,13 +50,11 @@ class Example extends React.PureComponent {
 - [Breadcrumbs](./src/components/Breadcrumbs)
 - [Buttons](./src/components/Button)
 - [Button Group](./src/components/ButtonGroup)
-- [Checkbox](./src/components/Checkbox)
 - [Collapse](./src/components/Collapse)
 - [Container](./src/components/Container)
 - [Dropdowns](./src/components/Dropdown)
 - [Follow](./src/components/Follow)
 - [Forms](./src/components/Form)
-- [Input](./src/components/Input)
 - [Jumbotron](./src/components/Jumbotron)
 - [Label](./src/components/Label)
 - [Loader](./src/components/Loader)
@@ -64,10 +62,7 @@ class Example extends React.PureComponent {
 - [Modals](./src/components/Modal)
 - [Navs](./src/components/Nav)
 - [Navbars](./src/components/Navbar)
-- [Radio Button](./src/components/RadioButton)
-- [Select](./src/components/Select)
 - [Tag](./src/components/Tag)
-- [Text Area](./src/components/TextArea)
 
 ## Contribute
 Feel free to [create an issue or feature request](https://github.com/afconsult/apollo/issues/new).
