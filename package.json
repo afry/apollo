@@ -21,8 +21,9 @@
     "README.md"
   ],
   "scripts": {
-    "release": "release-it --config ./.release-it.json",
     "publish": "yarn publish",
+    "release:it": "release-it --config ./.release-it.json",
+    "release": "npm-run-all release:it publish",
     "lint": "eslint . --max-warnings 0",
     "test": "jest",
     "test:ci": "yarn run test --runInBand",
