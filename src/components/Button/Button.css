@@ -49,6 +49,12 @@
   color: var(--dark-gray, darkgray);
 }
 
+.button-link:disabled,
+.button-link:disabled:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .button-primary {
   background-color: var(--day, blue);
   border-color: var(--day, blue);
@@ -98,7 +104,7 @@
 }
 
 .button-link {
-  color: var(--charcoal, slategray);
+  color: var(--day, blue);
 }
 
 .button-link,
@@ -110,7 +116,7 @@
 
 .button-link:hover,
 .button-link:focus {
-  color: var(--day, blue);
+  color: var(--morning, lightblue);
 }
 
 .button-small {
