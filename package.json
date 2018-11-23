@@ -21,9 +21,9 @@
     "README.md"
   ],
   "scripts": {
-    "publish": "cross-var --new-version $npm_package_version",
+    "publish:yarn": "cross-var yarn publish --new-version $npm_package_version",
     "release:it": "release-it --config ./.release-it.json",
-    "release": "npm-run-all release:it publish",
+    "release": "npm-run-all release:it publish:yarn",
     "lint": "eslint . --max-warnings 0",
     "test": "jest",
     "test:ci": "yarn run test --runInBand",
