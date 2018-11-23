@@ -80,8 +80,7 @@ yarn start
 ### Release
 Note: you must have the GITHUB_TOKEN environment variable set to a valid GitHub token with write access to your repo.
 
-Run the command and follow the instructions:
-1. Run release script:
+1. Run release script and follow the instructions:
 ```bash
 yarn release
 ```
