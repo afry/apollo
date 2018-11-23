@@ -56,7 +56,6 @@ class Example extends React.PureComponent {
 - [Follow](./src/components/Follow)
 - [Forms](./src/components/Form)
 - [Jumbotron](./src/components/Jumbotron)
-- [Label](./src/components/Label)
 - [Loader](./src/components/Loader)
 - [Mention](./src/components/Mention)
 - [Modals](./src/components/Modal)
