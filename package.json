@@ -21,7 +21,7 @@
     "README.md"
   ],
   "scripts": {
-    "publish": "yarn publish",
+    "publish": "cross-var yarn publish --new-version $npm_package_version",
     "release:it": "release-it --config ./.release-it.json",
     "release": "npm-run-all release:it publish",
     "lint": "eslint . --max-warnings 0",
@@ -54,6 +54,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.3",
+    "cross-var": "^1.1.0",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
     "enzyme": "^3.3.0",
