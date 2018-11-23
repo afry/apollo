@@ -17,33 +17,66 @@ yarn add @afconsult/apollo
 ```
 
 ### Example
-1. import apollo CSS in your ```src/index.js``` file:
+1. Import the stylesheet:
 ```javscript
 import '@afconsult/apollo/dist/css/apollo.css';
 ```
 
-2. Import required apollo components in your ```src/index.js``` file or in any of your custom component files:
+2. Import required apollo components:
 ```javascript
 import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
-3. Tell React to render the components
+3. Use the components:
 ```javascript
-ReactDOM.render(
-  <Form>
-    <FormGroup>
-      <Label for="example">Example Input</Label>
-      <Input id="example" placeholder="Inser text here..">
-    </FormGroup>
-    <Button type="submit">Submit</Button>
-  </Form>,
-  document.getElementById('app');
-)
+class Example extends React.PureComponent {
+  render() {
+    return (
+      <Form>
+        <FormGroup>
+          <Label for="example">Example Input</Label>
+          <Input id="example" placeholder="Inser text here..">
+        </FormGroup>
+        <Button type="submit">Submit</Button>
+      </Form>
+    );
+  }
+}
 ```
+
+### Components
+- [Avatar](./src/components/Avatar)
+- [Badge](./src/components/Badge)
+- [Breadcrumbs](./src/components/Breadcrumbs)
+- [Buttons](./src/components/Button)
+- [Button Group](./src/components/ButtonGroup)
+- [Collapse](./src/components/Collapse)
+- [Container](./src/components/Container)
+- [Dropdowns](./src/components/Dropdown)
+- [Follow](./src/components/Follow)
+- [Forms](./src/components/Form)
+- [Jumbotron](./src/components/Jumbotron)
+- [Loader](./src/components/Loader)
+- [Mention](./src/components/Mention)
+- [Modals](./src/components/Modal)
+- [Navs](./src/components/Nav)
+- [Navbars](./src/components/Navbar)
+- [Tag](./src/components/Tag)
 
 ## Contribute
 Feel free to [create an issue or feature request](https://github.com/afconsult/apollo/issues/new).
 At this point we're not accepting any pull requests.
+
+### Development
+1. Install dependencies:
+```bash
+yarn install
+```
+
+2. Run examples at `http://localhost:8080/` with webpack dev server:
+```bash
+yarn start
+```
 
 ## Authors
 **Jon Wahlström** ([jonwa](https://github.com/jonwa))

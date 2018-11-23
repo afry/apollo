@@ -5,8 +5,20 @@ import * as styles from './Button.css';
 
 const propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'danger',
+    'success',
+    'warning',
+    'link',
+  ]).string,
   disabled: PropTypes.bool,
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   onClick: PropTypes.func,
   size: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -17,6 +29,7 @@ const defaultProps = {
   className: undefined,
   color: 'secondary',
   disabled: false,
+  innerRef: undefined,
   onClick: undefined,
   size: undefined,
   tag: 'button',
@@ -42,6 +55,7 @@ class Button extends React.Component {
 
   render() {
     let {
+      innerRef,
       tag: Tag,
       type,
     } = this.props;
@@ -70,6 +84,7 @@ class Button extends React.Component {
 
     return (
       <Tag
+        ref={innerRef}
         {...other}
         className={classes}
         onClick={this.handleClick}
