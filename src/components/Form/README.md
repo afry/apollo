@@ -76,14 +76,6 @@ export default class Example extends React.PureComponent {
 | indented  | `bool`   | `false`     | |
 | valid     | `bool`   | `false`     | Specifies the value of the DOM element. |
 
-### Form Inline
-#### Example
-
-
-### Form Validation
-#### Example
-
-
 ## Input Types
 All input components also support [HTML DOM Input](https://www.w3schools.com/tags/tag_input.asp) Object Properties.
 ### [Checkbox](../Checkbox)
