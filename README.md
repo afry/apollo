@@ -28,7 +28,7 @@ import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
 3. Use the components:
-```javascript
+```jsx
 class Example extends React.PureComponent {
   render() {
     return (
