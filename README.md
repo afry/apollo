@@ -18,12 +18,12 @@ yarn add @afconsult/apollo
 
 ### Example
 1. Import the stylesheet:
-```javscript
+```jsx
 import '@afconsult/apollo/dist/css/apollo.css';
 ```
 
 2. Import required apollo components:
-```javascript
+```jsx
 import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
