@@ -21,5 +21,5 @@ export default class Example extends React.PureComponent {
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| color     | `string` | `primary` | Specifies the button color. Can be one of `'primary'`, `'secondary'` | 
+| color     | `string` | `primary` | Specifies the color scheme. Can be one of `'primary'`, `'secondary'` | 
 | tag       | `[func, string]` | `span` | Specifies the DOM element to be used. |
