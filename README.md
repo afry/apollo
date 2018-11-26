@@ -74,7 +74,7 @@ yarn install
 
 2. Run examples at `http://localhost:8080/` with webpack dev server:
 ```bash
-yarn start
+yarn run start
 ```
 
 ### Release
@@ -82,7 +82,12 @@ Note: you must have the GITHUB_TOKEN environment variable set to a valid GitHub 
 
 1. Run release script and follow the instructions:
 ```bash
-yarn release
+yarn run release
+```
+
+2. Run publish script to publish apollo to npm.
+```bash
+yarn run publish
 ```
 
 ## Authors
