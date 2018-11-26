@@ -1,6 +1,6 @@
 {
   "name": "@afconsult/apollo",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "Design system for ÅF Web Apps",
   "main": "index.js",
   "repository": "https://github.com/afconsult/apollo",
@@ -21,9 +21,6 @@
     "README.md"
   ],
   "scripts": {
-    "publish:yarn": "cross-var yarn publish --new-version $npm_package_version",
-    "release:it": "release-it --config ./.release-it.json",
-    "release": "npm-run-all release:it publish:yarn",
     "lint": "eslint . --max-warnings 0",
     "test": "jest",
     "test:ci": "yarn run test --runInBand",
@@ -33,6 +30,8 @@
     "build:dev": "webpack --config ./webpack/dev.config.js",
     "build:prod": "webpack --config ./webpack/prod.config.js",
     "build": "npm-run-all build:prod build:dev",
+    "release": "release-it --config ./.release-it.json",
+    "publish": "cross-var yarn publish --new-version $npm_package_version",
     "start": "webpack-dev-server --open --config ./webpack/test.config.js"
   },
   "dependencies": {

@@ -65,7 +65,6 @@ class Example extends React.PureComponent {
 
 ## Contribute
 Feel free to [create an issue or feature request](https://github.com/afconsult/apollo/issues/new).
-At this point we're not accepting any pull requests.
 
 ### Development
 1. Install dependencies:
@@ -75,7 +74,20 @@ yarn install
 
 2. Run examples at `http://localhost:8080/` with webpack dev server:
 ```bash
-yarn start
+yarn run start
+```
+
+### Release
+Note: you must have the GITHUB_TOKEN environment variable set to a valid GitHub token with write access to your repo.
+
+1. Run release script and follow the instructions:
+```bash
+yarn run release
+```
+
+2. Run publish script to publish apollo to npm.
+```bash
+yarn run publish
 ```
 
 ## Authors
