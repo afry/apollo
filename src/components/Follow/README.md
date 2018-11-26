@@ -1,6 +1,7 @@
-### Follow
+# Follow
 
-```javascript
+#### Example
+```jsx
 const Example extends React.Component {
   constructor(props) {
     super(props);
@@ -26,3 +27,13 @@ const Example extends React.Component {
   }
 }
 ```
+
+#### Props
+| Name      | PropType | Default      | Description |
+|-----------|----------|--------------|-------------|
+| active    | `bool`   | `false`      | Classes to be applied to the DOM element. |
+| children  | `[func, node, string]`  | `undefined` | |
+| className | `string` | `undefined`  | Classes to be applied to the DOM element. |
+| icon      | `string` | `undefined`  | |
+| onClick   | `func`   | `undefined`  | | 
+| onToggle  | `func`   | `undefined`  | | 
