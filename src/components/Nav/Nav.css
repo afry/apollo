@@ -110,12 +110,12 @@
 }
 
 .nav-horizontal-left:not(.nav-vertical) .nav-item:first-child > .nav-link,
-.nav-horizontal-left:not(.nav-vertical) .nav-item:first-child > .dropdown-toggle {
+.nav-horizontal-left:not(.nav-vertical) .dropdown:first-child > .dropdown-toggle {
   padding-left: 0;
 }
 
 .nav-horizontal-right:not(.nav-vertical) .nav-item:last-child > .nav-link,
-.nav-horizontal-right:not(.nav-vertical) .nav-item:last-child > .dropdown-toggle {
+.nav-horizontal-right:not(.nav-vertical) .dropdown:last-child > .dropdown-toggle {
   padding-right: 0;
 }
 
