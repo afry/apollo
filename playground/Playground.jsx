@@ -17,22 +17,14 @@ import {
   TagExample,
 } from './examples';
 
+import {
+  Alert
+} from '../src';
+
 export default function Playground() {
   return (
     <div>
-      <NavbarExample />
-      <NavsExample style={{ margin: '100px 0' }} />
-      <ModalExample />
-      <AvatarExample />
-      <BreadcrumbsExample />
-      <ButtonExample />
-      <CardExample />
-      <DropdownExample />
-      <FormExample />
-      <JumbotronExample />
-      <BadgeExample />
-      <MentionExample />
-      <TagExample />
+      <Alert />
     </div>
   );
 }

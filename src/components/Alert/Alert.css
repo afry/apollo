@@ -1,0 +1,24 @@
+.alert {
+  height: 64px;
+  width: 100%;
+}
+
+.alert-icon {
+  width: 64px;
+}
+
+.alert .close:hover,
+.alert .close:focus {
+  border-color: var(--sky, lightblue);
+  outline: none;
+  display: block
+}
+
+.alert .close:after {
+  content: '×';
+  display: inline-block;
+  color: var(--stone, darkgray);
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: lighter;
+}
