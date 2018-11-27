@@ -288,11 +288,14 @@
 }
 
 .navbar-dark .navbar-brand {
+  padding-right: 25px;
   color: var(--white, white);
 }
 
 .navbar-light .navbar-brand {
+  padding-right: 25px;
   color: var(--black, black);
+  border-right: 1px solid var(--marble, lightgray);
 }
 
 .navbar-dark .nav-link,
