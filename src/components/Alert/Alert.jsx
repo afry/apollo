@@ -4,16 +4,18 @@ import classNames from 'classnames';
 import * as styles from './Alert.css';
 
 const propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   onToggle: PropTypes.func,
   open: PropTypes.bool,
-  tag: PropTypes.oneOfTypes([
+  tag: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.string,
   ]),
 };
 
 const defaultProps = {
+  children: undefined,
   className: undefined,
   onToggle: undefined,
   open: true,
@@ -28,8 +30,13 @@ class Alert extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
+  handleToggle(e) {
+
+  }
+
   render() {
     const {
+      children,
       className,
       onToggle,
       tag: Tag,
@@ -46,14 +53,13 @@ class Alert extends React.Component {
     if (onToggle) {
       return (
         <Tag {...other} className={classes}>
-          <div className={styles['alert-icon']}>
-          </div>
-          <div className={classNames(styles['alert-body'])}>
-            {children}
+          <div className={styles['alert-icon']} />
+          <div className={styles['alert-body']}>
+            <span>{children}</span>
           </div>
           <button
             area-label="Close"
-            className={classNames(styles.close)}
+            className={styles.close}
             onClick={this.handleToggle}
             type="button"
           />
@@ -62,13 +68,12 @@ class Alert extends React.Component {
     }
 
     return (
-      <div {...other} className={classes}>
-        <Tag className={classNames(styles['modal-title'])}>
-          {children}
-        </Tag>
-      </div>
-    );    return (
       <Tag {...other} className={classes}>
+        <div className={styles['alert-icon']} />
+        <div className={styles['alert-body']}>
+          <span>{children}</span>
+        </div>
+      </Tag>
     );
   }
 }
