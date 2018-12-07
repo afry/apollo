@@ -6,6 +6,14 @@ import * as styles from './Alert.css';
 const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'error',
+    'success',
+    'warning',
+    'info',
+  ]),
   onToggle: PropTypes.func,
   open: PropTypes.bool,
   tag: PropTypes.oneOfType([
@@ -17,6 +25,7 @@ const propTypes = {
 const defaultProps = {
   children: undefined,
   className: undefined,
+  color: 'primary',
   onToggle: undefined,
   open: true,
   tag: 'div',
@@ -25,29 +34,38 @@ const defaultProps = {
 class Alert extends React.Component {
   constructor(props) {
     super(props);
-    const { open } = this.props;
-    this.state = { open };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(e) {
+    const { onToggle } = this.props;
+    if (!onToggle) {
+      e.preventDefault();
+      return;
+    }
 
+    onToggle(e);
   }
 
   render() {
     const {
       children,
       className,
+      color,
       onToggle,
+      open,
       tag: Tag,
       ...other
     } = this.props;
 
-    const { open } = this.state;
+    if (!open) {
+      return null;
+    }
 
     const classes = classNames(
       className,
       styles.alert,
+      styles[`alert-${color}`],
     );
 
     if (onToggle) {
