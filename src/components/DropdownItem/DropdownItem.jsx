@@ -25,6 +25,10 @@ const defaultProps = {
   tag: 'button',
 };
 
+const contextTypes = {
+  onToggle: PropTypes.func,
+};
+
 class DropdownItem extends React.Component {
   constructor(props) {
     super(props);
@@ -32,13 +36,20 @@ class DropdownItem extends React.Component {
   }
 
   handleClick(e) {
-    if (this.props.disabled) {
+    const { onClick, disabled } = this.props;
+    const { onToggle } = this.context;
+
+    if (disabled) {
       e.preventDefault();
       return;
     }
 
-    if (this.props.onClick) {
-      this.props.onClick(e);
+    if (onClick) {
+      onClick(e);
+    }
+
+    if (onToggle) {
+      onToggle(e);
     }
   }
 
@@ -87,5 +98,6 @@ class DropdownItem extends React.Component {
 
 DropdownItem.propTypes = propTypes;
 DropdownItem.defaultProps = defaultProps;
+DropdownItem.contextTypes = contextTypes;
 
 export default DropdownItem;
