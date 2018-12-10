@@ -6,15 +6,48 @@
   border-radius: 8px;
   position: relative;
   display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.alert:first-child {
+  margin-top: 0;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
 }
 
 .alert-icon {
   display: inline-block;
-  height: 64px;
+  height: 100%;
   width: 64px;
-  background-color: var(--danger, red);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+
+.alert-primary .alert-icon {
+  background-color: var(--day, white);
+}
+
+.alert-secondary .alert-icon {
+  background-color: var(--white, white);
+}
+
+.alert-danger .alert-icon {
+  background-color: var(--danger, red);
+}
+
+.alert-success .alert-icon {
+  background-color: var(--success, green);
+}
+
+.alert-warning .alert-icon {
+  background-color: var(--warning, yellow);
+}
+
+.alert-info .alert-icon {
+  background-color: var(--morning, lightblue);
 }
 
 .alert-body {
