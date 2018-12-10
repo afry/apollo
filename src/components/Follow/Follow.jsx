@@ -25,7 +25,7 @@ const defaultProps = {
   onToggle: undefined,
 };
 
-class Tag extends React.Component {
+class Follow extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -103,7 +103,7 @@ class Tag extends React.Component {
   }
 }
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+Follow.propTypes = propTypes;
+Follow.defaultProps = defaultProps;
 
-export default Tag;
+export default Follow;
