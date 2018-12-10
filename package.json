@@ -30,7 +30,7 @@
     "build:dev": "webpack --config ./webpack/dev.config.js",
     "build:prod": "webpack --config ./webpack/prod.config.js",
     "build": "npm-run-all build:prod build:dev",
-    "release": "release-it --config ./.release-it.json",
+    "release": "release-it --config ./.release-it.json -n",
     "publish": "cross-var yarn publish --new-version $npm_package_version",
     "start": "webpack-dev-server --open --config ./webpack/test.config.js"
   },
