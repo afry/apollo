@@ -2,13 +2,13 @@ import React from 'react';
 import {
   Container,
   Follow,
+  UncontrolledFollow,
 } from '../../src';
 
 class FollowExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
-    this.handleClick = this.handleClick.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
   }
 
@@ -26,6 +26,7 @@ class FollowExample extends React.Component {
         <h1>Follow</h1>
         <div>
           <Follow active={active} icon="https://picsum.photos/200/200/?image=1" onToggle={this.handleToggle}>Stockholm</Follow>
+          <UncontrolledFollow>Stockholm</UncontrolledFollow>
         </div>
       </Container>
     );

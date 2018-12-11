@@ -189,3 +189,7 @@ export {
 export {
   default as TextArea,
 } from './TextArea';
+
+export {
+  default as UncontrolledFollow,
+} from './UncontrolledFollow';
