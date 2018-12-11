@@ -45,6 +45,7 @@ class Example extends React.PureComponent {
 ```
 
 ### Components
+- [Alert](./src/components/Alert)
 - [Avatar](./src/components/Avatar)
 - [Badge](./src/components/Badge)
 - [Breadcrumbs](./src/components/Breadcrumbs)
