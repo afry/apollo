@@ -28,11 +28,6 @@
   margin-left: 2.5px;
 }
 
-.follow-clickable:hover {
-  cursor: pointer;
-  color: var(--day, blue);
-}
-
 .follow-icon {
   display: block;
   margin-left: -10px;

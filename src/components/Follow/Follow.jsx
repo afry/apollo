@@ -12,7 +12,6 @@ const propTypes = {
   ]),
   className: PropTypes.string,
   icon: PropTypes.string,
-  onClick: PropTypes.func,
   onToggle: PropTypes.func,
 };
 
@@ -21,41 +20,21 @@ const defaultProps = {
   children: undefined,
   className: undefined,
   icon: undefined,
-  onClick: undefined,
   onToggle: undefined,
 };
 
 class Follow extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-  }
-
-  handleClick(e) {
-    const { onClick } = this.props;
-    if (!onClick) {
-      return;
-    }
-
-    onClick(e);
   }
 
   handleToggle(e) {
-    e.stopPropagation();
-
     const { onToggle } = this.props;
     if (!onToggle) {
       return;
     }
     onToggle(e);
-  }
-
-  handleKeyUp(e) {
-    if (e.keyCode === 13) {
-      this.handleClick(e);
-    }
   }
 
   render() {
@@ -64,7 +43,6 @@ class Follow extends React.Component {
       children,
       className,
       icon,
-      onClick,
       onToggle,
       ...other
     } = this.props;
@@ -73,18 +51,10 @@ class Follow extends React.Component {
       className,
       styles.follow,
       active ? styles.active : 'undefined',
-      onClick ? styles['follow-clickable'] : undefined,
     );
 
     return (
-      <span
-        {...other}
-        className={classes}
-        onClick={this.handleClick}
-        onKeyUp={this.handleKeyUp}
-        role="button"
-        tabIndex={0}
-      >
+      <span {...other} className={classes}>
         {icon && <img alt="" className={styles['follow-icon']} src={icon} />}
         <span className={styles['follow-text']}>
           {children}
