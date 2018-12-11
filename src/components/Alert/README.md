@@ -1,0 +1,26 @@
+# Alert
+
+#### Example
+``` jsx
+import React from 'react';
+import { Alert } from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {
+  render() {
+    return (
+      <Alert color="danger">
+        <b>Server offline.</b> We are working on solving this issue.
+      </Alert>
+    );
+  }
+}
+```
+  
+  #### Props
+| Name      | PropType | Default      | Description |
+|-----------|----------|--------------|-------------|
+| className | `string` | `undefined`  | Classes to be applied to the DOM element. |
+| color     | `string` | `primary`    | Specifies the alert color. Can be one of `'primary'`, `'secondary'`, `'danger'`, `'success'`, `'warning'`, `'info'` |
+| onToggle  | `func`   | `undefined`  | |
+| open      | `bool`   | `true`       | |
+| tag       | `[func, string]`| `div` | Specifies the DOM element to be used. |
