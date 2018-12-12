@@ -4,17 +4,22 @@
 const Example extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClose = this.handleClose.bind(this);
+    this.state = { open: true };
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleClose(e) {
+  handleToggle(e) {
+    this.setState(prevState => ({ open: !prevState.open }));
   }
 
   render() {
+    const { open } = this.state;
+
     return (
       <Tag
         icon="https://picsum.photos/200/200/?image=1"
-        onClose={this.handleClose}
+        onToggle={this.handleToggle}
+        open={open}
       >Stockholm
       </Follow>
     );
