@@ -15,7 +15,6 @@ const propTypes = {
     'secondary',
   ]),
   icon: PropTypes.string,
-  onClick: PropTypes.func,
   onClose: PropTypes.func,
 };
 
@@ -24,41 +23,21 @@ const defaultProps = {
   className: undefined,
   color: 'secondary',
   icon: undefined,
-  onClick: undefined,
   onClose: undefined,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-  }
-
-  handleClick(e) {
-    const { onClick } = this.props;
-    if (!onClick) {
-      return;
-    }
-
-    onClick(e);
   }
 
   handleClose(e) {
-    e.stopPropagation();
-
     const { onClose } = this.props;
     if (!onClose) {
       return;
     }
     onClose(e);
-  }
-
-  handleKeyUp(e) {
-    if (e.keyCode === 13) {
-      this.handleClick(e);
-    }
   }
 
   render() {
@@ -67,25 +46,18 @@ class Tag extends React.Component {
       className,
       color,
       icon,
-      onClick,
       onClose,
+      ...other
     } = this.props;
 
     const classes = classNames(
       className,
       styles.tag,
       styles[`tag-${color}`],
-      onClick ? styles['tag-button'] : undefined,
     );
 
     return (
-      <span
-        className={classes}
-        onClick={this.handleClick}
-        onKeyUp={this.handleKeyUp}
-        role="button"
-        tabIndex={0}
-      >
+      <span {...other} className={classes}>
         {icon && (
           <img
             alt=""
