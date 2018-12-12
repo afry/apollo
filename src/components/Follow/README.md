@@ -35,7 +35,6 @@ const Example extends React.Component {
 | children  | `[func, node, string]`  | `undefined` | |
 | className | `string` | `undefined`  | Classes to be applied to the DOM element. |
 | icon      | `string` | `undefined`  | Specifies the url of an image icon. |
-| onClick   | `func`   | `undefined`  | Called when the DOM element is clicked. | 
 | onToggle  | `func`   | `undefined`  | Enables a toggle button that appears on hover. Called when this button is clicked. | 
 
 

@@ -8,6 +8,7 @@ import {
   ButtonExample,
   CardExample,
   DropdownExample,
+  FollowExample,
   FormExample,
   JumbotronExample,
   MentionExample,
@@ -37,17 +38,7 @@ class Playground extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Container>
-          <Alert />
-          <Alert color="secondary" />
-          <Alert open={this.state.open} color="danger" onToggle={this.handleToggle} />
-          <Alert color="success" />
-          <Alert color="warning" closeAfter={1000*5}>
-            <b>ERROR</b> This is an example of the alert component!
-          </Alert>
-          <Alert color="info" />
-        </Container>
-        <FormExample />
+        <FollowExample />
       </React.Fragment>
     );
   }
