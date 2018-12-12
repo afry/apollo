@@ -15,7 +15,8 @@ const propTypes = {
     'secondary',
   ]),
   icon: PropTypes.string,
-  onClose: PropTypes.func,
+  onToggle: PropTypes.func,
+  open: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -23,21 +24,22 @@ const defaultProps = {
   className: undefined,
   color: 'secondary',
   icon: undefined,
-  onClose: undefined,
+  onToggle: undefined,
+  open: true,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleClose(e) {
-    const { onClose } = this.props;
-    if (!onClose) {
+  handleToggle(e) {
+    const { onToggle } = this.props;
+    if (!onToggle) {
       return;
     }
-    onClose(e);
+    onToggle(e);
   }
 
   render() {
@@ -46,9 +48,14 @@ class Tag extends React.Component {
       className,
       color,
       icon,
-      onClose,
+      onToggle,
+      open,
       ...other
     } = this.props;
+
+    if (!open) {
+      return null;
+    }
 
     const classes = classNames(
       className,
@@ -68,10 +75,10 @@ class Tag extends React.Component {
         <span className={styles['tag-text']}>
           {children}
         </span>
-        {onClose && (
+        {onToggle && (
           <button
             className={styles.close}
-            onClick={this.handleClose}
+            onClick={this.handleToggle}
             type="button"
           />
         )}
