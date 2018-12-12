@@ -21,7 +21,7 @@ export default class Example extends React.PureComponent {
 #### Props [Breadcrumbs](./)
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
-| children  | `node`   | `undefined` | | 
+| children  | `node`   | `undefined` | Collection of DOM child elements. | 
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
 | tag       | `[func, string]` | `nav` | Specifies the DOM element to be used. |
 
@@ -29,5 +29,5 @@ export default class Example extends React.PureComponent {
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| active    | `bool`   | `false`     | | 
+| active    | `bool`   | `false`     | Control the breadcrumb state. | 
 | tag       | `[func, string]` | `a` | Specifies the DOM element to be used. |
