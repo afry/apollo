@@ -32,7 +32,7 @@ const Example extends React.Component {
 | Name      | PropType | Default      | Description |
 |-----------|----------|--------------|-------------|
 | active    | `bool`   | `false`      | Classes to be applied to the DOM element. |
-| children  | `[func, node, string]`  | `undefined` | |
+| children  | `[func, node, string]`  | `undefined` | Collection of DOM child elements. |
 | className | `string` | `undefined`  | Classes to be applied to the DOM element. |
 | icon      | `string` | `undefined`  | Specifies the url of an image icon. |
 | onToggle  | `func`   | `undefined`  | Enables a toggle button that appears on hover. Called when this button is clicked. | 
