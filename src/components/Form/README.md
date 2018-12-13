@@ -59,21 +59,21 @@ export default class Example extends React.PureComponent {
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| inline    | `bool`   | `false`     | |
+| inline    | `bool`   | `false`     | Specifies that all DOM children should be displayed as `inline-block`. |
 | innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
 
 #### Props [FormGroup](../FormGroup)
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
-| check     | `bool`   | `false`     | |
+| check     | `bool`   | `false`     | Styles the form group for input types [`'checkbox'`, `'radio'`] when `true`, default when `false`. |
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| inline    | `bool`   | `false`     | |
+| inline    | `bool`   | `false`     | Specifies that all DOM children should be displayed as `inline-block`. |
 
 #### Props [FormFeedback](../FormFeedback)
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| indented  | `bool`   | `false`     | |
+| indented  | `bool`   | `false`     | Specifies that the text should be indented. |
 | valid     | `bool`   | `false`     | Specifies the value of the DOM element. |
 
 ## Input Types
@@ -191,13 +191,13 @@ export default class Example extends React.Component {
 #### Props
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
-| checked   | `bool`   | `false`     | |
+| checked   | `bool`   | `false`     | Specifies that the radio button should be pre-selected when the page loads. |
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
 | disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
 | id        | `string` | `undefined` | A unique id for the DOM element. |
-| name      | `string` | `undefined` | 	Specifies the name of the DOM element. |
+| name      | `string` | `undefined` | Specifies the name of the DOM element. |
 | onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| readOnly  | `bool`   | `false`     | |
+| readOnly  | `bool`   | `false`     | Specifies that the radio button should be read-only. |
 | value     | `string` | `undefined` | Specifies the value of the DOM element. |
 
 ### [Select](../Select)
@@ -228,13 +228,13 @@ export default class Example extends React.PureComponent {
 #### Props
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
-| checked   | `bool`   | `false`     | |
+| checked   | `bool`   | `false`     | Specifies that the checkbox should be pre-selected when the page loads. |
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
 | disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
 | id        | `string` | `undefined` | A unique id for the DOM element. |
 | name      | `string` | `undefined` | Specifies the name of the DOM element. |
 | onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| readOnly  | `bool`   | `false`     | |
+| readOnly  | `bool`   | `false`     | Specifies that the select should be read-only. |
 | value     | `string` | `undefined` | Specifies the value of the DOM element. |
 
 ### [TextArea](../TextArea)
@@ -261,9 +261,9 @@ export default class Example extends React.PureComponent {
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| columns   | `string` | `39`        |
+| columns   | `string` | `39`        | Specifies the visible width of a text area. |
 | disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
 | id        | `string` | `undefined` | A unique id for the DOM element. |
 | innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
 | onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| rows      | `string` | `1`         |
+| rows      | `string` | `1`         | Specifies the visible number of lines in a text area. |
