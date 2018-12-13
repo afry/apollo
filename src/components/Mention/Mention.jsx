@@ -4,7 +4,11 @@ import classNames from 'classnames';
 import * as styles from './Mention.css';
 
 const propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.string,
+  ]),
 };
 
 const defaultProps = {
