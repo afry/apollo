@@ -9,6 +9,9 @@ const AvatarExample = () => (
     <h1>Avatar</h1>
     <div>
       <h4>X-Small</h4>
+      <Avatar initials="JW" size="x-small" src="" />
+      <Avatar initials="EJF" name="Jon Wahlström" size="x-small" src="" />
+
       <Avatar name="Jon Wahlström" size="x-small" src="" />
       <Avatar name="Jon Wahlström" size="x-small" src="http://via.placeholder.com/400x400" />
 
