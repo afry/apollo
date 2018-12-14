@@ -18,10 +18,15 @@
 }
 
 .navbar-nav .nav-link,
-.navbar-nav .dropdown-toggle {
+.navbar-nav .dropdown-toggle,
+.navbar-nav .breadcrumb {
   line-height: 70px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.navbar-nav .breadcrumbs {
+  margin-bottom: 0 !important;
 }
 
 .navbar-nav .dropdown-menu {

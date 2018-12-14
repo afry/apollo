@@ -1,6 +1,8 @@
 import React from 'react';
 import {
   BasicDropdown,
+  Breadcrumbs,
+  Breadcrumb,
   Container,
   Collapse,
   DropdownItem,
@@ -93,24 +95,12 @@ class NavbarExample extends React.Component {
             <NavbarBrand>one</NavbarBrand>
             <NavbarToggle />
             <Collapse navbar open={false}>
-              <Nav navbar align="right">
-                <NavItem>
-                  <NavLink disabled>Time Report</NavLink>
-                </NavItem>
-                <BasicDropdown>
-                  <DropdownToggle>Projects</DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>Menu Item</DropdownItem>
-                    <DropdownItem>Menu Item</DropdownItem>
-                    <DropdownItem>Menu Item</DropdownItem>
-                  </DropdownMenu>
-                </BasicDropdown>
-                <NavItem>
-                  <NavLink>Groups</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink>Information</NavLink>
-                </NavItem>
+              <Nav navbar align="left">
+                <Breadcrumbs>
+                  <Breadcrumb>First Crumb</Breadcrumb>
+                  <Breadcrumb>Second Crumb</Breadcrumb>
+                  <Breadcrumb>Third Crumb</Breadcrumb>
+                </Breadcrumbs>
               </Nav>
             </Collapse>
           </Container>
