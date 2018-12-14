@@ -35,7 +35,7 @@ class Example extends React.PureComponent {
       <Form>
         <FormGroup>
           <Label for="example">Example Input</Label>
-          <Input id="example" placeholder="Inser text here..">
+          <Input id="example" placeholder="Inser text here.." />
         </FormGroup>
         <Button type="submit">Submit</Button>
       </Form>
