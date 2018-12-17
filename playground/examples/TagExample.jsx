@@ -7,26 +7,25 @@ import {
 class TagExample extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
+    this.state = { open: true };
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   // eslint-disable-next-line
-  handleClick() {
-  }
-
-  // eslint-disable-next-line
-  handleRemove() {
+  handleToggle() {
+    this.setState(prevState => ({ open: !prevState.open }));
   }
 
   render() {
+    const { open } = this.state;
+
     return (
       <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Tag</h1>
         <div>
-          <Tag icon="https://picsum.photos/200/200/?image=1" onClick={this.handleClick}>Stockholm</Tag>
-          <Tag onClick={this.handleClick} onClose={this.handleRemove}>Stockholm, Sweden</Tag>
-          <Tag onClose={this.handleToggle}>Stockholm, Sweden</Tag>
+          <Tag icon="https://picsum.photos/200/200/?image=1">Stockholm</Tag>
+          <Tag>Stockholm, Sweden</Tag>
+          <Tag onToggle={this.handleToggle} open={open}>Stockholm, Sweden</Tag>
         </div>
       </Container>
     );

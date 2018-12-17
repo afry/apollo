@@ -28,11 +28,6 @@
   margin-left: 2.5px;
 }
 
-.tag-button:hover {
-  cursor: pointer;
-  color: var(--day, blue);
-}
-
 .tag-icon {
   display: block;
   margin-left: -10px;

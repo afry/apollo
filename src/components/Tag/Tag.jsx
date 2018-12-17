@@ -15,8 +15,8 @@ const propTypes = {
     'secondary',
   ]),
   icon: PropTypes.string,
-  onClick: PropTypes.func,
-  onClose: PropTypes.func,
+  onToggle: PropTypes.func,
+  open: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -24,41 +24,22 @@ const defaultProps = {
   className: undefined,
   color: 'secondary',
   icon: undefined,
-  onClick: undefined,
-  onClose: undefined,
+  onToggle: undefined,
+  open: true,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleClick(e) {
-    const { onClick } = this.props;
-    if (!onClick) {
+  handleToggle(e) {
+    const { onToggle } = this.props;
+    if (!onToggle) {
       return;
     }
-
-    onClick(e);
-  }
-
-  handleClose(e) {
-    e.stopPropagation();
-
-    const { onClose } = this.props;
-    if (!onClose) {
-      return;
-    }
-    onClose(e);
-  }
-
-  handleKeyUp(e) {
-    if (e.keyCode === 13) {
-      this.handleClick(e);
-    }
+    onToggle(e);
   }
 
   render() {
@@ -67,25 +48,23 @@ class Tag extends React.Component {
       className,
       color,
       icon,
-      onClick,
-      onClose,
+      onToggle,
+      open,
+      ...other
     } = this.props;
+
+    if (!open) {
+      return null;
+    }
 
     const classes = classNames(
       className,
       styles.tag,
       styles[`tag-${color}`],
-      onClick ? styles['tag-button'] : undefined,
     );
 
     return (
-      <span
-        className={classes}
-        onClick={this.handleClick}
-        onKeyUp={this.handleKeyUp}
-        role="button"
-        tabIndex={0}
-      >
+      <span {...other} className={classes}>
         {icon && (
           <img
             alt=""
@@ -96,10 +75,10 @@ class Tag extends React.Component {
         <span className={styles['tag-text']}>
           {children}
         </span>
-        {onClose && (
+        {onToggle && (
           <button
             className={styles.close}
-            onClick={this.handleClose}
+            onClick={this.handleToggle}
             type="button"
           />
         )}
