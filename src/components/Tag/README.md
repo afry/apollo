@@ -1,6 +1,7 @@
-### Tag 
+# Tag 
 
-```javascript
+### Example
+```jsx
 const Example extends React.Component {
   constructor(props) {
     super(props);
@@ -26,3 +27,13 @@ const Example extends React.Component {
   }
 }
 ```
+
+#### Props
+| Name      | PropType | Default     | Description |
+|-----------|----------|-------------|-------------|
+| children  | `[func, node, string]` | undefined | Collection of DOM child elements. |  
+| className | `string` | `undefined` | Classes to be applied to the DOM element. |
+| color     | `string` | `secondary` | Specifies the tag background color. Can be one of `'primary'`, `'secondary'`. |
+| icon      | `string` | `undefined` | Specifies the url of an image icon. |
+| onToggle  | `func`   | `undefined` | Called for toggling `open` in the controlling component. |
+| open      | `bool`   | `true`      | Control the tag visibility state. |
