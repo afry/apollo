@@ -13,7 +13,7 @@ const propTypes = {
     'success',
     'warning',
     'link',
-  ]).string,
+  ]),
   disabled: PropTypes.bool,
   innerRef: PropTypes.oneOfType([
     PropTypes.func,
