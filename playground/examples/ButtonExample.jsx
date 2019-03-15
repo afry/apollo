@@ -19,6 +19,8 @@ const ButtonExample = () => (
       <Button tag="a">anchor</Button>
     </ButtonGroup>
 
+    <br />
+
     <h4>Large</h4>
     <ButtonGroup segmented>
       <Button color="primary" size="large">Large Button</Button>
@@ -26,11 +28,38 @@ const ButtonExample = () => (
       <Button href="https://google.com" size="large">Google link</Button>
     </ButtonGroup>
 
+    <br />
+
     <h4>Small</h4>
     <ButtonGroup>
       <Button color="primary" size="small">Small Button</Button>
       <Button color="secondary" size="small">Small Button</Button>
     </ButtonGroup>
+
+    <br />
+
+    <h4>Loading</h4>
+    <ButtonGroup>
+      <Button loading color="primary" size="large">This text should not be seen</Button>
+      <Button loading color="primary" size="small">This text should not be seen</Button>
+    </ButtonGroup>
+    <ButtonGroup>
+      <Button loading color="success" size="large">This text should not be seen</Button>
+      <Button loading color="success" size="small">This text should not be seen</Button>
+    </ButtonGroup>
+    <ButtonGroup>
+      <Button loading color="danger" size="large">This text should not be seen</Button>
+      <Button loading color="danger" size="small">This text should not be seen</Button>
+    </ButtonGroup>
+    <ButtonGroup>
+      <Button loading color="link" size="large">This text should not be seen</Button>
+      <Button loading color="link" size="small">This text should not be seen</Button>
+    </ButtonGroup>
+    <ButtonGroup>
+      <Button loading tag="a" size="large">This text should not be seen</Button>
+      <Button loading tag="a" size="small">This text should not be seen</Button>
+    </ButtonGroup>
+
   </Container>
 );
 

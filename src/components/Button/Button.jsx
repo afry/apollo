@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Loader from '../Loader';
 import * as styles from './Button.css';
 
 const propTypes = {
@@ -19,6 +20,7 @@ const propTypes = {
     PropTypes.object,
     PropTypes.string,
   ]),
+  loading: PropTypes.bool,
   onClick: PropTypes.func,
   size: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -30,6 +32,7 @@ const defaultProps = {
   color: 'secondary',
   disabled: false,
   innerRef: undefined,
+  loading: false,
   onClick: undefined,
   size: undefined,
   tag: 'button',
@@ -53,6 +56,7 @@ class Button extends React.Component {
     }
   }
 
+
   render() {
     let {
       innerRef,
@@ -61,17 +65,23 @@ class Button extends React.Component {
     } = this.props;
 
     const {
+      children,
       className,
       color,
+      disabled,
+      loading,
       size,
       ...other
     } = this.props;
+
+    const isDisabled = disabled || loading;
 
     const classes = classNames(
       className,
       styles.button,
       styles[`button-${color}`],
-      size ? styles[`button-${size}`] : ''
+      size ? styles[`button-${size}`] : '',
+      loading && styles['button-loading'],
     );
 
     if (other.href) {
@@ -87,9 +97,19 @@ class Button extends React.Component {
         ref={innerRef}
         {...other}
         className={classes}
+        disabled={isDisabled}
         onClick={this.handleClick}
         type={type}
-      />
+      >
+        <div>
+          {children}
+        </div>
+        { loading && (
+          <div>
+            <Loader width={'100%'} height={'100%'} /> 
+          </div>
+        )}
+      </Tag>
     );
   }
 }

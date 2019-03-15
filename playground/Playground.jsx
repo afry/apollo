@@ -38,7 +38,7 @@ class Playground extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <FollowExample />
+        <ButtonExample />
       </React.Fragment>
     );
   }

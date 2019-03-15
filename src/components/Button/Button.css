@@ -19,6 +19,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
 }
 
 .button:first-child {
@@ -142,3 +143,15 @@ a.button-large {
   line-height: 56px;
 }
 
+.button-loading > div:first-child {
+  visibility: hidden;
+}
+
+.button-loading > div:nth-child(2) {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
