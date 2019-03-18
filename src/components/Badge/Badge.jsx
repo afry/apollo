@@ -15,23 +15,9 @@ const defaultProps = {
   tag: 'span',
 };
 
-const Badge = (props) => {
-  const {
-    className,
-    color,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles.badge,
-    styles[`badge-${color}`]
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const Badge = ({className, color, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles.badge, styles[`badge-${color}`]);
+  return <Tag {...other} className={classes} />;
 };
 
 Badge.propTypes = propTypes;

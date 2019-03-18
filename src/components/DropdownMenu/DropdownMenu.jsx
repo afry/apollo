@@ -16,20 +16,13 @@ const defaultProps = {
 };
 
 const contextTypes = {
-  open: PropTypes.bool
+  open: PropTypes.bool,
 };
 
 const DropdownMenu = (props, context) => {
-  const {
-    className,
-    right,
-    tag: Tag,
-    ...other
-  } = props;
+  const {className, right, tag: Tag, ...other} = props;
 
-  const {
-    open,
-  } = context;
+  const {open} = context;
 
   const classes = classNames(
     className,
@@ -38,9 +31,7 @@ const DropdownMenu = (props, context) => {
     right ? styles['dropdown-menu-right'] : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 DropdownMenu.propTypes = propTypes;
@@ -48,4 +39,3 @@ DropdownMenu.defaultProps = defaultProps;
 DropdownMenu.contextTypes = contextTypes;
 
 export default DropdownMenu;
-

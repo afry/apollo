@@ -15,21 +15,9 @@ const defaultProps = {
   tag: 'nav',
 };
 
-const Breadcrumbs = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles.breadcrumbs,
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const Breadcrumbs = ({className, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles.breadcrumbs);
+  return <Tag {...other} className={classes} />;
 };
 
 Breadcrumbs.propTypes = propTypes;

@@ -39,81 +39,66 @@ const defaultProps = {
   type: 'button',
 };
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    if (this.props.disabled) {
+const Button = ({
+  children,
+  className,
+  color,
+  disabled,
+  loading,
+  onClick,
+  size,
+  innerRef,
+  ...other
+}) => {
+  const handleClick = e => {
+    if (disabled) {
       e.preventDefault();
       return;
     }
 
-    if (this.props.onClick) {
-      this.props.onClick(e);
+    if (onClick) {
+      onClick(e);
     }
+  };
+
+  const isDisabled = disabled || loading;
+
+  const classes = classNames(
+    className,
+    styles.button,
+    styles[`button-${color}`],
+    size ? styles[`button-${size}`] : '',
+    loading && styles['button-loading'],
+  );
+
+  let {type, tag: Tag} = other;
+
+  if (other.href) {
+    Tag = 'a';
   }
 
+  if (Tag !== 'button') {
+    type = undefined;
+  }
 
-  render() {
-    let {
-      tag: Tag,
-      type,
-      ...propsNoTagOrType,
-    } = this.props;
-
-    const {
-      children,
-      className,
-      color,
-      disabled,
-      loading,
-      size,
-      innerRef,
-      ...other
-    } = propsNoTagOrType;
-
-    const isDisabled = disabled || loading;
-
-    const classes = classNames(
-      className,
-      styles.button,
-      styles[`button-${color}`],
-      size ? styles[`button-${size}`] : '',
-      loading && styles['button-loading'],
-    );
-
-    if (other.href) {
-      Tag = 'a';
-    }
-
-    if (Tag !== 'button') {
-      type = undefined;
-    }
-
-    return (
-      <Tag
-        ref={innerRef}
-        {...other}
-        className={classes}
-        disabled={isDisabled}
-        onClick={this.handleClick}
-        type={type}
-      >
+  return (
+    <Tag
+      ref={innerRef}
+      {...other}
+      className={classes}
+      disabled={isDisabled}
+      onClick={handleClick}
+      type={type}
+    >
+      <div>{children}</div>
+      {loading && (
         <div>
-          {children}
+          <Loader width="100%" height="100%" />
         </div>
-        { loading && (
-          <div>
-            <Loader width={'100%'} height={'100%'} /> 
-          </div>
-        )}
-      </Tag>
-    );
-  }
-}
+      )}
+    </Tag>
+  );
+};
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;

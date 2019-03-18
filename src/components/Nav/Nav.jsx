@@ -25,19 +25,17 @@ const defaultProps = {
   vertical: false,
 };
 
-const Nav = (props) => {
-  const {
-    align,
-    className,
-    collapsed,
-    justified,
-    navbar,
-    tabs,
-    tag: Tag,
-    vertical,
-    ...other
-  } = props;
-
+const Nav = ({
+  align,
+  className,
+  collapsed,
+  justified,
+  navbar,
+  tabs,
+  tag: Tag,
+  vertical,
+  ...other
+}) => {
   const classes = classNames(
     className,
     navbar ? styles['navbar-nav'] : styles.nav,
@@ -48,9 +46,7 @@ const Nav = (props) => {
     vertical ? styles['nav-vertical'] : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 Nav.propTypes = propTypes;

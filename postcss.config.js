@@ -1,7 +1,8 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
-    'postcss-custom-media': { // eslint-disable-line sort-keys
+    'postcss-custom-media': {
+      // eslint-disable-line sort-keys
       extensions: {
         '--mobile': '(min-width: 320px)',
         '--mobile-only': '(min-width: 320px) and (max-width: 767px)',
@@ -12,10 +13,12 @@ module.exports = {
         '--large-desktop': '(min-width: 1281px)',
       },
     },
-    'postcss-preset-env': { // eslint-disable-line sort-keys
+    'postcss-preset-env': {
+      // eslint-disable-line sort-keys
       stage: 0,
     },
-    'postcss-custom-properties': { // eslint-disable-line sort-keys
+    'postcss-custom-properties': {
+      // eslint-disable-line sort-keys
       preserve: true,
       variables: {
         '--black': '#1e1e1e',
@@ -35,7 +38,8 @@ module.exports = {
         '--stone': '#7c7c7c',
         '--success': '#67a799',
         '--success-hover': '#5c9286',
-        '--system-fonts': '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"', // eslint-disable-line sort-keys, max-len
+        '--system-fonts':
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"', // eslint-disable-line sort-keys, max-len
         '--warning': '#f6ce8e',
         '--warning-hover': '#efbf72',
         '--white': '#ffffff',

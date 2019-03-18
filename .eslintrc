@@ -1,75 +1,33 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "jest": true,
-    "node": true
-  },
-  "extends": ["airbnb"],
-  "globals": {
-    "it": true,
-    "describe": true,
-    "expect": true,
-    "jest": true
-  },
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaFeatures": {
-      "allowImportExportEverywhere": true,
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    },
-    "ecmaVersion": 2017,
+    "ecmaVersion": 2018,
     "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
   },
   "plugins": [
     "react"
   ],
   "rules": {
-    "comma-dangle": 0,
-    "default-case": 2,
-    "eol-last": [2, "always"],
-    "import/extensions": [".js", ".jsx"],
-    "import/no-unresolved": 0,
-    "max-len": [1, { "tabWidth": 2 }],
-    "new-cap": [2, { "capIsNew": false }],
-    "no-console": 2,
-    "no-plusplus": 0,
-    "no-undef": 2,
-    "no-underscore-dangle": [
-      2,
-      {
-        "allowAfterThis": true,
-        "enforceInMethodNames": true
-      }
-    ],
     "no-unused-vars": [
-      2,
+      "error",
       {
-        "args": "after-used",
-        "ignoreRestSiblings": false,
-        "vars": "all"
+        "vars": "local",
+        "args": "none"
       }
     ],
-    "object-shorthand": 2,
-    "prefer-const": 2,
-    "prefer-template": 2,
-    "quote-props": [2, "as-needed"],
-    "quotes": [2, "single", "avoid-escape"],
-    "react/jsx-boolean-value": 2,
-    "react/jsx-handler-names": 2,
-    "react/jsx-key": 2,
-    "react/jsx-no-bind": 2,
-    "react/jsx-no-literals": [2, {"noStrings": true}],
-    "react/jsx-sort-props": 2,
-    "react/jsx-uses-vars": 2,
-    "sort-keys": [
-      2,
-      "asc",
-      {
-        "caseSensitive": false
-      }
-    ],
-    "sort-vars": 2
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
 }

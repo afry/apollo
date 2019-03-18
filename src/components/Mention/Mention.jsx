@@ -12,17 +12,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: undefined
+  children: undefined,
 };
 
-const Mention = (props) => {
+const Mention = props => {
   const classes = classNames(styles.mention);
-
-  return (
-    <span className={classes} {...props} />
-  );
+  return <span className={classes} {...props} />;
 };
-
 
 Mention.propTypes = propTypes;
 Mention.defaultProps = defaultProps;

@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
-import * as animationData from './loader.json';
+import * as animationData from './loader.json'; // eslint-disable-line import/no-unresolved
 
-const sizePropType = PropTypes.oneOfType([
-  PropTypes.number,
-  PropTypes.string,
-]);
+const sizePropType = PropTypes.oneOfType([PropTypes.number, PropTypes.string]);
 
 const propTypes = {
   autoPlay: PropTypes.bool,
@@ -22,30 +19,17 @@ const defaultProps = {
   width: 250,
 };
 
-const Loader = (props) => {
-  const {
-    autoPlay,
-    height,
-    loop,
-    width,
-  } = props;
-
+const Loader = ({autoPlay, height, loop, width}) => {
   const defaultOptions = {
     animationData,
     autoplay: autoPlay,
     loop,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   };
 
-  return (
-    <Lottie
-      height={height}
-      options={defaultOptions}
-      width={width}
-    />
-  );
+  return <Lottie height={height} options={defaultOptions} width={width} />;
 };
 
 Loader.propTypes = propTypes;

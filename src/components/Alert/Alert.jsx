@@ -16,10 +16,7 @@ const propTypes = {
   ]),
   onToggle: PropTypes.func,
   open: PropTypes.bool,
-  tag: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.string,
-  ]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
@@ -31,70 +28,56 @@ const defaultProps = {
   tag: 'div',
 };
 
-class Alert extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleToggle = this.handleToggle.bind(this);
-  }
-
-  handleToggle(e) {
-    const { onToggle } = this.props;
+const Alert = ({
+  children,
+  className,
+  color,
+  onToggle,
+  open,
+  tag: Tag,
+  ...other
+}) => {
+  const handleToggle = e => {
     if (!onToggle) {
       e.preventDefault();
       return;
     }
 
     onToggle(e);
+  };
+
+  if (!open) {
+    return null;
   }
 
-  render() {
-    const {
-      children,
-      className,
-      color,
-      onToggle,
-      open,
-      tag: Tag,
-      ...other
-    } = this.props;
+  const classes = classNames(className, styles.alert, styles[`alert-${color}`]);
 
-    if (!open) {
-      return null;
-    }
-
-    const classes = classNames(
-      className,
-      styles.alert,
-      styles[`alert-${color}`],
-    );
-
-    if (onToggle) {
-      return (
-        <Tag {...other} className={classes}>
-          <div className={styles['alert-icon']} />
-          <div className={styles['alert-body']}>
-            <span>{children}</span>
-          </div>
-          <button
-            area-label="Close"
-            className={styles.close}
-            onClick={this.handleToggle}
-            type="button"
-          />
-        </Tag>
-      );
-    }
-
+  if (onToggle) {
     return (
       <Tag {...other} className={classes}>
         <div className={styles['alert-icon']} />
         <div className={styles['alert-body']}>
           <span>{children}</span>
         </div>
+        <button
+          area-label="Close"
+          className={styles.close}
+          onClick={handleToggle}
+          type="button"
+        />
       </Tag>
     );
   }
-}
+
+  return (
+    <Tag {...other} className={classes}>
+      <div className={styles['alert-icon']} />
+      <div className={styles['alert-body']}>
+        <span>{children}</span>
+      </div>
+    </Tag>
+  );
+};
 
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;

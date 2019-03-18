@@ -13,21 +13,9 @@ const defaultProps = {
   tag: 'div',
 };
 
-const CardBody = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles['card-body'],
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const CardBody = ({className, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles['card-body']);
+  return <Tag {...other} className={classes} />;
 };
 
 CardBody.propTypes = propTypes;

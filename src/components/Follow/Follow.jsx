@@ -8,7 +8,7 @@ const propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.node,
-    PropTypes.string
+    PropTypes.string,
   ]),
   className: PropTypes.string,
   icon: PropTypes.string,
@@ -30,7 +30,7 @@ class Follow extends React.Component {
   }
 
   handleToggle(e) {
-    const { onToggle } = this.props;
+    const {onToggle} = this.props;
     if (!onToggle) {
       return;
     }
@@ -38,14 +38,7 @@ class Follow extends React.Component {
   }
 
   render() {
-    const {
-      active,
-      children,
-      className,
-      icon,
-      onToggle,
-      ...other
-    } = this.props;
+    const {active, children, className, icon, onToggle, ...other} = this.props;
 
     const classes = classNames(
       className,
@@ -56,9 +49,7 @@ class Follow extends React.Component {
     return (
       <span {...other} className={classes}>
         {icon && <img alt="" className={styles['follow-icon']} src={icon} />}
-        <span className={styles['follow-text']}>
-          {children}
-        </span>
+        <span className={styles['follow-text']}>{children}</span>
         {onToggle && (
           <button
             area-label="Control"

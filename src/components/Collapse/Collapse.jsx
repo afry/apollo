@@ -7,10 +7,7 @@ const propTypes = {
   className: PropTypes.string,
   navbar: PropTypes.bool,
   open: PropTypes.bool,
-  tag: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.string,
-  ]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
@@ -20,14 +17,8 @@ const defaultProps = {
   tag: 'div',
 };
 
-const Collapse = (props) => {
-  const {
-    className,
-    navbar,
-    open,
-    tag: Tag,
-    ...other
-  } = props;
+const Collapse = props => {
+  const {className, navbar, open, tag: Tag, ...other} = props;
 
   const classes = classNames(
     className,
@@ -36,9 +27,7 @@ const Collapse = (props) => {
     open ? styles.open : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 Collapse.propTypes = propTypes;

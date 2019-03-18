@@ -21,57 +21,48 @@ const defaultProps = {
   type: 'button',
 };
 
-class NavbarToggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    if (this.props.disabled) {
+const NavbarToggle = ({
+  children,
+  className,
+  disabled,
+  onClick,
+  tag: Tag,
+  ...other
+}) => {
+  const handleClick = e => {
+    if (disabled) {
       e.preventDefault();
       return;
     }
 
-    if (this.props.onClick) {
-      this.props.onClick(e);
+    if (onClick) {
+      onClick(e);
     }
+  };
+
+  const classes = classNames(
+    className,
+    styles['navbar-toggle'],
+    disabled ? styles.disabled : '',
+  );
+
+  let {type} = other;
+  if (Tag !== 'button') {
+    type = undefined;
   }
 
-  render() {
-    const {
-      children,
-      className,
-      disabled,
-      tag: Tag,
-      ...other
-    } = this.props;
-
-    let { type } = this.props;
-
-    const classes = classNames(
-      className,
-      styles['navbar-toggle'],
-      (disabled) ? styles.disabled : '',
-    );
-
-    if (Tag !== 'button') {
-      type = undefined;
-    }
-
-    return (
-      <Tag
-        {...other}
-        className={classes}
-        disabled={disabled}
-        onClick={this.handleClick}
-        type={type}
-      >
-        {children || <span className={styles['navbar-toggle-icon']} />}
-      </Tag>
-    );
-  }
-}
+  return (
+    <Tag
+      {...other}
+      className={classes}
+      disabled={disabled}
+      onClick={handleClick}
+      type={type}
+    >
+      {children || <span className={styles['navbar-toggle-icon']} />}
+    </Tag>
+  );
+};
 
 NavbarToggle.propTypes = propTypes;
 NavbarToggle.defaultProps = defaultProps;

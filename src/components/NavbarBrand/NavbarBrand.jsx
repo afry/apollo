@@ -5,17 +5,11 @@ import * as styles from './NavbarBrand.css';
 
 const propTypes = {
   active: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.string,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   className: PropTypes.string,
   href: PropTypes.string,
   icon: PropTypes.string,
-  tag: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.string
-  ]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
@@ -27,16 +21,14 @@ const defaultProps = {
   tag: 'a',
 };
 
-const NavbarBrand = (props) => {
-  const {
-    active,
-    children,
-    className,
-    icon,
-    tag: Tag,
-    ...other
-  } = props;
-
+const NavbarBrand = ({
+  active,
+  children,
+  className,
+  icon,
+  tag: Tag,
+  ...other
+}) => {
   const classes = classNames(
     className,
     styles['navbar-brand'],

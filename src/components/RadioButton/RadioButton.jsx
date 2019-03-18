@@ -25,16 +25,8 @@ const defaultProps = {
   value: undefined,
 };
 
-const RadioButton = (props) => {
-  const {
-    className,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles['radio-button'],
-  );
+const RadioButton = ({className, ...other}) => {
+  const classes = classNames(className, styles['radio-button']);
 
   return (
     <div className={classes}>

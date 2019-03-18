@@ -21,49 +21,37 @@ const defaultProps = {
   tag: 'a',
 };
 
-class NavLink extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    if (this.props.disabled) {
+const NavLink = ({
+  active,
+  className,
+  disabled,
+  innerRef,
+  onClick,
+  tag: Tag,
+  ...other
+}) => {
+  const handleClick = e => {
+    if (disabled) {
       e.preventDefault();
       return;
     }
 
-    if (this.props.onClick) {
-      this.props.onClick(e);
+    if (onClick) {
+      onClick(e);
     }
-  }
+  };
 
-  render() {
-    const {
-      active,
-      className,
-      innerRef,
-      tag: Tag,
-      ...other
-    } = this.props;
+  const classes = classNames(
+    className,
+    styles['nav-link'],
+    active ? styles.active : '',
+    other.disabled ? styles.disabled : '',
+  );
 
-    const classes = classNames(
-      className,
-      styles['nav-link'],
-      active ? styles.active : '',
-      other.disabled ? styles.disabled : '',
-    );
-
-    return (
-      <Tag
-        {...other}
-        ref={innerRef}
-        className={classes}
-        onClick={this.handleClick}
-      />
-    );
-  }
-}
+  return (
+    <Tag {...other} ref={innerRef} className={classes} onClick={handleClick} />
+  );
+};
 
 NavLink.propTypes = propTypes;
 NavLink.defaultProps = defaultProps;

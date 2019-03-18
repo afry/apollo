@@ -13,21 +13,9 @@ const defaultProps = {
   tag: 'div',
 };
 
-const ModalFooter = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles['modal-footer']
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const ModalFooter = ({className, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles['modal-footer']);
+  return <Tag {...other} className={classes} />;
 };
 
 ModalFooter.propTypes = propTypes;

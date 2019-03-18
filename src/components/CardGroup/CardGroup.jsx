@@ -15,23 +15,16 @@ const defaultProps = {
   tag: 'div',
 };
 
-const CardGroup = (props) => {
-  const {
-    className,
-    segmented,
-    tag: Tag,
-    ...other
-  } = props;
+const CardGroup = props => {
+  const {className, segmented, tag: Tag, ...other} = props;
 
   const classes = classNames(
     className,
     styles['card-group'],
-    segmented ? styles['card-group-segmented'] : ''
+    segmented ? styles['card-group-segmented'] : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 CardGroup.propTypes = propTypes;

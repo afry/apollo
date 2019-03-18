@@ -7,13 +7,10 @@ const propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.node,
-    PropTypes.string
+    PropTypes.string,
   ]),
   className: PropTypes.string,
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-  ]),
+  color: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.string,
   onToggle: PropTypes.func,
   open: PropTypes.bool,
@@ -35,7 +32,7 @@ class Tag extends React.Component {
   }
 
   handleToggle(e) {
-    const { onToggle } = this.props;
+    const {onToggle} = this.props;
     if (!onToggle) {
       return;
     }
@@ -57,24 +54,12 @@ class Tag extends React.Component {
       return null;
     }
 
-    const classes = classNames(
-      className,
-      styles.tag,
-      styles[`tag-${color}`],
-    );
+    const classes = classNames(className, styles.tag, styles[`tag-${color}`]);
 
     return (
       <span {...other} className={classes}>
-        {icon && (
-          <img
-            alt=""
-            className={styles['tag-icon']}
-            src={icon}
-          />
-        )}
-        <span className={styles['tag-text']}>
-          {children}
-        </span>
+        {icon && <img alt="" className={styles['tag-icon']} src={icon} />}
+        <span className={styles['tag-text']}>{children}</span>
         {onToggle && (
           <button
             className={styles.close}

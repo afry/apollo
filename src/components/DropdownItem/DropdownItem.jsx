@@ -36,8 +36,8 @@ class DropdownItem extends React.Component {
   }
 
   handleClick(e) {
-    const { onClick, disabled } = this.props;
-    const { onToggle } = this.context;
+    const {onClick, disabled} = this.props;
+    const {onToggle} = this.context;
 
     if (disabled) {
       e.preventDefault();
@@ -54,22 +54,13 @@ class DropdownItem extends React.Component {
   }
 
   render() {
-    const {
-      active,
-      className,
-      header,
-      href,
-      separator,
-      ...other
-    } = this.props;
+    const {active, className, header, href, separator, ...other} = this.props;
 
-    let {
-      tag: Tag
-    } = this.props;
+    let {tag: Tag} = this.props;
 
     const classes = classNames(
       className,
-      (!header && !separator) ? styles['dropdown-item'] : '',
+      !header && !separator ? styles['dropdown-item'] : '',
       header ? styles['dropdown-header'] : '',
       separator ? styles['dropdown-separator'] : '',
       active ? styles.active : '',

@@ -64,15 +64,15 @@ class Dropdown extends React.Component {
   }
 
   addEventListeners() {
-    ['click'].forEach(event => (
-      document.addEventListener(event, this.handleDocumentClick, true)
-    ));
+    ['click'].forEach(event =>
+      document.addEventListener(event, this.handleDocumentClick, true),
+    );
   }
 
   removeEventListeners() {
-    ['click'].forEach(event => (
-      document.removeEventListener(event, this.handleDocumentClick, true)
-    ));
+    ['click'].forEach(event =>
+      document.removeEventListener(event, this.handleDocumentClick, true),
+    );
   }
 
   handleDocumentClick(e) {
@@ -94,21 +94,16 @@ class Dropdown extends React.Component {
   }
 
   render() {
-    const {
-      className,
-      tag: Tag,
-      ...other
-    } = this.props;
+    const {className, tag: Tag, ...other} = this.props;
 
-    const classes = classNames(
-      className,
-      styles.dropdown,
-    );
+    const classes = classNames(className, styles.dropdown);
 
     return (
       <Tag
         {...other}
-        ref={(node) => { this.node = node; }}
+        ref={node => {
+          this.node = node;
+        }}
         className={classes}
       />
     );

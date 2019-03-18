@@ -10,7 +10,7 @@ const propTypes = {
   innerRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.object,
-    PropTypes.string
+    PropTypes.string,
   ]),
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -29,16 +29,9 @@ const defaultProps = {
 
 class Checkbox extends React.PureComponent {
   render() {
-    const {
-      className,
-      innerRef,
-      ...other
-    } = this.props;
+    const {className, innerRef, ...other} = this.props;
 
-    const classes = classNames(
-      className,
-      styles.checkbox,
-    );
+    const classes = classNames(className, styles.checkbox);
 
     return (
       <div className={classes}>
