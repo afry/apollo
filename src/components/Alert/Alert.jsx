@@ -9,7 +9,7 @@ const propTypes = {
   color: PropTypes.oneOf([
     'primary',
     'secondary',
-    'error',
+    'danger',
     'success',
     'warning',
     'info',

@@ -27,6 +27,7 @@ export default class Example extends React.PureComponent {
 | color     | `string` | `secondary` | Specifies the button color. Can be one of `'primary'`, `'secondary'`, `'success'`, `'danger'`, `'warning'`, `'link'`. |
 | disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
 | innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
+| loading   | `bool`   | `false`     | Show a loading animation |
 | onClick   | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
 | size      | `string` | `undefined` | Specifies the button size. Can be one of `small (144px*40px)` or `large (145px*56px)`. Default is `154px*48px` |
 | tag       | `[func, string]` | `button` | Specifies the DOM element to be used. |

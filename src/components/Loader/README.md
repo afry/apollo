@@ -20,7 +20,6 @@ export default class Example extends React.PureComponent {
 | Name      | PropType | Default     | Description |
 |-----------|----------|-------------|-------------|
 | autoPlay  | `bool`   | `true`      | Bodymovin option to auto plays the animation. |
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
 | height    | `[number, string]` | `250` | Pixel value for lottie container height. | 
 | loop      | `bool`   | `true` | Bodymovin option to loop the animation. |
 | width     | `[number, string]` | `250` | Pixel value for lottie container width. |

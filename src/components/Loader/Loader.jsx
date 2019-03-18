@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
-import classNames from 'classnames';
 import * as animationData from './loader.json';
 
 const sizePropType = PropTypes.oneOfType([
@@ -11,7 +10,6 @@ const sizePropType = PropTypes.oneOfType([
 
 const propTypes = {
   autoPlay: PropTypes.bool,
-  className: PropTypes.string,
   height: sizePropType,
   loop: PropTypes.bool,
   width: sizePropType,
@@ -19,7 +17,6 @@ const propTypes = {
 
 const defaultProps = {
   autoPlay: true,
-  className: undefined,
   height: 250,
   loop: true,
   width: 250,
@@ -28,13 +25,10 @@ const defaultProps = {
 const Loader = (props) => {
   const {
     autoPlay,
-    className,
     height,
     loop,
     width,
   } = props;
-
-  const classes = classNames(className);
 
   const defaultOptions = {
     animationData,
@@ -47,7 +41,6 @@ const Loader = (props) => {
 
   return (
     <Lottie
-      className={classes}
       height={height}
       options={defaultOptions}
       width={width}
