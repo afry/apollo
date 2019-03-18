@@ -59,9 +59,9 @@ class Button extends React.Component {
 
   render() {
     let {
-      innerRef,
       tag: Tag,
       type,
+      ...propsNoTagOrType,
     } = this.props;
 
     const {
@@ -71,8 +71,9 @@ class Button extends React.Component {
       disabled,
       loading,
       size,
+      innerRef,
       ...other
-    } = this.props;
+    } = propsNoTagOrType;
 
     const isDisabled = disabled || loading;
 
