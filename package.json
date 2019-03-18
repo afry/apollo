@@ -21,6 +21,7 @@
     "README.md"
   ],
   "scripts": {
+    "commit": "git-cz",
     "lint": "eslint . --max-warnings 0",
     "test": "jest",
     "test:ci": "yarn run test --runInBand",
@@ -52,10 +53,12 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "commitizen": "3.0.7",
     "cross-env": "^5.1.3",
     "cross-var": "^1.1.0",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
+    "cz-conventional-changelog": "2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
@@ -103,6 +106,11 @@
     ],
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
