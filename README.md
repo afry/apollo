@@ -34,7 +34,7 @@ import '@afconsult/apollo/dist/css/apollo.css';
 2. Import required apollo components:
 
 ```jsx
-import {Button, Form, FormGroup, Input, Label} from '@afconsult/apollo';
+import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 ```
 
 3. Use the components:
