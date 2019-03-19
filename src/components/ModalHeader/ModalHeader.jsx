@@ -30,26 +30,16 @@ class ModalHeader extends React.Component {
   }
 
   render() {
-    const {
-      children,
-      className,
-      tag: Tag,
-      ...other
-    } = this.props;
+    const {children, className, tag: Tag, ...other} = this.props;
 
-    const { onToggle } = this.context;
+    const {onToggle} = this.context;
 
-    const classes = classNames(
-      className,
-      styles['modal-header'],
-    );
+    const classes = classNames(className, styles['modal-header']);
 
     if (onToggle) {
       return (
         <div {...other} className={classes}>
-          <Tag className={classNames(styles['modal-title'])}>
-            {children}
-          </Tag>
+          <Tag className={classNames(styles['modal-title'])}>{children}</Tag>
           <button
             area-label="Close"
             className={classNames(styles.close)}
@@ -62,9 +52,7 @@ class ModalHeader extends React.Component {
 
     return (
       <div {...other} className={classes}>
-        <Tag className={classNames(styles['modal-title'])}>
-          {children}
-        </Tag>
+        <Tag className={classNames(styles['modal-title'])}>{children}</Tag>
       </div>
     );
   }

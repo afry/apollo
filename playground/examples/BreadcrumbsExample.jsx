@@ -1,12 +1,8 @@
 import React from 'react';
-import {
-  Breadcrumb,
-  Breadcrumbs,
-  Container,
-} from '../../src';
+import {Breadcrumb, Breadcrumbs, Container} from '../../src';
 
 const BreadcrumbsExample = () => (
-  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
+  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
     <h1>Breadcrumbs</h1>
     <Breadcrumbs>
       <Breadcrumb>Home</Breadcrumb>

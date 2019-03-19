@@ -9,7 +9,7 @@ const propTypes = {
   innerRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.object,
-    PropTypes.string
+    PropTypes.string,
   ]),
 };
 
@@ -22,22 +22,15 @@ const defaultProps = {
 /* eslint-disable react/prefer-stateless-function */
 class Form extends React.PureComponent {
   render() {
-    const {
-      className,
-      innerRef,
-      inline,
-      ...other
-    } = this.props;
+    const {className, innerRef, inline, ...other} = this.props;
 
     const classes = classNames(
       className,
       styles.form,
-      inline ? styles['form-inline'] : ''
+      inline ? styles['form-inline'] : '',
     );
 
-    return (
-      <form {...other} ref={innerRef} className={classes} />
-    );
+    return <form {...other} ref={innerRef} className={classes} />;
   }
 }
 

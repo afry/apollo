@@ -1,6 +1,7 @@
 # Follow
 
 #### Example
+
 ```jsx
 const Example extends React.Component {
   constructor(props) {
@@ -29,23 +30,24 @@ const Example extends React.Component {
 ```
 
 #### Props
-| Name      | PropType | Default      | Description |
-|-----------|----------|--------------|-------------|
-| active    | `bool`   | `false`      | Classes to be applied to the DOM element. |
-| children  | `[func, node, string]`  | `undefined` | Collection of DOM child elements. |
-| className | `string` | `undefined`  | Classes to be applied to the DOM element. |
-| icon      | `string` | `undefined`  | Specifies the url of an image icon. |
-| onToggle  | `func`   | `undefined`  | Enables a toggle button that appears on hover. Called when this button is clicked. | 
 
+| Name      | PropType               | Default     | Description                                                                        |
+| --------- | ---------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| active    | `bool`                 | `false`     | Classes to be applied to the DOM element.                                          |
+| children  | `[func, node, string]` | `undefined` | Collection of DOM child elements.                                                  |
+| className | `string`               | `undefined` | Classes to be applied to the DOM element.                                          |
+| icon      | `string`               | `undefined` | Specifies the url of an image icon.                                                |
+| onToggle  | `func`                 | `undefined` | Enables a toggle button that appears on hover. Called when this button is clicked. |
 
 ## Uncontrolled component
 
-For the most basic use-case a [Uncontrolled Follow](../UncontrolledFollow) component is provided. It manages its own state the does not require the `onToggle` and `active` props to work. 
+For the most basic use-case a [Uncontrolled Follow](../UncontrolledFollow) component is provided. It manages its own state the does not require the `onToggle` and `active` props to work.
 
 #### Example
-``` jsx
+
+```jsx
 import React from 'react';
-import { UncontrolledFollow } from '@afconsult/apollo';
+import {UncontrolledFollow} from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -57,4 +59,3 @@ export default class Example extends React.PureComponent {
   }
 }
 ```
-

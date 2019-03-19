@@ -10,24 +10,12 @@ const propTypes = {
 
 const defaultProps = {
   className: undefined,
-  tag: 'li'
+  tag: 'li',
 };
 
-const NavItem = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles['nav-item']
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const NavItem = ({className, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles['nav-item']);
+  return <Tag {...other} className={classes} />;
 };
 
 NavItem.propTypes = propTypes;

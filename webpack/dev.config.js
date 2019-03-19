@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const merge = require('webpack-merge');
-const baseConfig = require('./base.config.js');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const baseConfig = require('./base.config.js');
 
 module.exports = merge(baseConfig, {
   devtool: 'source-map',

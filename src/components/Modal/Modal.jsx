@@ -96,7 +96,7 @@ class Modal extends React.Component {
       return;
     }
 
-    const { parentNode } = this._dialogRef.current;
+    const {parentNode} = this._dialogRef.current;
     if (parentNode && typeof parentNode.focus === 'function') {
       parentNode.focus();
     }
@@ -113,14 +113,14 @@ class Modal extends React.Component {
 
   handleClosed() {
     this.setState({
-      animationType: 'hide'
+      animationType: 'hide',
     });
   }
 
   handleOpened() {
     this.setState({
       animationType: 'show',
-      open: true
+      open: true,
     });
 
     if (this.props.onOpened) {
@@ -134,16 +134,16 @@ class Modal extends React.Component {
       return;
     }
 
-    const { keyboard, open } = this.props;
+    const {keyboard, open} = this.props;
     if (open && keyboard && e.keyCode === 27) {
       this.props.onToggle(e);
     }
   }
 
   handleAnimationEnd() {
-    const { animationType } = this.state;
+    const {animationType} = this.state;
     if (animationType === 'hide') {
-      this.setState({ open: false });
+      this.setState({open: false});
       if (this.props.onClosed) {
         this.props.onClosed();
       }
@@ -166,7 +166,7 @@ class Modal extends React.Component {
       ...other
     } = this.props;
 
-    const { animationType } = this.state;
+    const {animationType} = this.state;
 
     if (!this.state.open) {
       return null;
@@ -182,7 +182,7 @@ class Modal extends React.Component {
       onAnimationEnd: this.handleAnimationEnd,
       onKeyUp: this.handleKeyboard,
       role: 'dialog',
-      style: { display: 'block' },
+      style: {display: 'block'},
       tabIndex: '-1',
     };
 
@@ -196,18 +196,13 @@ class Modal extends React.Component {
       styles['modal-content'],
     );
 
-    const dialogClasses = classNames(
-      dialogClassName,
-      styles['modal-dialog'],
-    );
+    const dialogClasses = classNames(dialogClassName, styles['modal-dialog']);
 
     return (
       <div>
         <div {...other} {...modalAttributes} className={modalClasses}>
           <div ref={this._dialogRef} className={dialogClasses}>
-            <div className={contentClasses}>
-              {children}
-            </div>
+            <div className={contentClasses}>{children}</div>
           </div>
         </div>
         <div className={backdropClasses} />

@@ -18,21 +18,20 @@ import {
   TagExample,
 } from './examples';
 
-import {
-  Alert,
-  Container
-} from '../src';
+import {Alert, Container} from '../src';
 
 class Playground extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: true };
+    this.state = {open: true};
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(e) {
-    console.log('before', this.state)
-    this.setState({ open: false }, () => { console.log('after', this.state)});
+    console.log('before', this.state);
+    this.setState({open: false}, () => {
+      console.log('after', this.state);
+    });
   }
 
   render() {

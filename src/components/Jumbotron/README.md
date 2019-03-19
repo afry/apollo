@@ -1,6 +1,7 @@
 # Jumbotron
 
 #### Example
+
 ```jsx
 import React from 'react';
 import { Jumbotron } from '@afconsult/apollo';
@@ -18,7 +19,8 @@ const Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default      | Description |
-|-----------|----------|--------------|-------------|
-| className | `string` | `undefined`  | Classes to be applied to the DOM element. |
-| tag       | `[func, string] `| `div`| Specifies the DOM element to be used. |
+
+| Name      | PropType         | Default     | Description                               |
+| --------- | ---------------- | ----------- | ----------------------------------------- |
+| className | `string`         | `undefined` | Classes to be applied to the DOM element. |
+| tag       | `[func, string]` | `div`       | Specifies the DOM element to be used.     |

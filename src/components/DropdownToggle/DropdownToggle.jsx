@@ -44,21 +44,15 @@ class DropdownToggle extends React.Component {
   }
 
   render() {
-    const {
-      active,
-      className,
-      disabled,
-      tag: Tag,
-      ...other
-    } = this.props;
+    const {active, className, disabled, tag: Tag, ...other} = this.props;
 
-    const { open } = this.context;
+    const {open} = this.context;
 
     const classes = classNames(
       className,
       styles['dropdown-toggle'],
-      (active || open) ? styles.active : '',
-      (disabled) ? styles.disabled : '',
+      active || open ? styles.active : '',
+      disabled ? styles.disabled : '',
     );
 
     return (

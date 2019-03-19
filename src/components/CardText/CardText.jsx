@@ -13,21 +13,12 @@ const defaultProps = {
   tag: 'p',
 };
 
-const CardText = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
+const CardText = props => {
+  const {className, tag: Tag, ...other} = props;
 
-  const classes = classNames(
-    className,
-    styles['card-text'],
-  );
+  const classes = classNames(className, styles['card-text']);
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 CardText.propTypes = propTypes;

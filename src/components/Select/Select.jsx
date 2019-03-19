@@ -27,17 +27,8 @@ const defaultProps = {
   value: undefined,
 };
 
-const Select = (props) => {
-  const {
-    className,
-    innerRef,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles.select,
-  );
+const Select = ({className, innerRef, ...other}) => {
+  const classes = classNames(className, styles.select);
 
   return (
     <div className={classes}>

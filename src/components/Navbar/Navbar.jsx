@@ -21,29 +21,20 @@ const defaultProps = {
   tag: 'nav',
 };
 
-const Navbar = (props) => {
-  const {
-    className,
-    dark,
-    expand,
-    fixed,
-    tag: Tag,
-    ...other
-  } = props;
+const Navbar = props => {
+  const {className, dark, expand, fixed, tag: Tag, ...other} = props;
 
   const classes = classNames(
     className,
     styles.navbar,
     dark ? styles['navbar-dark'] : styles['navbar-light'],
-    ((typeof (expand) === 'boolean' && expand) || expand === 'x-small')
+    (typeof expand === 'boolean' && expand) || expand === 'x-small'
       ? styles['navbar-expand']
       : styles[`navbar-expand-${expand}`],
     fixed ? styles[`navbar-fixed-${fixed}`] : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 Navbar.propTypes = propTypes;

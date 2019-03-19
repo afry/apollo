@@ -19,17 +19,17 @@ import {
 class NavbarExample extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: false };
+    this.state = {open: false};
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(e) {
-    this.setState({ open: !this.state.open });
+    this.setState({open: !this.state.open});
   }
 
   render() {
     return (
-      <div style={{ margin: '25px 0' }}>
+      <div style={{margin: '25px 0'}}>
         <h1>Navbar</h1>
         <h3>Dark</h3>
         <Navbar dark expand="medium">

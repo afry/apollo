@@ -1,10 +1,12 @@
 # Form
-#### Example
-``` jsx
-import React from 'react';
-import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {  
+#### Example
+
+```jsx
+import React from 'react';
+import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Form>
@@ -18,11 +20,11 @@ export default class Example extends React.PureComponent {
 }
 ```
 
-``` jsx
+```jsx
 import React from 'react';
-import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
+import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {  
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Form inline>
@@ -36,11 +38,11 @@ export default class Example extends React.PureComponent {
 }
 ```
 
-``` jsx
+```jsx
 import React from 'react';
-import { Form, FormGroup, FormFeedback, Label, Input } from '@afconsult/apollo';
+import {Form, FormGroup, FormFeedback, Label, Input} from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {  
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Form>
@@ -56,51 +58,59 @@ export default class Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| inline    | `bool`   | `false`     | Specifies that all DOM children should be displayed as `inline-block`. |
-| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
+
+| Name      | PropType                 | Default     | Description                                                            |
+| --------- | ------------------------ | ----------- | ---------------------------------------------------------------------- |
+| className | `string`                 | `undefined` | Classes to be applied to the DOM element.                              |
+| inline    | `bool`                   | `false`     | Specifies that all DOM children should be displayed as `inline-block`. |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element.                                        |
 
 #### Props [FormGroup](../FormGroup)
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
+
+| Name      | PropType | Default     | Description                                                                                        |
+| --------- | -------- | ----------- | -------------------------------------------------------------------------------------------------- |
 | check     | `bool`   | `false`     | Styles the form group for input types [`'checkbox'`, `'radio'`] when `true`, default when `false`. |
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| inline    | `bool`   | `false`     | Specifies that all DOM children should be displayed as `inline-block`. |
+| className | `string` | `undefined` | Classes to be applied to the DOM element.                                                          |
+| inline    | `bool`   | `false`     | Specifies that all DOM children should be displayed as `inline-block`.                             |
 
 #### Props [FormFeedback](../FormFeedback)
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
+
+| Name      | PropType | Default     | Description                                 |
+| --------- | -------- | ----------- | ------------------------------------------- |
+| className | `string` | `undefined` | Classes to be applied to the DOM element.   |
 | indented  | `bool`   | `false`     | Specifies that the text should be indented. |
-| valid     | `bool`   | `false`     | Specifies the value of the DOM element. |
+| valid     | `bool`   | `false`     | Specifies the value of the DOM element.     |
 
 ## Input Types
+
 All input components also support [HTML DOM Input](https://www.w3schools.com/tags/tag_input.asp) Object Properties.
+
 ### [Checkbox](../Checkbox)
+
 #### Example
-``` jsx
+
+```jsx
 import React from 'react';
-import { Form, FormGroup, Label, Checkbox } from '@afconsult/apollo';
+import {Form, FormGroup, Label, Checkbox} from '@afconsult/apollo';
 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
-  
+
   handleChange(event) {
-    const { currentTarget } = event;
+    const {currentTarget} = event;
     console.log(`Checked: ${currentTarget.checked}`);
   }
-  
+
   render() {
     return (
       <Form>
         <FormGroup check>
           <Label for="example_checkbox">
-            <Checkbox id="example_checkbox" onChange={this.handleChange} /> Default
+            <Checkbox id="example_checkbox" onChange={this.handleChange} />{' '}
+            Default
           </Label>
         </FormGroup>
       </Form>
@@ -110,23 +120,26 @@ export default class Example extends React.Component {
 ```
 
 #### Props
-| Name      | PropType | Default   | Description |
-|-----------|----------|-----------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
-| id        | `string` | `undefined` | A unique id for the DOM element. |
-| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
-| name      | `string` | `undefined` | 	Specifies the name of the DOM element. |
-| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| value     | `string` | `undefined` | Specifies the value of the DOM element. |
+
+| Name      | PropType                 | Default     | Description                                                |
+| --------- | ------------------------ | ----------- | ---------------------------------------------------------- |
+| className | `string`                 | `undefined` | Classes to be applied to the DOM element.                  |
+| disabled  | `bool`                   | `false`     | Specifies that the DOM element should be disabled.         |
+| id        | `string`                 | `undefined` | A unique id for the DOM element.                           |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element.                            |
+| name      | `string`                 | `undefined` | Specifies the name of the DOM element.                     |
+| onChange  | `func`                   | `undefined` | Called when the value of the DOM element has been changed. |
+| value     | `string`                 | `undefined` | Specifies the value of the DOM element.                    |
 
 ### [Input](../Input)
-#### Example
-``` jsx
-import React from 'react';
-import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {  
+#### Example
+
+```jsx
+import React from 'react';
+import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Form>
@@ -141,29 +154,32 @@ export default class Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
-| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| type      | `string` | `text`      | Specifies the type of the DOM element. Can be one of `text`, `number`, `password`, `email`, `tel`. |
+
+| Name      | PropType                 | Default     | Description                                                                                        |
+| --------- | ------------------------ | ----------- | -------------------------------------------------------------------------------------------------- |
+| className | `string`                 | `undefined` | Classes to be applied to the DOM element.                                                          |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element.                                                                    |
+| onChange  | `func`                   | `undefined` | Called when the value of the DOM element has been changed.                                         |
+| type      | `string`                 | `text`      | Specifies the type of the DOM element. Can be one of `text`, `number`, `password`, `email`, `tel`. |
 
 ### [RadioButton](../RadioButton)
+
 #### Example
-``` jsx
+
+```jsx
 import React from 'react';
-import { Form, FormGroup, Label, RadioButton } from '@afconsult/apollo';
+import {Form, FormGroup, Label, RadioButton} from '@afconsult/apollo';
 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
-  
+
   handleChange(event) {
-    const { currentTarget } = event;
+    const {currentTarget} = event;
   }
-  
+
   render() {
     return (
       <Form>
@@ -174,7 +190,8 @@ export default class Example extends React.Component {
         </FormGroup>
         <FormGroup check>
           <Label for="focused_radio_button_inlined_example">
-            <RadioButton checked id="focused_radio_button_inlined_example" /> Focus
+            <RadioButton checked id="focused_radio_button_inlined_example" />{' '}
+            Focus
           </Label>
         </FormGroup>
         <FormGroup check>
@@ -189,22 +206,25 @@ export default class Example extends React.Component {
 ```
 
 #### Props
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
+
+| Name      | PropType | Default     | Description                                                                 |
+| --------- | -------- | ----------- | --------------------------------------------------------------------------- |
 | checked   | `bool`   | `false`     | Specifies that the radio button should be pre-selected when the page loads. |
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
-| id        | `string` | `undefined` | A unique id for the DOM element. |
-| name      | `string` | `undefined` | Specifies the name of the DOM element. |
-| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| readOnly  | `bool`   | `false`     | Specifies that the radio button should be read-only. |
-| value     | `string` | `undefined` | Specifies the value of the DOM element. |
+| className | `string` | `undefined` | Classes to be applied to the DOM element.                                   |
+| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled.                          |
+| id        | `string` | `undefined` | A unique id for the DOM element.                                            |
+| name      | `string` | `undefined` | Specifies the name of the DOM element.                                      |
+| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed.                  |
+| readOnly  | `bool`   | `false`     | Specifies that the radio button should be read-only.                        |
+| value     | `string` | `undefined` | Specifies the value of the DOM element.                                     |
 
 ### [Select](../Select)
+
 #### Example
-``` jsx
+
+```jsx
 import React from 'react';
-import { Form, FormGroup, Label, Select, SelectOption } from '@afconsult/apollo';
+import {Form, FormGroup, Label, Select, SelectOption} from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -213,7 +233,9 @@ export default class Example extends React.PureComponent {
         <FormGroup>
           <Label for="select_example">Select</Label>
           <Select id="select_example" required value="first">
-            <SelectOption disabled hidden value="">Hidden Option</SelectOption>
+            <SelectOption disabled hidden value="">
+              Hidden Option
+            </SelectOption>
             <SelectOption value="first">First Option</SelectOption>
             <SelectOption value="second">Second Option</SelectOption>
             <SelectOption value="third">Third Option</SelectOption>
@@ -226,22 +248,25 @@ export default class Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
+
+| Name      | PropType | Default     | Description                                                             |
+| --------- | -------- | ----------- | ----------------------------------------------------------------------- |
 | checked   | `bool`   | `false`     | Specifies that the checkbox should be pre-selected when the page loads. |
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
-| id        | `string` | `undefined` | A unique id for the DOM element. |
-| name      | `string` | `undefined` | Specifies the name of the DOM element. |
-| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| readOnly  | `bool`   | `false`     | Specifies that the select should be read-only. |
-| value     | `string` | `undefined` | Specifies the value of the DOM element. |
+| className | `string` | `undefined` | Classes to be applied to the DOM element.                               |
+| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled.                      |
+| id        | `string` | `undefined` | A unique id for the DOM element.                                        |
+| name      | `string` | `undefined` | Specifies the name of the DOM element.                                  |
+| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed.              |
+| readOnly  | `bool`   | `false`     | Specifies that the select should be read-only.                          |
+| value     | `string` | `undefined` | Specifies the value of the DOM element.                                 |
 
 ### [TextArea](../TextArea)
+
 #### Example
-``` jsx
+
+```jsx
 import React from 'react';
-import { Form, FormGroup, Label, TextArea } from '@afconsult/apollo';
+import {Form, FormGroup, Label, TextArea} from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -258,12 +283,13 @@ export default class Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| columns   | `string` | `39`        | Specifies the visible width of a text area. |
-| disabled  | `bool`   | `false`     | Specifies that the DOM element should be disabled. |
-| id        | `string` | `undefined` | A unique id for the DOM element. |
-| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element. |
-| onChange  | `func`   | `undefined` | Called when the value of the DOM element has been changed. |
-| rows      | `string` | `1`         | Specifies the visible number of lines in a text area. |
+
+| Name      | PropType                 | Default     | Description                                                |
+| --------- | ------------------------ | ----------- | ---------------------------------------------------------- |
+| className | `string`                 | `undefined` | Classes to be applied to the DOM element.                  |
+| columns   | `string`                 | `39`        | Specifies the visible width of a text area.                |
+| disabled  | `bool`                   | `false`     | Specifies that the DOM element should be disabled.         |
+| id        | `string`                 | `undefined` | A unique id for the DOM element.                           |
+| innerRef  | `[func, object, string]` | `undefined` | Add a `ref` to the DOM element.                            |
+| onChange  | `func`                   | `undefined` | Called when the value of the DOM element has been changed. |
+| rows      | `string`                 | `1`         | Specifies the visible number of lines in a text area.      |

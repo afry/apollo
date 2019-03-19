@@ -1,11 +1,12 @@
 # Breadcrumbs
 
 #### Example
-``` jsx
-import React from 'react';
-import { Breadcrumbs, Breadcrumb } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {  
+```jsx
+import React from 'react';
+import {Breadcrumbs, Breadcrumb} from '@afconsult/apollo';
+
+export default class Example extends React.PureComponent {
   render() {
     return (
       <Breadcrumbs>
@@ -19,15 +20,17 @@ export default class Example extends React.PureComponent {
 ```
 
 #### Props [Breadcrumbs](./)
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| children  | `node`   | `undefined` | Collection of DOM child elements. | 
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| tag       | `[func, string]` | `nav` | Specifies the DOM element to be used. |
+
+| Name      | PropType         | Default     | Description                               |
+| --------- | ---------------- | ----------- | ----------------------------------------- |
+| children  | `node`           | `undefined` | Collection of DOM child elements.         |
+| className | `string`         | `undefined` | Classes to be applied to the DOM element. |
+| tag       | `[func, string]` | `nav`       | Specifies the DOM element to be used.     |
 
 #### Props [Breadcrumb](../Breadcrumb)
-| Name      | PropType | Default     | Description |
-|-----------|----------|-------------|-------------|
-| className | `string` | `undefined` | Classes to be applied to the DOM element. |
-| active    | `bool`   | `false`     | Control the breadcrumb state. | 
-| tag       | `[func, string]` | `a` | Specifies the DOM element to be used. |
+
+| Name      | PropType         | Default     | Description                               |
+| --------- | ---------------- | ----------- | ----------------------------------------- |
+| className | `string`         | `undefined` | Classes to be applied to the DOM element. |
+| active    | `bool`           | `false`     | Control the breadcrumb state.             |
+| tag       | `[func, string]` | `a`         | Specifies the DOM element to be used.     |

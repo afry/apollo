@@ -10,9 +10,9 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: {}
-          }
-        ]
+            options: {},
+          },
+        ],
       },
       {
         exclude: /node_modules/,
@@ -40,9 +40,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new ExtractTextPlugin('css/apollo.css'),
-  ],
+  plugins: [new ExtractTextPlugin('css/apollo.css')],
   resolve: {
     extensions: ['.js', '.jsx'],
   },

@@ -13,12 +13,8 @@ const defaultProps = {
   indented: false,
 };
 
-const FormText = (props) => {
-  const {
-    className,
-    indented,
-    ...other
-  } = props;
+const FormText = props => {
+  const {className, indented, ...other} = props;
 
   const classes = classNames(
     className,
@@ -26,9 +22,7 @@ const FormText = (props) => {
     indented ? styles['form-text-indented'] : '',
   );
 
-  return (
-    <div {...other} className={classes} />
-  );
+  return <div {...other} className={classes} />;
 };
 
 FormText.propTypes = propTypes;

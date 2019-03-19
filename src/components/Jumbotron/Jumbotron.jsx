@@ -13,21 +13,12 @@ const defaultProps = {
   tag: 'div',
 };
 
-const Jumbotron = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
+const Jumbotron = props => {
+  const {className, tag: Tag, ...other} = props;
 
-  const classes = classNames(
-    className,
-    styles.jumbotron,
-  );
+  const classes = classNames(className, styles.jumbotron);
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 Jumbotron.propTypes = propTypes;

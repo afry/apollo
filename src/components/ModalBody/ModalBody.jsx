@@ -13,21 +13,9 @@ const defaultProps = {
   tag: 'div',
 };
 
-const ModalBody = (props) => {
-  const {
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
-  const classes = classNames(
-    className,
-    styles['modal-body']
-  );
-
-  return (
-    <Tag {...other} className={classes} />
-  );
+const ModalBody = ({className, tag: Tag, ...other}) => {
+  const classes = classNames(className, styles['modal-body']);
+  return <Tag {...other} className={classes} />;
 };
 
 ModalBody.propTypes = propTypes;

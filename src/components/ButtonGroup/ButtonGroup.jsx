@@ -13,26 +13,17 @@ const propTypes = {
 const defaultProps = {
   className: undefined,
   segmented: false,
-  tag: 'div'
+  tag: 'div',
 };
 
-const ButtonGroup = (props) => {
-  const {
-    className,
-    segmented,
-    tag: Tag,
-    ...other
-  } = props;
-
+const ButtonGroup = ({className, segmented, tag: Tag, ...other}) => {
   const classes = classNames(
     className,
     styles['button-group'],
     segmented ? styles['button-group-segmented'] : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 ButtonGroup.propTypes = propTypes;

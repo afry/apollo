@@ -15,13 +15,8 @@ const defaultProps = {
   valid: false,
 };
 
-const FormFeedback = (props) => {
-  const {
-    className,
-    indented,
-    valid,
-    ...other
-  } = props;
+const FormFeedback = props => {
+  const {className, indented, valid, ...other} = props;
 
   const classes = classNames([
     className,
@@ -30,13 +25,10 @@ const FormFeedback = (props) => {
     indented ? styles['form-feedback-indented'] : '',
   ]);
 
-  return (
-    <div {...other} className={classes} />
-  );
+  return <div {...other} className={classes} />;
 };
 
 FormFeedback.propTypes = propTypes;
 FormFeedback.defaultProps = defaultProps;
 
 export default FormFeedback;
-

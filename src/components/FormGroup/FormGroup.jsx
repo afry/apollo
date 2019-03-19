@@ -15,24 +15,17 @@ const defaultProps = {
   inline: false,
 };
 
-const FormGroup = (props) => {
-  const {
-    check,
-    className,
-    inline,
-    ...other
-  } = props;
+const FormGroup = props => {
+  const {check, className, inline, ...other} = props;
 
   const classes = classNames(
     className,
     styles['form-group'],
     inline ? styles['form-group-inline'] : '',
-    check ? styles['form-group-check'] : ''
+    check ? styles['form-group-check'] : '',
   );
 
-  return (
-    <div {...other} className={classes} />
-  );
+  return <div {...other} className={classes} />;
 };
 
 FormGroup.propTypes = propTypes;

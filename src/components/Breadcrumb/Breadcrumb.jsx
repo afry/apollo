@@ -15,23 +15,14 @@ const defaultProps = {
   tag: 'a',
 };
 
-const Breadcrumb = (props) => {
-  const {
-    active,
-    className,
-    tag: Tag,
-    ...other
-  } = props;
-
+const Breadcrumb = ({active, className, tag: Tag, ...other}) => {
   const classes = classNames(
     className,
     styles.breadcrumb,
     active ? styles.active : '',
   );
 
-  return (
-    <Tag {...other} className={classes} />
-  );
+  return <Tag {...other} className={classes} />;
 };
 
 Breadcrumb.propTypes = propTypes;

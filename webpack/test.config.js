@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const baseConfig = require('./base.config.js');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const baseConfig = require('./base.config.js');
 
 module.exports = merge(baseConfig, {
   devServer: {
@@ -31,5 +31,5 @@ module.exports = merge(baseConfig, {
       template: './playground/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-  ]
+  ],
 });

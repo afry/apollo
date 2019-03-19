@@ -16,19 +16,10 @@ const defaultProps = {
   type: undefined,
 };
 
-const Icon = (props) => {
-  const {
-    className,
-    size,
-    type,
-    ...other
-  } = props;
+const Icon = props => {
+  const {className, size, type, ...other} = props;
 
-  const classes = classNames(
-    className,
-    styles.icon,
-    styles[`icon-${size}`]
-  );
+  const classes = classNames(className, styles.icon, styles[`icon-${size}`]);
 
   return (
     <svg {...other} className={classes} viewBox="0 0 1024 1024">
