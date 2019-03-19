@@ -4,7 +4,7 @@
 
 ```jsx
 import React from 'react';
-import {Badge} from '@afconsult/apollo';
+import { Badge } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

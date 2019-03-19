@@ -21,9 +21,7 @@ const defaultProps = {
   tag: 'nav',
 };
 
-const Navbar = props => {
-  const {className, dark, expand, fixed, tag: Tag, ...other} = props;
-
+const Navbar = ({ className, dark, expand, fixed, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles.navbar,

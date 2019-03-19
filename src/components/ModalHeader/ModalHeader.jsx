@@ -26,13 +26,14 @@ class ModalHeader extends React.Component {
   }
 
   handleToggle(e) {
-    this.context.onToggle(e);
+    const { onToggle } = this.context;
+    onToggle(e);
   }
 
   render() {
-    const {children, className, tag: Tag, ...other} = this.props;
+    const { children, className, tag: Tag, ...other } = this.props;
 
-    const {onToggle} = this.context;
+    const { onToggle } = this.context;
 
     const classes = classNames(className, styles['modal-header']);
 

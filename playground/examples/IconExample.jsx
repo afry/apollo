@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Icon} from '../../src';
+import { Container, Icon } from '../../src';
 
 const IconExample = () => (
   <Container>

@@ -14,7 +14,7 @@ module.exports = merge(baseConfig, {
   },
   mode: 'production',
   output: {
-    filename: 'js/apollo.min.js',
+    filename: 'js/apollo.js',
     libraryTarget: 'umd',
   },
   plugins: [

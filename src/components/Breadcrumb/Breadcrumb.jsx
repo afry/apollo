@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'a',
 };
 
-const Breadcrumb = ({active, className, tag: Tag, ...other}) => {
+const Breadcrumb = ({ active, className, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles.breadcrumb,

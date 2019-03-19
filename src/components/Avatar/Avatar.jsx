@@ -25,22 +25,22 @@ class Avatar extends React.Component {
   constructor(props) {
     super(props);
     this.handleError = this.handleError.bind(this);
-    this.state = {error: false};
+    this.state = { error: false };
   }
 
   // eslint-disable-next-line no-unused-vars
   componentWillReceiveProps(nextProps) {
-    this.setState({error: false});
+    this.setState({ error: false });
   }
 
   handleError() {
-    this.setState({error: true});
+    this.setState({ error: true });
   }
 
   render() {
-    const {error} = this.state;
-    let {initials} = this.props;
-    const {className, name, size, tag: Tag, ...other} = this.props;
+    const { error } = this.state;
+    let { initials } = this.props;
+    const { className, name, size, tag: Tag, ...other } = this.props;
 
     const classes = classNames(
       className,

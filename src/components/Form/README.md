@@ -4,7 +4,7 @@
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
+import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -22,7 +22,7 @@ export default class Example extends React.PureComponent {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
+import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -40,7 +40,7 @@ export default class Example extends React.PureComponent {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, FormFeedback, Label, Input} from '@afconsult/apollo';
+import { Form, FormGroup, FormFeedback, Label, Input } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -91,7 +91,7 @@ All input components also support [HTML DOM Input](https://www.w3schools.com/tag
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, Checkbox} from '@afconsult/apollo';
+import { Form, FormGroup, Label, Checkbox } from '@afconsult/apollo';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -100,7 +100,7 @@ export default class Example extends React.Component {
   }
 
   handleChange(event) {
-    const {currentTarget} = event;
+    const { currentTarget } = event;
     console.log(`Checked: ${currentTarget.checked}`);
   }
 
@@ -137,7 +137,7 @@ export default class Example extends React.Component {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, Input} from '@afconsult/apollo';
+import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -168,7 +168,7 @@ export default class Example extends React.PureComponent {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, RadioButton} from '@afconsult/apollo';
+import { Form, FormGroup, Label, RadioButton } from '@afconsult/apollo';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -177,7 +177,7 @@ export default class Example extends React.Component {
   }
 
   handleChange(event) {
-    const {currentTarget} = event;
+    const { currentTarget } = event;
   }
 
   render() {
@@ -224,7 +224,13 @@ export default class Example extends React.Component {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, Select, SelectOption} from '@afconsult/apollo';
+import {
+  Form,
+  FormGroup,
+  Label,
+  Select,
+  SelectOption,
+} from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {
@@ -266,7 +272,7 @@ export default class Example extends React.PureComponent {
 
 ```jsx
 import React from 'react';
-import {Form, FormGroup, Label, TextArea} from '@afconsult/apollo';
+import { Form, FormGroup, Label, TextArea } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

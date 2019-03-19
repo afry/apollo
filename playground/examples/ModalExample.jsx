@@ -11,17 +11,17 @@ import {
 class ModalExample extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = { open: false };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle() {
-    this.setState({open: !this.state.open});
+    this.setState({ open: !this.state.open });
   }
 
   render() {
     return (
-      <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+      <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Modal</h1>
         <Button onClick={this.handleToggle}>Open Modal</Button>
 

@@ -17,7 +17,7 @@ const defaultProps = {
   value: undefined,
 };
 
-const SelectOption = ({className, ...other}) => {
+const SelectOption = ({ className, ...other }) => {
   const classes = classNames(className, styles['select-option']);
   return <option {...other} className={classes} />;
 };

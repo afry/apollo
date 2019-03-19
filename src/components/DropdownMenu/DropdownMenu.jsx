@@ -20,9 +20,9 @@ const contextTypes = {
 };
 
 const DropdownMenu = (props, context) => {
-  const {className, right, tag: Tag, ...other} = props;
+  const { className, right, tag: Tag, ...other } = props;
 
-  const {open} = context;
+  const { open } = context;
 
   const classes = classNames(
     className,

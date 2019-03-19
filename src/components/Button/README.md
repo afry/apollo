@@ -4,7 +4,7 @@
 
 ```javascript
 import React from 'react';
-import {Button} from '@afconsult/apollo';
+import { Button } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

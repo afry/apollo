@@ -13,7 +13,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const ModalBody = ({className, tag: Tag, ...other}) => {
+const ModalBody = ({ className, tag: Tag, ...other }) => {
   const classes = classNames(className, styles['modal-body']);
   return <Tag {...other} className={classes} />;
 };

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, ButtonGroup, Container} from '../../src';
+import { Button, ButtonGroup, Container } from '../../src';
 
 const ButtonExample = () => (
-  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Button</h1>
     <ButtonGroup>
       <Button color="primary">primary</Button>

@@ -27,7 +27,7 @@ const defaultProps = {
   value: undefined,
 };
 
-const Select = ({className, innerRef, ...other}) => {
+const Select = ({ className, innerRef, ...other }) => {
   const classes = classNames(className, styles.select);
 
   return (

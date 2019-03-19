@@ -11,9 +11,9 @@ import {
 } from '../../src';
 
 const CardExample = () => (
-  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Cards</h1>
-    <CardGroup style={{height: '394px', width: '75%'}}>
+    <CardGroup style={{ height: '394px', width: '75%' }}>
       <Card dark>
         <CardImage src="http://via.placeholder.com/256x180" />
         <CardBody>
@@ -53,7 +53,7 @@ const CardExample = () => (
       </Card>
     </CardGroup>
     <br />
-    <CardGroup segmented style={{height: '394', width: '75%'}}>
+    <CardGroup segmented style={{ height: '394', width: '75%' }}>
       <Card>
         <CardImage src="http://via.placeholder.com/256x180" />
         <CardBody>

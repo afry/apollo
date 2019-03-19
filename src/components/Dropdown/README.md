@@ -16,7 +16,7 @@ import {
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = { open: false };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
@@ -27,7 +27,7 @@ export default class Example extends React.Component {
   }
 
   render() {
-    const {open} = this.state;
+    const { open } = this.state;
 
     return (
       <Dropdown onToggle={this.handleToggle} open={open}>

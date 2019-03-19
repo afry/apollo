@@ -16,7 +16,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const ButtonGroup = ({className, segmented, tag: Tag, ...other}) => {
+const ButtonGroup = ({ className, segmented, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles['button-group'],

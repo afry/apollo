@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 const Jumbotron = props => {
-  const {className, tag: Tag, ...other} = props;
+  const { className, tag: Tag, ...other } = props;
 
   const classes = classNames(className, styles.jumbotron);
 

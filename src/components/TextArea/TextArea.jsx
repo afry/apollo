@@ -41,7 +41,13 @@ const defaultProps = {
   value: undefined,
 };
 
-const TextArea = ({className, columns, innerRef, resize: Resize, ...other}) => {
+const TextArea = ({
+  className,
+  columns,
+  innerRef,
+  resize: Resize,
+  ...other
+}) => {
   const classes = classNames(className, styles.textarea);
 
   return (
@@ -50,7 +56,7 @@ const TextArea = ({className, columns, innerRef, resize: Resize, ...other}) => {
       ref={innerRef}
       className={classes}
       cols={columns}
-      style={{resize: Resize}}
+      style={{ resize: Resize }}
     />
   );
 };

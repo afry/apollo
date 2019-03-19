@@ -16,7 +16,7 @@ const defaultProps = {
 };
 
 const FormGroup = props => {
-  const {check, className, inline, ...other} = props;
+  const { check, className, inline, ...other } = props;
 
   const classes = classNames(
     className,
