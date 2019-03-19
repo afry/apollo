@@ -1,9 +1,12 @@
 # Apollo Design System
+
+Design system for Enterprise Web Apps
+
 [![npm version](https://badge.fury.io/js/%40afconsult%2Fapollo.svg)](https://badge.fury.io/js/%40afconsult%2Fapollo)
 [![Build Status](https://travis-ci.org/afconsult/apollo.svg?branch=develop)](https://travis-ci.org/afconsult/apollo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<br />
-Design system for Enterprise Web Apps
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 
 ## Getting Started
 ### Install
