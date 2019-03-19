@@ -5,11 +5,11 @@ class BasicDropdown extends React.Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
-    this.state = { open: false };
+    this.state = {open: false};
   }
 
   handleToggle() {
-    this.setState({ open: !this.state.open });
+    this.setState({open: !this.state.open});
   }
 
   render() {

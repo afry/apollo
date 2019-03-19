@@ -1,6 +1,7 @@
 # Mention
 
 #### Example
+
 ```jsx
 import React from 'react';
 import { Mention } from '@afconsult/apollo';
@@ -17,6 +18,7 @@ const Example extends React.PureComponent {
 ```
 
 #### Props
-| Name      | PropType | Default      | Description |
-|-----------|----------|--------------|-------------|
-| children  | `[func, node, string]`  | `undefined` | Collection of DOM child elements. |
+
+| Name     | PropType               | Default     | Description                       |
+| -------- | ---------------------- | ----------- | --------------------------------- |
+| children | `[func, node, string]` | `undefined` | Collection of DOM child elements. |

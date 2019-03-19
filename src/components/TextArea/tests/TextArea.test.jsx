@@ -1,6 +1,6 @@
 /* global define, it, describe, expect */
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import TextArea from '../TextArea';
 
 describe('<TextArea />', () => {

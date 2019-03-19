@@ -1,6 +1,6 @@
 /* global define, describe, it, expect, jest */
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Checkbox from '../Checkbox';
 
 describe('<Checkbox />', () => {

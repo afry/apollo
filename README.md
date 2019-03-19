@@ -1,4 +1,5 @@
 # Apollo Design System
+
 [![npm version](https://badge.fury.io/js/%40afconsult%2Fapollo.svg)](https://badge.fury.io/js/%40afconsult%2Fapollo)
 [![Build Status](https://travis-ci.org/afconsult/apollo.svg?branch=develop)](https://travis-ci.org/afconsult/apollo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,28 +7,37 @@
 Design system for Enterprise Web Apps
 
 ## Getting Started
+
 ### Install
+
 Install with npm:
+
 ```bash
 npm install @afconsult/apollo --save
 ```
+
 Install with [Yarn](https://yarnpkg.com/en/):
+
 ```bash
 yarn add @afconsult/apollo
 ```
 
 ### Example
+
 1. Import the stylesheet:
+
 ```jsx
 import '@afconsult/apollo/dist/css/apollo.css';
 ```
 
 2. Import required apollo components:
+
 ```jsx
-import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
+import {Button, Form, FormGroup, Input, Label} from '@afconsult/apollo';
 ```
 
 3. Use the components:
+
 ```jsx
 const Example = () => {
   return (
@@ -43,6 +53,7 @@ const Example = () => {
 ```
 
 ### Components
+
 - [Alert](./src/components/Alert)
 - [Avatar](./src/components/Avatar)
 - [Badge](./src/components/Badge)
@@ -63,36 +74,45 @@ const Example = () => {
 - [Tag](./src/components/Tag)
 
 ## Contribute
+
 Feel free to [create an issue or feature request](https://github.com/afconsult/apollo/issues/new).
 
 ### Development
+
 1. Install dependencies:
+
 ```bash
 yarn install
 ```
 
 2. Run examples at `http://localhost:8080/` with webpack dev server:
+
 ```bash
 yarn run start
 ```
 
 ### Release
+
 Note: you must have the GITHUB_TOKEN environment variable set to a valid GitHub token with write access to your repo.
 
 1. Run release script and follow the instructions:
+
 ```bash
 yarn run release
 ```
 
 2. Run publish script to publish apollo to npm.
+
 ```bash
 yarn run publish
 ```
 
 ## Authors
+
 **Jon Wahlström** ([jonwa](https://github.com/jonwa))
 
 See also the list of [contributors](https://github.com/afconsult/apollo/contributors).
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

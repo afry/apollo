@@ -21,20 +21,19 @@
     "README.md"
   ],
   "scripts": {
+    "start": "webpack-dev-server --open --config ./webpack/test.config.js",
     "build:dev": "webpack --config ./webpack/dev.config.js",
     "build:prod": "webpack --config ./webpack/prod.config.js",
     "build": "npm-run-all build:prod build:dev",
+    "lint": "prettier --write \"**/*.{html,js,jsx,json,md,yaml}\" && eslint --fix \"**/*.{js,jsx}\"",
+    "lint:ci": "prettier --check \"**/*.{html,js,jsx,json,md,yaml}\" && eslint \"**/*.{js,jsx}\"",
     "check:ci": "npm-run-all lint test:ci",
     "check": "npm-run-all lint test",
-    "publish": "cross-var yarn publish --new-version $npm_package_version",
-    "release": "release-it --config ./.release-it.json -n",
-    "start": "webpack-dev-server --open --config ./webpack/test.config.js",
-    "test:ci": "yarn run test --runInBand",
-    "test:watch": "yarn run test --watch",
     "test": "jest",
+    "test:ci": "yarn run test --runInBand",
     "precommit": "lint-staged",
-    "format": "prettier --write \"src/**/*.{js, jsx}\"",
-    "lint": "eslint --fix \"src/**/*.{js, jsx}\""
+    "publish": "cross-var yarn publish --new-version $npm_package_version",
+    "release": "release-it --config ./.release-it.json -n"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -111,6 +110,13 @@
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
     }
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {

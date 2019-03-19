@@ -15,7 +15,7 @@ import {
 } from '../../src';
 
 const FormExample = () => (
-  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
+  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
     <h1>Form</h1>
     <Form inline>
       <h3>Input</h3>
@@ -73,18 +73,26 @@ const FormExample = () => (
     <Form>
       <h3>Select</h3>
       <FormGroup>
-        <Label for="select" value="">Select</Label>
+        <Label for="select" value="">
+          Select
+        </Label>
         <Select id="select" required value="first">
-          <SelectOption disabled hidden value="">Select Option</SelectOption>
+          <SelectOption disabled hidden value="">
+            Select Option
+          </SelectOption>
           <SelectOption value="first">1</SelectOption>
           <SelectOption value="second">2</SelectOption>
           <SelectOption value="third">3</SelectOption>
         </Select>
       </FormGroup>
       <FormGroup>
-        <Label for="disabled_select" value="">Disabled</Label>
+        <Label for="disabled_select" value="">
+          Disabled
+        </Label>
         <Select disabled id="disabled_select" required value="">
-          <SelectOption disabled hidden value="">Select Option</SelectOption>
+          <SelectOption disabled hidden value="">
+            Select Option
+          </SelectOption>
           <SelectOption value="first">1</SelectOption>
           <SelectOption value="second">2</SelectOption>
           <SelectOption value="third">3</SelectOption>
@@ -131,19 +139,31 @@ const FormExample = () => (
         <FormGroup check>
           <Label for="radio_button_with_form_text">
             <RadioButton id="radio_button_with_form_text" /> Default
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label for="focused_radio_button_with_form_text">
-            <RadioButton checked id="focused_radio_button_with_form_text" /> Focus
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <RadioButton checked id="focused_radio_button_with_form_text" />{' '}
+            Focus
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label for="disabled_radio_button_with_form_text">
-            <RadioButton checked disabled id="disabled_radio_button_with_form_text" /> Disabled
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <RadioButton
+              checked
+              disabled
+              id="disabled_radio_button_with_form_text"
+            />{' '}
+            Disabled
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
       </FormGroup>
@@ -164,7 +184,8 @@ const FormExample = () => (
         </FormGroup>
         <FormGroup check>
           <Label for="disabled_radio_button_inlined">
-            <RadioButton checked disabled id="disabled_radio_button_inlined" /> Disabled
+            <RadioButton checked disabled id="disabled_radio_button_inlined" />{' '}
+            Disabled
           </Label>
         </FormGroup>
       </FormGroup>
@@ -197,19 +218,25 @@ const FormExample = () => (
         <FormGroup check>
           <Label for="exampleFormTextCheckboxDefault">
             <Checkbox id="exampleFormTextCheckboxDefault" /> Default
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label for="checkboxFormTextHover">
             <Checkbox checked id="checkboxFormTextHover" /> Focus
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label for="checkboxFormTextDisabled">
             <Checkbox checked disabled id="checkboxFormTextDisabled" /> Disabled
-            <FormText indented>Example indented help text that remains unchanged.</FormText>
+            <FormText indented>
+              Example indented help text that remains unchanged.
+            </FormText>
           </Label>
         </FormGroup>
       </FormGroup>

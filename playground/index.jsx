@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { AppContainer } from 'react-hot-loader';
+import {AppContainer} from 'react-hot-loader';
 
 import Playground from './Playground';
 
