@@ -14,13 +14,13 @@ describe('<NavLink />', () => {
 
   describe('disabled', () => {
     it('sets the disabled attribute on the navlink', () => {
-      const button = shallow(<NavLink disabled />);
-      expect(button.prop('disabled')).toBe(true);
+      const navlink = shallow(<NavLink disabled />);
+      expect(navlink.prop('disabled')).toBe(true);
     });
 
     it('sets the disabled attribute on the navlink', () => {
-      const button = shallow(<NavLink disabled={false} />);
-      expect(button.prop('disabled')).toBe(false);
+      const navlink = shallow(<NavLink />);
+      expect(navlink.prop('disabled')).toBe(false);
     });
   });
 });

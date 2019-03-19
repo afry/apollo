@@ -40,19 +40,19 @@
     "react-lottie": "1.2.3"
   },
   "peerDependencies": {
+    "prop-types": ">=15",
     "react": ">=16.8",
-    "react-dom": ">=16.8",
-    "prop-types": ">=15"
+    "react-dom": ">=16.8"
   },
   "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/preset-env": "7.4.0",
+    "@babel/preset-react": "7.0.0",
     "autoprefixer": "^8.0.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-jest": "^23.6.0",
+    "babel-eslint": "8.2.1",
+    "babel-jest": "24.5.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "commitizen": "3.0.7",
     "cross-env": "^5.1.3",
@@ -60,9 +60,8 @@
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
     "cz-conventional-changelog": "2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
     "eslint": "5.15.3",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "4.1.0",
@@ -75,9 +74,9 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
     "husky": "1.3.1",
-    "jest": "^23.6.0",
-    "jest-css-modules-transform": "^1.0.3",
-    "jest-enzyme": "^4.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "24.5.0",
+    "jest-enzyme": "7.0.2",
     "lint-staged": "8.1.5",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
@@ -95,8 +94,6 @@
     "react-hot-loader": "^3.1.3",
     "react-test-renderer": "^16.2.0",
     "release-it": "^8.0.1",
-    "renamer": "^0.6.1",
-    "rimraf": "^2.6.2",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "4.6.0",
@@ -107,12 +104,11 @@
     "webpack-merge": "^4.1.2"
   },
   "jest": {
-    "testURL": "http://localhost:8080",
-    "setupFiles": [
+    "setupFilesAfterEnv": [
       "./tests/setup.js"
     ],
     "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
+      "\\.(scss|sass|css)$": "identity-obj-proxy"
     }
   },
   "config": {

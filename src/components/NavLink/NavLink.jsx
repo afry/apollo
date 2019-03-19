@@ -24,13 +24,13 @@ const defaultProps = {
 const NavLink = ({
   active,
   className,
-  disabled,
   innerRef,
   onClick,
   tag: Tag,
   ...other
 }) => {
   const handleClick = e => {
+    const { disabled } = other;
     if (disabled) {
       e.preventDefault();
       return;
