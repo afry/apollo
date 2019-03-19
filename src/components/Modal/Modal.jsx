@@ -42,11 +42,14 @@ const childContextTypes = {
 class Modal extends React.Component {
   constructor(props) {
     super(props);
+    const { open } = this.props;
+
     this.state = {
       animationType: 'show',
-      open: this.props.open,
+      open,
     };
-    this._dialogRef = React.createRef();
+
+    this.dialogRef = React.createRef();
     this.setFocus = this.setFocus.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
     this.handleOpened = this.handleOpened.bind(this);
@@ -56,59 +59,70 @@ class Modal extends React.Component {
   }
 
   getChildContext() {
+    const { onToggle } = this.props;
     return {
-      onToggle: this.props.onToggle,
+      onToggle,
     };
   }
 
   componentDidMount() {
-    if (this.props.onEnter) {
-      this.props.onEnter();
+    const { onEnter, autoFocus } = this.props;
+    const { open } = this.props;
+
+    if (onEnter) {
+      onEnter();
     }
 
-    if (this.state.open && this.props.autoFocus) {
+    if (open && autoFocus) {
       this.setFocus();
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.open && nextProps.open) {
+    const { open } = this.props;
+    if (!open && nextProps.open) {
       this.handleOpened();
-    } else if (this.props.open && !nextProps.open) {
+    } else if (open && !nextProps.open) {
       this.handleClosed();
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.autoFocus && this.state.open && !prevState.open) {
+    const { autoFocus } = this.props;
+    const { open } = this.state;
+
+    if (autoFocus && open && !prevState.open) {
       this.setFocus();
     }
   }
 
   componentWillUnmount() {
-    if (this.props.onExit) {
-      this.props.onExit();
+    const { onExit } = this.props;
+    if (onExit) {
+      onExit();
     }
   }
 
   setFocus() {
-    if (!this._dialogRef) {
+    if (!this.dialogRef) {
       return;
     }
 
-    const {parentNode} = this._dialogRef.current;
+    const { parentNode } = this.dialogRef.current;
     if (parentNode && typeof parentNode.focus === 'function') {
       parentNode.focus();
     }
   }
 
   handleToggle(e) {
-    if (!this.props.onToggle) {
+    const { onToggle } = this.props;
+
+    if (!onToggle) {
       e.preventDefault();
       return;
     }
 
-    this.props.onToggle(e);
+    onToggle(e);
   }
 
   handleClosed() {
@@ -123,29 +137,33 @@ class Modal extends React.Component {
       open: true,
     });
 
-    if (this.props.onOpened) {
-      this.props.onOpened();
+    const { onOpened } = this.props;
+
+    if (onOpened) {
+      onOpened();
     }
   }
 
   handleKeyboard(e) {
-    if (!this.props.onToggle) {
+    const { keyboard, open, onToggle } = this.props;
+
+    if (!onToggle) {
       e.preventDefault();
       return;
     }
 
-    const {keyboard, open} = this.props;
     if (open && keyboard && e.keyCode === 27) {
-      this.props.onToggle(e);
+      onToggle(e);
     }
   }
 
   handleAnimationEnd() {
-    const {animationType} = this.state;
+    const { onClosed } = this.props;
+    const { animationType } = this.state;
     if (animationType === 'hide') {
-      this.setState({open: false});
-      if (this.props.onClosed) {
-        this.props.onClosed();
+      this.setState({ open: false });
+      if (onClosed) {
+        onClosed();
       }
     }
   }
@@ -157,18 +175,12 @@ class Modal extends React.Component {
       className,
       contentClassName,
       dialogClassName,
-      keyboard, // eslint-disable-line no-unused-vars
-      open, // eslint-disable-line no-unused-vars
-      onClosed, // eslint-disable-line no-unused-vars
-      onEnter, // eslint-disable-line no-unused-vars
-      onExit, // eslint-disable-line no-unused-vars
-      onOpened, // eslint-disable-line no-unused-vars
       ...other
     } = this.props;
 
-    const {animationType} = this.state;
+    const { animationType, open: isOpen } = this.state;
 
-    if (!this.state.open) {
+    if (!isOpen) {
       return null;
     }
 
@@ -182,7 +194,7 @@ class Modal extends React.Component {
       onAnimationEnd: this.handleAnimationEnd,
       onKeyUp: this.handleKeyboard,
       role: 'dialog',
-      style: {display: 'block'},
+      style: { display: 'block' },
       tabIndex: '-1',
     };
 
@@ -201,7 +213,7 @@ class Modal extends React.Component {
     return (
       <div>
         <div {...other} {...modalAttributes} className={modalClasses}>
-          <div ref={this._dialogRef} className={dialogClasses}>
+          <div ref={this.dialogRef} className={dialogClasses}>
             <div className={contentClasses}>{children}</div>
           </div>
         </div>

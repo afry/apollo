@@ -22,7 +22,7 @@ const defaultProps = {
 /* eslint-disable react/prefer-stateless-function */
 class Form extends React.PureComponent {
   render() {
-    const {className, innerRef, inline, ...other} = this.props;
+    const { className, innerRef, inline, ...other } = this.props;
 
     const classes = classNames(
       className,

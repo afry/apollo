@@ -17,7 +17,7 @@ const defaultProps = {
 };
 
 const Icon = props => {
-  const {className, size, type, ...other} = props;
+  const { className, size, type, ...other } = props;
 
   const classes = classNames(className, styles.icon, styles[`icon-${size}`]);
 

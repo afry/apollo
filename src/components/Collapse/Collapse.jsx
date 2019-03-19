@@ -17,9 +17,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const Collapse = props => {
-  const {className, navbar, open, tag: Tag, ...other} = props;
-
+const Collapse = ({ className, navbar, open, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles.collapse,

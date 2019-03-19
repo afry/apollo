@@ -4,7 +4,7 @@
 
 ```jsx
 import React from 'react';
-import {Breadcrumbs, Breadcrumb} from '@afconsult/apollo';
+import { Breadcrumbs, Breadcrumb } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

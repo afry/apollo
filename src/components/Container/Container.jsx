@@ -15,9 +15,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const Container = props => {
-  const {className, fluid, tag: Tag, ...other} = props;
-
+const Container = ({ className, fluid, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     fluid ? styles['container-fluid'] : styles.container,

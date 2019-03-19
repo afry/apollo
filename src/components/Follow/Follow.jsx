@@ -30,7 +30,7 @@ class Follow extends React.Component {
   }
 
   handleToggle(e) {
-    const {onToggle} = this.props;
+    const { onToggle } = this.props;
     if (!onToggle) {
       return;
     }
@@ -38,7 +38,14 @@ class Follow extends React.Component {
   }
 
   render() {
-    const {active, children, className, icon, onToggle, ...other} = this.props;
+    const {
+      active,
+      children,
+      className,
+      icon,
+      onToggle,
+      ...other
+    } = this.props;
 
     const classes = classNames(
       className,

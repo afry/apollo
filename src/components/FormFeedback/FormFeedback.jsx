@@ -16,7 +16,7 @@ const defaultProps = {
 };
 
 const FormFeedback = props => {
-  const {className, indented, valid, ...other} = props;
+  const { className, indented, valid, ...other } = props;
 
   const classes = classNames([
     className,

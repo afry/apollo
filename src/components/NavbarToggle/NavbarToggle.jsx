@@ -46,7 +46,7 @@ const NavbarToggle = ({
     disabled ? styles.disabled : '',
   );
 
-  let {type} = other;
+  let { type } = other;
   if (Tag !== 'button') {
     type = undefined;
   }

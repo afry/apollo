@@ -1,6 +1,6 @@
-/* global define, it, describe, expect, jest */
+/* global it, describe, expect, jest */
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import RadioButton from '../RadioButton';
 
 describe('<RadioButton />', () => {

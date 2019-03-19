@@ -13,11 +13,8 @@ const defaultProps = {
   tag: 'a',
 };
 
-const CardLink = props => {
-  const {className, tag: Tag, ...other} = props;
-
+const CardLink = ({ className, tag: Tag, ...other }) => {
   const classes = classNames(className, styles['card-link']);
-
   return <Tag {...other} className={classes} />;
 };
 

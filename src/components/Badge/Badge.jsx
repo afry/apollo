@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'span',
 };
 
-const Badge = ({className, color, tag: Tag, ...other}) => {
+const Badge = ({ className, color, tag: Tag, ...other }) => {
   const classes = classNames(className, styles.badge, styles[`badge-${color}`]);
   return <Tag {...other} className={classes} />;
 };

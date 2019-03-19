@@ -47,7 +47,7 @@ For the most basic use-case a [Uncontrolled Follow](../UncontrolledFollow) compo
 
 ```jsx
 import React from 'react';
-import {UncontrolledFollow} from '@afconsult/apollo';
+import { UncontrolledFollow } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

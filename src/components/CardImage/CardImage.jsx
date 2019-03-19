@@ -15,9 +15,7 @@ const defaultProps = {
   tag: 'img',
 };
 
-const CardImage = props => {
-  const {className, placement, tag: Tag, ...other} = props;
-
+const CardImage = ({ className, placement, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles['card-image'],

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -13,7 +15,7 @@ const defaultProps = {
   for: undefined,
 };
 
-const Label = ({className, for: htmlFor, ...other}) => {
+const Label = ({ className, for: htmlFor, ...other }) => {
   const classes = classNames(className, styles.label);
   return <label {...other} className={classes} htmlFor={htmlFor} />;
 };

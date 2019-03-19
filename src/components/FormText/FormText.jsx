@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 const FormText = props => {
-  const {className, indented, ...other} = props;
+  const { className, indented, ...other } = props;
 
   const classes = classNames(
     className,

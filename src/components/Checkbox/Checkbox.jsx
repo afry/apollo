@@ -27,20 +27,16 @@ const defaultProps = {
   value: undefined,
 };
 
-class Checkbox extends React.PureComponent {
-  render() {
-    const {className, innerRef, ...other} = this.props;
+const Checkbox = ({ className, innerRef, ...other }) => {
+  const classes = classNames(className, styles.checkbox);
 
-    const classes = classNames(className, styles.checkbox);
-
-    return (
-      <div className={classes}>
-        <input {...other} ref={innerRef} type="checkbox" />
-        <span className={classNames(styles.checkmark)} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classes}>
+      <input {...other} ref={innerRef} type="checkbox" />
+      <span className={classNames(styles.checkmark)} />
+    </div>
+  );
+};
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;

@@ -5,6 +5,7 @@ import Loader from '../Loader';
 import * as styles from './Button.css';
 
 const propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf([
     'primary',
@@ -28,6 +29,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: undefined,
   className: undefined,
   color: 'secondary',
   disabled: false,
@@ -71,7 +73,7 @@ const Button = ({
     loading && styles['button-loading'],
   );
 
-  let {type, tag: Tag} = other;
+  let { type, tag: Tag } = other;
 
   if (other.href) {
     Tag = 'a';

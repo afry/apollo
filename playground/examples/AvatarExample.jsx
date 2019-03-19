@@ -1,8 +1,8 @@
 import React from 'react';
-import {Avatar, Container} from '../../src';
+import { Avatar, Container } from '../../src';
 
 const AvatarExample = () => (
-  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Avatar</h1>
     <div>
       <h4>X-Small</h4>

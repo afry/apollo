@@ -32,7 +32,7 @@ class Tag extends React.Component {
   }
 
   handleToggle(e) {
-    const {onToggle} = this.props;
+    const { onToggle } = this.props;
     if (!onToggle) {
       return;
     }

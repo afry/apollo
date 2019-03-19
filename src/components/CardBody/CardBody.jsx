@@ -13,7 +13,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const CardBody = ({className, tag: Tag, ...other}) => {
+const CardBody = ({ className, tag: Tag, ...other }) => {
   const classes = classNames(className, styles['card-body']);
   return <Tag {...other} className={classes} />;
 };

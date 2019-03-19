@@ -4,7 +4,7 @@
 
 ```jsx
 import React from 'react';
-import {Alert} from '@afconsult/apollo';
+import { Alert } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

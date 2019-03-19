@@ -5,15 +5,15 @@ class UncontrolledFollow extends React.Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
-    this.state = {active: false};
+    this.state = { active: false };
   }
 
   handleToggle() {
-    this.setState(prevState => ({active: !prevState.active}));
+    this.setState(prevState => ({ active: !prevState.active }));
   }
 
   render() {
-    const {active} = this.state;
+    const { active } = this.state;
 
     return (
       <Follow {...this.props} active={active} onToggle={this.handleToggle} />

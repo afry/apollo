@@ -6,7 +6,7 @@ Loader component is a wrapper of [React Lottie](https://www.npmjs.com/package/re
 
 ```jsx
 import React from 'react';
-import {Loader} from '@afconsult/apollo';
+import { Loader } from '@afconsult/apollo';
 
 export default class Example extends React.PureComponent {
   render() {

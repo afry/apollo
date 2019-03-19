@@ -1,4 +1,4 @@
-/* global define, it, describe, expect, jest */
+/* global it, describe, expect */
 
 describe('<Label />', () => {
   it('should be 3', () => {

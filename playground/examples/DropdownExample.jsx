@@ -13,17 +13,17 @@ class DropdownExample extends React.Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
-    this.state = {open: false};
+    this.state = { open: false };
   }
 
   handleToggle() {
     const isOpen = !this.state.open;
-    this.setState({open: isOpen});
+    this.setState({ open: isOpen });
   }
 
   render() {
     return (
-      <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+      <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Dropdown</h1>
         <Dropdown onToggle={this.handleToggle} open={this.state.open}>
           <DropdownToggle>Dropdown</DropdownToggle>

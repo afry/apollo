@@ -1,10 +1,10 @@
 import React from 'react';
-import {Container, Follow, UncontrolledFollow} from '../../src';
+import { Container, Follow, UncontrolledFollow } from '../../src';
 
 class FollowExample extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {active: false};
+    this.state = { active: false };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
@@ -15,10 +15,10 @@ class FollowExample extends React.Component {
   }
 
   render() {
-    const {active} = this.state;
+    const { active } = this.state;
 
     return (
-      <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+      <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
         <h1>Follow</h1>
         <div>
           <Follow

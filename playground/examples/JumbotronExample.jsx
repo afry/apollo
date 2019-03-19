@@ -1,8 +1,8 @@
 import React from 'react';
-import {Container, Badge, Jumbotron} from '../../src';
+import { Container, Badge, Jumbotron } from '../../src';
 
 const JumbotronExample = () => (
-  <Container style={{marginBottom: '50px', marginTop: '50px'}}>
+  <Container style={{ marginBottom: '50px', marginTop: '50px' }}>
     <h1>Jumbotron</h1>
     <Jumbotron>
       <Badge>PROJECT</Badge>

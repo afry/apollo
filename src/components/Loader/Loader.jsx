@@ -19,7 +19,7 @@ const defaultProps = {
   width: 250,
 };
 
-const Loader = ({autoPlay, height, loop, width}) => {
+const Loader = ({ autoPlay, height, loop, width }) => {
   const defaultOptions = {
     animationData,
     autoplay: autoPlay,

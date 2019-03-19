@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const Card = ({className, dark, tag: Tag, ...other}) => {
+const Card = ({ className, dark, tag: Tag, ...other }) => {
   const classes = classNames(
     className,
     styles.card,
