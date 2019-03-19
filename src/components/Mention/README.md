@@ -6,15 +6,7 @@
 import React from 'react';
 import { Mention } from '@afconsult/apollo';
 
-const Example extends React.PureComponent {
-  render() {
-    return (
-      <Mention>
-        Stockholm
-      </Mention>
-    );
-  }
-}
+const Example = () => <Mention>Stockholm</Mention>;
 ```
 
 #### Props

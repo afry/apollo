@@ -6,16 +6,12 @@
 import React from 'react';
 import { Jumbotron } from '@afconsult/apollo';
 
-const Example extends React.PureComponent {
-  render() {
-    return (
-      <Jumbotron>
-        <h1>Lorem ipsum dolor</h1>
-        <p>Put a bird on it ethical fanny pack shoreditch la croix.</p>
-      </Jumbotron>
-    );
-  }
-}
+const Example = () => (
+  <Jumbotron>
+    <h1>Lorem ipsum dolor</h1>
+    <p>Put a bird on it ethical fanny pack shoreditch la croix.</p>
+  </Jumbotron>
+);
 ```
 
 #### Props

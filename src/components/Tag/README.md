@@ -3,7 +3,7 @@
 ### Example
 
 ```jsx
-const Example extends React.Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: true };

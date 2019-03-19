@@ -40,17 +40,15 @@ import { Button, Form, FormGroup, Input, Label } from '@afconsult/apollo';
 3. Use the components:
 
 ```jsx
-const Example = () => {
-  return (
-    <Form>
-      <FormGroup>
-        <Label for="example">Example Input</Label>
-        <Input id="example" placeholder="Inser text here.." />
-      </FormGroup>
-      <Button type="submit">Submit</Button>
-    </Form>
-  );
-};
+const Example = () => (
+  <Form>
+    <FormGroup>
+      <Label for="example">Example Input</Label>
+      <Input id="example" placeholder="Inser text here.." />
+    </FormGroup>
+    <Button type="submit">Submit</Button>
+  </Form>
+);
 ```
 
 ### Components

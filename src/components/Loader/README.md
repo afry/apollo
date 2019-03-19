@@ -8,11 +8,7 @@ Loader component is a wrapper of [React Lottie](https://www.npmjs.com/package/re
 import React from 'react';
 import { Loader } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return <Loader width={25} height={25} />;
-  }
-}
+const Example = () => <Loader width={25} height={25} />;
 ```
 
 #### Props

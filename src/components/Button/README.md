@@ -6,19 +6,15 @@
 import React from 'react';
 import { Button } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <div>
-        <Button color="primary">primary</Button>
-        <Button color="secondary">secondary</Button>
-        <Button color="success">success</Button>
-        <Button color="danger">danger</Button>
-        <Button color="link">link</Button>
-      </div>
-    );
-  }
-}
+const Example = () => (
+  <React.Fragment>
+    <Button color="primary">primary</Button>
+    <Button color="secondary">secondary</Button>
+    <Button color="success">success</Button>
+    <Button color="danger">danger</Button>
+    <Button color="link">link</Button>
+  </React.Fragment>
+);
 ```
 
 #### Props

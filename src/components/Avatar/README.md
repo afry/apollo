@@ -8,17 +8,13 @@ Avatars are used to display a thumbnail of an individual.
 import React from 'react';
 import { Avatar } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Avatar
-        name="Willow Mcdonald"
-        size="x-small"
-        src="http://via.placeholder.com/400x400"
-      />
-    );
-  }
-}
+const Example = () => (
+  <Avatar
+    name="Willow Mcdonald"
+    size="x-small"
+    src="http://via.placeholder.com/400x400"
+  />
+);
 ```
 
 #### Props

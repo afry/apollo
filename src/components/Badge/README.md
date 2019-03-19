@@ -6,16 +6,12 @@
 import React from 'react';
 import { Badge } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <div>
-        <Badge>Group</Badge>
-        <Badge color="secondary">Project</Badge>
-      </div>
-    );
-  }
-}
+const Example = () => (
+  <React.Fragment>
+    <Badge>Group</Badge>
+    <Badge color="secondary">Project</Badge>
+  </React.Fragment>
+);
 ```
 
 #### Props
