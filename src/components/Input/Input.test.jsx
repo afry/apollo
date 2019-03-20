@@ -1,7 +1,6 @@
-/* global it, describe, expect, jest */
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Input from '../Input';
+import Input from './Input';
 
 describe('<InputField />', () => {
   describe('onChange()', () => {

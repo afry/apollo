@@ -30,7 +30,6 @@
     "check": "yarn lint && yarn test",
     "check:ci": "yarn lint:ci && yarn test:ci",
     "commit": "git-cz",
-    "precommit": "lint-staged",
     "publish": "cross-var yarn publish --new-version $npm_package_version",
     "release": "release-it --config ./.release-it.json -n"
   },
@@ -125,7 +124,8 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "yarn precommit"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
   }
 }

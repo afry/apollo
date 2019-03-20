@@ -6,7 +6,8 @@
     "sourceType": "module"
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "plugins": ["react"],
   "rules": {
