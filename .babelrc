@@ -1,4 +1,19 @@
 {
-  "presets":["env", "react"],
+  "presets": [
+    "@babel/react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["@babel/preset-env"]]
+    }
+  },
   "plugins": ["transform-object-rest-spread", "react-hot-loader/babel"]
 }
