@@ -6,15 +6,11 @@
 import React from 'react';
 import { Alert } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Alert color="danger">
-        <b>Server offline.</b> We are working on solving this issue.
-      </Alert>
-    );
-  }
-}
+const Example = () => (
+  <Alert color="danger">
+    <b>Server offline.</b> We are working on solving this issue.
+  </Alert>
+);
 ```
 
 #### Props

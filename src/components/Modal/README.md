@@ -8,7 +8,7 @@ The Modal component pass the `onToggle` prop via context to the [ModalHeader](..
 import React from 'react';
 import { Modal, ModalBody, ModalHeader, ModalFooter } from '@afconsult/apollo';
 
-export default class Example extends React.Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };

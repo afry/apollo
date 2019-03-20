@@ -6,17 +6,13 @@
 import React from 'react';
 import { Breadcrumbs, Breadcrumb } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Breadcrumbs>
-        <Breadcrumb>first</Breadcrumb>
-        <Breadcrumb>second</Breadcrumb>
-        <Breadcrumb active>active</Breadcrumb>
-      </Breadcrumbs>
-    );
-  }
-}
+const Example = () => (
+  <Breadcrumbs>
+    <Breadcrumb>first</Breadcrumb>
+    <Breadcrumb>second</Breadcrumb>
+    <Breadcrumb active>active</Breadcrumb>
+  </Breadcrumbs>
+);
 ```
 
 #### Props [Breadcrumbs](./)

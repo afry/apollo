@@ -6,55 +6,43 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Form>
-        <FormGroup>
-          <Label for="form_example">Valid</Label>
-          <Input id="form_example" placeholder="Text" />
-        </FormGroup>
-      </Form>
-    );
-  }
-}
+const Example = () => (
+  <Form>
+    <FormGroup>
+      <Label for="form_example">Valid</Label>
+      <Input id="form_example" placeholder="Text" />
+    </FormGroup>
+  </Form>
+);
 ```
 
 ```jsx
 import React from 'react';
 import { Form, FormGroup, Label, Input } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Form inline>
-        <FormGroup>
-          <Label for="form_inline_example">Valid</Label>
-          <Input id="form_inline_example" placeholder="Text" />
-        </FormGroup>
-      </Form>
-    );
-  }
-}
+const Example = () => (
+  <Form inline>
+    <FormGroup>
+      <Label for="form_inline_example">Valid</Label>
+      <Input id="form_inline_example" placeholder="Text" />
+    </FormGroup>
+  </Form>
+);
 ```
 
 ```jsx
 import React from 'react';
 import { Form, FormGroup, FormFeedback, Label, Input } from '@afconsult/apollo';
 
-export default class Example extends React.PureComponent {
-  render() {
-    return (
-      <Form>
-        <FormGroup>
-          <Label for="form_feedback_example">Valid</Label>
-          <Input id="form_feedback_example" placeholder="Text" />
-          <FormFeedback valid>Hurray! Something worked.</FormFeedback>
-        </FormGroup>
-      </Form>
-    );
-  }
-}
+const Example = () => (
+  <Form>
+    <FormGroup>
+      <Label for="form_feedback_example">Valid</Label>
+      <Input id="form_feedback_example" placeholder="Text" />
+      <FormFeedback valid>Hurray! Something worked.</FormFeedback>
+    </FormGroup>
+  </Form>
+);
 ```
 
 #### Props
