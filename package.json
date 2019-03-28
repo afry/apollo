@@ -50,7 +50,7 @@
     "autoprefixer": "^8.0.0",
     "babel-eslint": "8.2.1",
     "babel-jest": "24.5.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "8.0.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "clean-webpack-plugin": "^0.1.19",
     "commitizen": "3.0.7",
