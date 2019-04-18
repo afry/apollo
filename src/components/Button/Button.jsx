@@ -92,10 +92,10 @@ const Button = ({
       onClick={handleClick}
       type={type}
     >
-      <div>{children}</div>
+      {children}
       {loading && (
-        <div>
-          <Loader width="100%" height="100%" />
+        <div className={styles.loader}>
+          <Loader width="50%" height="100%" />
         </div>
       )}
     </Tag>
