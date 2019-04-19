@@ -37,7 +37,20 @@ class Playground extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <AvatarExample />
+        <BadgeExample />
+        <BreadcrumbsExample />
         <ButtonExample />
+        <CardExample />
+        <DropdownExample />
+        <FollowExample />
+        <FormExample />
+        <JumbotronExample />
+        <MentionExample />
+        <ModalExample />
+        <NavbarExample />
+        <NavsExample />
+        <TagExample />
       </React.Fragment>
     );
   }

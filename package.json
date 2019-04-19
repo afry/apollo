@@ -45,9 +45,9 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
     "@babel/preset-env": "7.4.0",
     "@babel/preset-react": "7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
     "autoprefixer": "^8.0.0",
     "babel-eslint": "8.2.1",
     "babel-jest": "24.5.0",
@@ -95,12 +95,12 @@
     "release-it": "^8.0.1",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.6",
-    "webpack": "4.6.0",
-    "webpack-cli": "^2.0.10",
-    "webpack-combine-loaders": "^2.0.3",
-    "webpack-dev-server": "^3.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-combine-loaders": "^2.0.4",
+    "webpack-dev-server": "^3.3.1",
     "webpack-licenses-plugin": "^0.0.3",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.2.1"
   },
   "jest": {
     "setupFilesAfterEnv": [

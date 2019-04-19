@@ -21,7 +21,7 @@ const defaultProps = {
 
 const Loader = ({ autoPlay, height, loop, width }) => {
   const defaultOptions = {
-    animationData,
+    animationData: animationData.default,
     autoplay: autoPlay,
     loop,
     rendererSettings: {
